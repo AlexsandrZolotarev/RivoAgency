@@ -1,13 +1,129 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+	padding: 0;
+	margin: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+	height: 100%;
+	width: 100%;
+	background: black;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	cursor: url('./Components/img/Icons/pointinghand.png');
+	scroll-behavior: smooth;
+}
+*::-webkit-scrollbar 
+{
+	width: 7px;
+}
+body::-webkit-scrollbar-track 
+{
+
+	background: white;     
+}
+body::-webkit-scrollbar-thumb 
+{
+
+	background-color: yellow;
+	
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+
+
+
+
+.wrapper
+{
+	flex-grow: 1;
+	font-family: "Quicksand", sans-serif;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
 }
+
+/* обводка текста */
+::-moz-selection { background: #FDDD0A; color: #fff; text-shadow: none; }
+     ::selection { background: #FDDD0A; color: #fff; text-shadow: none; }
+
+/* UserProducts */
+
+.ContactUs
+{
+	position:fixed;
+	cursor: pointer;
+	bottom: 10%;
+	right: 2%;
+	display: block;
+	z-index: 1000000;
+	:nth-child(1) 
+	{
+	width: 120px;
+	height: 120px;
+	animation-name: rotate;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+	}
+	:last-child{
+		color: #FDDD0A;
+		position: absolute;
+		top: 50%; 
+		left: 50%; 
+		transform: translate(-50%, -50%); 
+		width: 22.5px;
+		height: 22.5px;
+	}
+}
+@keyframes rotate{
+    from{ transform: rotate(-360deg); }
+    to{ transform: rotate(360deg); }
+}
+@media screen and (max-width: 962px)
+{
+	.ContactUs
+	{
+		bottom: 20%;
+		right: 7%;
+	}
+}
+.swiper
+{
+	width: 100%;
+	right: 0;
+	margin-left: 0;
+	margin-right: 0;
+	top:-10px;
+	border-radius: 2px;
+	border: 1px solid rgb(83, 83, 83);
+}
+.swiper-slide 
+{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 22px;
+	font-weight: bold;
+	color: #fff;
+}
+

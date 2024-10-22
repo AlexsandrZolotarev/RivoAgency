@@ -1,0 +1,247 @@
+.wrapper_Footer
+{
+    margin-top: 5%;
+    margin-bottom: 3%;
+ color: white;
+ text-transform: uppercase;
+ width: 100%;
+ font-weight: 500;
+ display: flex;
+ flex-shrink: 0;
+
+}
+.wrapper_Footer__BodyMenuItemsWithVector
+{
+    width: 50%;
+    position: relative;
+    z-index: 50;
+}
+.wrapper_Footer__MenuItemsWithVector
+{
+    width: 100%;
+    display: flex;
+    position: relative;
+    z-index: -1;
+}
+.wrapper_Footer__EllipseWithElement
+{
+    width: 50%;
+    display: flex;
+}
+.wrapper_Footer__Vector
+{
+    width: 40%;
+    position: relative;
+    img {
+        position: absolute;
+        margin: 52% auto;
+        inset: 0;
+    }
+}
+
+.wrapper_Footer__menuitems
+{    
+    font-size:calc(26px + 16 * (100vw / 1980));
+    cursor: pointer;
+    position: relative;
+    width: 60%;
+    a {
+        position: relative;
+    }
+    ul
+    {
+        display: flex;
+        flex-direction: column;
+    }
+    li {
+        margin: 2% 0;
+    }
+}
+.wrapper_Footer__menuitems a::after {
+	position: absolute;
+	content: '';
+	left: 0;
+	bottom: -10px;
+	display: block;
+	width: 0%;
+	height: 1px;
+	background: #FDDD0A;
+    transition: 0.3s;
+}
+.wrapper_Footer__menuitems a:hover:after {
+	width: 100%;
+}
+.wrapper_Footer__menuitems a:hover
+{
+     color: #FDDD0A;   
+     transition: 0.1s;
+}
+.wrapper_Footer__EllipseWithElements{
+ display: flex;
+ width: 50%;
+ z-index: 1;
+}
+.wrapper_Footer__Ellipse{
+    width: 10%;
+    position: absolute;
+}
+.wrapper_Footer__menuitemsProject{
+    background-image: url();
+}
+
+.wrapper_Footer__Elements{
+    background-image: url(/src/Components/img/Elementbig.png);
+    width: 90%;
+    position: relative;
+    background-position: center;
+    background-size: cover; 
+    
+    img{
+        position: absolute;
+        top:20px;
+        left: 20px;
+        right: 0;
+        bottom: 0;
+        display: block;
+        margin: auto;
+    }
+}
+.wrapper_Footer__Copyright
+{
+    margin-top: 15%;
+    color: #3F3F3F;
+    text-transform:none;
+    width: 100%;
+    font-size:15px;
+    display: flex;
+    flex-direction: row;
+    :last-child
+    {
+        margin-left: 15%;
+    }
+}
+
+
+.wrapper_Footer__Ellipse
+{
+    position: relative;
+    top: -30px;
+}
+.wrapper_Footer__Element
+{
+
+}
+
+
+
+
+/* @media screen and (max-width: 1850px)
+{
+    .wrapper_Footer__Elements
+    {
+        width: 0px;
+        position: static;
+        top: 1px;
+    }
+} */
+@media screen and (max-width: 768px)
+{
+
+}
+@media screen and (min-width: 670px)and (max-width: 1352px)
+{
+    .wrapper_Footer__Elements
+    {
+        background-image: none;
+    }
+    .wrapper_Footer__Vector
+    {
+        display: none;
+    }
+    .wrapper_Footer__menuitems
+    {
+        
+    }
+    .wrapper_Footer__EllipseWithElements
+    {
+        display: none;
+    }
+    .wrapper_Footer__MenuItemsWithVector
+    {
+        margin-left: 15%;
+        
+    }
+    .wrapper_Footer__menuitems
+    {
+        width: 100%;
+        margin: 0 3%;
+        nav::after
+        {
+            position: absolute;
+            right: 0;
+            top: 0%;
+            content: url(/src/Components/img/Element.png);
+        }
+        nav::before
+        {
+            position: absolute;
+            right: 0;
+            bottom: 15%;
+            content: url(/src/Components/img/ElementCube.png);
+        }
+    }
+}
+@media screen and (max-width: 670px)
+{
+    .wrapper_Footer__Vector
+    {
+        display: none;
+    }
+    .wrapper_Footer__Ellipse
+    {
+        display: none;
+    }
+    .wrapper_Footer__Elements
+    {
+        display: none;
+    }
+    .wrapper_Footer
+    {
+        display: block;
+    }
+    .wrapper_Footer__BodyMenuItemsWithVector
+    {
+        width: 100%;
+    }
+   
+    .wrapper_Footer__Copyright
+    {
+        flex-wrap: wrap;
+        flex-direction: column;
+        :last-child
+        {
+            margin: 0;
+            margin-top: 5%;
+        }
+    }
+    .wrapper_Footer__menuitems
+    {
+        width: 100%;
+        margin: 0 3%;
+        nav::after
+        {
+            position: absolute;
+            right: 0;
+            top: 0%;
+            content: url(/src/Components/img/ElementFooterMini.png);
+        }
+        nav::before
+        {
+            position: absolute;
+            right: 0;
+            bottom: 15%;
+            content: url(/src/Components/img/ElementCubeFooterMini.png);
+        }
+    }
+    
+}

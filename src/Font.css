@@ -1,0 +1,45 @@
+@font-face {
+    font-family: 'Gilroy';
+    src: url('..//public/font/Gilroy-Light.eot');
+    src: local('Gilroy Light'), local('Gilroy-Light'),
+        url('..//public/font/Gilroy-Light.eot?#iefix') format('embedded-opentype'),
+        url('..//public/font/Gilroy-Light.woff2') format('woff2'),
+        url('..//public/font/Gilroy-Light.woff') format('woff'),
+        url('..//public/font/Gilroy-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'gilroy-bold';
+    src: url('..//public/font/gilroy-bold.eot');
+    src: local('gilroy-bold'), local('gilroy-bold'),
+        url('..//public/font/gilroy-bold.eot?#iefix') format('embedded-opentype'),
+        url('..//public/font/gilroy-bold.woff2') format('woff2'),
+        url('..//public/font/gilroy-bold.woff') format('woff'),
+        url('..//public/font/gilroy-bold.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'RoadRadio';
+    src: url('..//public/font/RoadRadio.eot');
+    src: local('RoadRadio'),
+        url('..//public/font/RoadRadio.eot?#iefix') format('embedded-opentype'),
+        url('..//public/font/RoadRadio.woff2') format('woff2'),
+        url('..//public/font/RoadRadio.woff') format('woff'),
+        url('..//public/font/RoadRadio.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RoadRadio-Bold';
+    src: url('..//public/font/RoadRadio-Bold.eot');
+    src: local('RoadRadio Bold'), local('RoadRadio-Bold'),
+        url('..//public/font/RoadRadio-Bold.eot?#iefix') format('embedded-opentype'),
+        url('..//public/font/RoadRadio-Bold.woff2') format('woff2'),
+        url('..//public/font/RoadRadio-Bold.woff') format('woff'),
+        url('..//public/font/RoadRadio-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}

@@ -1,0 +1,6 @@
+[
+    {"id": 1, "name": "React Developer","salary": "1500", "region": "Russia", "positionJob":"Senior"},
+    {"id": 2, "name": "Php Developer","salary": "1100", "region": "Russia", "positionJob":"Middle"},
+    {"id": 3, "name": "WordPress Developer","salary": "1100", "region": "Russia", "positionJob":"Senior"},
+    {"id": 4, "name": "Laravel Developer","salary": "550", "region": "Russia", "positionJob":"Junior"}
+]

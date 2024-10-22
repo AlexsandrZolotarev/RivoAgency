@@ -1,0 +1,224 @@
+
+.addNewVacanciBody
+{
+    position: relative;
+    transition: all ease 1000ms;
+}
+.addNewVacanciButton
+{
+    margin-top: 5%;
+    float: right;
+    text-transform: uppercase;
+    font-size:calc(10px + 12 * (100vw / 1980));
+    max-width: none;
+    background: linear-gradient(to left, transparent 50%, #FDDD0A 50%) right;
+    background-size: 200%;
+    transition: .3s ease-out;
+}
+
+.addNewVacanciBody:hover .addNewVacanciButton
+{
+    background-position: left;
+    color: black;
+}
+
+.Career{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    color: white;
+    align-items: center;
+    font-family: "Poppins", system-ui;
+    margin-top:5%;
+    justify-content: center;
+}
+.Wrapper_Career__Title{
+    display: flex;
+    width: 100%;
+    flex-wrap: nowrap;
+}
+.Wrapper_Career__Title_name{
+    width: 50%;
+    font-family: "Alexandria", sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;   
+    :first-child{
+        font-size:calc(52px + 32 * (100vw / 1980));
+    }
+    :last-child{
+        font-weight: 600;
+        border-radius: 1px;
+        color: rgba(0, 0, 0, 0.1); 
+        -webkit-text-stroke: 0.4px rgb(80, 80, 80);
+        font-size:calc(60px + 48 * (100vw / 1980));
+    }
+}
+.Wrapper_Career__Title_title{
+    width: 40%;
+    :first-child{
+        font-size:calc(24px + 1 * (100vw / 1980));
+    }
+    :last-child{
+        margin-top: 5%;
+        font-size:calc(16px + 1 * (100vw / 1980));
+    }
+}
+.Wrapper_Career__Vacancies{
+    margin-top: 5%;
+}
+.Wrapper_Career__Vacancies_title{
+    font-size:32px;
+}
+
+.Wrapper_Career__Vacancies_vacancies{
+    display: flex;
+    flex-direction: column;
+    .vacancies{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    
+        li ul{
+            margin-top: 3%;
+           display: grid;
+           grid-template-columns: 0.1fr 0.6fr auto auto auto;
+           align-items: center;
+           justify-content: space-between;
+            border: 1px solid rgb(123, 123, 123,0.2);
+            :nth-child(2){
+                font-family: "Poppins";
+                text-transform: uppercase;
+                font-weight: 400;
+                font-size:calc(24px + 1 * (100vw / 1980));
+            }
+            :first-child{
+                text-transform: uppercase;
+                background-color: white;
+                color: black;
+                padding: 1px 2px;
+                max-width: max-content;
+                font-size:calc(12px + 1 * (100vw / 1980));
+                font-weight: 600;
+                margin-left: 10%;
+            } 
+        }
+    }
+}
+
+.Wrapper_Career__Vacancies_vacancies button {
+    padding: 20px 20px;
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid #FDDD0A;
+    color:  #FDDD0A;
+    transition: ease 500ms;
+}
+.VacanciesForm {
+    z-index: 1;
+    display: grid;
+    grid-template-rows: 1fr;
+    margin-top: 4%;
+    width: 50%;
+    div{
+        margin-top: 6%;
+        display: flex;
+        flex-direction: column;
+        position: relative; 
+        label{
+            margin-bottom: -9%;
+            transition: 500ms ease all;
+        }
+    }
+    label {
+        color: rgb(123, 123, 123);
+        font-size:calc(18px + 1 * (100vw / 1980));
+        
+    }
+    input{
+        margin-top: 4%;
+        cursor: pointer;
+        font-size:calc(15px + 10 * (100vw / 1980));
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid white;
+        color: white;
+    }
+   
+}
+
+.VacanciesForm input:focus-visible
+{
+    border-bottom: 1px solid #FDDD0A;
+}
+
+.VacanciesForm input:focus-visible + label
+{
+    margin-bottom: 0%;
+    opacity: 0.6;
+}
+
+@media screen and (max-width:900px){
+    .Wrapper_Career__Title{
+        flex-direction: column;
+    }
+    .Wrapper_Career__Title_title{
+        width: 100%;
+    }
+    .Career{
+        width: 90%;
+    }
+    .Wrapper_Career__Vacancies_vacancies .vacancies li ul{
+        display: grid;
+        grid-template-columns: 1fr;
+        :first-child{
+            color: white;
+            background: none;
+            padding: 15px;
+            padding-bottom: 0;
+            margin: 0;
+            font-size: calc(24px + 1 * (100vw / 1980));
+            font-weight: 400;
+            grid-row: 1;
+        }
+        button {
+            max-width:none;
+        }
+        li{
+            padding: 15px;
+            padding-bottom: 5px;
+        }
+        .positionJobWithName{
+            display: flex;
+        }
+    }
+}
+@media screen and (max-width: 670px)
+{
+    .Wrapper_Career__Vacancies_title{
+        font-size: 31px;
+        margin-bottom: 10%;
+    }
+    .Wrapper_Career__Title_title{
+        text-align: center;
+    }
+    .Wrapper_Career__Title_name{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10%;
+        :first-child{
+            font-size:calc(32px + 32 * (100vw / 1980));
+        }
+        :last-child{
+            font-size:calc(40px + 32 * (100vw / 1980));
+        }
+    }
+    .Wrapper_Career__Title_title{
+        :first-child{
+            font-weight: 700;
+            font-size:calc(17px + 4 * (100vw / 1980));
+        }
+        :last-child{
+            font-size:calc(16px + 4 * (100vw / 1980));
+        }
+    }
+}
