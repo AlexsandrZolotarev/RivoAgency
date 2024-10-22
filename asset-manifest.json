@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/RivoAgancy/static/css/main.2f932c98.css",
+    "main.js": "/RivoAgancy/static/js/main.f73fb6ca.js",
+    "static/media/WeWhoWeAr.webm": "/RivoAgancy/static/media/WeWhoWeAr.e7b81904614c6c787df1.webm",
+    "static/media/whoWeAreVideo.mp4": "/RivoAgancy/static/media/whoWeAreVideo.2389d4c77cbe00b3f43e.mp4",
+    "static/media/Background.png": "/RivoAgancy/static/media/Background.a9a902869a28c74c8276.png",
+    "static/media/VideoPoster.jpeg": "/RivoAgancy/static/media/VideoPoster.d6ebe4873d09c3e4707f.jpeg",
+    "static/media/Jotul.png": "/RivoAgancy/static/media/Jotul.1020a9921bbfe1490b95.png",
+    "static/media/HaulCars.png": "/RivoAgancy/static/media/HaulCars.d9aba71b0f0442340de8.png",
+    "static/media/Saltmine.png": "/RivoAgancy/static/media/Saltmine.c2788b5e5ef892fde906.png",
+    "static/media/Expiriens.jpg": "/RivoAgancy/static/media/Expiriens.0294f491770f09a5089f.jpg",
+    "static/media/2.png": "/RivoAgancy/static/media/2.4d643e7ef0ce6a30b116.png",
+    "static/media/3.png": "/RivoAgancy/static/media/3.9ed00ea1a8a15840cf71.png",
+    "static/media/4.png": "/RivoAgancy/static/media/4.fc064c0c9ba99b8050eb.png",
+    "static/media/1.png": "/RivoAgancy/static/media/1.ce352c46ba68518afa52.png",
+    "static/media/SkylineEnergy.png": "/RivoAgancy/static/media/SkylineEnergy.b42373700769044054df.png",
+    "static/media/Mens.png": "/RivoAgancy/static/media/Mens.10567e8e898f2f0d144f.png",
+    "static/media/Elementbig.png": "/RivoAgancy/static/media/Elementbig.b42129139340574a7f06.png",
+    "static/media/channels4_profile.jpg": "/RivoAgancy/static/media/channels4_profile.93ced7d012e9c95d11e7.jpg",
+    "static/media/ElementRight.png": "/RivoAgancy/static/media/ElementRight.855fe5d9985193e8755d.png",
+    "static/media/ElementLeft2.png": "/RivoAgancy/static/media/ElementLeft2.e0e21a2240be84911526.png",
+    "index.html": "/RivoAgancy/index.html",
+    "main.2f932c98.css.map": "/RivoAgancy/static/css/main.2f932c98.css.map",
+    "main.f73fb6ca.js.map": "/RivoAgancy/static/js/main.f73fb6ca.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2f932c98.css",
+    "static/js/main.f73fb6ca.js"
+  ]
+}
