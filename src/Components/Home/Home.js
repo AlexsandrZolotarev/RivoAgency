@@ -11,7 +11,7 @@ import Cloch from './/../img/HomePage/WeWhoWeAre/Cloch_icon.png';
 import Cube from './/../img/HomePage/WeWhoWeAre/Center.png';
 import video from './/../video/whoWeAreVideo.mp4';
 import Poster from './/../img/HomePage/VideoPoster.jpeg';
-import videoWebm from './/../video/WeWhoWeAr.webm';
+import videoWebm from './/../video/whoWeAreVideo.webm';
 
 
 
