@@ -27,7 +27,7 @@ class App extends React.Component
         <Header/>
         <div className='wrapper-content'>
           <Routes>
-            <Route path ='' element ={<HomeContainer/>}>
+            <Route path ='/RivoAgancy' element ={<HomeContainer/>}>
             </Route>
             <Route path ='/Services' element ={<Services/>}>
             </Route>
@@ -45,9 +45,9 @@ class App extends React.Component
         </div>
         <Footer/>  
        <CookiesPrivacy/>
-              <a className='ContactUs' href='#Footer'>
-                <img src={ContactsUs}></img>
-                <img src={Arrow}></img>
+              <a className='ContactUs' href='#Footer' aria-label='Contacts'>
+                <img alt='' src={ContactsUs}></img>
+                <img alt='' src={Arrow}></img>
               </a>
       </div>
     );

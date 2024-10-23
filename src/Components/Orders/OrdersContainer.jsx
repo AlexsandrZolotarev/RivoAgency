@@ -1,7 +1,7 @@
 
 import React from 'react'
 import Orders from './Orders';
-import { onChangeCounterPlus, onChangeCounterMinus, setCardsAC } from '../../Redux/order-reducer';
+import { onChangeCounterPlus, onChangeCounterMinus, setCardsAC ,onChangeCounterAlbum} from '../../Redux/order-reducer';
 import { connect } from 'react-redux';
 
 let mapStateToProps = (state) => {
@@ -26,6 +26,10 @@ let mapDispatchToProps = (dispatch) => {
         let action = onChangeCounterMinus(symbol);
         dispatch(action);
     },
+    changeCounterAlbum : (counterSlider) => {
+      let action = onChangeCounterAlbum(counterSlider);
+      dispatch(action);
+  },
   }
 }
 

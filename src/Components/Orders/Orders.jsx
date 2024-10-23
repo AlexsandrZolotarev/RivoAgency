@@ -8,7 +8,7 @@ import { GoArrowRight } from "react-icons/go";
 import { Swiper, SwiperSlide} from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-creative';
-import { Pagination, Navigation } from 'swiper/modules';
+import {Keyboard, Pagination, Navigation } from 'swiper/modules';
 function Album({car})
 {
     return (
@@ -67,21 +67,24 @@ export default function Orders(props){
     function onChangeCounterPlus()
     {
         props.changeCounterPlus(this);
-        sliderRef.current.swiper.slideNext();  
+        sliderRef.current.swiper.slideNext(); 
+    }
+    function onSlideChange()
+    {
+        props.changeCounterAlbum(sliderRef.current.swiper.activeIndex);
     }
     function onChangeCounterMinus()
     {
         props.onChangeCounterMinus(this);
         sliderRef.current.swiper.slidePrev();
-    }
-    props.album.map((item,index) =>
-               console.log(item.id, props.album[index]));             
-    return (
+    }   
+
+        return (
         <div className={s.Orders}>
             <div className={s.OrdersImgs}></div>
             <div className={s.OrdersContainer}>
                 <div className={s.OrdersTitle}>
-                    <NavLink to={'/'}>
+                    <NavLink to={'/RivoAgancy'}>
                     <div className={s.OrdersTitleButton}>
                         <GoArrowLeft />
                         <p>Back to Home</p> 
@@ -107,16 +110,19 @@ export default function Orders(props){
                         <p>Information</p>
                         <Swiper ref={sliderRef}
                                 slidesPerView={1}
+                                onSlideChange={() => onSlideChange()}
                                 spaceBetween={30}
+                                keyboard={{
+                                    enabled: true,
+                                  }}
                                 pagination={{
                                 clickable: true,
                                 }}
                                 navigation={true}
-                                modules={[Pagination, Navigation]}
+                                modules={[Keyboard,Pagination, Navigation]}
                                 className="mySwiper"
                             >
                             {props.album.map((item,index) =>
-                             
                             <SwiperSlide><Album key = {item.id} car={props.album[index]}/></SwiperSlide>
                             )}
                         </Swiper>

@@ -15,7 +15,11 @@
     background-size: 200%;
     transition: .3s ease-out;
 }
-
+.addNewVacanciBody:focus-visible .addNewVacanciButton
+{
+    background-position: left;
+    color: black;
+}
 .addNewVacanciBody:hover .addNewVacanciButton
 {
     background-position: left;

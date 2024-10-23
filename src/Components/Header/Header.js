@@ -12,8 +12,8 @@ export default function Header() {
     <header className={s.header}>
         <div className={s.container}>
         <div className={s.header__body}>            
-            <NavLink to={''}>
-            <img src={logotype}/>
+            <NavLink to={'/RivoAgancy'} aria-label='Home Page'>
+            <img alt='Logotype' src={logotype}/>
             </NavLink>
             <div className={s.header__buttons_items}>
             <div className={s.header__items}>
@@ -72,7 +72,7 @@ export default function Header() {
             </NavLink>
             <div className={s.headerMainMenu}>
                 <div className={s.hamburger}></div>
-                 <NavLink to={'/FilterableProductTable'}>MENU</NavLink>
+                 <NavLink to={'/RivoAgancy'}>MENU</NavLink>
             </div>
         </div>
         </div>
