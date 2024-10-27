@@ -4,9 +4,16 @@ import logotype from './/../img/Rivo_logotype.png';
 import { GoChevronDown } from 'react-icons/go';
 import { NavLink} from 'react-router-dom';
 import s from'./Header.module.css'
-
+import { slide as Menu } from 'react-burger-menu'
 export default function Header() {
+  let menuBurger = React.createRef();
 
+  function getMenuBurger()
+  {
+    menuBurger.current.firstChild.classList.toggle("active");
+
+    // this.addEventListener('click', () => console.log(1));
+  }
 
   return (
     <header className={s.header}>
@@ -59,7 +66,7 @@ export default function Header() {
                             </nav>
                         </li>
                         <li>
-                            <a href='#'>Contacts</a>
+                            <NavLink to={'/Contacts'}>Contacts</NavLink>
                         </li>
                         <li>
                             <NavLink to={'/Careers'} className={s.Hot}>Careers</NavLink>
@@ -70,9 +77,57 @@ export default function Header() {
                 <p>MAKE ORDER</p> 
                 <MdArrowOutward className='makeOrder_Button__arrow'/>
             </NavLink>
-            <div className={s.headerMainMenu}>
-                <div className={s.hamburger}></div>
-                 <NavLink to={'/RivoAgancy'}>MENU</NavLink>
+            <div ref={menuBurger} onClick={getMenuBurger} className={s.headerMainMenu} >
+                <div className={s.hamburger} id='hamburger'></div>
+                <NavLink to={'/RivoAgancy'}>MENU</NavLink>
+                <Menu>
+                <nav className={s.headerMainMenu__menu}>
+                    <ul className={s.headerMainMenu__list}>
+                        <li>
+                            <a href='#' alt='' className={s.headerMainMenu__link}>Главана</a>
+                        </li>
+                        <li>
+                            <a href='#' alt='' className={s.headerMainMenu__link}>Главана</a>
+                        </li>
+                        <li>
+                            <a href='#' alt='' className={s.headerMainMenu__link}>Главана</a>
+                        </li>
+                        <li>
+                            <a href='#' alt='' className={s.headerMainMenu__link}>Главана</a>
+                        </li>
+                        <li>
+                            <a href='#' alt='' className={s.headerMainMenu__link}>Главана </a>
+                        </li>
+                        <li>
+                            <a href='#' alt='' className={s.headerMainMenu__link}> Главана</a>
+                        </li>
+                      
+                    </ul>
+                </nav>
+                </Menu>
+                <nav className={s.headerMainMenu__menu}>
+                    <ul className={s.headerMainMenu__list}>
+                        <li>
+                            <a href='#' alt='' className={s.headerMainMenu__link}>Главана</a>
+                        </li>
+                        <li>
+                            <a href='#' alt='' className={s.headerMainMenu__link}>Главана</a>
+                        </li>
+                        <li>
+                            <a href='#' alt='' className={s.headerMainMenu__link}>Главана</a>
+                        </li>
+                        <li>
+                            <a href='#' alt='' className={s.headerMainMenu__link}>Главана</a>
+                        </li>
+                        <li>
+                            <a href='#' alt='' className={s.headerMainMenu__link}>Главана </a>
+                        </li>
+                        <li>
+                            <a href='#' alt='' className={s.headerMainMenu__link}> Главана</a>
+                        </li>
+                      
+                    </ul>
+                </nav>
             </div>
         </div>
         </div>

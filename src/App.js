@@ -37,7 +37,7 @@ class App extends React.Component
             </Route>
             <Route path ='/Projects' element ={<Projects/>}>
             </Route>
-            <Route path ='/Contacts' element ={<Contacts />}>
+            <Route path ='/Contacts' element ={<Contacts/>}>
             </Route>
             <Route path ='/Orders' element ={<OrdersContainer/>}>
             </Route>
@@ -46,8 +46,8 @@ class App extends React.Component
         <Footer/>  
        <CookiesPrivacy/>
               <a className='ContactUs' href='#Footer' aria-label='Contacts'>
-                <img alt='' src={ContactsUs}></img>
-                <img alt='' src={Arrow}></img>
+                <img alt='' src={ContactsUs} aria-hidden='true'></img>
+                <img alt='' src={Arrow} aria-hidden='true'></img>
               </a>
       </div>
     );

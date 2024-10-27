@@ -44,9 +44,11 @@
     font-size:calc(26px + 16 * (100vw / 1980));
     cursor: pointer;
     position: relative;
+
     width: 60%;
     a {
         position: relative;
+        color: white;   
     }
     ul
     {

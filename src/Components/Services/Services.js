@@ -15,7 +15,7 @@ export default function Services() {
         <div className={s.ContainerServiceItems}>
             <div className={s.ServiceItem +' Item'}>
                 <div className={s.ServiceItem_Icon}>
-                    <img src={item3}></img>       
+                    <img src={item3} aria-hidden='true'></img>       
                 </div>  
                 <div className={s.ServiceItem_Title}>
                     <p>Web Development</p>    
@@ -30,7 +30,7 @@ export default function Services() {
             </div> 
             <div className={s.ServiceItem + ' Item'}>
                 <div className={s.ServiceItem_Icon}>
-                    <img src={item2}></img>       
+                    <img src={item2} aria-hidden='true'></img>       
                 </div>  
                 <div className={s.ServiceItem_Title}>
                     <p>Mobile Development</p>    
@@ -45,7 +45,7 @@ export default function Services() {
             </div> 
             <div className={s.ServiceItem + ' Item'}>
                 <div className={s.ServiceItem_Icon}>
-                    <img src={item1}></img>       
+                    <img src={item1} aria-hidden='true'></img>       
                 </div>  
                 <div className={s.ServiceItem_Title}>
                     <p>Custom Software</p>    

@@ -305,14 +305,7 @@
   position: relative;
 }
 
-.headerMainMenu:hover
-{
-  .hamburger::before
-  {
-    width: 30px;
-    transition: .2s ease-in-out;
-  }
-}
+
 
 .hamburger
 {
@@ -331,7 +324,6 @@
 	width: 17px;
   position: absolute;
   transition: .2s ease-in-out;
-
 }
 .hamburger::after{
   content: '';
@@ -342,6 +334,34 @@
   position: absolute;
 
 }  
+#hamburger .active::before{
+	content: '';
+	height: 20px;
+	top:10px; 
+	float: left;
+	background-color: rgb(255, 255, 255);
+	  width: 17px;
+	position: absolute;
+	transition: .2s ease-in-out;
+  }
+.hamburger.active::before{
+	content: '';
+	height: 20px;
+	top:10px; 
+	float: left;
+	background-color: rgb(255, 255, 255);
+	  width: 17px;
+	position: absolute;
+	transition: .2s ease-in-out;
+  }
+.hamburger.active::after{
+	content: '';
+	height: 20px;
+	float: left;
+	background-color: white;
+	  width: 30px;
+	position: absolute;
+  }  
 
 
 /* header__items_sub-list - menu__sub-list */
@@ -369,12 +389,46 @@
 .header__items_sub-list li:last-child{
 	margin: 0px 0px;
 }
-.header__items_sub li{
+
+.headerMainMenu__menu
+{
+	position: absolute;
+	display: none;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	background-color: #c94545;
+}
+
+.headerMainMenu__list
+{
 
 }
-.link {
-	
+.headerMainMenu__link
+{
+
 }
+/* .headerMainMenu:focus
+{
+	.headerMainMenu__menu
+	{
+		display: block;
+	}
+}
+.headerMainMenu:hover
+{
+	.headerMainMenu__menu
+	{
+		display: block;
+	}
+  .hamburger::before
+  {
+    width: 30px;
+    transition: .2s ease-in-out;
+  }
+} */
 /* Адаптив под Tablet */
 @media screen and (max-width: 1240px)
 {
@@ -405,8 +459,4 @@
 		padding: 0 3% 0 5%;
 
 	}
-}
-@media screen and (min-width : 768) and (max-width: 1280px)
-{
-
 }

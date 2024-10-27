@@ -42,7 +42,7 @@ export default function Home(props) {
                     <p>The world</p>
                 </div>
                 <div className={s.HomeTitleCube}>
-                    <img alt='#'  src={cube}></img>
+                    <img alt='' aria-hidden='true' src={cube}></img>
                 </div>  
             </div> 
             <div className={s.HomeButton}>
@@ -53,8 +53,8 @@ export default function Home(props) {
         </div>
         <div className={s.WeWhoWeAreContainer} id='WeWhoWeAre'>
             <div className={s.WeWhoWeAreContainerLeft}>
-                <img src={ElementLeft}></img>
-                <img src={ElementLeft2}></img>
+                <img src={ElementLeft} aria-hidden='true'></img>
+                <img src={ElementLeft2} aria-hidden='true'></img>
             </div>
 
             <div className={s.WeWhoWeAreContainerMain}>
@@ -70,7 +70,7 @@ export default function Home(props) {
                         <div className={s.WeWhoWeAreContainerMain_VideoContainar} onClick={onPlayChange}>
                             <video ref={video} poster={Poster} preload='metadata' id='VideoGofman'>
                                 <source src={video} type="video/mp4"></source>
-                                <source src={videoWebm} type="video/ogg"></source>
+                                <source src={videoWebm} type="video/webm"></source>
                             </video>
                             <span ref={buttonPlay} className={s.videoEnter}></span>
                         </div>
@@ -86,9 +86,9 @@ export default function Home(props) {
                             </p>
                         </div>
                         <div className={s.WeWhoWeAreContainerMain__Clutch}>
-                            <img src={Cloch}></img>
+                            <img src={Cloch} aria-hidden='true'></img>
                         </div>
-                        <img src={Cube} className={s.cube}></img>
+                        <img src={Cube} className={s.cube} aria-hidden='true'></img>
                     </div>
                     
                 </div>

@@ -3,46 +3,32 @@ import s from'./Footer.module.css'
 import Vector from '..//img/Vector 2.png'
 import Ellipse from '..//img/Element1.png'
 import Cube from '..//img/whoWeAreElement.png'
+import { NavLink } from 'react-router-dom'
 export default function Footer() {
   return (
     <div className={s.wrapper_Footer} id='Footer'>
         <div className={s.wrapper_Footer__BodyMenuItemsWithVector}>
             <div className={s.wrapper_Footer__MenuItemsWithVector}>
                 <div className={s.wrapper_Footer__Vector}>
-                    <img src={Vector}></img>
+                    <img src={Vector} loading="lazy" aria-hidden='true'></img>
                 </div>
                 <div className={s.wrapper_Footer__menuitems}>
                     <nav>
                         <ul>
                             <li>
-                                <a>HOME</a>
+                                <NavLink to={'/RivoAgancy'}>HOME</NavLink>
                             </li>
                             <li>
-                                <a>Who we are</a>
+                                <NavLink to={'/Services'}>Services</NavLink>
                             </li>
                             <li>
-                                <a>Services</a>
+                                <NavLink to={'/Projects'}>Projeсts</NavLink>
                             </li>
                             <li>
-                                <a>Indusrty expertise</a>
+                                <NavLink to={'/Contacts'}>Contaсts</NavLink>
                             </li>
                             <li>
-                                <a>OUR STAcK</a>
-                            </li>
-                            <li className={s.wrapper_Footer__menuitemsProject}>
-                                <a>Projeсts</a>
-                            </li>
-                            <li>
-                                <a>Reviews</a>
-                            </li>
-                            <li>
-                                <a>Contaсts</a>
-                            </li>
-                            <li>
-                                <a>Career</a>
-                            </li>
-                            <li>
-                                <a>Blog</a>
+                                <NavLink to={'/Careers'}>Careers</NavLink>
                             </li>
                         </ul>
                     </nav>
@@ -56,10 +42,10 @@ export default function Footer() {
         <div className={s.wrapper_Footer__EllipseWithElements}>
 
             <div className={s.wrapper_Footer__Ellipse}>
-                <img src={Ellipse}></img>
+                <img src={Ellipse} aria-hidden='true'></img>
             </div>
             <div className={s.wrapper_Footer__Elements}>
-                <img src={Cube}></img>
+                <img src={Cube} aria-hidden='true'></img>
             </div>
 
         </div>
