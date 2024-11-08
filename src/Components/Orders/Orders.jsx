@@ -3,12 +3,12 @@ import s from './Orders.module.css'
 import { GoArrowLeft } from "react-icons/go";
 import { NavLink } from "react-router-dom";
 import { PiArrowDownLight } from "react-icons/pi";
-
 import { GoArrowRight } from "react-icons/go";
 import { Swiper, SwiperSlide} from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-creative';
 import {Keyboard, Pagination, Navigation } from 'swiper/modules';
+import axios from "axios";
 function Album({car})
 {
     return (
@@ -46,7 +46,7 @@ function Album({car})
                 </th>
             </tbody>
             </table>
-            <img alt="" src={require(`../img/Orders/${car.img}`)}></img>
+            <img alt="" src={require(`../img/Orders/${car.img}`)} loading="lazy"></img>
             </div>
     )
 }
@@ -55,11 +55,13 @@ export default function Orders(props){
 
     if(props.album.length === 0)
     {
+        axios.get("https://alexsandrzolotarev.github.io/api/encrypted.json")
+        .then(res => console.log(res))
         props.setCards(
-            [{id: 1, brand : "Mercedes",model:"AMG SL 63 4MATIC+", cluthRewiew:'3.5',equipment :"Luxe", location:{country:'Germany',classAuto: 'J'},budget:"200000",realese:"2017",img:"1.png"},
-            {id: 2, brand : "Mercedes",model:"Benz E-CLASS", cluthRewiew:'4',equipment :"Comfort", location:{country:'Germany',classAuto: 'E'},budget:"190000",realese:"2019",img:"2.png"},
-            {id: 3, brand : "Mercedes",model:"AMG SL 43 4MATIC", cluthRewiew:'5',equipment :"Comfort", location:{country:'Germany',classAuto: 'E'},budget:"170000",realese:"2019",img:"3.png"},
-            {id: 4, brand : "Mercedes",model:"AMG SL 53 4MATIC", cluthRewiew:'3',equipment :"Luxe", location:{country:'Germany',classAuto: 'J'},budget:"190000",realese:"2024",img:"4.png"},
+            [{id: 1, brand : "Mercedes",model:"AMG SL 63 4MATIC+", cluthRewiew:'3.5',equipment :"Luxe", location:{country:'Germany',classAuto: 'J'},budget:"200000",realese:"2017",img:"1.webp"},
+            {id: 2, brand : "Mercedes",model:"Benz E-CLASS", cluthRewiew:'4',equipment :"Comfort", location:{country:'Germany',classAuto: 'E'},budget:"190000",realese:"2019",img:"2.webp"},
+            {id: 3, brand : "Mercedes",model:"AMG SL 43 4MATIC", cluthRewiew:'5',equipment :"Comfort", location:{country:'Germany',classAuto: 'E'},budget:"170000",realese:"2019",img:"3.webp"},
+            {id: 4, brand : "Mercedes",model:"AMG SL 53 4MATIC", cluthRewiew:'3',equipment :"Luxe", location:{country:'Germany',classAuto: 'J'},budget:"190000",realese:"2024",img:"4.webp"},
         ]);
     }
     let Numbers = React.createRef();

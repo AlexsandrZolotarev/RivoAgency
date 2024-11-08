@@ -10,7 +10,7 @@ export default function Footer() {
         <div className={s.wrapper_Footer__BodyMenuItemsWithVector}>
             <div className={s.wrapper_Footer__MenuItemsWithVector}>
                 <div className={s.wrapper_Footer__Vector}>
-                    <img src={Vector} loading="lazy" aria-hidden='true'></img>
+                    <img src={Vector}aria-hidden='true' loading="lazy" ></img>
                 </div>
                 <div className={s.wrapper_Footer__menuitems}>
                     <nav>
@@ -42,10 +42,10 @@ export default function Footer() {
         <div className={s.wrapper_Footer__EllipseWithElements}>
 
             <div className={s.wrapper_Footer__Ellipse}>
-                <img src={Ellipse} aria-hidden='true'></img>
+                <img src={Ellipse} aria-hidden='true' loading="lazy"></img>
             </div>
             <div className={s.wrapper_Footer__Elements}>
-                <img src={Cube} aria-hidden='true'></img>
+                <img src={Cube} aria-hidden='true' loading="lazy"></img>
             </div>
 
         </div>
