@@ -5,6 +5,13 @@ class CookiesPrivacy extends React.Component {
   Button = (CP) => {
     return <button onClick={this.hideCookies}>ACCEPT</button>;
   };
+  componentDidMount(){
+    setTimeout(() => {
+      document.getElementById("CookiesPrivacy").style= `
+      visibility:visible;
+      transform: translateY(0%);`
+    },6000);
+  }
   hideCookies = () => {
     document.getElementById("CookiesPrivacy").style.display = "none";
   };

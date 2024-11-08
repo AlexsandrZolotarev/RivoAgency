@@ -2,50 +2,56 @@ const CHANGE_COUNTER_PLUS = "CHANGE-COUNTER-PLUS";
 const CHANGE_COUNTER_MINUS = "CHANGE-COUNTER-MINUS";
 const CHANGE_COUNTER = "CHANGE_COUNTER";
 const SET_CARDS = "SET-CARDS";
-let initialState = { 
-    album: [],
+let initialState = {
+  album: [],
   counterAlbum: 1,
-}
+};
+
 const ordersReducer = (state = initialState, action) => {
-
-  let copyState = {...state};
-  switch(action.type)
-    {
-      case CHANGE_COUNTER_PLUS:{
-        copyState.counterAlbum = {...state.counterAlbum };
-        copyState.album = [...state.album];
-        copyState.counterAlbum = state.counterAlbum;
-        if(copyState.counterAlbum >= copyState.album.at(-1).id) return state;
-        copyState.counterAlbum = state.counterAlbum + 1;
-        return copyState;
-      }
-      case CHANGE_COUNTER_MINUS:{
-        
-        copyState.counterAlbum = {...state.counterAlbum };
-        copyState.album = [...state.album];
-        copyState.counterAlbum = state.counterAlbum;
-        if(!(copyState.counterAlbum === 1)) copyState.counterAlbum = state.counterAlbum - 1;
-        return copyState;
-      }
-      case SET_CARDS:{
-        copyState.album = [...state.album];
-        copyState.album = action.cards;
-        return copyState;
-      
-      }
-      case CHANGE_COUNTER:{
-        copyState.counterAlbum = action.counterSlider + 1;
-        return copyState;
-      }
-      default :
-         return state;
+  let copyState = { ...state };
+  switch (action.type) {
+    case CHANGE_COUNTER_PLUS: {
+      copyState.counterAlbum = { ...state.counterAlbum };
+      copyState.album = [...state.album];
+      copyState.counterAlbum = state.counterAlbum;
+      if (copyState.counterAlbum >= copyState.album.at(-1).id) return state;
+      copyState.counterAlbum = state.counterAlbum + 1;
+      return copyState;
     }
-}
+    case CHANGE_COUNTER_MINUS: {
+      copyState.counterAlbum = { ...state.counterAlbum };
+      copyState.album = [...state.album];
+      copyState.counterAlbum = state.counterAlbum;
+      if (!(copyState.counterAlbum === 1))
+        copyState.counterAlbum = state.counterAlbum - 1;
+      return copyState;
+    }
+    case SET_CARDS: {
+      copyState.album = [...state.album];
+      copyState.album = action.cards;
+      return copyState;
+    }
+    case CHANGE_COUNTER: {
+      copyState.counterAlbum = action.counterSlider + 1;
+      return copyState;
+    }
+    default:
+      return state;
+  }
+};
 
-export const onChangeCounterPlus = (symbol) => ({type:CHANGE_COUNTER_PLUS, symbol: symbol});
-export const onChangeCounterMinus = (symbol) => ({type:CHANGE_COUNTER_MINUS, symbol: symbol});
-export const setCardsAC = (cards) => ({type:SET_CARDS, cards: cards});
-export const onChangeCounterAlbum = (counterSlider) => ({type:CHANGE_COUNTER, counterSlider: counterSlider});
-
+export const onChangeCounterPlus = (symbol) => ({
+  type: CHANGE_COUNTER_PLUS,
+  symbol: symbol,
+});
+export const onChangeCounterMinus = (symbol) => ({
+  type: CHANGE_COUNTER_MINUS,
+  symbol: symbol,
+});
+export const setCardsAC = (cards) => ({ type: SET_CARDS, cards: cards });
+export const onChangeCounterAlbum = (counterSlider) => ({
+  type: CHANGE_COUNTER,
+  counterSlider: counterSlider,
+});
 
 export default ordersReducer;

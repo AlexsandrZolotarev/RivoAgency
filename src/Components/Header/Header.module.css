@@ -19,16 +19,7 @@
   height: 75.47px;
   margin: 35px 35px 0px 65px;
 }
-.header__body::after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-  height: 1px;
-  background-color: #fddd0a;
-  opacity: 0.5;
-}
+
 .header__buttons_items {
   display: flex;
   padding: 0 40px;
@@ -266,16 +257,53 @@
   position: relative;
   margin-left: 50px;
   cursor: pointer;
+  a{
+    text-decoration: none;
+    color: white;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 500;
+  }
 }
-.headerMainMenu a {
-  color: white;
-  font-family: "Poppins", system-ui;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 18px;
+.headerMainMenu__list
+{
+  font-size: calc(32px + 16* (100vw / 1980));
+  cursor: pointer;
   position: relative;
+  color: white;
+  text-transform: uppercase;
+  width: 60%;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  a {
+    position: relative;
+    color: white;
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+  }
+  li {
+    margin: 2% 0;
+  }
 }
-
+.headerMainMenu__list a::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: -10px;
+  display: block;
+  width: 0%;
+  height: 1px;
+  background: #fddd0a;
+  transition: 0.3s;
+}
+.headerMainMenu__list a:hover:after {
+  width: 100%;
+}
+.headerMainMenu__list a:hover {
+  color: #fddd0a;
+  transition: 0.1s;
+}
 .hamburger {
   position: relative;
   padding-right: 20px;
@@ -285,7 +313,7 @@
 }
 .hamburger::before {
   content: "";
-  height: 2px;
+  height: 1.5px;
   top: 10px;
   float: left;
   background-color: rgb(255, 255, 255);
@@ -295,7 +323,7 @@
 }
 .hamburger::after {
   content: "";
-  height: 2px;
+  height: 1.5px;
   float: left;
   background-color: white;
   width: 30px;
@@ -309,7 +337,7 @@
   background-color: rgb(255, 255, 255);
   width: 17px;
   position: absolute;
-  transition: 0.2s ease-in-out;
+  transition: 0.2s ease;
 }
 .hamburger.active::before {
   content: "";
@@ -319,7 +347,7 @@
   background-color: rgb(255, 255, 255);
   width: 17px;
   position: absolute;
-  transition: 0.2s ease-in-out;
+  transition: 0.2s ease;
 }
 .hamburger.active::after {
   content: "";
@@ -353,16 +381,19 @@
 }
 
 .headerMainMenu__menu {
-  position: absolute;
+  position: fixed;
   display: none;
   top: 0;
   right: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
-  background-color: #c94545;
+  z-index: 30000;
+  background-color: #000000;
 }
-
+.hamburger__logotype
+{
+  margin: 40px;
+}
 @media screen and (max-width: 1240px) {
   .header__items {
     display: none;

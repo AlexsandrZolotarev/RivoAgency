@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import s from "./Orders.module.css";
 import { GoArrowLeft } from "react-icons/go";
 import { NavLink } from "react-router-dom";
@@ -58,26 +58,28 @@ class Orders extends React.Component {
   constructor(props) {
     super(props);
     this.Numbers = React.createRef();
-    this.SliderRef = React.createRef(null);
+    this.SliderRef = React.createRef();
   }
   componentDidMount(){
     axios
     .get("https://alexsandrzolotarev.github.io/api/encrypted.json")
     .then((response) => this.props.setCards(response.data.models));
   }
-  onChangeCounterPlus() {
+  onChangeCounterPlus = () => {
+
     this.props.changeCounterPlus(this);
     this.sliderRef.current.swiper.slideNext();
   }
-  onSlideChange() {
-    debugger;
+  onSlideChange = () => {
     this.props.changeCounterAlbum(this.sliderRef.current.swiper.activeIndex);
   }
-  onChangeCounterMinus() {
+  onChangeCounterMinus = () => {
+    debugger;
     this.props.onChangeCounterMinus(this);
     this.sliderRef.current.swiper.slidePrev();
   }
   render() {
+    let counterAlbum = this.props.album.at(-1)?.id ? this.props.album.at(-1).id : 4;
     return (
       <div className={s.Orders}>
         <div className={s.OrdersImgs}></div>
@@ -108,7 +110,7 @@ class Orders extends React.Component {
 
         <div className={s.OrdersBody} id="Album">
           <div className={s.OrdersBodyTitle}>
-            <p>Information</p>
+            <p>Information </p>
             <Swiper
               ref={this.sliderRef}
               slidesPerView={1}
@@ -133,10 +135,13 @@ class Orders extends React.Component {
             </Swiper>
           </div>
           <div className={s.OrdersBodyTitle__Title}>
-            <div ref={this.Numbers}>{`0${this.props.counterAlbum}/${
-              this.props.album.at(-1)?.id ? this.props.album.at(-1).id : 4
-            }`}</div>
-          </div>
+            <div ref={this.Numbers}>
+            {(this.props.counterAlbum <= 9) ? "0" + `${this.props.counterAlbum}/${counterAlbum}` :
+            `${this.props.counterAlbum}/${counterAlbum}`
+            }
+            
+            </div>
+          </div> 
           <div className={s.OrdersBodyButtons}>
             <button onClick={this.onChangeCounterMinus.bind("-")}>
               <GoArrowLeft />

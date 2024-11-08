@@ -11,13 +11,11 @@
 .wrapper_Footer__BodyMenuItemsWithVector {
   width: 50%;
   position: relative;
-  z-index: 50;
 }
 .wrapper_Footer__MenuItemsWithVector {
   width: 100%;
   display: flex;
   position: relative;
-  z-index: -1;
 }
 .wrapper_Footer__EllipseWithElement {
   width: 50%;

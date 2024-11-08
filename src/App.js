@@ -23,7 +23,9 @@ class App extends React.Component
   {
     return (
       <div className='wrapper'>
-
+      <div id='page-preloader' className='preloader'>
+        <div className='loader'></div>
+      </div> 
         <Header/>
         <div className='wrapper-content'>
           <Routes>

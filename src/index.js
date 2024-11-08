@@ -7,38 +7,47 @@ import store from './Redux/redux-store';
 import {Provider} from 'react-redux';
 
 
-function isVisible(elem) {
+// function isVisible(elem) {
 
-  let coords = elem.getBoundingClientRect();
+//   let coords = elem.getBoundingClientRect();
 
-  let windowHeight = document.documentElement.clientHeight;
+//   let windowHeight = document.documentElement.clientHeight;
 
-  // видны верхний ИЛИ нижний край элемента
-  let topVisible = coords.top > 0 && coords.top < windowHeight;
-  let bottomVisible = coords.bottom < windowHeight && coords.bottom > 0;
+//   // видны верхний ИЛИ нижний край элемента
+//   let topVisible = coords.top > 0 && coords.top < windowHeight;
+//   let bottomVisible = coords.bottom < windowHeight && coords.bottom > 0;
 
-  return topVisible || bottomVisible;
-}
+//   return topVisible || bottomVisible;
+// }
 
-function showVisible() {
-  for (let img of document.querySelectorAll('img')) {
-    let realSrc = img.dataset.src;
-    if (!realSrc) continue;
+// function showVisible() {
+//   for (let img of document.querySelectorAll('img')) {
+//     let realSrc = img.dataset.src;
+//     if (!realSrc) continue;
 
-    if (isVisible(img)) {
-      realSrc += '?nocache=' + Math.random();
+//     if (isVisible(img)) {
+//       realSrc += '?nocache=' + Math.random();
 
-      img.src = realSrc;
+//       img.src = realSrc;
 
-      img.dataset.src = '';
-    }
+//       img.dataset.src = '';
+//     }
+//   }
+// }
+
+// window.addEventListener('scroll', showVisible);
+// showVisible();
+
+function preloader()
+{
+  document.body.onload = () =>{
+    setTimeout(() => {
+      var preloader = document.getElementById('page-preloader');
+      if(!preloader.classList.contains('done')) preloader.classList.add('done');
+    }, 1000);
   }
 }
-
-window.addEventListener('scroll', showVisible);
-showVisible();
-
-
+preloader();
 ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter>
       <React.StrictMode>
