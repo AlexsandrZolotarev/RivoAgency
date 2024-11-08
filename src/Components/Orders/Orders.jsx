@@ -59,10 +59,11 @@ class Orders extends React.Component {
     super(props);
     this.Numbers = React.createRef();
     this.SliderRef = React.createRef(null);
-
+  }
+  componentDidMount(){
     axios
-      .get("https://alexsandrzolotarev.github.io/api/encrypted.json")
-      .then((response) => this.props.setCards(response.data.models));
+    .get("https://alexsandrzolotarev.github.io/api/encrypted.json")
+    .then((response) => this.props.setCards(response.data.models));
   }
   onChangeCounterPlus() {
     this.props.changeCounterPlus(this);

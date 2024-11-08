@@ -1,8 +1,10 @@
 import React from 'react'
 import s from './Expertise.module.css'
-export default function Expertise() {
-  return (
-    <div>Expertise</div>
-  )
+class Expertise extends React.Component {
+  render(){
+    return (
+      <div>Expertise</div>
+    );
+  }
 }
-
+export default Expertise;

@@ -6,72 +6,75 @@ import jotul from "..//img/Projects/Jotul.webp";
 import saltmine from "..//img/Projects/Saltmine.webp";
 import skylineEnergy from "..//img/Projects/SkylineEnergy.webp";
 import { MdArrowOutward } from "react-icons/md";
+class Projects extends React.Component {
+  render() {
+    return (
+      <div className={s.wrapper_Projects}>
+        <div className={s.wrapper_Projects_container}>
+          <div className={s.wrapper_Projects__title}>
+            <p>Projects</p>
+            <p>Projects</p>
+          </div>
+          <div className={s.wrapper_Projects__body}>
+            <div className={s.wrapper_Projects__container}>
+              <div className={s.wrapper_Projects__project}>
+                <div className={s.wrapper_Projects_body_title}>
+                  <p>Mens</p>
+                </div>
+                <div className={s.wrapper_Projects_body_project}>
+                  <img alt="Mens" src={mens} loading="lazy"></img>
+                </div>
+              </div>
 
-export default function Projects() {
-  return (
-    <div className={s.wrapper_Projects}>
-      <div className={s.wrapper_Projects_container}>
-        <div className={s.wrapper_Projects__title}>
-          <p>Projects</p>
-          <p>Projects</p>
-        </div>
-        <div className={s.wrapper_Projects__body}>
-          <div className={s.wrapper_Projects__container}>
-            <div className={s.wrapper_Projects__project}>
-              <div className={s.wrapper_Projects_body_title}>
-                <p>Mens</p>
+              <div className={s.wrapper_Projects__project}>
+                <div className={s.wrapper_Projects_body_title}>
+                  <p>Saltmine</p>
+                </div>
+                <div className={s.wrapper_Projects_body_project}>
+                  <img alt="Saltmine" src={saltmine} loading="lazy"></img>
+                </div>
               </div>
-              <div className={s.wrapper_Projects_body_project}>
-                <img alt="Mens" src={mens} loading="lazy"></img>
-              </div>
-            </div>
 
-            <div className={s.wrapper_Projects__project}>
-              <div className={s.wrapper_Projects_body_title}>
-                <p>Saltmine</p>
+              <div className={s.wrapper_Projects__project}>
+                <div className={s.wrapper_Projects_body_title}>
+                  <p>Haul Cars</p>
+                </div>
+                <div className={s.wrapper_Projects_body_project}>
+                  <img alt="Haul Cars" src={haulCars} loading="lazy"></img>
+                </div>
               </div>
-              <div className={s.wrapper_Projects_body_project}>
-                <img alt="Saltmine" src={saltmine} loading="lazy"></img>
-              </div>
-            </div>
 
-            <div className={s.wrapper_Projects__project}>
-              <div className={s.wrapper_Projects_body_title}>
-                <p>Haul Cars</p>
+              <div className={s.wrapper_Projects__project}>
+                <div className={s.wrapper_Projects_body_title}>
+                  <p>Skyline Energy</p>
+                </div>
+                <div className={s.wrapper_Projects_body_project}>
+                  <img
+                    alt="Skyline Energy"
+                    src={skylineEnergy}
+                    loading="lazy"
+                  ></img>
+                </div>
               </div>
-              <div className={s.wrapper_Projects_body_project}>
-                <img alt="Haul Cars" src={haulCars} loading="lazy"></img>
-              </div>
-            </div>
 
-            <div className={s.wrapper_Projects__project}>
-              <div className={s.wrapper_Projects_body_title}>
-                <p>Skyline Energy</p>
-              </div>
-              <div className={s.wrapper_Projects_body_project}>
-                <img
-                  alt="Skyline Energy"
-                  src={skylineEnergy}
-                  loading="lazy"
-                ></img>
-              </div>
-            </div>
-
-            <div className={s.wrapper_Projects__project}>
-              <div className={s.wrapper_Projects_body_title}>
-                <p>Jotul</p>
-              </div>
-              <div className={s.wrapper_Projects_body_project}>
-                <img alt="Jotul" src={jotul} loading="lazy"></img>
+              <div className={s.wrapper_Projects__project}>
+                <div className={s.wrapper_Projects_body_title}>
+                  <p>Jotul</p>
+                </div>
+                <div className={s.wrapper_Projects_body_project}>
+                  <img alt="Jotul" src={jotul} loading="lazy"></img>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div className={s.wrapper_Projects__button}>
-          <button>Show more cases</button>
-          <MdArrowOutward />
+          <div className={s.wrapper_Projects__button}>
+            <button>Show more cases</button>
+            <MdArrowOutward />
+          </div>
         </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
+
+export default Projects;

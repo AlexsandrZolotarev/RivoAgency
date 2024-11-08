@@ -15,10 +15,12 @@ let mapStateToProps = (state) => {
 let mapDispatchToProps = (dispatch) => {
   return {
     buttonPlayChange : (obj) => {
+      debugger;
         let action = buttonPlayOnChange(obj);
         dispatch(action);
     },
     updateVolume: (obj) => {
+      debugger;
       let action = volumeChangeActionCreator(obj);
       dispatch(action);
     },
