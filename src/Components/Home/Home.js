@@ -1,14 +1,14 @@
 import React from "react";
 import s from "./Home.module.css";
-import cube from ".//../img/ElementCube.png";
+import cube from ".//../img/ElementCube.webp";
 import { PiArrowDownLight } from "react-icons/pi";
-import ElementLeft from ".//../img/HomePage/WeWhoWeAre/ElementLeft.png";
-import ElementLeft2 from ".//../img/HomePage/WeWhoWeAre/ElementLeft2.png";
-import ElementRight from ".//../img/HomePage/WeWhoWeAre/ElementRight.png";
-import Vector from ".//../img/HomePage/WeWhoWeAre/Vector3Right.png";
-import Cloch from ".//../img/HomePage/WeWhoWeAre/Cloch_icon.png";
-import Cube from ".//../img/HomePage/WeWhoWeAre/Center.png";
-import Poster from ".//../img/HomePage/VideoPoster.jpeg";
+import ElementLeft from ".//../img/HomePage/WeWhoWeAre/ElementLeft.webp";
+import ElementLeft2 from ".//../img/HomePage/WeWhoWeAre/ElementLeft2.webp";
+import ElementRight from ".//../img/HomePage/WeWhoWeAre/ElementRight.webp";
+import Vector from ".//../img/HomePage/WeWhoWeAre/Vector3Right.webp";
+import Cloch from ".//../img/HomePage/WeWhoWeAre/Cloch_icon.webp";
+import Cube from ".//../img/HomePage/WeWhoWeAre/Center.webp";
+import Poster from ".//../img/HomePage/VideoPoster.webp";
 import videoWebm from ".//../video/whoWeAreVideo.webm";
 
 export default function Home(props) {

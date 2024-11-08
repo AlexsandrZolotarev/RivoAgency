@@ -19,7 +19,7 @@ html,body{
 	-ms-text-size-adjust: 100%;
 	-moz-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
-	cursor: url('./Components/img/Icons/pointinghand.png');
+	cursor: url('./Components/img/Icons/pointinghand.webp');
 	scroll-behavior: smooth;
 }
 *::-webkit-scrollbar 

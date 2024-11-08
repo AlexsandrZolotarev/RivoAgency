@@ -1,10 +1,10 @@
 import React from "react";
 import s from "./Projects.module.css";
-import mens from "..//img/Projects/Mens.png";
-import haulCars from "..//img/Projects/HaulCars.png";
-import jotul from "..//img/Projects/Jotul.png";
-import saltmine from "..//img/Projects/Saltmine.png";
-import skylineEnergy from "..//img/Projects/SkylineEnergy.png";
+import mens from "..//img/Projects/Mens.webp";
+import haulCars from "..//img/Projects/HaulCars.webp";
+import jotul from "..//img/Projects/Jotul.webp";
+import saltmine from "..//img/Projects/Saltmine.webp";
+import skylineEnergy from "..//img/Projects/SkylineEnergy.webp";
 import { MdArrowOutward } from "react-icons/md";
 
 export default function Projects() {

@@ -18,7 +18,7 @@
 }
 .HomeImgs
 {
-    background: linear-gradient(to bottom, rgba(0,0,0,0) 10%, rgba(0,0,0,1)), url(/src/Components/img/HomePage/Expiriens.jpg) no-repeat,
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 10%, rgba(0,0,0,1)), url(/src/Components/img/HomePage/Expiriens.webp) no-repeat,
     linear-gradient(to top, black -15%, transparent 90%);
     background-clip: border-box;
     background-origin:border-box;
@@ -216,7 +216,7 @@
     right: -10px; 
     top: 42%;
     margin-inline: auto; 
-    background: url(../img//Icons/Play_icon.png) 100% no-repeat;
+    background: url(../img//Icons/whoWeArePlay_icon.webp) 100% no-repeat;
     border: 0;
     transition: all 500ms ease;
     z-index: 100;

@@ -1,8 +1,8 @@
 import React from 'react'
 import s from './Services.module.css'
-import item1 from '../img/Services/Custom_development_icon.png'
-import item2 from '../img/Services/Mobile_development_icon.png'
-import item3 from '../img/Services/Web_development_icon.png'
+import item1 from '../img/Services/Custom_development_icon.webp'
+import item2 from '../img/Services/Mobile_development_icon.webp'
+import item3 from '../img/Services/Web_development_icon.webp'
 import { HiMiniArrowUpRight } from "react-icons/hi2";
 export default function Services() {
   return (

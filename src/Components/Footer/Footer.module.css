@@ -92,7 +92,7 @@
 }
 
 .wrapper_Footer__Elements{
-    background-image: url(/src/Components/img/Elementbig.png);
+    background-image: url(/src/Components/img/Elementbig.webp);
     width: 90%;
     position: relative;
     background-position: center;
@@ -182,14 +182,14 @@
             position: absolute;
             right: 0;
             top: 0%;
-            content: url(/src/Components/img/Element.png);
+            content: url(/src/Components/img/Element.webp);
         }
         nav::before
         {
             position: absolute;
             right: 0;
             bottom: 15%;
-            content: url(/src/Components/img/ElementCube.png);
+            content: url(/src/Components/img/ElementCube.webp);
         }
     }
 }
@@ -235,14 +235,14 @@
             position: absolute;
             right: 0;
             top: 0%;
-            content: url(/src/Components/img/ElementFooterMini.png);
+            content: url(/src/Components/img/ElementFooterMini.webp);
         }
         nav::before
         {
             position: absolute;
             right: 0;
             bottom: 15%;
-            content: url(/src/Components/img/ElementCubeFooterMini.png);
+            content: url(/src/Components/img/ElementCubeFooterMini.webp);
         }
     }
     

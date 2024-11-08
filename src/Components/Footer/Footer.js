@@ -1,8 +1,8 @@
 import React from 'react'
 import s from'./Footer.module.css'
-import Vector from '..//img/Vector 2.png'
-import Ellipse from '..//img/Element1.png'
-import Cube from '..//img/whoWeAreElement.png'
+import Vector from '..//img/Vector 2.webp'
+import Ellipse from '..//img/Element1.webp'
+import Cube from '..//img/whoWeAreElement.webp'
 import { NavLink } from 'react-router-dom'
 export default function Footer() {
   return (
