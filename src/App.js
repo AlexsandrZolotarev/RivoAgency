@@ -27,7 +27,7 @@ class App extends React.Component
         <div className='loader'></div>
       </div> 
         <Header/>
-        <div className='wrapper-content'>
+        <main className='wrapper-content'>
           <Routes>
             <Route path ='/RivoAgancy' element ={<HomeContainer/>}>
             </Route>
@@ -44,10 +44,10 @@ class App extends React.Component
             <Route path ='/Orders' element ={<OrdersContainer/>}>
             </Route>
           </Routes>
-        </div>
+        </main>
         <Footer/>  
        <CookiesPrivacy/>
-              <a className='ContactUs' href='#Footer' aria-label='Contacts'>
+              <a className='ContactUs' href='#Footer' aria-label='Contacts' id='ContactUs'>
                 <img alt='' src={ContactsUs} aria-hidden='true'></img>
                 <img alt='' src={Arrow} aria-hidden='true'></img>
               </a>

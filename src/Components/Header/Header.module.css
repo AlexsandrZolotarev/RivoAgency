@@ -236,6 +236,12 @@
   font-weight: 500;
   font-family: "Poppins", system-ui;
 }
+.hamburger:focus{
+  nav{
+    font-size: 50px;
+  }
+ 
+}
 .makeOrder_Button {
   color: #fddd0a;
   display: flex;
@@ -286,6 +292,13 @@
     margin: 2% 0;
   }
 }
+.headerMainMenu:hover{
+
+  .hamburger::before
+  {
+    width: 30px;
+  }
+}
 .headerMainMenu__list a::after {
   position: absolute;
   content: "";
@@ -329,34 +342,7 @@
   width: 30px;
   position: absolute;
 }
-#hamburger .active::before {
-  content: "";
-  height: 20px;
-  top: 10px;
-  float: left;
-  background-color: rgb(255, 255, 255);
-  width: 17px;
-  position: absolute;
-  transition: 0.2s ease;
-}
-.hamburger.active::before {
-  content: "";
-  height: 20px;
-  top: 10px;
-  float: left;
-  background-color: rgb(255, 255, 255);
-  width: 17px;
-  position: absolute;
-  transition: 0.2s ease;
-}
-.hamburger.active::after {
-  content: "";
-  height: 20px;
-  float: left;
-  background-color: white;
-  width: 30px;
-  position: absolute;
-}
+
 .header__items_sub-list {
   position: absolute;
   top: 100%;
@@ -369,15 +355,6 @@
   transition: all 0.3s ease 0s;
   min-width: 200px;
   min-height: 300px;
-}
-.header__items_sub-list li {
-  margin: 15px 0px;
-}
-.header__items_sub-list li:first-child {
-  margin: 0px;
-}
-.header__items_sub-list li:last-child {
-  margin: 0px 0px;
 }
 
 .headerMainMenu__menu {

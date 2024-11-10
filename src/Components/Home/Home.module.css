@@ -3,7 +3,7 @@
   white-space: nowrap;
   z-index: 49;
   color: white;
-  margin-bottom: 20%;
+  margin-bottom: 10%;
   width: 100%;
   height: auto;
 }
@@ -22,15 +22,15 @@
   background-size: auto;
   opacity: 0.6;
   background-size: 100% calc(70% / 2);
-  width: 100%;
-  height: calc(200% / 2);
   position: absolute;
-  top: 0%;
+  top: -35%;
   transition: transform 0.5s ease;
-}
-
-.HomeCointaner {
   width: 100%;
+  height: 180%;
+}
+.HomeCointaner
+{
+  position: relative;
 }
 .HomeTitle {
   text-transform: uppercase;
@@ -63,8 +63,6 @@
     -webkit-text-stroke: 0.7px rgb(255, 255, 255);
     -webkit-background-clip: text;
   }
-}
-.HomeTitle:first-child {
 }
 .HomeTitleCube {
   margin-top: 13%;
@@ -203,7 +201,7 @@
 }
 
 .WeWhoWeAreContainerMain__title {
-  font-size: calc(52px + 24 * (100vw / 1980));
+  font-size: calc(36px + 24 * (100vw / 1980));
   font-family: "Poppins";
   font-weight: 600;
   text-transform: uppercase;
@@ -216,7 +214,7 @@
     -webkit-text-stroke: 0.5px rgb(255, 255, 255, 0.2);
     font-weight: bold;
     display: block;
-    font-size: calc(80px + 24 * (100vw / 1980));
+    font-size: calc(60px + 24 * (100vw / 1980));
   }
 }
 .WeWhoWeAreContainerMain__textWithClutch {
@@ -229,11 +227,11 @@
 .WeWhoWeAreContainerMain__textWithClutch_body {
   color: #b6b6b6;
   font-family: "Alexandria";
-  font-size: calc(14px + 2 * (100vw / 1980));
+  font-size: calc(12px + 2 * (100vw / 1980));
   line-height: 25.5px;
   text-wrap: pretty;
   :first-child {
-    font-size: calc(19px + 5 * (100vw / 1980));
+    font-size: calc(17px + 5 * (100vw / 1980));
     font-family: "Poppins";
     color: white;
   }
@@ -256,7 +254,6 @@
 @media screen and (min-width: 1450px) {
   .HomeImgs {
     background-size: 100% 100%;
-    height: 100%;
   }
 }
 
@@ -268,7 +265,6 @@
 @media screen and (max-width: 1450px) {
   .HomeImgs {
     background-size: 100% 70%;
-    height: 85%;
   }
   .WeWhoWeAreContainerLeft {
     display: none;
@@ -281,9 +277,9 @@
     margin: 0 5%;
   }
   .WeWhoWeAreContainerMain__title {
-    font-size: calc(52px + 7 * (100vw / 1980));
+    font-size: calc(36px + 7 * (100vw / 1980));
     :last-child {
-      font-size: calc(80px + 5 * (100vw / 1980));
+      font-size: calc(60px + 5 * (100vw / 1980));
     }
   }
 
@@ -317,7 +313,6 @@
   }
   .HomeImgs {
     background-size: 100% 70%;
-    height: 60%;
   }
   .HomeTitleWithCube {
     margin: 0;

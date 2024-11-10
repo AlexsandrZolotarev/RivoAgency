@@ -90,10 +90,10 @@ class Expertise extends React.Component {
       <div className={s.Career}>
         <div className={s.Wrapper_Career}>
           <div className={s.Wrapper_Career__Title}>
-            <div className={s.Wrapper_Career__Title_name}>
+            <header className={s.Wrapper_Career__Title_name}>
               <p>Career</p>
               <p>Career</p>
-            </div>
+            </header>
             <div className={s.Wrapper_Career__Title_title}>
               <p>Interested in joining our team?</p>
               <p>
@@ -104,9 +104,9 @@ class Expertise extends React.Component {
             </div>
           </div>
           <div className={s.Wrapper_Career__Vacancies}>
-            <div className={s.Wrapper_Career__Vacancies_title}>
+            <header className={s.Wrapper_Career__Vacancies_title}>
               <p>Current vacancies</p>
-            </div>
+            </header>
             <div className={s.Wrapper_Career__Vacancies_vacancies}>
               <ul className={s.vacancies}>
                 {this.props.careerVacancies.map((v) => (

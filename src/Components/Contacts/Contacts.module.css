@@ -9,6 +9,7 @@
   color: white;
   font-family: "Alexandria", sans-serif;
   font-family: "Poppins";
+  display: none;
 }
 .contactsTitle {
   width: 100%;

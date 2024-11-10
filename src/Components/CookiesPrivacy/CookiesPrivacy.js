@@ -2,7 +2,7 @@ import React from "react";
 import s from "./CookiesPrivacy.module.css";
 
 class CookiesPrivacy extends React.Component {
-  Button = (CP) => {
+  Button = () => {
     return <button onClick={this.hideCookies}>ACCEPT</button>;
   };
   componentDidMount(){
@@ -10,9 +10,11 @@ class CookiesPrivacy extends React.Component {
       document.getElementById("CookiesPrivacy").style= `
       visibility:visible;
       transform: translateY(0%);`
+      document.getElementById("ContactUs").style.bottom = '10%';
     },6000);
   }
   hideCookies = () => {
+    document.getElementById("ContactUs").style.bottom = '1%';
     document.getElementById("CookiesPrivacy").style.display = "none";
   };
   render() {
@@ -27,7 +29,7 @@ class CookiesPrivacy extends React.Component {
         </div>
         <div className={s.CookiesPrivacy_body__informationBody}>
           <p>More information</p>
-          <this.Button />
+          <this.Button/>
         </div>
       </div>
     );

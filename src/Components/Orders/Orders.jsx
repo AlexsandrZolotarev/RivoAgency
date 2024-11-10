@@ -92,12 +92,12 @@ class Orders extends React.Component {
               </div>
             </NavLink>
             <div className={s.OrdersTitleBody}>
-              <div className={s.OrdersTitleBodyMenu}>
+              <header className={s.OrdersTitleBodyMenu}>
                 <p>Menu</p>
                 <p>
                   We offers everything you need to make every journey your own.
                 </p>
-              </div>
+              </header>
               <div className={s.OrdersTitleBodyButton}>
                 <a href="#Album">
                   <PiArrowDownLight className={s.OrdersTitleBodyButtonArrow} />
@@ -110,7 +110,7 @@ class Orders extends React.Component {
 
         <div className={s.OrdersBody} id="Album">
           <div className={s.OrdersBodyTitle}>
-            <p>Information </p>
+            <header>Information </header>
             <Swiper
               ref={this.sliderRef}
               slidesPerView={1}

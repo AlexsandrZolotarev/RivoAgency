@@ -3,8 +3,6 @@ import { MdArrowOutward } from "react-icons/md";
 import { GoChevronDown } from "react-icons/go";
 import { NavLink } from "react-router-dom";
 import s from "./Header.module.css";
-import { slide as Menu } from "react-burger-menu";
-
 class Header extends React.Component {
   constructor(props) {
     super(props);
@@ -15,7 +13,7 @@ class Header extends React.Component {
   };
   render() {
     return (
-      <header className={s.header}>
+      <header className={s.header} id="header">
         <div className={s.container}>
           <div className={s.header__body}>
             <NavLink to={"/RivoAgancy"} aria-label="Home Page">
@@ -107,8 +105,10 @@ class Header extends React.Component {
                           </li>
                         </ul>
                       </ul>
+
                       <GoChevronDown className="Expertise_GoChevronDown" />
                     </nav>
+                   
                   </li>
                   <li>
                     <NavLink to={"/Contacts"}>Contacts</NavLink>
@@ -124,14 +124,10 @@ class Header extends React.Component {
                 <p>MAKE ORDER</p>
                 <MdArrowOutward className="makeOrder_Button__arrow" />
               </NavLink>
-              <div
-                ref={this.menuBurger}
-                onClick={this.getMenuBurger}
-                className={s.headerMainMenu}
-              >
+              <div className={s.headerMainMenu}>
                 <div className={s.hamburger} id="hamburger"></div>
                 <NavLink to={"/RivoAgancy"}>MENU</NavLink>
-                <Menu>
+                
                   <nav className={s.headerMainMenu__menu}>
                     <ul className={s.headerMainMenu__list}>
                       <svg
@@ -187,7 +183,7 @@ class Header extends React.Component {
                       </li>
                     </ul>
                   </nav>
-                </Menu>
+                
               </div>
             </div>
           </div>

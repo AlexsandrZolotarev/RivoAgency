@@ -57,7 +57,7 @@
     
     height: 100%;
     width: 100%;
-    p:first-child
+    header:first-child
     {
         font-size: 52px;
         font-family: 'Poppins';
@@ -127,10 +127,6 @@
 }
 .swiper {
     width: 120%;
-}
-.OrdersBodyTitleAlbum
-{
- 
 }
 .OrdersBodyTitleAlbum tbody th:nth-child(even)
 {
@@ -324,13 +320,10 @@
     {
         display: none;
     }
-    .OrdersBodyTitle
+    .OrdersBodyTitle:first-child
     {
-        p:first-child
-        {
-            font-size: 30px;
-            margin-bottom: 10px;
-        }
+        font-size: 30px;
+        margin-bottom: 10px;     
     }
     .OrdersBodyTitleAlbum
     {

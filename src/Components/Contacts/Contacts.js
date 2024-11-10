@@ -20,10 +20,10 @@ class Contacts extends React.Component {
   render() {
     return (
       <section className={s.contacts} name="Contacts" id="Contacts">
-        <article className={s.contactsTitle}>
+        <header className={s.contactsTitle}>
           <p>Contacts</p>
           <p>Contacts</p>
-        </article>
+        </header>
         <article className={s.contactsBody}>
           <div className={s.contactsBodyFieds}>
             <div className={s.contactsBodyFieds__name}>

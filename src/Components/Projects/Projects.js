@@ -9,70 +9,68 @@ import { MdArrowOutward } from "react-icons/md";
 class Projects extends React.Component {
   render() {
     return (
-      <div className={s.wrapper_Projects}>
+      <section className={s.wrapper_Projects}>
         <div className={s.wrapper_Projects_container}>
-          <div className={s.wrapper_Projects__title}>
-            <p>Projects</p>
-            <p>Projects</p>
+          <header className={s.wrapper_Projects__title}>
+            <h2>Projects</h2>
+            <h2>Projects</h2>
+          </header>
+            <section className={s.wrapper_Projects__body}>
+                <a className={s.wrapper_Projects__project}>
+                  <h3>Mens</h3>
+                  <div className={s.wrapper_Projects_body_project}>
+                    <picture>
+                      <img alt="Mens" src={mens} loading="lazy"></img>
+                    </picture>
+                  </div>
+                </a>
+
+                <article className={s.wrapper_Projects__project}>
+                  <div className={s.wrapper_Projects_body_title}>
+                    <header>Saltmine</header>
+                  </div>
+                  <div className={s.wrapper_Projects_body_project}>
+                    <img alt="Saltmine" src={saltmine} loading="lazy"></img>
+                  </div>
+                </article>
+
+                <article className={s.wrapper_Projects__project}>
+                  <div className={s.wrapper_Projects_body_title}>
+                    <header>Haul Cars</header>
+                  </div>
+                  <div className={s.wrapper_Projects_body_project}>
+                    <img alt="Haul Cars" src={haulCars} loading="lazy"></img>
+                  </div>
+                </article>
+
+                <article className={s.wrapper_Projects__project}>
+                  <div className={s.wrapper_Projects_body_title}>
+                    <header>Skyline Energy</header>
+                  </div>
+                  <div className={s.wrapper_Projects_body_project}>
+                    <img
+                      alt="Skyline Energy"
+                      src={skylineEnergy}
+                      loading="lazy"
+                    ></img>
+                  </div>
+                </article>
+
+                <article className={s.wrapper_Projects__project}>
+                  <div className={s.wrapper_Projects_body_title}>
+                    <header>Jotul</header>
+                  </div>
+                  <div className={s.wrapper_Projects_body_project}>
+                    <img alt="Jotul" src={jotul} loading="lazy"></img>
+                  </div>
+                </article>
+            </section>
           </div>
-          <div className={s.wrapper_Projects__body}>
-            <div className={s.wrapper_Projects__container}>
-              <div className={s.wrapper_Projects__project}>
-                <div className={s.wrapper_Projects_body_title}>
-                  <p>Mens</p>
-                </div>
-                <div className={s.wrapper_Projects_body_project}>
-                  <img alt="Mens" src={mens} loading="lazy"></img>
-                </div>
-              </div>
-
-              <div className={s.wrapper_Projects__project}>
-                <div className={s.wrapper_Projects_body_title}>
-                  <p>Saltmine</p>
-                </div>
-                <div className={s.wrapper_Projects_body_project}>
-                  <img alt="Saltmine" src={saltmine} loading="lazy"></img>
-                </div>
-              </div>
-
-              <div className={s.wrapper_Projects__project}>
-                <div className={s.wrapper_Projects_body_title}>
-                  <p>Haul Cars</p>
-                </div>
-                <div className={s.wrapper_Projects_body_project}>
-                  <img alt="Haul Cars" src={haulCars} loading="lazy"></img>
-                </div>
-              </div>
-
-              <div className={s.wrapper_Projects__project}>
-                <div className={s.wrapper_Projects_body_title}>
-                  <p>Skyline Energy</p>
-                </div>
-                <div className={s.wrapper_Projects_body_project}>
-                  <img
-                    alt="Skyline Energy"
-                    src={skylineEnergy}
-                    loading="lazy"
-                  ></img>
-                </div>
-              </div>
-
-              <div className={s.wrapper_Projects__project}>
-                <div className={s.wrapper_Projects_body_title}>
-                  <p>Jotul</p>
-                </div>
-                <div className={s.wrapper_Projects_body_project}>
-                  <img alt="Jotul" src={jotul} loading="lazy"></img>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className={s.wrapper_Projects__button}>
+          <section className={s.wrapper_Projects__button}>
             <button>Show more cases</button>
             <MdArrowOutward />
-          </div>
-        </div>
-      </div>
+          </section>
+      </section>
     );
   }
 }

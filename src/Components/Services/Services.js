@@ -9,19 +9,19 @@ class Services extends React.Component {
   render() {
     return (
       <div className={s.Service}>
-        <div className={s.ServiceTitle}>
+        <header className={s.ServiceTitle}>
           <p>Services</p>
           <p>Services</p>
-        </div>
+        </header>
         <div className={s.ServiceItems}>
           <div className={s.ContainerServiceItems}>
             <div className={s.ServiceItem + " Item"}>
               <div className={s.ServiceItem_Icon}>
                 <img src={item3} aria-hidden="true"></img>
               </div>
-              <div className={s.ServiceItem_Title}>
+              <header className={s.ServiceItem_Title}>
                 <p>Web Development</p>
-              </div>
+              </header>
               <div className={s.ServiceItem_Text}>
                 <p>
                   Start developing your software with us to increase your
@@ -40,9 +40,9 @@ class Services extends React.Component {
               <div className={s.ServiceItem_Icon}>
                 <img src={item2} aria-hidden="true"></img>
               </div>
-              <div className={s.ServiceItem_Title}>
+              <header className={s.ServiceItem_Title}>
                 <p>Mobile Development</p>
-              </div>
+              </header>
               <div className={s.ServiceItem_Text}>
                 <p>
                   Request mobile apps development at Rivo Agency to expose your
@@ -61,9 +61,9 @@ class Services extends React.Component {
               <div className={s.ServiceItem_Icon}>
                 <img src={item1} aria-hidden="true"></img>
               </div>
-              <div className={s.ServiceItem_Title}>
+              <header className={s.ServiceItem_Title}>
                 <p>Custom Software</p>
-              </div>
+              </header>
               <div className={s.ServiceItem_Text}>
                 <p>
                   Using strong expertise across various technology stacks and

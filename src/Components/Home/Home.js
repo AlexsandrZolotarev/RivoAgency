@@ -1,16 +1,16 @@
 import React from "react";
 import s from "./Home.module.css";
-import cube from ".//../img/ElementCube.webp";
 import { PiArrowDownLight } from "react-icons/pi";
-import ElementLeft from ".//../img/HomePage/WeWhoWeAre/ElementLeft.webp";
-import ElementLeft2 from ".//../img/HomePage/WeWhoWeAre/ElementLeft2.webp";
-import ElementRight from ".//../img/HomePage/WeWhoWeAre/ElementRight.webp";
-import Vector from ".//../img/HomePage/WeWhoWeAre/Vector3Right.webp";
-import Cloch from ".//../img/HomePage/WeWhoWeAre/Cloch_icon.webp";
-import Cube from ".//../img/HomePage/WeWhoWeAre/Center.webp";
+import ElementLeft from ".//../img/HomePage/WeWhoWeAre/ElementLeft.svg";
+import ElementLeft2 from ".//../img/HomePage/WeWhoWeAre/ElementLeftBig.svg";
+import ElementRight from ".//../img/HomePage/WeWhoWeAre/ElementRight.svg";
+import Vector from ".//../img/HomePage/WeWhoWeAre/Vector.svg";
+import Cloch from ".//../img/HomePage/WeWhoWeAre/Cloch.svg";
+import Cube from ".//../img/HomePage/WeWhoWeAre/Cube.svg";
 import Poster from ".//../img/HomePage/VideoPoster.webp";
 import videoWebm from ".//../video/whoWeAreVideo.webm";
-
+import Contacts from "../Contacts/Contacts";
+import Projects from "../Projects/Projects";
 class Orders extends React.Component {
   constructor(props)
   {
@@ -29,19 +29,19 @@ class Orders extends React.Component {
   render()
   {
     return (
-      <div className={s.Home}>
-        <div className={s.HomeCointaner}>
+      <section className={s.Home}>
+        <section className={s.HomeCointaner}>
           <div className={s.HomeImgs}></div>
           <div className={s.HomeTitleWithCube}>
             <div className={s.HomeTitle}>
-              <p>We are rivo agency</p>
-              <p>We help</p>
-              <p>Ideas</p>
-              <p>To Change</p>
-              <p>The world</p>
+              <h2>We are rivo agency</h2>
+              <h2>We help</h2>
+              <h2>Ideas</h2>
+              <h2>To Change</h2>
+              <h2>The world</h2>
             </div>
             <div className={s.HomeTitleCube}>
-              <img alt="" aria-hidden="true" src={cube}></img>
+              <img alt="" aria-hidden="true" src={Cube}></img>
             </div>
           </div>
           <div className={s.HomeButton}>
@@ -49,21 +49,21 @@ class Orders extends React.Component {
               <PiArrowDownLight />
             </a>
           </div>
-        </div>
-        <div className={s.WeWhoWeAreContainer} id="WeWhoWeAre">
-          <div className={s.WeWhoWeAreContainerLeft}>
+        </section>
+        <article className={s.WeWhoWeAreContainer} id="WeWhoWeAre">
+          <article className={s.WeWhoWeAreContainerLeft}>
             <img src={ElementLeft} aria-hidden="true" loading="lazy"></img>
             <img src={ElementLeft2} aria-hidden="true" loading="lazy"></img>
-          </div>
+          </article>
   
-          <div className={s.WeWhoWeAreContainerMain}>
-            <div className={s.WeWhoWeAreContainerMain__title}>
-              <p>Who we are?</p>
-              <p>Who we are?</p>
-            </div>
+          <section className={s.WeWhoWeAreContainerMain}>
+            <header className={s.WeWhoWeAreContainerMain__title}>
+              <h2>Who we are?</h2>
+              <h2>Who we are?</h2>
+            </header>
             <div className={s.WeWhoWeAreContainerMain__body}>
               <div className={s.WeWhoWeAreContainerMain__textWithVideo}>
-                <p>Hi! We are a team of professionals</p>
+                <header><h2>Hi! We are a team of professionals</h2></header>
                 <p>
                   With proven expertise in delivering effective, secured and
                   high-quality digital solutions for various industries and
@@ -96,7 +96,7 @@ class Orders extends React.Component {
               </div>
               <div className={s.WeWhoWeAreContainerMain__textWithClutch}>
                 <div className={s.WeWhoWeAreContainerMain__textWithClutch_body}>
-                  <p>Our company</p>
+                  <header><h2>Our company</h2></header>
                   <p>
                     Offers development of different products starting from simple
                     promo websites for individuals or companies, and finishing
@@ -110,9 +110,10 @@ class Orders extends React.Component {
                   </p>
                 </div>
                 <div className={s.WeWhoWeAreContainerMain__Clutch}>
-                  <img src={Cloch} aria-hidden="true" loading="lazy"></img>
+                  <img alt="#" src={Cloch} aria-hidden="true"></img>
                 </div>
                 <img
+                  alt="#"
                   src={Cube}
                   className={s.cube}
                   aria-hidden="true"
@@ -120,14 +121,17 @@ class Orders extends React.Component {
                 ></img>
               </div>
             </div>
-          </div>
+          </section>
   
-          <div className={s.WeWhoWeAreContainerRight}>
-            <img src={ElementRight} loading="lazy"></img>
-            <img src={Vector} loading="lazy"></img>
-          </div>
-        </div>
-      </div>
+          <article className={s.WeWhoWeAreContainerRight}>
+            <img alt="#" src={ElementRight} loading="lazy"></img>
+            <img alt="#" src={Vector} loading="lazy"></img>
+          </article>
+        </article>
+        <Projects/>
+        <Contacts/>
+      </section>
+      
     );
   }
 }

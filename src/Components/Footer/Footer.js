@@ -8,7 +8,7 @@ import { NavLink } from "react-router-dom";
 class Footer extends React.Component {
   render() {
     return (
-      <div className={s.wrapper_Footer} id="Footer">
+      <footer className={s.wrapper_Footer} id="Footer">
         <div className={s.wrapper_Footer__BodyMenuItemsWithVector}>
           <div className={s.wrapper_Footer__MenuItemsWithVector}>
             <div className={s.wrapper_Footer__Vector}>
@@ -18,7 +18,7 @@ class Footer extends React.Component {
               <nav>
                 <ul>
                   <li>
-                    <NavLink to={"/RivoAgancy"}>HOME</NavLink>
+                    <NavLink to={"/RivoAgancy"} href="#header">HOME</NavLink>
                   </li>
                   <li>
                     <NavLink to={"/Services"}>Services</NavLink>
@@ -49,7 +49,7 @@ class Footer extends React.Component {
             <img src={Cube} aria-hidden="true" loading="lazy"></img>
           </div>
         </div>
-      </div>
+      </footer>
     );
   }
 }
