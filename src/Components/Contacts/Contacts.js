@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import s from "./Contacts.module.css";
 import { FaFacebookF } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa6";

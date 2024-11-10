@@ -1,6 +1,6 @@
 
 import React from 'react'
-import Orders from './Orders';
+import OrdersAPIComponent from './Orders';
 import { onChangeCounterPlus, onChangeCounterMinus, setCardsAC ,onChangeCounterAlbum} from '../../Redux/order-reducer';
 import { connect } from 'react-redux';
 
@@ -33,7 +33,7 @@ let mapDispatchToProps = (dispatch) => {
   }
 }
 
-const OrdersContainer = connect(mapStateToProps,mapDispatchToProps)(Orders);
+const OrdersContainer = connect(mapStateToProps,mapDispatchToProps)(OrdersAPIComponent);
 
  export default OrdersContainer;
 

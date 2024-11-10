@@ -367,10 +367,37 @@
   z-index: 30000;
   background-color: #000000;
 }
+.close{
+  display: block;
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+.close::after{
+  content: '';
+  position: absolute;
+  top: 10;
+  height: 2px;
+  width:20px;
+  transform: rotate(130deg);
+  color: white;
+  background-color: white;
+}
+.close::before{
+  content: '';
+  position: absolute;
+  top: 10px;
+  height: 2px;
+  transform: rotate(45deg);
+  width: 20px;
+  color: white;
+  background-color: white;
+}
 .hamburger__logotype
 {
   margin: 40px;
 }
+
 @media screen and (max-width: 1240px) {
   .header__items {
     display: none;
@@ -382,7 +409,6 @@
   }
   .header__body {
     margin: 0;
-    margin-left: 10px;
     width: 100%;
     align-items: center;
   }

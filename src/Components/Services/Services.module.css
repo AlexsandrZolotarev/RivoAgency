@@ -48,6 +48,8 @@ div[class~="ServiveButton"] {
     } */
 }
 .ServiceItem {
+  display: flex;
+  flex-direction: column;
   margin-top: 5%;
   .Item {
     margin-left: 20px;

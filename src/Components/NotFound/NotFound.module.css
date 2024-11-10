@@ -1,0 +1,79 @@
+.notFound {
+  display: flex;
+  width: 100%;
+  color: white;
+  min-height: 640px;
+  max-height: 750px;
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: calc(42px + 16 * (100vw / 1980));
+  line-height: 93.6px;
+}
+.notFound__left_content {
+  position: relative;
+  width: 30%;
+  z-index: 200;
+  background: url(/src/assets/NotFound/Elements\ big.svg) no-repeat center /
+    cover;
+  background-clip: border-box;
+  background-position: 50% center;
+  img {
+    position: absolute;
+    left: 28%;
+    padding: 1rem;
+    top: 40%;
+    transform: translate(-50%);
+  }
+}
+.notFound__main_content {
+  display: flex;
+  align-items: center;
+  position: relative;
+  flex-direction: column;
+  width: 40%;
+  margin-top: 8%;
+  z-index: 1;
+  text-align: center;
+  img {
+    max-width: 200px;
+    max-height: 200px;
+    margin-bottom: 10%;
+  }
+  header {
+    margin-left: 60px;
+  }
+  p {
+    font-size: calc(14px + 6 * (100vw / 1980));
+    line-height: 26px;
+    font-weight: 300;
+  }
+}
+.notFound__right_content {
+  width: 30%;
+  position: relative;
+  img {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+  }
+  z-index: 3;
+}
+
+@media screen and (max-width: 1067px) {
+  .notFound__left_content {
+    display: none;
+  }
+  .notFound__main_content {
+    width: 100%;
+  }
+  .notFound__right_content {
+    display: none;
+  }
+}
+@media screen and (max-width: 425px) {
+  .notFound__main_content * {
+    margin-left: -10%;
+  }
+}
+
+

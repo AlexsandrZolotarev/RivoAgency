@@ -8,9 +8,13 @@ class Header extends React.Component {
     super(props);
     this.menuBurger = React.createRef();
   }
-  getMenuBurger = () => {
-    this.menuBurger.current.firstChild.classList.toggle("active");
-  };
+  openMenuburger = () => {
+    document.getElementById('hamburger').style.display = 'flex';
+  }
+  closeMenuburger = () => {
+    document.getElementById('hamburger').style.display = 'none';
+    alert(1);
+  }
   render() {
     return (
       <header className={s.header} id="header">
@@ -124,11 +128,10 @@ class Header extends React.Component {
                 <p>MAKE ORDER</p>
                 <MdArrowOutward className="makeOrder_Button__arrow" />
               </NavLink>
-              <div className={s.headerMainMenu}>
-                <div className={s.hamburger} id="hamburger"></div>
+              <div className={s.headerMainMenu} onClick={this.openMenuburger} >
+                <div className={s.hamburger}></div>
                 <NavLink to={"/RivoAgancy"}>MENU</NavLink>
-                
-                  <nav className={s.headerMainMenu__menu}>
+                  <nav className={s.headerMainMenu__menu} id="hamburger">
                     <ul className={s.headerMainMenu__list}>
                       <svg
                         width="134"
@@ -182,6 +185,7 @@ class Header extends React.Component {
                         <NavLink to={"/Careers"}>Careers</NavLink>
                       </li>
                     </ul>
+                    <div className={s.close} id="close" onClick={this.closeMenuburger}></div>
                   </nav>
                 
               </div>

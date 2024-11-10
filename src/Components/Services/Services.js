@@ -1,21 +1,21 @@
 import React from "react";
 import s from "./Services.module.css";
-import item1 from "../img/Services/Custom_development_icon.webp";
-import item2 from "../img/Services/Mobile_development_icon.webp";
-import item3 from "../img/Services/Web_development_icon.webp";
+import item1 from "../../assets/Services/Custom_development_icon.webp";
+import item2 from "../../assets/Services/Mobile_development_icon.webp";
+import item3 from "../../assets/Services/Web_development_icon.webp";
 import { HiMiniArrowUpRight } from "react-icons/hi2";
 
 class Services extends React.Component {
   render() {
     return (
-      <div className={s.Service}>
+      <section className={s.Service}>
         <header className={s.ServiceTitle}>
-          <p>Services</p>
-          <p>Services</p>
+          <h2>Services</h2>
+          <h2>Services</h2>
         </header>
-        <div className={s.ServiceItems}>
+        <section className={s.ServiceItems}>
           <div className={s.ContainerServiceItems}>
-            <div className={s.ServiceItem + " Item"}>
+            <article className={s.ServiceItem + " Item"}>
               <div className={s.ServiceItem_Icon}>
                 <img src={item3} aria-hidden="true"></img>
               </div>
@@ -35,8 +35,8 @@ class Services extends React.Component {
                 <a>Make order</a>
                 <HiMiniArrowUpRight className={s.ServiceItem_Arrow} />
               </div>
-            </div>
-            <div className={s.ServiceItem + " Item"}>
+            </article>
+            <article className={s.ServiceItem + " Item"}>
               <div className={s.ServiceItem_Icon}>
                 <img src={item2} aria-hidden="true"></img>
               </div>
@@ -56,8 +56,8 @@ class Services extends React.Component {
                 <a>Make order</a>
                 <HiMiniArrowUpRight className={s.ServiceItem_Arrow} />
               </div>
-            </div>
-            <div className={s.ServiceItem + " Item"}>
+            </article>
+            <article className={s.ServiceItem + " Item"}>
               <div className={s.ServiceItem_Icon}>
                 <img src={item1} aria-hidden="true"></img>
               </div>
@@ -77,10 +77,10 @@ class Services extends React.Component {
                 <a>Make order</a>
                 <HiMiniArrowUpRight className={s.ServiceItem_Arrow} />
               </div>
-            </div>
+            </article>
           </div>
-        </div>
-      </div>
+        </section>
+      </section>
     );
   }
 }

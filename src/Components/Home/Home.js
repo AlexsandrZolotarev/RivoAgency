@@ -1,16 +1,17 @@
 import React from "react";
 import s from "./Home.module.css";
 import { PiArrowDownLight } from "react-icons/pi";
-import ElementLeft from ".//../img/HomePage/WeWhoWeAre/ElementLeft.svg";
-import ElementLeft2 from ".//../img/HomePage/WeWhoWeAre/ElementLeftBig.svg";
-import ElementRight from ".//../img/HomePage/WeWhoWeAre/ElementRight.svg";
-import Vector from ".//../img/HomePage/WeWhoWeAre/Vector.svg";
-import Cloch from ".//../img/HomePage/WeWhoWeAre/Cloch.svg";
-import Cube from ".//../img/HomePage/WeWhoWeAre/Cube.svg";
-import Poster from ".//../img/HomePage/VideoPoster.webp";
-import videoWebm from ".//../video/whoWeAreVideo.webm";
+import ElementLeft from "./../../assets/HomePage/WeWhoWeAre/ElementLeft.svg";
+import ElementLeft2 from "./../../assets/HomePage/WeWhoWeAre/ElementLeftBig.svg";
+import ElementRight from "./../../assets/HomePage/WeWhoWeAre/ElementRight.svg";
+import Vector from "./../../assets/HomePage/WeWhoWeAre/Vector.svg";
+import Cloch from "./../../assets/HomePage/WeWhoWeAre/Cloch.svg";
+import Cube from "./../../assets/HomePage/WeWhoWeAre/Cube.svg";
+import Poster from "./../../assets/HomePage/VideoPoster.webp";
+import videoWebm from ".//../../video/whoWeAreVideo.webm";
 import Contacts from "../Contacts/Contacts";
 import Projects from "../Projects/Projects";
+import Services from "../Services/Services";
 class Orders extends React.Component {
   constructor(props)
   {
@@ -128,6 +129,7 @@ class Orders extends React.Component {
             <img alt="#" src={Vector} loading="lazy"></img>
           </article>
         </article>
+        <Services/>
         <Projects/>
         <Contacts/>
       </section>

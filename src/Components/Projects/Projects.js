@@ -1,10 +1,10 @@
 import React from "react";
 import s from "./Projects.module.css";
-import mens from "..//img/Projects/Mens.webp";
-import haulCars from "..//img/Projects/HaulCars.webp";
-import jotul from "..//img/Projects/Jotul.webp";
-import saltmine from "..//img/Projects/Saltmine.webp";
-import skylineEnergy from "..//img/Projects/SkylineEnergy.webp";
+import mens from "../../assets/Projects/Mens.webp";
+import haulCars from "../../assets/Projects/HaulCars.webp";
+import jotul from "../../assets/Projects/Jotul.webp";
+import saltmine from "../../assets/Projects/Saltmine.webp";
+import skylineEnergy from "../../assets/Projects/SkylineEnergy.webp";
 import { MdArrowOutward } from "react-icons/md";
 class Projects extends React.Component {
   render() {
@@ -64,12 +64,13 @@ class Projects extends React.Component {
                     <img alt="Jotul" src={jotul} loading="lazy"></img>
                   </div>
                 </article>
-            </section>
-          </div>
-          <section className={s.wrapper_Projects__button}>
+                <div className={s.wrapper_Projects__button}>
             <button>Show more cases</button>
             <MdArrowOutward />
-          </section>
+          </div>
+            </section>
+          </div>
+         
       </section>
     );
   }

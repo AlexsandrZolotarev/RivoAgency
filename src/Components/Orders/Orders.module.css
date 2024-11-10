@@ -11,7 +11,7 @@
 }
 .OrdersImgs
 {
-    background: linear-gradient(to bottom, rgba(0,0,0,0) 20%, rgba(0,0,0,1)), url(/src/Components/img/Orders/Background.webp) no-repeat,
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 20%, rgba(0,0,0,1)), url(/src/assets/Orders/Background.webp) no-repeat,
     linear-gradient(to top, black -15%, transparent 90%);
     background-clip: border-box;
     background-origin:border-box;

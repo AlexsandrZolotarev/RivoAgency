@@ -1,8 +1,8 @@
 import React from "react";
 import s from "./Footer.module.css";
-import Vector from "..//img/Vector 2.webp";
-import Ellipse from "..//img/Element1.webp";
-import Cube from "..//img/whoWeAreElement.webp";
+import Vector from "../../assets/Footer/Vector.svg";
+import Ellipse from "../../assets/Footer/Element.svg";
+import Cube from "../../assets/Footer/ElementCube.svg";
 import { NavLink } from "react-router-dom";
 
 class Footer extends React.Component {

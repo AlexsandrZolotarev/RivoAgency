@@ -8,7 +8,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-creative";
 import { Keyboard, Pagination, Navigation } from "swiper/modules";
-import axios from "axios";
 function Album({ car }) {
   return (
     <div className={s.OrdersBodyTitleAlbum}>
@@ -47,41 +46,18 @@ function Album({ car }) {
       </table>
       <img
         alt=""
-        src={require(`../img/Orders/${car.img}`)}
+        src={require(`../../assets/Orders/ ${car.img}`)}
         loading="lazy"
       ></img>
     </div>
   );
 }
 
-class Orders extends React.Component {
-  constructor(props) {
-    super(props);
-    this.Numbers = React.createRef();
-    this.SliderRef = React.createRef();
-  }
-  componentDidMount(){
-    axios
-    .get("https://alexsandrzolotarev.github.io/api/encrypted.json")
-    .then((response) => this.props.setCards(response.data.models));
-  }
-  onChangeCounterPlus = () => {
-
-    this.props.changeCounterPlus(this);
-    this.sliderRef.current.swiper.slideNext();
-  }
-  onSlideChange = () => {
-    this.props.changeCounterAlbum(this.sliderRef.current.swiper.activeIndex);
-  }
-  onChangeCounterMinus = () => {
-    debugger;
-    this.props.onChangeCounterMinus(this);
-    this.sliderRef.current.swiper.slidePrev();
-  }
-  render() {
-    let counterAlbum = this.props.album.at(-1)?.id ? this.props.album.at(-1).id : 4;
+let Orders = (props) =>
+{
+    let counterAlbum = props.album.at(-1)?.id ? props.album.at(-1).id : 4;
     return (
-      <div className={s.Orders}>
+      <section className={s.Orders}>
         <div className={s.OrdersImgs}></div>
         <div className={s.OrdersContainer}>
           <div className={s.OrdersTitle}>
@@ -110,11 +86,11 @@ class Orders extends React.Component {
 
         <div className={s.OrdersBody} id="Album">
           <div className={s.OrdersBodyTitle}>
-            <header>Information </header>
+            <header><h2>Information</h2></header>
             <Swiper
-              ref={this.sliderRef}
+              ref={props.sliderRef}
               slidesPerView={1}
-              onSlideChange={() => this.onSlideChange()}
+              onSlideChange={() => props.onSlideChange()}
               spaceBetween={30}
               keyboard={{
                 enabled: true,
@@ -126,34 +102,34 @@ class Orders extends React.Component {
               modules={[Keyboard, Pagination, Navigation]}
               className="mySwiper"
             >
-              {this.props.album.map((item, index) => (
+              {props.album.map((item, index) => (
                 <SwiperSlide>
                   {" "}
-                  <Album key={item?.id} car={this.props.album[index]} />
+                  <Album key={item?.id} car={props.album[index]} />
                 </SwiperSlide>
               ))}
             </Swiper>
           </div>
           <div className={s.OrdersBodyTitle__Title}>
-            <div ref={this.Numbers}>
-            {(this.props.counterAlbum <= 9) ? "0" + `${this.props.counterAlbum}/${counterAlbum}` :
-            `${this.props.counterAlbum}/${counterAlbum}`
+            <div ref={props.Numbers}>
+            {(props.counterAlbum <= 9) ? "0" + `${props.counterAlbum}/${counterAlbum}` :
+            `${props.counterAlbum}/${counterAlbum}`
             }
             
             </div>
           </div> 
           <div className={s.OrdersBodyButtons}>
-            <button onClick={this.onChangeCounterMinus.bind("-")}>
+            <button onClick={props.onChangeCounterMinus.bind("-")}>
               <GoArrowLeft />
             </button>
-            <button onClick={this.onChangeCounterPlus.bind("+")}>
+            <button onClick={props.onChangeCounterPlus.bind("+")}>
               <GoArrowRight />
             </button>
           </div>
         </div>
-      </div>
+      </section>
     );
-  }
+  
 }
 
 export default Orders;

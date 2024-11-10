@@ -76,12 +76,9 @@
   width: 10%;
   position: absolute;
 }
-.wrapper_Footer__menuitemsProject {
-  background-image: url();
-}
 
 .wrapper_Footer__Elements {
-  background-image: url(/src/Components/img/Elementbig.webp);
+  background-image: url(/src/assets/Footer/ElementBig.svg);
   width: 90%;
   position: relative;
   background-position: center;
@@ -141,13 +138,13 @@
       position: absolute;
       right: 0;
       top: 0%;
-      content: url(/src/Components/img/Element.webp);
+      content: url(/src/assets/img/Element.webp);
     }
     nav::before {
       position: absolute;
       right: 0;
       bottom: 15%;
-      content: url(/src/Components/img/ElementCube.webp);
+      content: url(/src/assets/img/ElementCube.webp);
     }
   }
 }
@@ -183,13 +180,13 @@
       position: absolute;
       right: 0;
       top: 0%;
-      content: url(/src/Components/img/ElementFooterMini.webp);
+      content: url(/src/assets/img/ElementFooterMini.webp);
     }
     nav::before {
       position: absolute;
       right: 0;
       bottom: 15%;
-      content: url(/src/Components/img/ElementCubeFooterMini.webp);
+      content: url(/src/assets/img/ElementCubeFooterMini.webp);
     }
   }
 }

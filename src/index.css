@@ -1,7 +1,6 @@
 * {
   padding: 0;
   margin: 0;
-  border: 1px solid green;
 }
 *,
 *:before,
@@ -34,7 +33,6 @@ body {
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  cursor: url("./Components/img/Icons/pointinghand.webp");
   scroll-behavior: smooth;
 }
 *::-webkit-scrollbar {
@@ -69,6 +67,7 @@ a:visited {
 }
 a:hover {
   text-decoration: none;
+  cursor: url("./assets/Icons/Cursor.svg") 2 2, default;
 }
 ul li {
   list-style: none;
@@ -143,12 +142,6 @@ h6 {
     transform: rotate(360deg);
   }
 }
-@media screen and (max-width: 962px) {
-  .ContactUs {
-    bottom: 20%;
-    right: 7%;
-  }
-}
 .swiper {
   width: 100%;
   right: 0;
@@ -203,4 +196,13 @@ h6 {
   to {
     transform: translate(-50%, -50%) rotate(360deg);
   }
+}
+@media screen and (max-width: 970px) {
+  .ContactUs 
+  {
+    right: 4%;
+  }  
+}
+@media screen and (max-width: 780px) {
+    
 }

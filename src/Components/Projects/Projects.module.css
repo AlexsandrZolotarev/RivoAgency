@@ -76,6 +76,7 @@
   background: linear-gradient(to left, transparent 50%, #fddd0a 50%) right;
   background-size: 200%;
   transition: 0.3s ease-out;
+  width: auto;
   button {
     text-transform: uppercase;
     color: #fddd0a;
