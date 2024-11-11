@@ -1,0 +1,126 @@
+.stack {
+  color: white;
+  margin-top: 5%;
+  width: 60%;
+  margin: 0 auto;
+  color: white;
+  font-family: "Alexandria", sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-top: 7%;
+  position: relative;
+  z-index: 1;
+}
+.stack__title {
+  font-weight: 700;
+  text-align: left;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  :first-child {
+    font-size: calc(36px + 16 * (100vw / 1980));
+    line-height: 52px;
+  }
+  :last-child {
+    font-weight: 600;
+    border-radius: 1px;
+    color: rgba(0, 0, 0, 0.1);
+    -webkit-text-stroke: 0.4px rgb(80, 80, 80);
+    font-size: calc(84px + 16 * (100vw / 1980));
+  }
+}
+.stack__body__title {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+}
+.stack__body__title h2:first-child{
+  font-weight: 400;
+  line-height: 24px;
+  font-size: 24px;
+  text-align: left;
+  text-transform: uppercase;
+  padding-bottom: 30px;
+}
+.stack__body__items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(226px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 30px 28px;
+  h2{
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 17px;
+  }
+ 
+}
+
+.web_development {
+  width: 70%;
+}
+.stack__item {
+  border: 1px solid #212121;
+  display: flex;
+  align-items: center;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 17px;
+  text-align: center;
+  color: white;
+  transition: all ease 0.3s;
+  min-width: 253px;
+  min-height: 132px;
+  flex-direction: column;
+  justify-content: space-evenly;
+  h2 {
+    text-wrap: wrap;
+  }
+}
+.stack__item:hover {
+  border-left: 4px solid #fddd0a;
+  border-bottom: 4px solid #fddd0a;
+}
+.stack__element {
+  position: absolute;
+  bottom: -100px;
+  right: -100px;
+}
+@media screen and (max-width: 1250px) {
+  .stack {
+    width: 100%;
+    padding: 0 5%;
+  }
+  .stack__element {
+    position: absolute;
+    bottom: -50px;
+    right: 20px;
+  }
+  .stack__title {
+    :first-child {
+      font-size: calc(32px + 16 * (100vw / 1980));
+      line-height: 52px;
+    }
+    :last-child {
+      font-size: calc(50px + 15 * (100vw / 1980));
+    }
+  }
+  .stack__item {
+    h2 {
+      padding: 10px 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .stack__element {
+    display: none;
+  }
+  .stack__title {
+    :first-child {
+      font-size: calc(21px + 16 * (100vw / 1980));
+      line-height: 52px;
+    }
+    :last-child {
+      font-size: calc(29px + 15 * (100vw / 1980));
+    }
+  }
+}

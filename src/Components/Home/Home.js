@@ -13,6 +13,7 @@ import Contacts from "../Contacts/Contacts";
 import Projects from "../Projects/Projects";
 import Services from "../Services/Services";
 import IndustryExpertise from "../IndustryExpertise/IndustryExpertise";
+import Stack from "../Stack/Stack";
 class Orders extends React.Component {
   constructor(props)
   {
@@ -132,6 +133,7 @@ class Orders extends React.Component {
         </article>
         <Services/>
         <IndustryExpertise/>
+        <Stack/>
         <Projects/>
         <Contacts/>
        
