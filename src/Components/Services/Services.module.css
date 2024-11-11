@@ -6,15 +6,36 @@
   font-weight: 600;
   line-height: 1.2;
   margin-top: 7%;
+  position: relative;
+  z-index: 1;
 }
+.Service::before {
+  content: '';
+  position: absolute;
+  background: url(../../assets/Services/Element\ big.svg) no-repeat;
+  width: 40%;
+  height: 100%;
+  top: 0;
+  right: -33%;
+  z-index: 100;
+}
+.Service::after {
+  content: '';
+  position: absolute;
+  background: url(../../assets/Services/Elements\ bigRight.svg) no-repeat;
+  width: 40%;
+  height: 100%;
+  bottom:0;
+  left: -33%;
+  z-index: 100;
+}
+
 .ContainerServiceItems {
   display: flex;
   grid-auto-flow: column;
   grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
   justify-content: center;
   flex-wrap: nowrap;
-}
-.ContainerServiceItems > * {
 }
 .ServiceTitle {
   width: 100%;
@@ -40,12 +61,17 @@
 
 div[class~="ServiveButton"] {
   font-size: smaller;
+  font-family: "Alexandria", sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 17px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  display: inline-block;
   text-transform: uppercase;
   color: #fddd0a;
   position: relative;
-  /* after: {
-
-    } */
 }
 .ServiceItem {
   display: flex;
@@ -55,25 +81,21 @@ div[class~="ServiveButton"] {
     margin-left: 20px;
     margin-top: 5%;
   }
-  a {
-    :hover {
-      .ServiceItem_Arrow {
-        display: none;
-      }
-    }
-  }
+  
 }
+
 .ServiceItem_Arrow {
   position: absolute;
-  top: -2px;
-  width: 20px;
-  height: 20px;
+  top: -4px;
+  width: 25px;
+  height: 25px;
+  left: 120px;
 }
 
 .ServiceItem_Title {
   font-weight: 600;
   text-transform: uppercase;
-  margin: 5% 0;
+  margin: 10% 0;
 }
 .ServiceItem_Text {
   font-weight: 250;
@@ -81,6 +103,7 @@ div[class~="ServiveButton"] {
   font-family: "Alexandria";
   color: #b6b6b6;
   line-height: 25.5px;
+  text-wrap: wrap;
   p {
   }
 }
@@ -92,10 +115,26 @@ div[class~="ServiveButton"] {
   }
 }
 
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 768px)
+{
   .ContainerServiceItems {
     flex-wrap: wrap;
   }
+  .ServiceItem_Title
+  {
+    margin: 7% 0;
+  }
+  .ServiceItem
+  {
+    margin-bottom: 10%;
+  }
+} 
+@media screen and (max-width: 1250px) {
+  .Service::before,::after
+  {
+    display: none;
+  }
+  
   .ServiceTitle {
     display: flex;
     flex-direction: column;
@@ -111,6 +150,4 @@ div[class~="ServiveButton"] {
     margin: 0 5%;
     margin-top: 10%;
   }
-}
-@media screen and (max-width: 670px) {
 }

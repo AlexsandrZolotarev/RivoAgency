@@ -5,7 +5,6 @@ import Expertise from './Components/Expertise/Expertise';
 import Projects from './Components/Projects/Projects';
 import Footer from './Components/Footer/Footer';
 import Header from './Components/Header/Header';
-import notFound from './Components/NotFound/NotFound';
 import CookiesPrivacy from './Components/CookiesPrivacy/CookiesPrivacy';
 import ContactsUs from './assets/img/Contact us big.webp';
 import Arrow from './assets/Icons/ArrowBig_icon.webp';
@@ -13,13 +12,9 @@ import CareersContainer from './Components/Careers/CareersContainer';
 import HomeContainer from './Components/Home/HomeContainer';
 import OrdersContainer from './Components/Orders/OrdersContainer';
 import NotFound from './Components/NotFound/NotFound';
-
+import Services from './Components/Services/Services';
 class App extends React.Component
 { 
-  constructor(props)
-  {
-    super(props);
-  }
   render()
   {
     return (
@@ -41,6 +36,8 @@ class App extends React.Component
             <Route path ='/Contacts' element ={<Contacts/>}>
             </Route>
             <Route path ='/Orders' element ={<OrdersContainer/>}>
+            </Route>
+            <Route path ='/Services' element ={<Services/>}>
             </Route>
             <Route path ='*' element ={<NotFound/>}>
             </Route>

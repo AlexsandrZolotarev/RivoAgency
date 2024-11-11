@@ -17,7 +17,6 @@ class CookiesPrivacy extends React.Component {
           document.body.clientWidth, document.documentElement.clientWidth
         );
         if(scrollWidth < 970) document.getElementById("ContactUs").style.bottom = '20%';
-
       },6000);
     };
     hideCookies = () => {

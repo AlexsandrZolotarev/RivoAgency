@@ -4,6 +4,7 @@ import item1 from "../../assets/Services/Custom_development_icon.webp";
 import item2 from "../../assets/Services/Mobile_development_icon.webp";
 import item3 from "../../assets/Services/Web_development_icon.webp";
 import { HiMiniArrowUpRight } from "react-icons/hi2";
+import { NavLink } from "react-router-dom";
 
 class Services extends React.Component {
   render() {
