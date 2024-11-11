@@ -7,6 +7,7 @@
   font-weight: 500;
   display: flex;
   flex-shrink: 0;
+  min-height: 800px;
 }
 .wrapper_Footer__BodyMenuItemsWithVector {
   width: 50%;
@@ -16,6 +17,7 @@
   width: 100%;
   display: flex;
   position: relative;
+  height: 100%;
 }
 .wrapper_Footer__EllipseWithElement {
   width: 50%;
@@ -35,8 +37,10 @@
   font-size: calc(26px + 16 * (100vw / 1980));
   cursor: pointer;
   position: relative;
-
   width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   a {
     position: relative;
     color: white;
@@ -79,11 +83,12 @@
 
 .wrapper_Footer__Elements {
   background-image: url(/src/assets/Footer/ElementBig.svg);
-  width: 90%;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
   position: relative;
   background-position: center;
-  background-size: cover;
-
+  background-size: contain;
   img {
     position: absolute;
     top: 20px;
@@ -159,7 +164,8 @@
     display: none;
   }
   .wrapper_Footer {
-    display: block;
+    display: block;    
+    min-height: 300px;
   }
   .wrapper_Footer__BodyMenuItemsWithVector {
     width: 100%;

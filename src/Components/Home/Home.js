@@ -20,10 +20,8 @@ class Orders extends React.Component {
     super(props);
     this.video = React.createRef();
     this.buttonPlay = React.createRef();
- 
   }
   onVolumeChange = (volume) => {
-    debugger;
     this.props.updateVolume({video: this.video, volume: volume});
   }
   onPlayChange = () =>{
