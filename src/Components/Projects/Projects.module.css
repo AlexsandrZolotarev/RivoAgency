@@ -112,10 +112,9 @@
   }
 }
 @media screen and (max-width: 1250px) {
-
   .wrapper_Projects{
     width: 100%;
-    margin: 0 5%;
+    padding: 0 5%;
     margin-top: 10%;
   }
 }

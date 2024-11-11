@@ -12,6 +12,7 @@ import videoWebm from ".//../../video/whoWeAreVideo.webm";
 import Contacts from "../Contacts/Contacts";
 import Projects from "../Projects/Projects";
 import Services from "../Services/Services";
+import IndustryExpertise from "../IndustryExpertise/IndustryExpertise";
 class Orders extends React.Component {
   constructor(props)
   {
@@ -130,8 +131,10 @@ class Orders extends React.Component {
           </article>
         </article>
         <Services/>
+        <IndustryExpertise/>
         <Projects/>
         <Contacts/>
+       
       </section>
       
     );

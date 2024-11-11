@@ -147,7 +147,7 @@ div[class~="ServiveButton"] {
   }
   .Service {
     width: 100%;
-    margin: 0 5%;
+    padding: 0 5%;
     margin-top: 10%;
   }
 }
