@@ -182,7 +182,6 @@ let Header = (props) => {
                   </ul>
                   <IoCloseOutline
                     className={s.close}
-                    id="close"
                     onClick={closeBurger}
                   />
                 </nav>

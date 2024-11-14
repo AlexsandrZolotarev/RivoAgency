@@ -5,8 +5,9 @@ import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 import store from "./Redux/redux-store";
 import { Provider } from "react-redux";
+import ScrollingHeader from "./scrolling-header";
 
-function preloader() {
+function Preloader() {
   document.body.onload = () => {
     setTimeout(() => {
       var preloader = document.getElementById("page-preloader");
@@ -19,9 +20,10 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>
     <React.StrictMode>
       <Provider store={store}>
-        <App />
-      </Provider>
+        <App/>
+        <Preloader/>
+        <ScrollingHeader/>
+        </Provider>
     </React.StrictMode>
   </BrowserRouter>
 );
-preloader();

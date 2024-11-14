@@ -1,6 +1,6 @@
 .header {
   color: #ffffff;
-  position: relative;
+  position:relative;
   width: 100%;
   top: 30px;
   left: 0;
@@ -361,7 +361,7 @@
 
 .headerMainMenu__menu {
   position: fixed;
-  display: none;
+  visibility: hidden;
   top: 0;
   right: 0;
   width: 100%;

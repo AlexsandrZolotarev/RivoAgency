@@ -1,13 +1,17 @@
 .wrapper_Footer {
-  margin-top: 5%;
-  margin-bottom: 3%;
   color: white;
   text-transform: uppercase;
   width: 100%;
-  font-weight: 500;
+  font-weight: 400;
   display: flex;
   flex-shrink: 0;
   min-height: 800px;
+  margin: 0 auto;
+  font-family: "Alexandria", sans-serif;
+  line-height: 1.2;
+  margin-top: 7%;
+  position: relative;
+  z-index: 1;
 }
 .wrapper_Footer__BodyMenuItemsWithVector {
   width: 50%;
@@ -133,9 +137,6 @@
   .wrapper_Footer__EllipseWithElements {
     display: none;
   }
-  .wrapper_Footer__MenuItemsWithVector {
-    margin-left: 15%;
-  }
   .wrapper_Footer__menuitems {
     width: 100%;
     margin: 0 3%;
@@ -194,5 +195,15 @@
       bottom: 15%;
       content: url(/src/assets/img/ElementCubeFooterMini.webp);
     }
+  }
+}
+@media screen and (max-width: 1250px) {
+  .wrapper_Footer {
+    width: 100%;
+    padding: 0 5%;
+  }
+  .wrapper_Footer__BodyMenuItemsWithVector
+  {
+    margin: 0;
   }
 }

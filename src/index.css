@@ -107,7 +107,6 @@ h6 {
 }
 
 /* UserProducts */
-
 .ContactUs {
   position: fixed;
   cursor: pointer;
@@ -142,6 +141,7 @@ h6 {
     transform: rotate(360deg);
   }
 }
+
 .swiper {
   width: 100%;
   right: 0;

@@ -21,7 +21,7 @@
   background-origin: border-box;
   background-size: auto;
   opacity: 0.6;
-  background-size: 100% calc(70% / 2);
+  background-size: 100% 100%;
   position: absolute;
   top: -35%;
   transition: transform 0.5s ease;
@@ -251,11 +251,6 @@
   accent-color: #fddd0a;
   transition: all 1200ms ease;
 }
-@media screen and (min-width: 1450px) {
-  .HomeImgs {
-    background-size: 100% 100%;
-  }
-}
 
 @media screen and (max-width: 1000px) {
   .WeWhoWeAreContainerMain__body {
@@ -282,21 +277,9 @@
       font-size: calc(60px + 5 * (100vw / 1980));
     }
   }
-
-  .HomeTitle {
+  .HomeTitle *{
+    margin-left: 0 !important;
     font-weight: 600;
-    :first-child {
-      margin-left: 0%;
-    }
-    :nth-child(2) {
-      margin-left: 0%;
-    }
-    :nth-child(3) {
-      margin-left: 0%;
-    }
-    :nth-last-child(2) {
-      margin-left: 0%;
-    }
   }
 }
 @media screen and (max-width: 670px) {

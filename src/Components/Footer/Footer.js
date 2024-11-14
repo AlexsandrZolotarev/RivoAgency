@@ -6,6 +6,9 @@ import Cube from "../../assets/Footer/ElementCube.svg";
 import { NavLink } from "react-router-dom";
 
 class Footer extends React.Component {
+  Scroll = () => {
+    window.scrollTo(0,0);
+  }
   render() {
     return (
       <footer className={s.wrapper_Footer} id="Footer">
@@ -17,19 +20,19 @@ class Footer extends React.Component {
             <div className={s.wrapper_Footer__menuitems}>
               <nav>
                 <ul>
-                  <li>
-                    <NavLink to={"/RivoAgancy"} href="#header">HOME</NavLink>
+                  <li onClick={this.Scroll}>
+                    <NavLink to={"/RivoAgancy"}>HOME</NavLink>
                   </li>
-                  <li>
+                  <li onClick={this.Scroll}>
                     <NavLink to={"/Services"}>Services</NavLink>
                   </li>
-                  <li>
+                  <li onClick={this.Scroll}>
                     <NavLink to={"/Projects"}>Projeсts</NavLink>
                   </li>
-                  <li>
+                  <li onClick={this.Scroll}>
                     <NavLink to={"/Contacts"}>Contaсts</NavLink>
                   </li>
-                  <li>
+                  <li onClick={this.Scroll}>
                     <NavLink to={"/Careers"}>Careers</NavLink>
                   </li>
                 </ul>

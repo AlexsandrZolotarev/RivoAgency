@@ -3,16 +3,16 @@ import { Route, Routes } from 'react-router-dom';
 import Contacts from './Components/Contacts/Contacts';
 import Expertise from './Components/Expertise/Expertise';
 import Projects from './Components/Projects/Projects';
-import Footer from './Components/Footer/Footer';
 import CookiesPrivacy from './Components/CookiesPrivacy/CookiesPrivacy';
-import ContactsUs from './assets/img/Contact us big.webp';
-import Arrow from './assets/Icons/ArrowBig_icon.webp';
 import CareersContainer from './Components/Careers/CareersContainer';
 import HomeContainer from './Components/Home/HomeContainer';
 import OrdersContainer from './Components/Orders/OrdersContainer';
 import NotFound from './Components/NotFound/NotFound';
 import Services from './Components/Services/Services';
 import HeaderContainer from './Components/Header/HeaderContainer';
+import ContactUs from './Components/ContactsUs/ContactUs';
+import ScrollingHeader from './scrolling-header';
+import FooterContainer from './Components/Footer/FooterContainer';
 class App extends React.Component
 { 
   render()
@@ -43,17 +43,14 @@ class App extends React.Component
             </Route>
           </Routes>
         </main>
-        <Footer/>  
-       <CookiesPrivacy/>
-              <a className='ContactUs' href='#ContactUs' aria-label='Contacts' id='ContactUs'>
-                <img alt='' src={ContactsUs} aria-hidden='true'></img>
-                <img alt='' src={Arrow} aria-hidden='true'></img>
-              </a>
+        <FooterContainer/>  
+        <CookiesPrivacy/>
+        <ContactUs/>
+        <ScrollingHeader/> 
       </div>
     );
   }
 }
-
 
 
 export default App;
