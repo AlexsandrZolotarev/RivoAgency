@@ -31,7 +31,7 @@ function Album({ car }) {
             <td>{car.equipment}</td>
           </tr>
           <tr>
-            <td>Ccountry</td>
+            <td>Country</td>
             <td>{car.location.country}</td>
           </tr>
           <tr>
@@ -110,7 +110,10 @@ let Orders = (props) => {
               <SwiperSlide>
                 {" "}
                 <Album key={item?.id} car={props.album[index]} />
-                <div className={s.OrdersBodyButtons}>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+          <div className={s.OrdersBodyButtons}>
                   <button>
                     <GoArrowLeft
                       onClick={() => props.onChangeCounterMinus()}
@@ -122,9 +125,6 @@ let Orders = (props) => {
                     />
                   </button>
                 </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
         </div>
         <div className={s.OrdersBodyTitle__Title}>
           <div>
@@ -133,6 +133,7 @@ let Orders = (props) => {
               : `${props.counterAlbum}/${counterAlbum}`}
           </div>
         </div>
+        
       </article>
     </section>
   );
