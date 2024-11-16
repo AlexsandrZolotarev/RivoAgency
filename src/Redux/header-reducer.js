@@ -8,12 +8,11 @@ let initialState = {
 const headerReducer = (state = initialState, action) => {
   switch (action.type) {
     case ClOSE_BURGER: {
-      document.getElementById('hamburger').style.display ='flex';
-      document.getElementById('hamburger').style.visibility = 'hidden';
-      return {...state,burger:document.getElementById('hamburger')};
+      document.getElementById('hamburger').style.display ='none';
+      return {...state};
     }
     case OPEN_BURGER: {
-      document.getElementById('hamburger').style.visibility = 'visible';
+      document.getElementById('hamburger').style.display ='flex';
       return {...state};
     }
     default:

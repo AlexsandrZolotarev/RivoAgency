@@ -240,7 +240,6 @@
   nav{
     font-size: 50px;
   }
- 
 }
 .makeOrder_Button {
   color: #fddd0a;
@@ -361,19 +360,24 @@
 
 .headerMainMenu__menu {
   position: fixed;
-  visibility: hidden;
   top: 0;
   right: 0;
   width: 100%;
   height: 100%;
-  z-index: 30000;
+  z-index: 100;
   background-color: #000000;
+  display: none;
+}
+.headerMainMenu input[type="checkbox"]:checked + .headerMainMenu__menu
+{
+    display: none;
 }
 .close{
   display: block;
   position: relative;
   width: 100px;
   height: 100px;
+  z-index: 1000;
 }
 .close::after{
   content: '';
@@ -413,6 +417,7 @@
     margin: 0;
     width: 100%;
     align-items: center;
+    padding-left: 20px;
   }
   .header {
     top: 10px;
@@ -421,3 +426,4 @@
     padding: 0 3% 0 5%;
   }
 }
+

@@ -40,12 +40,49 @@
     margin-bottom: 10%;
   }
   header {
-    margin-left: 60px;
+    margin-bottom: 5%;
   }
   p {
     font-size: calc(14px + 6 * (100vw / 1980));
     line-height: 26px;
     font-weight: 300;
+  }
+}
+.notFound__main_content button{
+
+  color: #fddd0a;
+
+}
+.button{
+  transition: all ease 1000ms;
+  border: 1px solid #fddd0a;
+  padding: 1.5%;
+  font-size: 0.7rem;
+  font-family: "Poppins";
+  color: #fddd0a;
+  background: linear-gradient(to left, transparent 50%, #fddd0a 50%) right;
+  background-size: 200%;
+  transition: 0.3s ease-out;
+  position: relative;
+  button {
+    text-transform: uppercase;
+    font-size: 1rem;
+    border: 0;
+    background-color: transparent;
+  }
+  .button__arrow {
+    position: relative;
+    bottom: 0;
+    top: 5px;
+    font-size: 2em;
+  }
+}
+.button:hover {
+  background-position: left;
+  color: black;
+  button {
+    text-transform: uppercase;
+    color: black;
   }
 }
 .notFound__right_content {
@@ -65,15 +102,14 @@
   }
   .notFound__main_content {
     width: 100%;
+    margin: 0 auto;
   }
   .notFound__right_content {
     display: none;
   }
 }
 @media screen and (max-width: 425px) {
-  .notFound__main_content * {
-    margin-left: -10%;
+  .notFound {
+      margin-top: 15%;
   }
 }
-
-
