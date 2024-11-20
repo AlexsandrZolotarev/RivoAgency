@@ -11,7 +11,6 @@ import NotFound from './Components/NotFound/NotFound';
 import Services from './Components/Services/Services';
 import HeaderContainer from './Components/Header/HeaderContainer';
 import ContactUs from './Components/ContactsUs/ContactUs';
-import ScrollingHeader from './scrolling-header';
 import FooterContainer from './Components/Footer/FooterContainer';
 class App extends React.Component
 { 
@@ -46,7 +45,6 @@ class App extends React.Component
         <FooterContainer/>  
         <CookiesPrivacy/>
         <ContactUs/>
-        <ScrollingHeader/> 
       </div>
     );
   }
