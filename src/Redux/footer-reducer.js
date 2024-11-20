@@ -14,7 +14,7 @@ const headerReducer = (state = initialState, action) => {
   }
 };
 
-export const scrollToHeaderActionCreator = () => ({
+export const scrollToHeader = () => ({
   type: SCROLL,
 });
 

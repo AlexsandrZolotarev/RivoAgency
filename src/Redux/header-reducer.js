@@ -20,10 +20,10 @@ const headerReducer = (state = initialState, action) => {
   }
 };
 
-export const openBurgerActionCreator = () => ({
+export const openBurger = () => ({
   type: OPEN_BURGER,
 });
-export const closeBurgerActionCreator = () => ({
+export const closeBurger = () => ({
   type: ClOSE_BURGER,
 });
 

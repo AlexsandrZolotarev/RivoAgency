@@ -88,3 +88,14 @@
     width: 100%;
   }
 }
+@media (prefers-color-scheme: light) {
+  .CookiesPrivacy
+  {
+    background-color: white;
+    color: black !important;
+  }
+  .CookiesPrivacy_body__description
+  {
+    color: black;
+  }
+}

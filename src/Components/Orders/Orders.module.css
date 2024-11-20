@@ -1,3 +1,7 @@
+*:focus-visible {
+  border: 3px solid white;
+  border-radius: 1%;
+}
 .Orders {
   margin-top: 5%;
   white-space: nowrap;
@@ -8,6 +12,29 @@
   height: 100%;
   font-family: "Poppins";
 }
+.button button {
+  background-color: transparent;
+  color: white;
+  border: transparent;
+  font-size: calc(20px + 10 * (100vw / 1980));
+}
+.button {
+  transition: all 0.9s ease;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  margin: 1em auto;
+  padding: 15px;
+  border-radius: 0.5em;
+}
+.button:hover {
+  background-color: aliceblue;
+  color: #0078d6;
+  button {
+    color: #0078d6;
+  }
+}
+
 .OrdersImgs {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 1)),
     url(/src/assets/Orders/Background.webp) no-repeat,
@@ -30,14 +57,10 @@
 }
 
 .OrdersBody {
-  display: flex;
   position: relative;
   z-index: 1;
-  max-height: 1000px;
-  margin: 10% 15%;
-  width: 70%;
-  padding-bottom: 20px;
-  border: 1px solid rgb(83, 83, 83);
+  margin: 10% 5%;
+  width: 90%;
 }
 .OrdersBodyTitle {
   height: 100%;
@@ -61,92 +84,7 @@
   z-index: 9998;
   top: 15%;
 }
-.OrdersBodyTitleAlbum {
-  display: grid;
-  grid-template-columns: 0.2fr 1fr;
-  font-weight: 900;
-  thead {
-    text-transform: uppercase;
-    color: white;
-   
-    th{
-        padding: 20px;
-    }
-  }
-  tbody {
-    display: grid;
-    grid-template-columns: 100% 100%;
-    grid-template-rows: 30% 30%;
-    padding: 20px;
-  }
-  th {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    color: #b6b6b6;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 20px;
-    margin-top: 10px;
-  }
-  td {
-    color: white;
-    font-family: "Alexandria";
-    font-size: calc(16px + 12 * (100vw / 1980));
-    text-align: left;
-    padding-top: 10px;
-  }
-  img {
-    height: 100%;
-    width: 100%;
-    margin-left: 10%;
-  }
-}
-.OrdersBodyTitleAlbum tbody tr {
-  display: flex;
-  flex-direction: column;
-}
-.OrdersBodyTitleAlbum tbody tr *:not(:first-child) {
-  color: #6e6e6e;
-  font-weight: 200;
-}
 
-.OrdersBodyTitleAlbum tbody th:nth-child(even) {
-  margin-left: 10%;
-}
-.OrdersBodyButtons {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  justify-content: flex-end;
-  transition: all ease 1500s;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  z-index: 10000;
-}
-.OrdersBodyButtons button {
-  background-color: transparent;
-  border: 1px solid white;
-  min-width: 50px;
-  min-height: 50px;
-  position: relative;
-  margin-left: 20%;
-  :first-child {
-    position: absolute;
-    color: white;
-    width: 20px;
-    height: 20px;
-    inset: 25%;
-    top: 30%;
-  }
-}
-.OrdersBodyButtons button:hover {
-  background-color: #fddd0a;
-  :first-child {
-    color: black;
-  }
-}
 .OrdersContainer {
   position: relative;
   margin: 0 auto;
@@ -169,7 +107,6 @@
     top: 4px;
   }
   :last-child {
-    margin-left: 2%;
   }
 }
 .OrdersTitleBody {
@@ -181,14 +118,12 @@
     font-size: calc(50px + 50 * (100vw / 1980));
   }
 }
-.OrdersTitleBodyButton {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
 
 .OrdersTitleBodyButton {
   transition: all 1s ease;
+  p {
+    margin-left: 1%;
+  }
 }
 .OrdersTitleBodyButton a {
   color: white;
@@ -209,6 +144,138 @@
   height: 25px;
   inset: 25%;
 }
+.orders__body__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(600px, max-content));
+  gap: 30px 30px;
+  align-items: center;
+  position: relative;
+  justify-items: center;
+  justify-content: center;
+}
+.car {
+  max-height: 80rem;
+  min-width: 15rem;
+  max-width: 38rem;
+  width: 40rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.car__image {
+  display: flex;
+  justify-content: center;
+  img {
+    width: 90%;
+    max-width: auto;
+    height: 18rem;
+    padding-top: 2em;
+  }
+}
+.description {
+  display: flex;
+  width: 90%;
+  flex-wrap: wrap;
+  margin-top: 1em;
+  min-height: 120px;
+  min-height: 100px;
+}
+.consumption {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.consumption *:not(p) {
+  display: flex;
+  justify-content: space-between;
+}
+.consumption__CO2 {
+  display: flex;
+  justify-content: space-between;
+}
+.description__item {
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  background-color: rgb(139, 139, 139);
+  padding: 0 10px;
+  margin: 10px;
+  :first-child {
+    color: black;
+    margin: 1px 5px;
+  }
+}
+.types {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  min-width: 10rem;
+  max-width: 33rem;
+}
+.prices {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 5rem;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+.prices * {
+  padding: 30px 20px 20px 20px;
+  background-color: rgb(68, 67, 67);
+  width: 50%;
+  margin: 0 0.4em;
+  border-radius: 10px;
+}
+.prices__price {
+  position: relative;
+}
+.prices__price::before {
+  content: "Recommended price manufacturer";
+  position: absolute;
+  top: 7px;
+  font-size: 12px;
+  font-weight: 400;
+}
+.prices__monthlyrent {
+  position: relative;
+}
+.prices__monthlyrent::before {
+  content: "Monthly rent";
+  position: absolute;
+  top: 7px;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.types *:not(svg) {
+  display: flex;
+  align-items: center;
+  margin-top: 1.5em;
+  svg {
+    margin: 0 10px;
+    color: rgb(0, 0, 0);
+  }
+}
+
+.category {
+  margin-top: 1em;
+  img {
+    max-width: 9rem;
+  }
+}
+.car {
+  background-color: rgb(97, 97, 97);
+  border-radius: 5px;
+  padding: 20px;
+  header {
+    display: flex;
+    justify-content: center;
+    font-size: calc(20px + 10 * (100vw / 1980));
+    padding-top: 1.5em;
+  }
+}
 @keyframes arrow {
   0%,
   100% {
@@ -219,22 +286,72 @@
     transform: translate(0px, -7px);
   }
 }
-@media screen and (max-width: 1450px) {
-  .OrdersBody::after {
-    display: none;
+@media screen and (max-width: 680px) {
+  .car {
+    max-width: 29rem;
+    margin: 0 5em;
   }
-  .OrdersBodyTitleAlbum {
-    display: grid;
-    grid-template-columns: 0.5fr 0.5fr;
-    table {
-      font-size: 20px;
-    }
-    tbody {
-      margin: 0;
+  .car__image {
+    width: 26rem;
+  }
+  .prices {
+    margin-top: 1rem;
+    flex-direction: column;
+    padding: 20px 0;
+  }
+  .prices * {
+    width: 65%;
+  }
+  .prices *:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  .types {
+    text-wrap: pretty;
+    display: block;
+  }
+  .category {
+    padding: 0 5px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .car {
+    max-width: 18rem;
+    margin: 0 20px;
+    padding: 0;
+    header {
+      text-wrap: wrap;
     }
   }
-  .OrdersBody {
-    margin-bottom: 90%;
+  .car__image {
+    width: 18rem;
+    padding: 15px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .consumption {
+    font-size: 13px;
+    padding: 0 5px;
+  }
+  .consumption *:not(p) {
+    flex-direction: column;
+  }
+  .consumption__CO2 {
+    flex-direction: column;
+    font-size: 13px;
+    padding: 0 5px;
+  }
+  .prices {
+    margin-top: 1rem;
+    flex-direction: column;
+    padding: 20px 0;
+  }
+  .prices * {
+    width: 90%;
+  }
+  .prices *:not(:last-child) {
+    margin-bottom: 20px;
   }
 }
 @media screen and (max-width: 670px) {
@@ -252,28 +369,7 @@
     font-size: 30px;
     margin-bottom: 10px;
   }
-  .OrdersBodyTitleAlbum {
-    display: grid;
-    grid-template-columns: 1fr;
-    table {
-      font-size: 20px;
-    }
-    tbody {
-      margin: 0;
-      grid-template-columns: 45% 100%;
-      grid-template-rows: 30% 30%;
-      padding: 0;
-      padding-top: 10%;
-      margin-left: 5%;
-    }
-    img
-    {
-        width: 120%;
-        height: 120%;
-        margin: 0;
-        object-fit: contain;
-    }
-  }
+
   .OrdersContainer {
     width: 100%;
     padding: 0 3%;
@@ -284,5 +380,36 @@
       width: 90%;
     }
   }
-
+  .description {
+    text-wrap: wrap;
+  }
+  .description__item:first-child {
+    font-size: 1em;
+  }
+}
+@media (prefers-color-scheme: light) {
+  .OrdersBody
+  {
+    color: black;
+    background-color: #EEEEF0;
+  }
+  .Orders *
+  {
+    color: #000;
+  }
+  .OrdersContainer *
+  {
+    color: white;
+  }
+  .OrdersImgs {
+    background: 
+      url(/src/assets/Orders/Background.webp) no-repeat;
+    background-size: 100% auto;
+    width: 100%;
+    opacity: 1;
+    filter: brightness(40%);
+    height: calc(100%);
+    position: absolute;
+    top: 0%;
+  }
 }

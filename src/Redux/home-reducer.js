@@ -33,12 +33,11 @@ const homeReducer = (state = initialState, action) => {
       return state;
   }
 };
-
-export const volumeChangeActionCreator = (obj) => ({
+export const updateVolume = (obj) => ({
   type: UPDATE_VOLUME,
   obj: obj,
 });
-export const buttonPlayOnChange = (obj) => ({
+export const onChangeButtonPlay = (obj) => ({
   type: UPDATE_BUTTON_PLAY,
   obj: obj,
 });

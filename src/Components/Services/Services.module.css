@@ -48,9 +48,12 @@
     width: 100%;
     text-align: justify;
     font-size: 5.3vw;
-    text-decoration: solid;
+    font-size: calc(84px + 16*(100vw / 1980));
+    font-weight: 700;
+    border-radius: 1px;
+    -webkit-text-stroke: 0.5px rgb(80, 80, 80);
+    font-family:'Poppins';
     color: transparent;
-    -webkit-text-stroke: 0.25px rgba(255, 255, 255, 0.2);
     :after {
       content: "";
       display: inline-block;
@@ -82,6 +85,20 @@ div[class~="ServiveButton"] {
     margin-top: 5%;
   }
   
+}
+.ServiceItem a::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: -10px;
+  display: block;
+  width: 0%;
+  height: 1px;
+  background: #000000;
+  transition: 0.3s;
+}
+.ServiceItem a:hover:after {
+  width: 100%;
 }
 
 .ServiceItem_Arrow {
@@ -149,5 +166,19 @@ div[class~="ServiveButton"] {
     width: 100%;
     padding: 0 5%;
     margin-top: 10%;
+  }
+}
+@media (prefers-color-scheme: light) {
+  .Service
+  {
+    color: black;
+  }
+  a
+  {
+    color: black;
+  }
+  .ServiceItem_Arrow
+  {
+    color: black;
   }
 }

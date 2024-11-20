@@ -1,21 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import s from "./Contacts.module.css";
 import { FaFacebookF } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa6";
 import { FaTwitter } from "react-icons/fa";
 import { SlSocialVkontakte } from "react-icons/sl";
 import { BsPaperclip } from "react-icons/bs";
+import PhoneInput from "react-phone-number-input/input";
 
 class Contacts extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.contact = {
       name: null,
       email: null,
       tel: null,
       message: null,
-    };
+    }
   }
+  
   handleClick = () => {};
   render() {
     return (
@@ -48,16 +50,21 @@ class Contacts extends React.Component {
             </div>
             <div className={s.contactsBodyFieds__pnone}>
               <p>Phone</p>
-              <input
+              {/* <input
                 type="text"
                 name="phone"
                 ref={this.contact.tel}
                 pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                 required
-              ></input>
+              ></input> */}
+              <PhoneInput
+               country="US"
+      placeholder="Enter phone number"
+      />
             </div>
             <div className={s.contactsBodyFieds__message}>
               <p>Message</p>
+
               <input
                 type="text"
                 ref={this.contact.message}

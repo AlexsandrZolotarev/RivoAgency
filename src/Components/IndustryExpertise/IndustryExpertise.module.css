@@ -20,11 +20,13 @@
     line-height: 52px;
   }
   :last-child {
-    font-weight: 600;
+    font-size: calc(84px + 16*(100vw / 1980));
+    font-weight: 700;
     border-radius: 1px;
     color: rgba(0, 0, 0, 0.1);
-    -webkit-text-stroke: 0.4px rgb(80, 80, 80);
-    font-size: calc(84px + 16*(100vw / 1980));
+    -webkit-text-stroke: 0.5px rgb(80, 80, 80);
+    font-family:'Poppins';
+    color: transparent;
   }
 }
 .industry__body {
@@ -106,4 +108,15 @@
       font-size: calc(29px + 15*(100vw / 1980));
     }
   }
+}
+
+@media (prefers-color-scheme: light) {
+ .industry
+ {
+  color: black;
+ } 
+ .industry__item
+ {
+  color: black;
+ }
 }

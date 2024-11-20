@@ -3,6 +3,7 @@ import ContactsUs from "./../../assets/img/Contact us big.webp";
 import Arrow from "./../../assets/Icons/ArrowBig_icon.webp";
 import s from "./ContactUs.module.css";
 function ContactUs() {
+  ;
   return (
     <a
       className={s.ContactUs}

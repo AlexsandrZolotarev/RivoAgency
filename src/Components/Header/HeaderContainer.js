@@ -1,6 +1,6 @@
 import {
-  openBurgerActionCreator,
-  closeBurgerActionCreator,
+  openBurger,
+  closeBurger,
 } from "../../Redux/header-reducer";
 import { connect } from 'react-redux';
 import Header from "./Header";
@@ -10,19 +10,11 @@ let mapStateToProps = (state) => {
     s: state,
   };
 };
-let mapDispatchToProps = (dispatch) => {
-  return {
-    openBurger: () => {
-      let action = openBurgerActionCreator();
-      dispatch(action);
-    },
-    closeBurger: () => {
-      let action = closeBurgerActionCreator();
-      dispatch(action);
-    },
-  };
-};
-
-const HeaderContainer = connect(mapStateToProps, mapDispatchToProps)(Header);
+const HeaderContainer = connect(mapStateToProps, 
+  {
+    openBurger,
+    closeBurger,
+  }
+)(Header);
 
 export default HeaderContainer;

@@ -28,8 +28,7 @@
   width: 100%;
   height: 150%;
 }
-.HomeCointaner
-{
+.HomeCointaner {
   position: relative;
 }
 .HomeTitle h2:first-child {
@@ -45,7 +44,7 @@
   font-size: calc(60px + 50 * (100vw / 1980));
   display: grid;
   grid-template-columns: 1fr;
-  line-height: 1.2;  
+  line-height: 1.2;
   :nth-child(2) {
     color: transparent;
     -webkit-text-stroke: 0.7px rgb(255, 255, 255);
@@ -86,7 +85,6 @@
 }
 .HomeButton a * {
   animation: arrow 1.5s ease-in-out infinite;
-
   display: inline-block;
   position: absolute;
   width: 25px;
@@ -98,7 +96,6 @@
   100% {
     transform: translate(0, 1px);
   }
-
   50% {
     transform: translate(0px, -7px);
   }
@@ -209,11 +206,12 @@
     line-height: 1;
   }
   :last-child {
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    -webkit-text-stroke: 0.5px rgb(255, 255, 255, 0.2);
-    font-weight: bold;
-    display: block;
+    font-weight: 700;
+    border-radius: 1px;
+    color: rgba(0, 0, 0, 0.1);
+    -webkit-text-stroke: 0.5px rgb(80, 80, 80);
+    font-family: "Poppins";
+    color: transparent;
     font-size: calc(60px + 24 * (100vw / 1980));
   }
 }
@@ -277,7 +275,7 @@
       font-size: calc(60px + 5 * (100vw / 1980));
     }
   }
-  .HomeTitle *{
+  .HomeTitle * {
     margin-left: 0 !important;
     font-weight: 600;
   }
@@ -324,5 +322,27 @@
       width: 72px;
       height: 72px;
     }
+  }
+}
+@media (prefers-color-scheme: light) {
+  .Home {
+    color: #000;
+    background-color: #eeeef0;
+  }
+  .WeWhoWeAreContainerMain__textWithVideo {
+    :first-child {
+      color: black;
+    }
+  }
+  .WeWhoWeAreContainerMain__textWithClutch_body {
+    :first-child {
+      color: black;
+    }
+  }
+  .HomeButton a {
+    border: 1px solid black;
+  }
+  .HomeButton a svg {
+    color: #000;
   }
 }

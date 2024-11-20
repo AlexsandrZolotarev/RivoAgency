@@ -15,10 +15,12 @@
     font-size: 40px;
   }
   :last-child {
-    font-weight: 600;
+    font-weight: 700;
     border-radius: 1px;
     color: rgba(0, 0, 0, 0.1);
-    -webkit-text-stroke: 0.4px rgb(80, 80, 80);
+    -webkit-text-stroke: 0.5px rgb(80, 80, 80);
+    font-family: "Poppins";
+    color: transparent;
     font-size: calc(60px + 12 * (100vw / 1980));
   }
 }
@@ -236,9 +238,47 @@
   }
 }
 @media screen and (max-width: 1250px) {
-  .contacts  {
-      width: 100%;
-      padding: 0 5%;
-      margin-top: 10%;
+  .contacts {
+    width: 100%;
+    padding: 0 5%;
+    margin-top: 10%;
+  }
+}
+@media (prefers-color-scheme: light) {
+  .contacts {
+    color: black;
+  }
+  .contactsBodyFieds__name input {
+    color: black !important;
+  }
+  .contactsBodyTextContact__phone a {
+    color: black;
+  }
+  .contactsBodyFieds {
+    & input {
+      color: black;
+      font-weight: 500;
+    }
+  }
+  .contactsButton {
+    border: 1px solid black;
+    color: black;
+  }
+  .contactsBodyTextContact__icons {
+    color: white;
+  }
+  .contactsBodyTextContact__icons li svg {
+    color: white;
+  }
+  .contactsBodyTextContact__icons li svg:hover {
+    color: black;
+  }
+  .contactsBodyFieds input {
+    color: black;
+  }
+  .contactsBodyFieds {
+    & input {
+      border-bottom: 1px solid black;
+    }
   }
 }

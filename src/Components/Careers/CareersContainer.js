@@ -1,9 +1,9 @@
 import React from "react";
 import Careers from "./Careers";
 import {
-  addVacanciActionCreator,
-  onVacancichangeActionCreator,
-  liftTextActionCreator,
+  addVacanci,
+  updateNewVacanciText,
+  liftText,
 } from "../../Redux/careerVacancies-reducer";
 import { connect } from "react-redux";
 
@@ -13,22 +13,11 @@ let mapStateToProps = (state) => {
     newCareerVacanci: state.careerPage.newCareerVacanci,
   };
 };
-let mapDispatchToProps = (dispatch) => {
-  return {
-    liftText: (input) => {
-      let action = liftTextActionCreator(input);
-      dispatch(action);
-    },
-    updateNewVacanciText: (input) => {
-      let action = onVacancichangeActionCreator(input);
-      dispatch(action);
-    },
-    addVacanci: () => {
-      dispatch(addVacanciActionCreator());
-    },
-  };
-};
 
-const CareersContainer = connect(mapStateToProps, mapDispatchToProps)(Careers);
+const CareersContainer = connect(mapStateToProps, 
+  {liftText,
+  updateNewVacanciText,
+  addVacanci,}
+)(Careers);
 
 export default CareersContainer;

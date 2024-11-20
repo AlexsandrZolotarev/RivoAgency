@@ -84,12 +84,12 @@ const careerVacanciesReducer = (state = initialState, action) => {
       return state;
   }
 };
-export const addVacanciActionCreator = () => ({ type: ADD_VACANCI });
-export const onVacancichangeActionCreator = (input) => ({
+export const addVacanci = () => ({ type: ADD_VACANCI });
+export const updateNewVacanciText = (input) => ({
   type: UPDATE_VACANCI,
   newInput: input,
 });
-export const liftTextActionCreator = (input) => ({
+export const liftText = (input) => ({
   type: LIFT_TEXT,
   newInput: input,
 });

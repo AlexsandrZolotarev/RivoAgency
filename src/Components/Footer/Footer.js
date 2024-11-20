@@ -21,7 +21,7 @@ class Footer extends React.Component {
               <nav>
                 <ul>
                   <li onClick={this.Scroll}>
-                    <NavLink to={"/"}>HOME</NavLink>
+                    <NavLink to={"/RivoAgancy"}>HOME</NavLink>
                   </li>
                   <li onClick={this.Scroll}>
                     <NavLink to={"/Services"}>Services</NavLink>

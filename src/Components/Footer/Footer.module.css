@@ -207,3 +207,20 @@
     margin: 0;
   }
 }
+@media (prefers-color-scheme: light) {
+  .wrapper_Footer
+  {
+    color: black;
+    background-color: white;
+  }
+  .wrapper_Footer__menuitems a::after {
+    background: black;
+  }
+  .wrapper_Footer__menuitems a:hover {
+    color: #000000;
+    transition: 0.1s;
+  }
+  .wrapper_Footer__menuitems a {
+    color: black;
+  }
+}
