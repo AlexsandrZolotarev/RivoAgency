@@ -211,23 +211,20 @@ h6 {
   }
 }
 @media screen and (max-width: 970px) {
-  .ContactUs 
-  {
+  .ContactUs {
     right: 4%;
-  }  
+  }
 }
 @media (prefers-color-scheme: light) {
-  body
-  {
+  body {
     background: white;
-    color: black
+    color: black;
   }
-  main
-  {
-    background: #EEEEF0;
+  main {
+    background: #eeeef0;
   }
-  .wrapper
-  {
+  .wrapper {
     background-color: white;
   }
 }
+

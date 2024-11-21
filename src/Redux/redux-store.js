@@ -2,7 +2,7 @@ import careerVacanciesReducer from "./careerVacancies-reducer";
 import homeReducer from "./home-reducer";
 import { createStore, combineReducers } from "redux";
 import ordersReducer from "./order-reducer";
-import headerReducer from "./header-reducer";
+import headerReducer from "./menuBurger-reducer";
 
 let reducers = combineReducers({
   careerPage: careerVacanciesReducer,
