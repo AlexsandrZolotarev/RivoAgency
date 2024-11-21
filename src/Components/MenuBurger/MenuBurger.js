@@ -5,6 +5,7 @@ import { scaleRotate as Menu } from "react-burger-menu";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 import { SlSocialVkontakte } from "react-icons/sl";
 import "./MenuBurger.css";
+import { NavLink } from "react-router-dom";
 
 let MenuBurger = (props) => {
   return (
@@ -29,34 +30,34 @@ let MenuBurger = (props) => {
         <nav>
           <ul>
             <li>
-              <a href={"/RivoAgancy"} className="link">
+              <NavLink to={"/RivoAgancy"} className="link" reloadDocument>
                 HOME
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a href={"/Services"} className="link">
+              <NavLink to={"/Services"} className="link" reloadDocument>
                 Services
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a href={"/Projects"} className="link">
+              <NavLink to={"/Projects"} className="link" reloadDocument>
                 Projects
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a href={"/Contacts"} className="link">
+              <NavLink to={"/Contacts"} className="link" reloadDocument>
                 Contacts
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a href={"/Careers"} className="link">
+              <NavLink to={"/Careers"} className="link" reloadDocument>
                 Careers
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a href={"/Orders"} className="link">
+              <NavLink to={"/Orders"} className="link" reloadDocument>
                 Orders
-              </a>
+              </NavLink>
             </li>
           </ul>
         </nav>
@@ -118,12 +119,11 @@ let MenuBurger = (props) => {
             </ul>
           </div>
         </nav>
-       
       </div>
       <div className="copyright">
-          <p>2024 © Rivo Agency</p>
-          <p>Privacy Policy & Term of Use</p>
-        </div>
+        <p>2024 © Rivo Agency</p>
+        <p>Privacy Policy & Term of Use</p>
+      </div>
     </Menu>
   );
 };
