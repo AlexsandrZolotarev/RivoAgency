@@ -1,0 +1,190 @@
+.order {
+  color: white;
+  margin-top: 1rem;
+  position: relative;
+}
+.order__container {
+  position: relative;
+  min-height: 50rem;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 1rem;
+  margin: 0 10em;
+  margin-top: 2%;
+}
+.presentaion {
+  grid-column: span 7;
+  width: 100%;
+}
+.text {
+  color: #767676;
+  display: flex;
+  text-wrap: pretty;
+  font-size: 13px;
+  :last-child {
+    display: inline-block;
+  }
+  :first-child {
+    display: block;
+    width: 8%;
+    height: 8%;
+    margin-right: 1%;
+  }
+}
+.descriprion {
+  background-color: white;
+  color: black;
+  grid-row: 1 / 2;
+  grid-column: 8 / 13;
+}
+.descriprion header h2 {
+  font-size: calc(20px + 10 * (100vw / 1980));
+  padding-top: 1em;
+  font-weight: 600;
+  display: inline-block;
+}
+.descriprion__container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1.5em;
+}
+.background {
+  display: block;
+  width: auto;
+  height: 100%;
+  position: absolute;
+  object-fit: fill;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.order__header {
+  background-color: white;
+  min-height: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  h2 {
+    display: inline-block;
+    font-size: 18px;
+    font-family: "Poppins";
+    font-weight: 400;
+    color: #767676;
+    margin-left: 10rem;
+    padding: 6px;
+  }
+}
+.order__header a:hover h2 {
+  background-color: #f4f4f4;
+  color: #333;
+}
+.img__body {
+  height: 80%;
+}
+.consumption {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin: 2em 0;
+}
+.consumption *:not(p) {
+  display: flex;
+  justify-content: space-between;
+}
+.consumption__CO2 {
+  display: flex;
+  justify-content: space-between;
+  margin: 1em 0;
+  margin-top: 0;
+}
+.button {
+  transition: all ease 1000ms;
+  display: flex;
+  justify-content: center;
+  border: 1px solid black;;
+  padding: 2.5%;
+  font-size: 1rem;
+  font-family: "Poppins";
+  color: black;
+  background: linear-gradient(to left, transparent 50%, #fddd0a 50%) right;
+  background-size: 200%;
+  transition: 0.3s ease-out;
+  width: auto;
+  button {
+    text-transform: uppercase;
+    color: black;
+    font-size: 1rem;
+    border: 0;
+    background-color: transparent;
+  }
+  :last-child {
+    position: relative;
+    font-size: 1.3em ;
+    top: 1px;
+}
+}
+.button:hover {
+  background-position: left;
+  color: black;
+  button {
+    text-transform: uppercase;
+    color: black;
+  }
+}
+
+.types {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  min-width: 10rem;
+  max-width: 33rem;
+}
+.types *:not(svg) {
+  display: flex;
+  align-items: center;
+  margin-top: 1.5em;
+  font-weight: 600;
+  svg {
+    margin: 0 10px;
+    margin-left: 0;
+    color: #767676;
+    font-size: 1.5rem;
+  }
+}
+.prices {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 1rem;
+  font-weight: 600;
+  font-size: 1.5rem;
+  font-family: "Poppins";
+}
+.prices * {
+  padding-top: 40px;
+  border-radius: 10px;
+}
+.prices__price {
+  position: relative;
+}
+.prices__price::before {
+  content: "Recommended price manufacturer";
+  position: absolute;
+  top: 7px;
+  font-size: 12px;
+  font-weight: 400;
+  width: 100%;
+}
+.prices__monthlyrent {
+  position: relative;
+}
+.prices__monthlyrent::before {
+  content: "Monthly rent";
+  position: absolute;
+  top: 7px;
+  font-size: 12px;
+  font-weight: 400;
+  width: 100%;
+}

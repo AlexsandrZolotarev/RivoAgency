@@ -2,7 +2,7 @@ const TOGGLE_BURGER = "TOGGLE-BURGER";
 
 
 let initialState = {
-  bool:true,
+  bool:false,
 };
 
 const MenuBurgerReducer = (state = initialState, action) => {

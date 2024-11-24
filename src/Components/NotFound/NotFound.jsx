@@ -7,6 +7,9 @@ import { NavLink } from "react-router-dom";
 import { MdArrowOutward } from "react-icons/md";
 
 let NotFound = () => {
+  let Scroll = () => {
+    window.scrollTo(0,0);
+  }
   return (
     <section className={s.notFound}>
       <div className={s.notFound__left_content}>
@@ -30,8 +33,8 @@ let NotFound = () => {
           <h2>Kaput! Error 404</h2>
           <p>Unfortunately, the page you're looking for doesn't exist or there was an error in the link you followed or typed.</p>
         </header>
-        <div className={s.button}>
-        <NavLink to={"/"}><button>GO to home page</button></NavLink>
+        <div className={s.button} onClick={Scroll}>
+        <NavLink to={"/RivoAgancy"}><button>GO to home page</button></NavLink>
         <MdArrowOutward className={s.button__arrow} />
         </div>
       

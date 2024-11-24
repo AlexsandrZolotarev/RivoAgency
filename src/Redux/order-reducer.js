@@ -1,6 +1,8 @@
 const SET_CARDS = "SET-CARDS";
+const SET_ORDER = "SET-ORDER";
 let initialState = {
   orders: [],
+  order: null,
 };
 
 const ordersReducer = (state = initialState, action) => {
@@ -11,11 +13,15 @@ const ordersReducer = (state = initialState, action) => {
       copyState.orders = action.cards;
       return copyState;
     }
+    case SET_ORDER: {
+      return { ...state, order:action.order};
+    }
     default:
       return state;
   }
 };
 
 export const setCards = (cards) => ({ type: SET_CARDS, cards: cards });
+export const setOrder = (order) => ({ type: SET_ORDER, order});
 
 export default ordersReducer;

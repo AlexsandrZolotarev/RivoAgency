@@ -10,17 +10,13 @@ class OrdersContainer extends React.Component {
       .then((response) => this.props.setCards(response.data.models));
   }
   render() {
-    return (
-      <>
-        <Orders orders ={this.props.orders}/>
-      </>
-    );
+    return <Orders orders={this.props.orders} />;
   }
 }
 
 let mapStateToProps = (state) => {
   return {
-    orders : state.OrdersPage.orders,
+    orders: state.OrdersPage.orders,
   };
 };
 

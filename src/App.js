@@ -13,6 +13,8 @@ import ContactUs from "./Components/ContactsUs/ContactUs";
 import FooterContainer from "./Components/Footer/FooterContainer";
 import MenuBurgerContainer from "./Components/MenuBurger/MenuBurgerContainer";
 import Header from "./Components/Header/Header";
+import OrderContainer from "./Components/Order/OrderContainer";
+
 
 class App extends React.Component {
   render() {
@@ -22,7 +24,7 @@ class App extends React.Component {
           <div className="loader"></div>
         </div>
         <MenuBurgerContainer pageWrapId={"main"} outerContainerId={"wrapper"} />
-        <Header/>
+        <Header />
         <main className="wrapper-content" id="main">
           <Routes>
             <Route path="/RivoAgancy" element={<HomeContainer />}></Route>
@@ -32,6 +34,7 @@ class App extends React.Component {
             <Route path="/Contacts" element={<Contacts />}></Route>
             <Route path="/Orders" element={<OrdersContainer />}></Route>
             <Route path="/Services" element={<Services />}></Route>
+            <Route path="/Order/:carId" element={<OrderContainer/>}></Route>
             <Route path="*" element={<NotFound />}></Route>
           </Routes>
         </main>

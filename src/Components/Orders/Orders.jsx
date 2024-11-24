@@ -8,20 +8,16 @@ import { FaGasPump } from "react-icons/fa6";
 import { FaChargingStation } from "react-icons/fa";
 import { TbAutomaticGearbox } from "react-icons/tb";
 import { IoMdCheckmark } from "react-icons/io";
-let Description = () => {
-  return <div>1</div>;
-};
-
-let Order = ({ car }) => {
+let Car = ({ car }) => {
   return (
     <article className={s.car} tabIndex={car.id}>
-      <a href="" className={s.car__image}>
+      <NavLink to={"/Order/" + car.id} className={s.car__image}>
         <img
           src={require(`../../assets/Orders/Cars/${car.img}`)}
           alt={`Модель ${car.model}`}
           loading="lazy"
         />
-      </a>
+      </NavLink>
       <header>
         <h2>{car.model}</h2>
       </header>
@@ -128,7 +124,7 @@ let Orders = (props) => {
         </div>
         <div className={s.orders__body__grid}>
           {props.orders.map((item) => (
-            <Order key={item.id} car={item} />
+            <Car key={item.id} car={item} />
           ))}
         </div>
       </section>
