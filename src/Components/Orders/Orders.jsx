@@ -13,7 +13,7 @@ let Car = ({ car }) => {
     <article className={s.car} tabIndex={car.id}>
       <NavLink to={"/Order/" + car.id} className={s.car__image}>
         <img
-          src={require(`../../assets/Orders/Cars/${car.img}`)}
+          src={`https://alexsandrzolotarev.github.io/RivoAgancy/src/assets/Orders/Cars/${car.img}`}
           alt={`Модель ${car.model}`}
           loading="lazy"
         />
