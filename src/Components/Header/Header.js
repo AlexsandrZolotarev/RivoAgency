@@ -5,17 +5,34 @@ import { NavLink } from "react-router-dom";
 import logoDark from "./../../assets/Header/LogotypeDark.svg";
 import logoLight from "./../../assets/Header/LogotypeLight.svg";
 import s from "./Header.module.css";
-
-let Header = (props) => {
+import { BiLogIn } from "react-icons/bi";
+let Header = () => {
   return (
     <header className={s.header} id="header">
       <div className={s.container}>
         <div className={s.header__body}>
           <NavLink to={"/RivoAgancy"} aria-label="Home Page">
-          <img alt="logotype" src={(window.matchMedia('(prefers-color-scheme: dark)').matches) ? logoDark : logoLight}/>
+            <img
+              alt="logotype"
+              src={
+                window.matchMedia("(prefers-color-scheme: dark)").matches
+                  ? logoDark
+                  : logoLight
+              }
+            />
           </NavLink>
+
           <div className={s.header__buttons_items}>
-            <div className={s.header__items}>
+          <div className={s.login}>
+              <NavLink to={"/RivoAgancy/login"}>Login</NavLink>
+              <BiLogIn />
+            </div>
+          <NavLink className={s.makeOrder_Button} to={"/RivoAgancy/Orders"}>
+              <p>MAKE ORDER</p>
+              <MdArrowOutward className={s.makeOrder_Button__arrow} />
+            </NavLink>
+          
+            {/* <div className={s.header__items}>
               <ul className={s.header__items_items}>
                 <li>
                   <NavLink to={"/Services"}>Services</NavLink>
@@ -78,11 +95,7 @@ let Header = (props) => {
                   </NavLink>
                 </li>
               </ul>
-            </div>
-            <NavLink className={s.makeOrder_Button} to={"/Orders"}>
-              <p>MAKE ORDER</p>
-              <MdArrowOutward className={s.makeOrder_Button__arrow} />
-            </NavLink>
+            </div> */}
           </div>
         </div>
       </div>

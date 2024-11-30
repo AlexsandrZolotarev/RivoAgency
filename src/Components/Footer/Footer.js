@@ -4,11 +4,9 @@ import Vector from "../../assets/Footer/Vector.svg";
 import Ellipse from "../../assets/Footer/Element.svg";
 import Cube from "../../assets/Footer/ElementCube.svg";
 import { NavLink } from "react-router-dom";
+import Scroll from "../../Scroll";
 
 class Footer extends React.Component {
-  Scroll = () => {
-    window.scrollTo(0,0);
-  }
   render() {
     return (
       <footer className={s.wrapper_Footer} id="Footer">
@@ -20,20 +18,20 @@ class Footer extends React.Component {
             <div className={s.wrapper_Footer__menuitems}>
               <nav>
                 <ul>
-                  <li onClick={this.Scroll}>
+                  <li onClick={Scroll}>
                     <NavLink to={"/RivoAgancy"}>HOME</NavLink>
                   </li>
-                  <li onClick={this.Scroll}>
-                    <NavLink to={"/Services"}>Services</NavLink>
+                  <li onClick={Scroll}>
+                    <NavLink to={"/RivoAgancy/Services"}>Services</NavLink>
                   </li>
-                  <li onClick={this.Scroll}>
-                    <NavLink to={"/Projects"}>Projeсts</NavLink>
+                  <li onClick={Scroll}>
+                    <NavLink to={"/RivoAgancy/Projects"}>Projeсts</NavLink>
                   </li>
-                  <li onClick={this.Scroll}>
-                    <NavLink to={"/Contacts"}>Contaсts</NavLink>
+                  <li onClick={Scroll}>
+                    <NavLink to={"/RivoAgancy/Contacts"}>Contaсts</NavLink>
                   </li>
-                  <li onClick={this.Scroll}>
-                    <NavLink to={"/Careers"}>Careers</NavLink>
+                  <li onClick={Scroll}>
+                    <NavLink to={"/RivoAgancy/Careers"}>Careers</NavLink>
                   </li>
                 </ul>
               </nav>

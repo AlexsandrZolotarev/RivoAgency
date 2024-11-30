@@ -12,10 +12,8 @@ import Services from "./Components/Services/Services";
 import ContactUs from "./Components/ContactsUs/ContactUs";
 import FooterContainer from "./Components/Footer/FooterContainer";
 import MenuBurgerContainer from "./Components/MenuBurger/MenuBurgerContainer";
-import Header from "./Components/Header/Header";
 import OrderContainer from "./Components/Order/OrderContainer";
-
-
+import HeaderContainer from "./Components/Header/HeaderContainer";
 class App extends React.Component {
   render() {
     return (
@@ -24,17 +22,26 @@ class App extends React.Component {
           <div className="loader"></div>
         </div>
         <MenuBurgerContainer pageWrapId={"main"} outerContainerId={"wrapper"} />
-        <Header />
+        <HeaderContainer />
         <main className="wrapper-content" id="main">
           <Routes>
             <Route path="/RivoAgancy" element={<HomeContainer />}></Route>
-            <Route path="/Expertise" element={<Expertise />}></Route>
-            <Route path="/Careers" element={<CareersContainer />}></Route>
-            <Route path="/Projects" element={<Projects />}></Route>
-            <Route path="/Contacts" element={<Contacts />}></Route>
-            <Route path="/Orders" element={<OrdersContainer />}></Route>
-            <Route path="/Services" element={<Services />}></Route>
-            <Route path="/Order/:carId" element={<OrderContainer/>}></Route>
+            <Route path="/RivoAgancy/Expertise" element={<Expertise />}></Route>
+            <Route
+              path="/RivoAgancy/Careers"
+              element={<CareersContainer />}
+            ></Route>
+            <Route path="/RivoAgancy/Projects" element={<Projects />}></Route>
+            <Route path="/RivoAgancy/Contacts" element={<Contacts />}></Route>
+            <Route
+              path="/RivoAgancy/Orders"
+              element={<OrdersContainer />}
+            ></Route>
+            <Route path="/RivoAgancy/Services" element={<Services />}></Route>
+            <Route
+              path="/RivoAgancy/Order/:carId"
+              element={<OrderContainer />}
+            ></Route>
             <Route path="*" element={<NotFound />}></Route>
           </Routes>
         </main>

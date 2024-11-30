@@ -6,6 +6,7 @@ import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 import { SlSocialVkontakte } from "react-icons/sl";
 import "./MenuBurger.css";
 import { NavLink } from "react-router-dom";
+import { BiLogIn } from "react-icons/bi";
 
 let MenuBurger = (props) => {
   return (
@@ -17,7 +18,8 @@ let MenuBurger = (props) => {
       onStateChange={props.toogleBurger}
     >
       <div>
-        <img
+      <NavLink to={"/RivoAgancy"} className="link" reloadDocument>
+      <img
           alt="logotype"
           src={
             window.matchMedia("(prefers-color-scheme: dark)").matches
@@ -25,6 +27,8 @@ let MenuBurger = (props) => {
               : logoLight
           }
         />
+      </NavLink>
+        
       </div>
       <div className="burger__body">
         <nav>
@@ -35,29 +39,58 @@ let MenuBurger = (props) => {
               </NavLink>
             </li>
             <li>
-              <NavLink to={"/Services"} className="link" reloadDocument>
+              <NavLink
+                to={"/RivoAgancy/Services"}
+                className="link"
+                reloadDocument
+              >
                 Services
               </NavLink>
             </li>
             <li>
-              <NavLink to={"/Projects"} className="link" reloadDocument>
+              <NavLink
+                to={"/RivoAgancy/Projects"}
+                className="link"
+                reloadDocument
+              >
                 Projects
               </NavLink>
             </li>
             <li>
-              <NavLink to={"/Contacts"} className="link" reloadDocument>
+              <NavLink
+                to={"/RivoAgancy/Contacts"}
+                className="link"
+                reloadDocument
+              >
                 Contacts
               </NavLink>
             </li>
             <li>
-              <NavLink to={"/Careers"} className="link" reloadDocument>
+              <NavLink
+                to={"/RivoAgancy/Careers"}
+                className="link"
+                reloadDocument
+              >
                 Careers
               </NavLink>
             </li>
             <li>
-              <NavLink to={"/Orders"} className="link" reloadDocument>
+              <NavLink
+                to={"/RivoAgancy/Orders"}
+                className="link"
+                reloadDocument
+              >
                 Orders
               </NavLink>
+            </li>
+            <li>
+              <div className="login__form">
+              <div className="login__form_container">
+              <button>Login</button>
+              <BiLogIn />
+              </div>
+                
+              </div>
             </li>
           </ul>
         </nav>

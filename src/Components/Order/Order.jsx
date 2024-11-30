@@ -1,18 +1,19 @@
 import React from "react";
 import s from "./Order.module.css";
 import NotFound from "../NotFound/NotFound";
-import NotFoundImg from "../../assets/NotFound/NotFoundImg.png";
 import background from "../../assets/Orders/Order/vehicle_background.webp";
+import backgroundBlack from "../../assets/Orders/Order/BackgroundOrderBlack.png";
 import { PiEngineFill } from "react-icons/pi";
 import { FaChargingStation, FaGasPump } from "react-icons/fa";
 import { TbAutomaticGearbox } from "react-icons/tb";
 import { IoAlertCircleOutline } from "react-icons/io5";
 import { MdArrowOutward } from "react-icons/md";
+import Scroll from "../../Scroll";
 let Order = (props) => {
   if (!props.order) {
     return <NotFound />;
   }
-  console.log(props)
+  Scroll();
   return (
     <section className={s.order}>
       <header className={s.order__header}>
@@ -22,16 +23,15 @@ let Order = (props) => {
       </header>
       <div className={s.background}>
         <picture>
-          <source srcset={background} media="(min-width: 1024px)" />
-          <img src={background} alt="Background" width="2962" height="1297" />
+          <source srcset={(window.matchMedia('(prefers-color-scheme: dark)').matches) ? backgroundBlack  : background} media="(min-width: 1024px)" />
+          <img src={(window.matchMedia('(prefers-color-scheme: dark)').matches) ? backgroundBlack  : background} alt="Background" width="2962" height="1297" />
         </picture>
       </div>
       <div className={s.order__container}>
         <div className={s.presentaion}>
           <div className={s.img__body}>
             <img
-              // src={(props.order.img) ? props.order.model : NotFoundImg }
-              src={NotFoundImg}
+              src={`https://alexsandrzolotarev.github.io/RivoAgancy/src/assets/Orders/Cars/${props.order.img}`}
               alt={`Модель ${props.order.model}`}
               loading="lazy"
             />
@@ -58,9 +58,7 @@ let Order = (props) => {
               <h2>{props.order.model}</h2>
             </header>
             <div className={s.prices}>
-              <div className={s.prices__price}>
-                {props.order.price + ` €`}
-              </div>
+              <div className={s.prices__price}>{props.order.price + ` €`}</div>
               <div className={s.prices__monthlyrent}>
                 {" "}
                 {props.order.monthlyRent + ` €`}

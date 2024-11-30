@@ -11,7 +11,7 @@ import { IoMdCheckmark } from "react-icons/io";
 let Car = ({ car }) => {
   return (
     <article className={s.car} tabIndex={car.id}>
-      <NavLink to={"/Order/" + car.id} className={s.car__image}>
+      <NavLink to={"/RivoAgancy/Order/" + car.id} className={s.car__image}>
         <img
           src={`https://alexsandrzolotarev.github.io/RivoAgancy/src/assets/Orders/Cars/${car.img}`}
           alt={`Модель ${car.model}`}
@@ -22,21 +22,24 @@ let Car = ({ car }) => {
         <h2>{car.model}</h2>
       </header>
       <div className={s.types}>
-        <div className={s.types__engine}>
-          <PiEngineFill />
-          {car.engine}
-        </div>
-        <div className={s.types__fuel}>
-          {car.Fuel === "Gasoline" || car.Fuel === "Diesel" ? (
-            <FaGasPump />
-          ) : (
-            <FaChargingStation />
-          )}
-          {car.Fuel}
-        </div>
-        <div className={s.types__transmission}>
-          <TbAutomaticGearbox />
-          {car.transmission}
+        <div className={s.types__container}>
+          <div className={s.types__engine}>
+            <PiEngineFill />
+            {car.engine}
+          </div>
+
+          <div className={s.types__fuel}>
+            {car.Fuel === "Gasoline" || car.Fuel === "Diesel" ? (
+              <FaGasPump />
+            ) : (
+              <FaChargingStation />
+            )}
+            {car.Fuel}
+          </div>
+          <div className={s.types__transmission}>
+            <TbAutomaticGearbox />
+            {car.transmission}
+          </div>
         </div>
       </div>
       <div className={s.prices}>
@@ -84,9 +87,13 @@ let Car = ({ car }) => {
           alt={`Категория модели`}
         />
       </div>
-      <a href=" " title={`Узнать больше о ${car.model}`} className={s.button}>
+      <NavLink
+        to={"/Order/" + car.id}
+        title={`Узнать больше о ${car.model}`}
+        className={s.button}
+      >
         <button>Learn more</button>
-      </a>
+      </NavLink>
     </article>
   );
 };
@@ -108,7 +115,7 @@ let Orders = (props) => {
               <p>Looking for a new vehicle in stock</p>
             </header>
             <div className={s.OrdersTitleBodyButton}>
-              <a>
+              <a href="#ordersBody">
                 <PiArrowDownLight className={s.OrdersTitleBodyButtonArrow} />
               </a>
               <p>View</p>
@@ -122,7 +129,7 @@ let Orders = (props) => {
             <h2>Information</h2>
           </header>
         </div>
-        <div className={s.orders__body__grid}>
+        <div className={s.orders__body__grid} id="ordersBody">
           {props.orders.map((item) => (
             <Car key={item.id} car={item} />
           ))}

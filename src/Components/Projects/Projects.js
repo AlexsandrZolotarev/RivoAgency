@@ -26,6 +26,56 @@ class Projects extends React.Component {
             <h2>Projects</h2>
             <h2>Projects</h2>
           </header>
+          <ul id="cards">
+			<li className={s.card} id="card_1">
+				<div className="card__content">
+					<div>
+						<h2>Card One</h2>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+						<p><a href="#top" className="btn btn--accent">Read more</a></p>
+					</div>
+					<figure>
+						<img src={mens} alt="Image description"/>
+					</figure>
+				</div>
+			</li>
+			<li className="card" id="card_2">
+				<div className="card__content">
+					<div>
+						<h2>Card Two</h2>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+						<p><a href="#top" className="btn btn--accent">Read more</a></p>
+					</div>
+					<figure>
+						<img src={mens} alt="Image description"/>
+					</figure>
+				</div>
+			</li>
+			<li className="card" id="card_3">
+				<div className="card__content">
+					<div>
+						<h2>Card Three</h2>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+						<p><a href="#top" className="btn btn--accent">Read more</a></p>
+					</div>
+					<figure>
+						<img src={mens} alt="Image description"/>
+					</figure>
+				</div>
+			</li>
+			<li className="card" id="card_4">
+				<div className="card__content">
+					<div>
+						<h2>Card Four</h2>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+						<p><a href="#top" className="btn btn--accent">Read more</a></p>
+					</div>
+					<figure>
+						<img src={mens} alt="Image description"/>
+					</figure>
+				</div>
+			</li>
+		</ul>
           <section className={s.wrapper_Projects__body}>
             <article className={s.wrapper_Projects__project}>
               <header className={s.wrapper_Projects_body_title}>Mens</header>
