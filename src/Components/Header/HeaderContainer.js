@@ -9,7 +9,7 @@ class HeaderContainer extends React.Component {
     axios
       .get("https://alexsandrzolotarev.github.io/api/encrypted.json", {
       })
-      .then((res) => console.log(res));
+      .then((res) => console.log());
   }
   render() {
     return <Header {...this.props} />;
