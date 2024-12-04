@@ -88,7 +88,7 @@ let Car = ({ car }) => {
         />
       </div>
       <NavLink
-        to={"/Order/" + car.id}
+        to={"/RivoAgancy/Order/" + car.id}
         title={`Узнать больше о ${car.model}`}
         className={s.button}
       >

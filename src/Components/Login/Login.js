@@ -1,56 +1,52 @@
 import React from "react";
 import s from "./Login.module.css";
 import { ErrorMessage, Field, Form, Formik } from "formik";
-import axios from "axios";
+import { checkingForRegistration } from "../../localStorage/localStorage";
+import { useNavigate } from "react-router-dom";
+import { Preloader } from "../../preloader/preloader";
+import * as Yup from 'yup';
+
+const SignupSchema = Yup.object().shape({
+  name: Yup.string()
+    .min(4, 'Too Short!')
+    .max(24, 'Too Long!')
+    .required('Required'),
+  password: Yup.string()
+    .min(5, 'Too Short!')
+    .max(24, 'Too Long!')
+    .required('Required'),
+  email: Yup.string().email('Invalid email').required('Required'),
+});
 let LoginForm = (props) => {
-  let server = (data) => {
-    let loginButton = document.getElementById("login_button");
-    loginButton.classList.add("loader");
-    setTimeout(() => {
-      if (loginButton.classList.contains("loader"))
-      {
-          loginButton.classList.remove("loader");
-          loginButton.classList.add("done");
-      } 
-      axios
-      .post("https://alexsandrzolotarev.github.io/api/encrypted.json", {
-        props,
-      })
-      .then((response) => console.log(response))
-      .catch((error) => console.log(error));
-    },1000);
-    
-  };
+  const navigate = useNavigate();
   return (
     <Formik
       className={s.login_form}
-      initialValues={{ email: "", password: "", name: "" }}
-      validate={(values) => {
-        const errors = {};
-        if (!values.email) {
-          errors.email = "Required";
-        } else if (
-          !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
-        ) {
-          errors.email = "Email must contain the @ symbol";
-        }
-        return errors;
-      }}
+      initialValues={{name: "" , email: "", password: ""}}
+      validationSchema={SignupSchema}
       onSubmit={(values) => {
-        server(values);
+        values.id = Math.random().toString(16).slice(2);
+        props.setAuthUser(values);
+        Preloader();
+        navigate('/RivoAgancy/Profile');
       }}
     >
       {({ isSubmitting }) => (
         <Form>
           <div className={s.grid}>
-            <Field type="text" name="name" placeholder="Enter Name" />
+            <Field type="name" name="name" placeholder="Enter Name" />
+            <ErrorMessage
+              name="name"
+              component="div"
+              className={s.error}
+            />
           </div>
           <div className={s.grid}>
             <Field type="email" name="email" placeholder="Enter Email" />
             <ErrorMessage
               name="email"
               component="div"
-              className={s.error_email}
+              className={s.error}
             />
           </div>
           <div className={s.grid}>
@@ -59,14 +55,13 @@ let LoginForm = (props) => {
               name="password"
               placeholder="Enter password"
             />
-            <ErrorMessage name="password" component="div" />
+            <ErrorMessage name="password" component="div" className={s.error}/>
           </div>
           <div className={s.grid_button}>
             <button type="submit" disabled={isSubmitting} id="login_button">
               Submit
             </button>
           </div>
-         
         </Form>
       )}
     </Formik>
@@ -77,9 +72,9 @@ let Login = (props) => {
   return (
     <section className={s.login}>
       <div className={s.login_wrapper}>
-        <h1>{"Login"}</h1>
-        <h2>{"Login"}</h2>
-        <LoginForm />
+        <h1>{(checkingForRegistration()) ? "Login" : "Registration"}</h1>
+        <h2>{(checkingForRegistration())? "Login" : "Registration"}</h2>
+        <LoginForm {...props} />
       </div>
     </section>
   );

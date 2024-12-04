@@ -14,7 +14,8 @@ import FooterContainer from "./Components/Footer/FooterContainer";
 import MenuBurgerContainer from "./Components/MenuBurger/MenuBurgerContainer";
 import OrderContainer from "./Components/Order/OrderContainer";
 import HeaderContainer from "./Components/Header/HeaderContainer";
-import Login from "./Components/Login/Login";
+import LoginContainer from "./Components/Login/LoginContainer";
+import ProlifeContainer from "./Components/Profile/ProlifeContainer";
 class App extends React.Component {
   render() {
     return (
@@ -34,6 +35,7 @@ class App extends React.Component {
             ></Route>
             <Route path="/RivoAgancy/Projects" element={<Projects />}></Route>
             <Route path="/RivoAgancy/Contacts" element={<Contacts />}></Route>
+            <Route path="/RivoAgancy/Profile" element={<ProlifeContainer />}></Route>
             <Route
               path="/RivoAgancy/Orders"
               element={<OrdersContainer />}
@@ -45,7 +47,7 @@ class App extends React.Component {
             ></Route>
              <Route
               path="/RivoAgancy/Login"
-              element={<Login/>}
+              element={<LoginContainer/>}
             ></Route>
             <Route path="*" element={<NotFound />}></Route>
           </Routes>

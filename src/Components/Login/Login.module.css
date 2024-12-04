@@ -12,7 +12,7 @@
   width: 100%;
   position: relative;
 }
-.error_email {
+.error{
   position: absolute;
   bottom: 40%;
   right: 2em;
@@ -21,7 +21,7 @@
   font-weight: 500;
   line-height: 13px;
 }
-.error_email::after {
+.error::after {
   content: "⊗";
   position: absolute;
   top: 0;
@@ -91,12 +91,12 @@
   }
 }
 @media screen and (max-width: 1250px) {
-    .error_email {
+    .error {
         right:0;
     }
 }
 @media screen and (max-width: 870px) {
-    .error_email {
+    .error{
       position: relative;
     }
 }

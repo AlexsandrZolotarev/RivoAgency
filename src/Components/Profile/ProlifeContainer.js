@@ -1,16 +1,17 @@
 import React from "react";
-import Header from "./Header";
 import { connect } from "react-redux";
 import { setAuthUser } from "../../Redux/auth-reducer";
+import Profile from "./Prolife";
 
-class HeaderContainer extends React.Component {
+class ProlifeContainer extends React.Component {
   render() {
-    return <Header {...this.props} />;
+    return <Profile/>;
   }
 }
 const mapStateToProps = (state) => {
-  return {};
+  return {
+  };
 };
 export default connect(mapStateToProps, {
   setAuthUser,
-})(HeaderContainer);
+})(ProlifeContainer);
