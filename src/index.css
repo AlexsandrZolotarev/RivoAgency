@@ -203,6 +203,23 @@ h6 {
     animation: 1s spin infinite linear;
   }
 }
+
+#login_button.loader{
+  position: relative;
+  color:transparent;
+  width: 25px;
+  height: 25px;
+  border: 6px solid white;
+  border-radius: 50%;
+  border-top-color: #fddd0a;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation: 1s spin infinite linear;
+}
+#login_button.done{
+  color:#fddd0a;
+}
 .preloader.done {
   opacity: 0;
   visibility: hidden;

@@ -1,0 +1,102 @@
+.login {
+  color: white;
+  font-size: 20px;
+  font-family: "Poppins";
+  form {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+}
+.grid {
+  width: 100%;
+  position: relative;
+}
+.error_email {
+  position: absolute;
+  bottom: 40%;
+  right: 2em;
+  color: #fd0a0a;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 13px;
+}
+.error_email::after {
+  content: "⊗";
+  position: absolute;
+  top: 0;
+  right: -1.2em;
+  font-size: 20px;
+}
+.grid_button{
+  border: 1px solid #fddd0a;
+}
+.login_wrapper {
+  width: 40%;
+  margin: 0 auto;
+  margin-top: 3rem;
+  input {
+    width: 100%;
+    margin-bottom: 2em;
+    border: none;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    cursor: pointer;
+    outline: none;
+    color: white;
+    margin: 3% 0px;
+    font-size: 20px;
+    font-weight: 200;
+    background-color: transparent;
+  }
+  button {
+    width: 100%;
+    font-size: 20px;
+    padding: 15px;
+    background-color: transparent;
+    color: #fddd0a;
+    text-transform: uppercase;
+    text-transform: uppercase;
+    font-size: calc(15px + 12 * (100vw / 1980));
+    max-width: none;
+    background: linear-gradient(to left, transparent 50%, #fddd0a 50%) right;
+    background-size: 200%;
+    transition: 0.3s ease-out;
+    border: none;
+  }
+  h1 {
+    width: 100%;
+    font-family: "Alexandria", sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  h2 {
+    font-weight: 700;
+    border-radius: 1px;
+    color: rgba(0, 0, 0, 0.1);
+    -webkit-text-stroke: 0.5px rgb(80, 80, 80);
+    font-family: "Poppins";
+    color: transparent;
+    font-size: calc(60px + 12 * (100vw / 1980));
+  }
+}
+.login_wrapper button:hover {
+  background-position: left;
+  color: black;
+}
+.login_form {
+}
+@media screen and (max-width: 800px) {
+  .login_wrapper {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 1250px) {
+    .error_email {
+        right:0;
+    }
+}
+@media screen and (max-width: 870px) {
+    .error_email {
+      position: relative;
+    }
+}

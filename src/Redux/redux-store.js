@@ -4,7 +4,6 @@ import { createStore, combineReducers } from "redux";
 import ordersReducer from "./order-reducer";
 import headerReducer from "./menuBurger-reducer";
 import authReducer from "./auth-reducer";
-
 let reducers = combineReducers({
   careerPage: careerVacanciesReducer,
   homePage: homeReducer,

@@ -17,7 +17,7 @@ let Order = (props) => {
   return (
     <section className={s.order}>
       <header className={s.order__header}>
-        <a href="/Orders">
+        <a href="/RivoAgancy/Orders">
           <h2>Venicles</h2>
         </a>
       </header>
