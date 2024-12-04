@@ -12,7 +12,7 @@ let Header = () => {
     <header className={s.header} id="header">
       <div className={s.container}>
         <div className={s.header__body}>
-          <NavLink to={"/RivoAgancy"} aria-label="Home Page">
+          <NavLink to={""} aria-label="Home Page">
             <img
               alt="logotype"
               src={
@@ -25,10 +25,10 @@ let Header = () => {
 
           <div className={s.header__buttons_items}>
             <div className={s.login}>
-              <NavLink to={"/RivoAgancy/login"}>{(checkingForRegistration()) ? "" : "Registration"}</NavLink>
+              <NavLink to={"/login"}>{(checkingForRegistration()) ? "" : "Registration"}</NavLink>
               {(checkingForRegistration()) ? "" : <BiLogIn /> }
             </div>
-            <NavLink className={s.makeOrder_Button} to={"/RivoAgancy/Orders"}>
+            <NavLink className={s.makeOrder_Button} to={"/Orders"}>
               <p>MAKE ORDER</p>
               <MdArrowOutward className={s.makeOrder_Button__arrow} />
             </NavLink>

@@ -27,26 +27,26 @@ class App extends React.Component {
         <HeaderContainer />
         <main className="wrapper-content" id="main">
           <Routes>
-            <Route path="/RivoAgancy" element={<HomeContainer />}></Route>
-            <Route path="/RivoAgancy/Expertise" element={<Expertise />}></Route>
+            <Route path="" element={<HomeContainer />}></Route>
+            <Route path="/Expertise" element={<Expertise />}></Route>
             <Route
-              path="/RivoAgancy/Careers"
+              path="/Careers"
               element={<CareersContainer />}
             ></Route>
-            <Route path="/RivoAgancy/Projects" element={<Projects />}></Route>
-            <Route path="/RivoAgancy/Contacts" element={<Contacts />}></Route>
-            <Route path="/RivoAgancy/Profile" element={<ProlifeContainer />}></Route>
+            <Route path="/Projects" element={<Projects />}></Route>
+            <Route path="/Contacts" element={<Contacts />}></Route>
+            <Route path="/Profile" element={<ProlifeContainer />}></Route>
             <Route
-              path="/RivoAgancy/Orders"
+              path="/Orders"
               element={<OrdersContainer />}
             ></Route>
-            <Route path="/RivoAgancy/Services" element={<Services />}></Route>
+            <Route path="/Services" element={<Services />}></Route>
             <Route
-              path="/RivoAgancy/Order/:carId"
+              path="/Order/:carId"
               element={<OrderContainer />}
             ></Route>
              <Route
-              path="/RivoAgancy/Login"
+              path="/Login"
               element={<LoginContainer/>}
             ></Route>
             <Route path="*" element={<NotFound />}></Route>

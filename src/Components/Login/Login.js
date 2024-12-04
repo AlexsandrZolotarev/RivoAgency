@@ -28,7 +28,7 @@ let LoginForm = (props) => {
         values.id = Math.random().toString(16).slice(2);
         props.setAuthUser(values);
         Preloader();
-        navigate('/RivoAgancy/Profile');
+        navigate('/Profile');
       }}
     >
       {({ isSubmitting }) => (

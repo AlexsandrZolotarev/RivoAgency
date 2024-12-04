@@ -17,7 +17,7 @@ let Order = (props) => {
   return (
     <section className={s.order}>
       <header className={s.order__header}>
-        <a href="/RivoAgancy/Orders">
+        <a href="/Orders">
           <h2>Venicles</h2>
         </a>
       </header>
@@ -31,7 +31,7 @@ let Order = (props) => {
         <div className={s.presentaion}>
           <div className={s.img__body}>
             <img
-              src={`https://alexsandrzolotarev.github.io/RivoAgancy/src/assets/Orders/Cars/${props.order.img}`}
+              src={`https://alexsandrzolotarev.github.io/src/assets/Orders/Cars/${props.order.img}`}
               alt={`Модель ${props.order.model}`}
               loading="lazy"
             />

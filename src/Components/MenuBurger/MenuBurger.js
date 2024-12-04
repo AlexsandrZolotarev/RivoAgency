@@ -18,7 +18,7 @@ let MenuBurger = (props) => {
       onStateChange={props.toogleBurger}
     >
       <div>
-      <NavLink to={"/RivoAgancy"} className="link" reloadDocument>
+      <NavLink to={""} className="link" reloadDocument>
       <img
           alt="logotype"
           src={
@@ -34,13 +34,13 @@ let MenuBurger = (props) => {
         <nav>
           <ul>
             <li>
-              <NavLink to={"/RivoAgancy"} className="link" reloadDocument>
+              <NavLink to={""} className="link" reloadDocument>
                 HOME
               </NavLink>
             </li>
             <li>
               <NavLink
-                to={"/RivoAgancy/Services"}
+                to={"/Services"}
                 className="link"
                 reloadDocument
               >
@@ -49,7 +49,7 @@ let MenuBurger = (props) => {
             </li>
             <li>
               <NavLink
-                to={"/RivoAgancy/Projects"}
+                to={"/Projects"}
                 className="link"
                 reloadDocument
               >
@@ -58,7 +58,7 @@ let MenuBurger = (props) => {
             </li>
             <li>
               <NavLink
-                to={"/RivoAgancy/Contacts"}
+                to={"/Contacts"}
                 className="link"
                 reloadDocument
               >
@@ -67,7 +67,7 @@ let MenuBurger = (props) => {
             </li>
             <li>
               <NavLink
-                to={"/RivoAgancy/Careers"}
+                to={"/Careers"}
                 className="link"
                 reloadDocument
               >
@@ -76,7 +76,7 @@ let MenuBurger = (props) => {
             </li>
             <li>
               <NavLink
-                to={"/RivoAgancy/Orders"}
+                to={"/Orders"}
                 className="link"
                 reloadDocument
               >

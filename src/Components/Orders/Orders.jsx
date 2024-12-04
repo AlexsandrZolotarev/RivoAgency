@@ -11,7 +11,7 @@ import { IoMdCheckmark } from "react-icons/io";
 let Car = ({ car }) => {
   return (
     <article className={s.car} tabIndex={car.id}>
-      <NavLink to={"/RivoAgancy/Order/" + car.id} className={s.car__image}>
+      <NavLink to={"Order/" + car.id} className={s.car__image}>
         <img
           src={`https://alexsandrzolotarev.github.io/RivoAgancy/src/assets/Orders/Cars/${car.img}`}
           alt={`Модель ${car.model}`}
@@ -88,7 +88,7 @@ let Car = ({ car }) => {
         />
       </div>
       <NavLink
-        to={"/RivoAgancy/Order/" + car.id}
+        to={"Order/" + car.id}
         title={`Узнать больше о ${car.model}`}
         className={s.button}
       >
@@ -103,7 +103,7 @@ let Orders = (props) => {
       <div className={s.OrdersImgs}></div>
       <div className={s.OrdersContainer}>
         <div className={s.OrdersTitle}>
-          <NavLink to={"/RivoAgancy"}>
+          <NavLink to={""}>
             <div className={s.OrdersTitleButton}>
               <GoArrowLeft />
               <p>Back to Home</p>
