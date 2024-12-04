@@ -34,13 +34,13 @@ let MenuBurger = (props) => {
         <nav>
           <ul>
             <li>
-              <NavLink to={""} className="link" reloadDocument>
+              <NavLink to={"/RivoAgancy"} className="link" reloadDocument>
                 HOME
               </NavLink>
             </li>
             <li>
               <NavLink
-                to={"/Services"}
+                to={"/RivoAgancy/Services"}
                 className="link"
                 reloadDocument
               >
@@ -49,7 +49,7 @@ let MenuBurger = (props) => {
             </li>
             <li>
               <NavLink
-                to={"/Projects"}
+                to={"/RivoAgancy/Projects"}
                 className="link"
                 reloadDocument
               >
@@ -58,7 +58,7 @@ let MenuBurger = (props) => {
             </li>
             <li>
               <NavLink
-                to={"/Contacts"}
+                to={"/RivoAgancy/Contacts"}
                 className="link"
                 reloadDocument
               >
@@ -67,7 +67,7 @@ let MenuBurger = (props) => {
             </li>
             <li>
               <NavLink
-                to={"/Careers"}
+                to={"/RivoAgancy/Careers"}
                 className="link"
                 reloadDocument
               >
@@ -76,7 +76,7 @@ let MenuBurger = (props) => {
             </li>
             <li>
               <NavLink
-                to={"/Orders"}
+                to={"/RivoAgancy/Orders"}
                 className="link"
                 reloadDocument
               >

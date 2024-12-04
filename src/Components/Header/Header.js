@@ -12,7 +12,7 @@ let Header = () => {
     <header className={s.header} id="header">
       <div className={s.container}>
         <div className={s.header__body}>
-          <NavLink to={""} aria-label="Home Page">
+          <NavLink to={"/RivoAgancy"} aria-label="Home Page">
             <img
               alt="logotype"
               src={

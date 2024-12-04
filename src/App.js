@@ -27,7 +27,7 @@ class App extends React.Component {
         <HeaderContainer />
         <main className="wrapper-content" id="main">
           <Routes>
-            <Route path="" element={<HomeContainer />}></Route>
+            <Route path="/RivoAgancy" element={<HomeContainer />}></Route>
             <Route path="/Expertise" element={<Expertise />}></Route>
             <Route
               path="/Careers"
