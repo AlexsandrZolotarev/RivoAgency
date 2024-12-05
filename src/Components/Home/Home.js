@@ -30,7 +30,7 @@ class Orders extends React.Component {
         if(index % 2 === 0) e.style.animation = "animatinRight 2.2s forwards";
         else e.style.animation = "animatinLeft 2.2s forwards";
       });
-    },1000)
+    },500)
   }
   onVolumeChange = (volume) => {
     this.props.updateVolume({video: this.video, volume: volume});

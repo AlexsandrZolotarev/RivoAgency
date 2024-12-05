@@ -3,8 +3,8 @@ import s from "./Login.module.css";
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import { checkingForRegistration } from "../../localStorage/localStorage";
 import { useNavigate } from "react-router-dom";
-import { Preloader } from "../../preloader/preloader";
 import * as Yup from 'yup';
+import { Preloader } from "../..";
 
 const SignupSchema = Yup.object().shape({
   name: Yup.string()
@@ -27,6 +27,7 @@ let LoginForm = (props) => {
       onSubmit={(values) => {
         values.id = Math.random().toString(16).slice(2);
         values.img = "https://alexsandrzolotarev.github.io/RivoAgancy/src/assets/NotFound/notFound.webp"; 
+        values.status = "";
         var registrationDate = new Date();
         values.registrationDate = `${registrationDate.getDate()}.${registrationDate.getMonth()}.${registrationDate.getFullYear()}`; 
         props.setAuthUser(values);
