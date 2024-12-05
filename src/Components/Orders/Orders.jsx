@@ -103,7 +103,7 @@ let Orders = (props) => {
       <div className={s.OrdersImgs}></div>
       <div className={s.OrdersContainer}>
         <div className={s.OrdersTitle}>
-          <NavLink to={""}>
+          <NavLink to={"/RivoAgancy"}>
             <div className={s.OrdersTitleButton}>
               <GoArrowLeft />
               <p>Back to Home</p>
@@ -114,12 +114,12 @@ let Orders = (props) => {
               <p>Menu</p>
               <p>Looking for a new vehicle in stock</p>
             </header>
-            <div className={s.OrdersTitleBodyButton}>
-              <a href="#ordersBody">
+            {/* <div className={s.OrdersTitleBodyButton}>
+              <a href="#Orders">
                 <PiArrowDownLight className={s.OrdersTitleBodyButtonArrow} />
               </a>
               <p>View</p>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

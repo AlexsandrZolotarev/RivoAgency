@@ -29,27 +29,16 @@ class App extends React.Component {
           <Routes>
             <Route path="/RivoAgancy" element={<HomeContainer />}></Route>
             <Route path="/Expertise" element={<Expertise />}></Route>
-            <Route
-              path="/Careers"
-              element={<CareersContainer />}
-            ></Route>
+            <Route path="/Careers" element={<CareersContainer />}></Route>
             <Route path="/Projects" element={<Projects />}></Route>
             <Route path="/Contacts" element={<Contacts />}></Route>
             <Route path="/Profile" element={<ProlifeContainer />}></Route>
-            <Route
-              path="/Orders"
-              element={<OrdersContainer />}
-            ></Route>
+            <Route path="/Orders" element={<OrdersContainer />}></Route>
             <Route path="/Services" element={<Services />}></Route>
-            <Route
-              path="/Order/:carId"
-              element={<OrderContainer />}
-            ></Route>
-             <Route
-              path="/Login"
-              element={<LoginContainer/>}
-            ></Route>
+            <Route path="/Orders/Order/:carId" element={<OrderContainer />}></Route>
+            <Route path="/Login" element={<LoginContainer />}></Route>
             <Route path="*" element={<NotFound />}></Route>
+            <Route path="/" element={<HomeContainer />}></Route>
           </Routes>
         </main>
         <FooterContainer />

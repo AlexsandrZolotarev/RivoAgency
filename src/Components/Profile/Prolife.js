@@ -2,26 +2,47 @@ import React from "react";
 import s from "./Profile.module.css";
 import Login from "../Login/Login";
 let Profile = () => {
-  var user = JSON.parse(localStorage.user);
-  
-  if (!user) {
+  if (!localStorage.length) {
     return <Login />;
   }
+  var user = JSON.parse(localStorage.user);
   return (
     <section className={s.profile}>
-      <div className={s.profile_wrapper}>
-        <div className={s.profile_image}>
-          <img src={(localStorage.img) ? localStorage.img : 'https://alexsandrzolotarev.github.io/RivoAgancy/src/assets/NotFound/notFound.webp'}></img>
-        </div>
-        <div className={s.profile_body}>
-          <div className={s.name}>{user.name}</div>
-          <div className={s.email}>{user.email}</div>
-          <div className={s.status}></div>
-          <div className={s.id}>
-            <p>ID:{user?.id}</p>
+      <article className={s.profile_wrapper}>
+        <div className={s.profile_avatar}>
+          <div className={s.profile_image}>
+            <img src={JSON.parse(localStorage.user).img} alt="MyProfileImage"></img>
+            <div className={s.profile_file_input}>
+            <label></label>
+            <input type="text" name="url"></input>
+            </div>
+           
+          </div>
+          <div className={s.profile_registation__date}>
+            <p>Registration date</p>
+            <p>{user.registrationDate}</p>
           </div>
         </div>
-      </div>
+        <div className={s.profile_body}>
+          <h2>Personal Information</h2>
+          <div className={s.name + ' profile__information'}>
+            <p>{user.name}</p>
+            <p>Name</p>
+          </div>
+          <div className={s.email + ' profile__information'}>
+            <p>{user.email}</p>
+            <p>Email</p>
+          </div>
+          <div className={s.status + ' profile__information'}>
+          <p>{user.email}</p>
+          <p>Status</p>
+          </div>
+          <div className={s.id + ' profile__information'}>
+            <p>{user?.id}</p>
+            <p>ID</p>
+          </div>
+        </div>
+      </article>
     </section>
   );
 };

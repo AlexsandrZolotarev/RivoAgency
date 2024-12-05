@@ -7,6 +7,7 @@ import { SlSocialVkontakte } from "react-icons/sl";
 import "./MenuBurger.css";
 import { NavLink } from "react-router-dom";
 import { BiLogIn } from "react-icons/bi";
+import { checkingForRegistration } from "../../localStorage/localStorage";
 
 let MenuBurger = (props) => {
   return (
@@ -40,7 +41,7 @@ let MenuBurger = (props) => {
             </li>
             <li>
               <NavLink
-                to={"/RivoAgancy/Services"}
+                to={"/Services"}
                 className="link"
                 reloadDocument
               >
@@ -49,7 +50,7 @@ let MenuBurger = (props) => {
             </li>
             <li>
               <NavLink
-                to={"/RivoAgancy/Projects"}
+                to={"/Projects"}
                 className="link"
                 reloadDocument
               >
@@ -58,7 +59,7 @@ let MenuBurger = (props) => {
             </li>
             <li>
               <NavLink
-                to={"/RivoAgancy/Contacts"}
+                to={"/Contacts"}
                 className="link"
                 reloadDocument
               >
@@ -67,7 +68,7 @@ let MenuBurger = (props) => {
             </li>
             <li>
               <NavLink
-                to={"/RivoAgancy/Careers"}
+                to={"/Careers"}
                 className="link"
                 reloadDocument
               >
@@ -76,7 +77,7 @@ let MenuBurger = (props) => {
             </li>
             <li>
               <NavLink
-                to={"/RivoAgancy/Orders"}
+                to={"/Orders"}
                 className="link"
                 reloadDocument
               >
@@ -86,7 +87,13 @@ let MenuBurger = (props) => {
             <li>
               <div className="login__form">
               <div className="login__form_container">
-              <button>Login</button>
+              <NavLink
+                to={(checkingForRegistration()) ? "Profile": "Login"}
+                className="link"
+                reloadDocument
+              >
+                {(checkingForRegistration())? "Profile": "Login"}
+              </NavLink>
               <BiLogIn />
               </div>
                 

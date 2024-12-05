@@ -22,6 +22,16 @@ class Orders extends React.Component {
     this.video = React.createRef();
     this.buttonPlay = React.createRef();
   }
+  componentDidMount()
+  { 
+    setTimeout(() => {
+      Array.from(document.getElementById('HomeTitle').children)
+      .forEach((e, index) => {
+        if(index % 2 === 0) e.style.animation = "animatinRight 2.2s forwards";
+        else e.style.animation = "animatinLeft 2.2s forwards";
+      });
+    },1000)
+  }
   onVolumeChange = (volume) => {
     this.props.updateVolume({video: this.video, volume: volume});
   }
@@ -35,7 +45,7 @@ class Orders extends React.Component {
         <section className={s.HomeCointaner}>
           <div className={s.HomeImgs}></div>
           <div className={s.HomeTitleWithCube}>
-            <div className={s.HomeTitle}>
+            <div className={s.HomeTitle} id="HomeTitle">
               <h2>We are rivo agency</h2>
               <h2>We help</h2>
               <h2>Ideas</h2>
@@ -45,11 +55,6 @@ class Orders extends React.Component {
             <div className={s.HomeTitleCube}>
               <img alt="" aria-hidden="true" src={Cube}></img>
             </div>
-          </div>
-          <div className={s.HomeButton}>
-            <a href="#WeWhoWeAre">
-              <PiArrowDownLight />
-            </a>
           </div>
         </section>
         <article className={s.WeWhoWeAreContainer} id="WeWhoWeAre">

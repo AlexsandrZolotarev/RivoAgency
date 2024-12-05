@@ -26,11 +26,13 @@ let LoginForm = (props) => {
       validationSchema={SignupSchema}
       onSubmit={(values) => {
         values.id = Math.random().toString(16).slice(2);
+        values.img = "https://alexsandrzolotarev.github.io/RivoAgancy/src/assets/NotFound/notFound.webp"; 
+        var registrationDate = new Date();
+        values.registrationDate = `${registrationDate.getDate()}.${registrationDate.getMonth()}.${registrationDate.getFullYear()}`; 
         props.setAuthUser(values);
         Preloader();
-        navigate('/Profile');
-      }}
-    >
+        setTimeout(() => navigate('/Profile'),2000)
+      }}>
       {({ isSubmitting }) => (
         <Form>
           <div className={s.grid}>

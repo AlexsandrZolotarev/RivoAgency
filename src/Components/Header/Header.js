@@ -25,8 +25,18 @@ let Header = () => {
 
           <div className={s.header__buttons_items}>
             <div className={s.login}>
-              <NavLink to={"/login"}>{(checkingForRegistration()) ? "" : "Registration"}</NavLink>
-              {(checkingForRegistration()) ? "" : <BiLogIn /> }
+              {checkingForRegistration() ? (
+                <img
+                  className={s.profile__image}
+                  src={JSON.parse(localStorage.user).img}
+                  alt="MyProfileImage"
+                ></img>
+              ) : (
+                <BiLogIn />
+              )}
+              <NavLink to={checkingForRegistration() ? "Profile" : "Login"}>
+                {checkingForRegistration() ? JSON.parse(localStorage.user).name : "Registration"}
+              </NavLink>
             </div>
             <NavLink className={s.makeOrder_Button} to={"/Orders"}>
               <p>MAKE ORDER</p>

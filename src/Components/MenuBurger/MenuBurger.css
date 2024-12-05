@@ -26,9 +26,13 @@
     color: white;
   }
 }
+.login__form_container *{
+  color: #fddd0a;
+}
 .login__form_container {
   width: fit-content;
   position: relative;
+
 }
 .login__form {
   position: relative;
