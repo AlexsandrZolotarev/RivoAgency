@@ -1,4 +1,4 @@
-import { getCars } from "../api/api";
+import {carsApi} from "../api/api";
 
 const SET_CARDS = "SET-CARDS";
 const SET_ORDER = "SET-ORDER";
@@ -28,7 +28,7 @@ export const setOrder = (order) => ({ type: SET_ORDER, order });
 
 export const getCarsThunk = () => {
   return (dispatch) => {
-    getCars()
+    carsApi.getCars()
     .then((data) => {
       dispatch(setCards(data));
     });
@@ -36,7 +36,7 @@ export const getCarsThunk = () => {
 };
 export const getCarsOrder = (orderId) => {
   return (dispatch) => {
-    getCars()
+    carsApi.getCars()
       .then((data) => 
         dispatch(setOrder(data[orderId.carId - 1])))
       .catch((data) => 
