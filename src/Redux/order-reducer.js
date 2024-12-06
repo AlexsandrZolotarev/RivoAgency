@@ -1,3 +1,5 @@
+import { getCars } from "../api/api";
+
 const SET_CARDS = "SET-CARDS";
 const SET_ORDER = "SET-ORDER";
 let initialState = {
@@ -14,7 +16,7 @@ const ordersReducer = (state = initialState, action) => {
       return copyState;
     }
     case SET_ORDER: {
-      return { ...state, order:action.order};
+      return { ...state, order: action.order };
     }
     default:
       return state;
@@ -22,6 +24,23 @@ const ordersReducer = (state = initialState, action) => {
 };
 
 export const setCards = (cards) => ({ type: SET_CARDS, cards: cards });
-export const setOrder = (order) => ({ type: SET_ORDER, order});
+export const setOrder = (order) => ({ type: SET_ORDER, order });
 
+export const getCarsThunk = () => {
+  return (dispatch) => {
+    getCars()
+    .then((data) => {
+      dispatch(setCards(data));
+    });
+  };
+};
+export const getCarsOrder = (orderId) => {
+  return (dispatch) => {
+    getCars()
+      .then((data) => 
+        dispatch(setOrder(data[orderId.carId - 1])))
+      .catch((data) => 
+        dispatch(setOrder(null)));
+  };
+};
 export default ordersReducer;

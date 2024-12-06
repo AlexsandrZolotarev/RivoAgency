@@ -1,10 +1,12 @@
 import careerVacanciesReducer from "./careerVacancies-reducer";
 import homeReducer from "./home-reducer";
-import { createStore, combineReducers } from "redux";
+import { createStore, combineReducers, applyMiddleware } from "redux";
 import ordersReducer from "./order-reducer";
 import headerReducer from "./menuBurger-reducer";
 import authReducer from "./auth-reducer";
 import profileReducer from "./profile-reducer";
+import {thunk} from "redux-thunk";
+
 let reducers = combineReducers({
   careerPage: careerVacanciesReducer,
   homePage: homeReducer,
@@ -14,6 +16,6 @@ let reducers = combineReducers({
   ProfilePage: profileReducer,
 });
 
-let store = createStore(reducers);
+let store = createStore(reducers,applyMiddleware(thunk));
 window.store = store;
 export default store;

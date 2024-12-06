@@ -7,6 +7,7 @@ import store from "./Redux/redux-store";
 import { Provider } from "react-redux";
 
 export function AnimationHomePage() {
+  if(!document.getElementById("HomeTitle")) return;
   let homeTitleChilden = document.getElementById("HomeTitle").children;
   setTimeout(() => {
     Array.from(homeTitleChilden).forEach((e, index) => {

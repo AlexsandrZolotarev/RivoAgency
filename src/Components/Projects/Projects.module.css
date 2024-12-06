@@ -1,3 +1,9 @@
+:root {
+  --card-height: 40vw;
+  --card-margin: 4vw;
+  --card-top-offset: 1em;
+  --outline-width: 0px;
+}
 .wrapper_Projects {
   color: white;
   margin-top: 5%;
@@ -30,7 +36,7 @@
     border-radius: 1px;
     color: rgba(0, 0, 0, 0.1);
     -webkit-text-stroke: 0.5px rgb(80, 80, 80);
-    font-family:'Poppins';
+    font-family: "Poppins";
     color: transparent;
   }
 }
@@ -53,7 +59,7 @@
   text-align: right;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-  margin-right:20px;
+  margin-right: 20px;
 }
 .wrapper_Projects_body_project {
   position: relative;
@@ -113,16 +119,162 @@
     color: black;
   }
 }
+
+/* CARDS */
+
+
+#cards {
+  padding-bottom: calc(var(--numcards) * var(--card-top-offset));
+  margin-bottom: var(--card-margin);
+}
+
+#card_1 {
+  --index: 1;
+}
+
+#card_2 {
+  --index: 2;
+}
+
+#card_3 {
+  --index: 3;
+}
+
+#card_4 {
+  --index: 4;
+}
+#card_5 {
+  --index: 5;
+}
+.card {
+  position: sticky;
+  top: 0;
+  padding-top: calc(var(--index) * var(--card-top-offset));
+}
+
+.card__content {
+  transform-origin: 50% 0%;
+  will-change: transform;
+}
+
+#cards {
+  list-style: none;
+  outline: calc(var(--outline-width) * 10) solid hotpink;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(var(--numcards), var(--card-height));
+  gap: var(--card-margin);
+}
+
+.card {
+  outline: var(--outline-width) solid lime;
+  min-height: 55rem;
+  font-family: "Poppins";
+  h2
+  {
+    font-size: 50px;
+    text-wrap: wrap;
+  }
+}
+.card:focus-within .card__content {
+  background-color: rgb(95, 95, 95);
+  color: white;
+}
+.card__content {
+  box-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.1), 0 1em 2em rgba(0, 0, 0, 0.1);
+  background: rgb(255, 255, 255);
+  color: rgb(10, 5, 7);
+  border-radius: 1em;
+  overflow: hidden;
+  min-height: 45rem;
+  display: grid;
+  grid-template-areas: "text img";
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-rows: 1fr;
+  align-items: stretch;
+  outline: var(--outline-width) solid blue;
+}
+
+.card__content > div {
+  grid-area: text;
+  width: 80%;
+  place-self: center;
+  text-align: left;
+  display: grid;
+  gap: 1em;
+  place-items: start;
+}
+
+.card__content > picture {
+  grid-area: img;
+  overflow: hidden;
+}
+
+.card__content > picture > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.btn {
+  transition: all ease 1000ms;
+  display: flex;
+  justify-content: center;
+  border: 1px solid #000000;
+  padding: 2.5%;
+  font-size: 1rem;
+  font-family: "Poppins";
+  color: #fddd0a;
+  background: linear-gradient(to left, transparent 50%, #fddd0a 50%) right;
+  background-size: 200%;
+  transition: 0.3s ease-out;
+  width: auto;
+  padding: 1em;
+}
+.btn:hover {
+  background-position: left;
+  color: black;
+}
+.warning {
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+  right: 1rem;
+  width: max-content;
+  text-align: center;
+  max-width: 90vw;
+  margin: auto;
+  z-index: 2;
+  font-size: 0.8em;
+  color: #333;
+}
+
+
+/* CARDS */
 @media screen and (max-width: 1250px) {
-  .wrapper_Projects{
+  .wrapper_Projects {
     width: 100%;
     padding: 0 5%;
     margin-top: 10%;
   }
 }
 
-
 @media screen and (max-width: 670px) {
+  .card
+  {
+    min-height: 80rem;
+  }
+  .card__content
+  {
+    display: flex;
+    flex-direction: column;
+    min-height: 60rem;
+  }
+  .card__content > div
+  {
+    justify-items: stretch;
+    margin: 5em 0;
+  }
   .wrapper_Projects_body_title {
     font-size: calc(15px + 15 * (100vw / 1980));
   }
@@ -133,8 +285,7 @@
   }
 }
 @media (prefers-color-scheme: light) {
-  .wrapper_Projects 
-  {
+  .wrapper_Projects {
     color: black !important;
   }
   .wrapper_Projects__button {
@@ -142,7 +293,6 @@
     border: 1px solid black;
 
     button {
-
       color: black;
     }
   }

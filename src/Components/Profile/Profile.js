@@ -5,6 +5,7 @@ import { MdOutlinePhotoCamera } from "react-icons/md";
 let Profile = (props) => {
   const dialog = React.createRef();
   let profileImage = React.createRef();
+  
   const handleClickOpen = () => {
     dialog.current.showModal();
   };

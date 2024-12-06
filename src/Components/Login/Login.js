@@ -17,6 +17,7 @@ const SignupSchema = Yup.object().shape({
     .required('Required'),
   email: Yup.string().email('Invalid email').required('Required'),
 });
+
 let LoginForm = (props) => {
   const navigate = useNavigate();
   return (

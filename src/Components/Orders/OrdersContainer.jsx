@@ -1,13 +1,10 @@
 import React from "react";
-import { setCards } from "../../Redux/order-reducer";
+import { getCarsThunk} from "../../Redux/order-reducer";
 import { connect } from "react-redux";
 import Orders from "./Orders";
-import { getCars } from "../../api/api";
 class OrdersContainer extends React.Component {
   componentDidMount() {
-    getCars().then((data) => {
-      this.props.setCards(data);
-    });
+    this.props.getCarsThunk();
   }
   render() {
     return <Orders orders={this.props.orders} />;
@@ -21,5 +18,5 @@ let mapStateToProps = (state) => {
 };
 
 export default connect(mapStateToProps, {
-  setCards,
+  getCarsThunk
 })(OrdersContainer);
