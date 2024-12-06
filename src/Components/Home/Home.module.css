@@ -12,6 +12,7 @@
   justify-content: space-evenly;
   position: relative;
   margin-top: 2%;
+  margin-bottom: 18rem;
 }
 .HomeImgs {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 1)),
@@ -30,6 +31,7 @@
 }
 .HomeCointaner {
   position: relative;
+ 
 }
 .HomeTitle h2:first-child {
   color: #fddd0a;
@@ -295,13 +297,14 @@
   .HomeImgs {
     background-size: 100% 70%;
   }
-  .HomeTitleWithCube {
-    margin: 0;
-  }
   .HomeTitle {
     font-weight: 600;
     margin: 0 5%;
-    font-size: 50px;
+    font-size: 70px;
+    h2
+    {
+      margin: 3% 0;
+    }
     :first-child {
       margin-left: 0%;
     }

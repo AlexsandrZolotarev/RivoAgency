@@ -1,6 +1,5 @@
 import React from "react";
 import s from "./Home.module.css";
-import { PiArrowDownLight } from "react-icons/pi";
 import ElementLeft from "./../../assets/HomePage/WeWhoWeAre/ElementLeft.svg";
 import ElementLeft2 from "./../../assets/HomePage/WeWhoWeAre/ElementLeftBig.svg";
 import ElementRight from "./../../assets/HomePage/WeWhoWeAre/ElementRight.svg";
@@ -15,23 +14,14 @@ import Projects from "../Projects/Projects";
 import Services from "../Services/Services";
 import IndustryExpertise from "../IndustryExpertise/IndustryExpertise";
 import Stack from "../Stack/Stack";
-class Orders extends React.Component {
+class Home extends React.Component {
   constructor(props)
   {
     super(props);
     this.video = React.createRef();
     this.buttonPlay = React.createRef();
   }
-  componentDidMount()
-  { 
-    setTimeout(() => {
-      Array.from(document.getElementById('HomeTitle').children)
-      .forEach((e, index) => {
-        if(index % 2 === 0) e.style.animation = "animatinRight 2.2s forwards";
-        else e.style.animation = "animatinLeft 2.2s forwards";
-      });
-    },500)
-  }
+
   onVolumeChange = (volume) => {
     this.props.updateVolume({video: this.video, volume: volume});
   }
@@ -146,4 +136,4 @@ class Orders extends React.Component {
     );
   }
 }
-export default Orders;
+export default Home;

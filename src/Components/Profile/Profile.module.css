@@ -52,10 +52,10 @@
     max-width: 30rem;
     padding: 1em;
   }
-  input{
+  input {
     border: none;
     background: transparent;
-    border-bottom:1px solid white;
+    border-bottom: 1px solid white;
     color: white;
     font-size: 1.2em;
   }
@@ -63,7 +63,7 @@
 .profile_body * {
   margin: 10px 0;
 }
-.profile_button{
+.profile_button {
   transition: all ease 1000ms;
   border: 1px solid #fddd0a !important;
   display: flex;
@@ -82,7 +82,6 @@
     font-size: 1rem;
     border: 0;
     background-color: transparent;
-  
   }
 }
 .profile_button:focus-within {
@@ -113,7 +112,7 @@
     font-size: 20px;
   }
 }
-.profile_file_input::before{
+.profile_file_input::before {
   content: "Enter only http link";
   position: absolute;
   width: inherit;
@@ -125,7 +124,7 @@
   color: white;
   opacity: 0;
 }
-.profile_file_input:hover::before{
+.profile_file_input:hover::before {
   opacity: 1;
 }
 .profile_file_input input {
@@ -136,26 +135,84 @@
   color: white;
   font-family: "Poppins";
 }
+.dialog {
+  position: absolute;
+  top: 50%;  
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20rem;
+  max-height: 15rem;
+  font-size: 20px;
+  padding: 1rem;
+  button{
+    width: 45%;
+    margin-right: 1em;
+  }
+}
+.dialog__buttons
+{
+  display: flex;
+  margin-top: 1.5em;
+  button
+  {
+    background-color: transparent;
+    border: 1px solid #fddd0a;
+    padding: 1em 1.5em;
+    font-size: 15px;
+    background: linear-gradient(to left, transparent 50%, #fddd0a 50%) right;
+    background-size: 200%;
+    transition: 0.3s ease-out;
+    transition: all ease 100ms;
+    text-transform: uppercase;
+  }
+}
+.dialog__buttons button:hover {
+  background-position: left;
+}
+.dialog__buttons button:focus-within {
+  background-position: left;
+}
+.dialog::backdrop {
+  background-image: linear-gradient(
+    130deg,
+    #fddd0a,
+    #593273 41.07%,
+    #94820e 76.05%
+  );
+}
 @media screen and (max-width: 1150px) {
   .profile_wrapper {
-    justify-items: center
+    justify-items: center;
   }
-  .profile_avatar
-  {
+  .profile_avatar {
     margin: 0;
   }
-  .profile_avatar
-  {
+  .profile_avatar {
     width: 70%;
     max-width: none;
   }
-  .profile_body
-  {
+  .profile_body {
     width: 70%;
     max-width: none;
-    div
-    {
+    div {
       max-width: none;
     }
+  }
+}
+@media screen and (max-width: 600px) {
+  .profile_wrapper {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    padding: 0;
+  }
+  .profile {
+    margin-top: 3rem;
+    padding: 0;
+  }
+  .profile_body {
+    width: 100%;
+  }
+  .profile_avatar {
+    width: 100%;
+    padding: 1rem;
   }
 }

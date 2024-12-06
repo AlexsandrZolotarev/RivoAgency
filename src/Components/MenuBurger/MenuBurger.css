@@ -93,8 +93,8 @@
   position: absolute;
   width: 36px;
   height: 30px;
-  right: 36px;
-  top: 65px;
+  right: 2.6rem;
+  top: 4.8rem;
 }
 .bm-burger-button span:first-child {
   display: none;
@@ -264,13 +264,11 @@
 
 @media screen and (max-width: 670px) {
   .bm-burger-button {
-    top: 1em;
+    right: 1rem;
+    top: 1.8rem;
   }
 }
 @media screen and (max-width: 450px) {
-  .bm-burger-button {
-    top: 15px;
-  }
   .burger__body {
     padding: 0;
     padding-top: 15%;
@@ -280,8 +278,8 @@
   }
   .bm-cross-button {
     right: 50px !important;
-    width: 1em !important;
-    height: 1% !important;
+    width: 5em !important;
+    height: 5% !important;
     span {
       top: 20px;
       right: 0px;

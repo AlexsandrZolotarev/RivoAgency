@@ -225,6 +225,10 @@ select:-webkit-autofill:focus {
 {
   display: flex;
   justify-content: space-between;
+  input
+  {
+    cursor: pointer;
+  }
   :first-child
   {
     font-weight: 600;
@@ -250,6 +254,25 @@ select:-webkit-autofill:focus {
   0% {transform: translateX(-150%);}
   100% {transform: translateY(0);}
 }
+@keyframes weWhoWaAre {
+  from{
+    translate: 25vw;
+    opacity: 0;
+  }
+}
+
+.WeWhoWeAreContainerMain__title
+{
+  animation-name: weWhoWaAre;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+
+  view-timeline-name: --we-Who-Wa-Are;
+  animation-timeline: --we-Who-Wa-Are;
+  animation-range: 20% 50%;
+}
+
+
 @keyframes spin {
   from {
     transform: translate(-50%, -50%) rotate(0deg);
