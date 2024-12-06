@@ -1,11 +1,11 @@
 import React from "react";
 import s from "./Profile.module.css";
-import Login from "../Login/Login";
 import { MdOutlinePhotoCamera } from "react-icons/md";
+
 let Profile = (props) => {
   const dialog = React.createRef();
   let profileImage = React.createRef();
-  
+  var user = JSON.parse(localStorage.user);
   const handleClickOpen = () => {
     dialog.current.showModal();
   };
@@ -19,10 +19,6 @@ let Profile = (props) => {
     dialog.current.close();
     props.changeProfile();
   };
-  if (!localStorage.length) {
-    return <Login />;
-  }
-  var user = JSON.parse(localStorage.user);
   return (
     <section className={s.profile}>
       <article className={s.profile_wrapper}>

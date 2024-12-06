@@ -5,7 +5,7 @@ import { scaleRotate as Menu } from "react-burger-menu";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 import { SlSocialVkontakte } from "react-icons/sl";
 import "./MenuBurger.css";
-import { NavLink } from "react-router-dom";
+import { Navigate, NavLink } from "react-router-dom";
 import { BiLogIn } from "react-icons/bi";
 import { checkingForRegistration } from "../../localStorage/localStorage";
 
@@ -87,12 +87,13 @@ let MenuBurger = (props) => {
             <li>
               <div className="login__form">
               <div className="login__form_container">
+               
               <NavLink
                 to={(checkingForRegistration()) ? "Profile": "Login"}
                 className="link"
                 reloadDocument
-              >
-                {(checkingForRegistration())? "Profile": "Login"}
+              > 
+              {(checkingForRegistration())? "Profile": "Login"}
               </NavLink>
               <BiLogIn />
               </div>
