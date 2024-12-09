@@ -1,6 +1,7 @@
 const UPDATE_TEXT = "UPDATE_TEXT";
 const CHANGE_PROFILE = "CHANGE_PROFILE";
 const ADD_PROFILE = "ADD_PROFILE";
+const UPDATE_PHONE = "UPDATE_PHONE";
 let initialState = {
   profile: {
     email: "",
@@ -9,6 +10,8 @@ let initialState = {
     name: "",
     password:"",
     registrationDate:"",
+    BirthDate:"",
+    phone:"",
     status: "",  
   },
 };
@@ -17,6 +20,10 @@ const profileReducer = (state = initialState, action) => {
     case ADD_PROFILE: {
       state.profile = JSON.parse(localStorage.user);
       return {...state};
+    }
+    case UPDATE_PHONE: {
+      state.profile.phone = action.value;
+      return  {...state}
     }
     case UPDATE_TEXT: {
       state.profile = { ...state.profile };
@@ -48,5 +55,9 @@ export const changeProfile = () => ({
 export const addProfile = () => ({
   type: ADD_PROFILE,
 });
+export const updatePhone = (value) => ({
+  type: UPDATE_PHONE,
+  value: value,
+})
 
 export default profileReducer;

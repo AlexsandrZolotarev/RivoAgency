@@ -7,12 +7,13 @@ import logoLight from "./../../assets/Header/LogotypeLight.svg";
 import s from "./Header.module.css";
 import { BiLogIn } from "react-icons/bi";
 import { checkingForRegistration } from "../../localStorage/localStorage";
+import MenuBurgerContainer from "../MenuBurger/MenuBurgerContainer";
 let Header = () => {
   return (
     <header className={s.header} id="header">
       <div className={s.container}>
         <div className={s.header__body}>
-          <NavLink to={"/RivoAgancy"} aria-label="Home Page">
+          <NavLink to={"/RivoAgency"} aria-label="Home Page">
             <img
               alt="logotype"
               src={
@@ -42,6 +43,7 @@ let Header = () => {
               <p>MAKE ORDER</p>
               <MdArrowOutward className={s.makeOrder_Button__arrow} />
             </NavLink>
+            <MenuBurgerContainer pageWrapId={"main"} outerContainerId={"wrapper"} />
           </div>
         </div>
       </div>

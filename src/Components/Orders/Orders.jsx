@@ -13,7 +13,7 @@ let Car = ({ car }) => {
     <article className={s.car} tabIndex={car.id}>
       <NavLink to={"Order/" + car.id} className={s.car__image}>
         <img
-          src={`https://alexsandrzolotarev.github.io/RivoAgancy/src/assets/Orders/Cars/${car.img}`}
+          src={`https://alexsandrzolotarev.github.io/RivoAgency/src/assets/Orders/Cars/${car.img}`}
           alt={`Модель ${car.model}`}
           loading="lazy"
         />
@@ -103,7 +103,7 @@ let Orders = (props) => {
       <div className={s.OrdersImgs}></div>
       <div className={s.OrdersContainer}>
         <div className={s.OrdersTitle}>
-          <NavLink to={"/RivoAgancy"}>
+          <NavLink to={"/RivoAgency"}>
             <div className={s.OrdersTitleButton}>
               <GoArrowLeft />
               <p>Back to Home</p>

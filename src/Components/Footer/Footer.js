@@ -17,7 +17,7 @@ let Footer = () => {
             <nav>
               <ul>
                 <li onClick={Scroll}>
-                  <NavLink to={"/RivoAgancy"}>HOME</NavLink>
+                  <NavLink to={"/RivoAgency"}>HOME</NavLink>
                 </li>
                 <li onClick={Scroll}>
                   <NavLink to={"/Services"}>Services</NavLink>

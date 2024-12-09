@@ -20,7 +20,7 @@ class Projects extends React.Component {
                 <div>
                   <h2>Mens</h2>
                   <p>
-                    <a href="/" className={s.btn}>
+                    <a href="/RivoAgency" className={s.btn}>
                       Read more
                     </a>
                   </p>
@@ -40,7 +40,7 @@ class Projects extends React.Component {
                 <div>
                   <h2>Saltmine</h2>
                   <p>
-                    <a href="/" className={s.btn}>
+                    <a href="/RivoAgency" className={s.btn}>
                       Read more
                     </a>
                   </p>
@@ -61,7 +61,7 @@ class Projects extends React.Component {
                 <div>
                   <h2>Haul Cars</h2>
                   <p>
-                    <a href="/" className={s.btn}>
+                    <a href="/RivoAgency" className={s.btn}>
                       Read more
                     </a>
                   </p>
@@ -82,7 +82,7 @@ class Projects extends React.Component {
                 <div>
                   <h2>Skyline Energy</h2>
                   <p>
-                    <a href="/" className={s.btn}>
+                    <a href="/RivoAgency" className={s.btn}>
                       Read more
                     </a>
                   </p>
@@ -103,7 +103,7 @@ class Projects extends React.Component {
                 <div>
                   <h2>Jotul</h2>
                   <p>
-                    <a href="/" className={s.btn}>
+                    <a href="/RivoAgency" className={s.btn}>
                       Read more
                     </a>
                   </p>

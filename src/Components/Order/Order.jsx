@@ -31,7 +31,7 @@ let Order = (props) => {
         <div className={s.presentaion}>
           <div className={s.img__body}>
             <img
-              src={`https://raw.githubusercontent.com/AlexsandrZolotarev/RivoAgancy/refs/heads/dev/src/assets/Orders/Cars/${props.order.img}`}
+              src={`https://raw.githubusercontent.com/AlexsandrZolotarev/RivoAgency/refs/heads/dev/src/assets/Orders/Cars/${props.order.img}`}
               alt={`Модель ${props.order.model}`}
               loading="lazy"
             />

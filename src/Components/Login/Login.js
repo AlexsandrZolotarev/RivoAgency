@@ -27,7 +27,7 @@ let LoginForm = (props) => {
       validationSchema={SignupSchema}
       onSubmit={(values) => {
         values.id = Math.random().toString(16).slice(2);
-        values.img = "https://alexsandrzolotarev.github.io/RivoAgancy/src/assets/NotFound/notFound.webp"; 
+        values.img = "https://alexsandrzolotarev.github.io/RivoAgency/src/assets/NotFound/notFound.webp"; 
         values.status = "";
         var registrationDate = new Date();
         values.registrationDate = `${registrationDate.getDate()}.${registrationDate.getMonth()}.${registrationDate.getFullYear()}`; 

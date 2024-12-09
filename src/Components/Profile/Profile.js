@@ -1,11 +1,13 @@
 import React from "react";
 import s from "./Profile.module.css";
 import { MdOutlinePhotoCamera } from "react-icons/md";
+import PhoneInputWithCountrySelect from "react-phone-number-input";
+import ProfileStatus from "./ProfileStatus";
 
 let Profile = (props) => {
   const dialog = React.createRef();
-  let profileImage = React.createRef();
   var user = JSON.parse(localStorage.user);
+
   const handleClickOpen = () => {
     dialog.current.showModal();
   };
@@ -14,6 +16,9 @@ let Profile = (props) => {
   };
   const onTextchange = (input) => {
     props.updateText(input);
+  };
+  const onPhoneChange = (value) => {
+    props.updatePhone(value);
   };
   const onProfilechange = () => {
     dialog.current.close();
@@ -25,16 +30,18 @@ let Profile = (props) => {
         <div className={s.profile_avatar}>
           <div className={s.profile_image}>
             <img
-              src={JSON.parse(localStorage.user).img}
+              src={user.img}
               alt="MyProfileImage"
             ></img>
             <div className="profile__information">
               <p>ID</p>
               <p>{props.profile.id}</p>
             </div>
+            <div className={s.profile__status}>
+              <ProfileStatus status={props.status}/>
+            </div>
             <div className={s.profile_file_input}>
               <input
-                ref={profileImage}
                 onChange={onTextchange.bind(this)}
                 type="text"
                 name="img"
@@ -67,6 +74,7 @@ let Profile = (props) => {
               type="text"
               id="name"
               name="name"
+              placeholder="Enter Name"
               maxLength={24}
               value={props.profile.name}
             ></input>
@@ -76,25 +84,39 @@ let Profile = (props) => {
             <input
               tabIndex="0"
               onChange={onTextchange.bind(this)}
+              type="date"
+              id="birthDate"
+              name="birthDate"
+              placeholder="Enter Birth Date"
+              value={props.profile.birthDate}
+            ></input>
+            <p>Email</p>
+          </div>
+          <h2>Contact Information</h2>
+          <div className="profile__information">
+            <input
+              tabIndex="0"
+              onChange={onTextchange.bind(this)}
               type="email"
               id="email"
               name="email"
+              placeholder="Enter email"
               maxLength={30}
               value={props.profile.email}
             ></input>
             <p>Email</p>
           </div>
           <div className="profile__information">
-            <input
-              onChange={onTextchange.bind(this)}
-              type="status"
-              id="status"
-              name="status"
-              maxLength={20}
-              value={props.profile.status}
-            ></input>
-            <p>Status</p>
+              <PhoneInputWithCountrySelect
+                name="phoneInputWithCountrySelect"
+                className={s.phone_input}
+                rules={{ required: true }}
+                value={props.profile.phone}
+                onChange={onPhoneChange.bind(this)}
+              />
+           <p>Phone Number</p>
           </div>
+
           <div className={s.profile_button}>
             <button onClick={handleClickOpen}>Change</button>
           </div>

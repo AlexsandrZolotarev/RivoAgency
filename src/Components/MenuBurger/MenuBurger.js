@@ -5,7 +5,7 @@ import { scaleRotate as Menu } from "react-burger-menu";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 import { SlSocialVkontakte } from "react-icons/sl";
 import "./MenuBurger.css";
-import { Navigate, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { BiLogIn } from "react-icons/bi";
 import { checkingForRegistration } from "../../localStorage/localStorage";
 
@@ -19,85 +19,62 @@ let MenuBurger = (props) => {
       onStateChange={props.toogleBurger}
     >
       <div>
-      <NavLink to={""} className="link" reloadDocument>
-      <img
-          alt="logotype"
-          src={
-            window.matchMedia("(prefers-color-scheme: dark)").matches
-              ? logoDark
-              : logoLight
-          }
-        />
-      </NavLink>
-        
+        <NavLink to={""} className="link" reloadDocument>
+          <img
+            alt="logotype"
+            src={
+              window.matchMedia("(prefers-color-scheme: dark)").matches
+                ? logoDark
+                : logoLight
+            }
+          />
+        </NavLink>
       </div>
       <div className="burger__body">
         <nav>
           <ul>
             <li>
-              <NavLink to={"/RivoAgancy"} className="link" reloadDocument>
+              <NavLink to={"/RivoAgency"} className="link" reloadDocument>
                 HOME
               </NavLink>
             </li>
             <li>
-              <NavLink
-                to={"/Services"}
-                className="link"
-                reloadDocument
-              >
+              <NavLink to={"/Services"} className="link" reloadDocument>
                 Services
               </NavLink>
             </li>
             <li>
-              <NavLink
-                to={"/Projects"}
-                className="link"
-                reloadDocument
-              >
+              <NavLink to={"/Projects"} className="link" reloadDocument>
                 Projects
               </NavLink>
             </li>
             <li>
-              <NavLink
-                to={"/Contacts"}
-                className="link"
-                reloadDocument
-              >
+              <NavLink to={"/Contacts"} className="link" reloadDocument>
                 Contacts
               </NavLink>
             </li>
             <li>
-              <NavLink
-                to={"/Careers"}
-                className="link"
-                reloadDocument
-              >
+              <NavLink to={"/Careers"} className="link" reloadDocument>
                 Careers
               </NavLink>
             </li>
             <li>
-              <NavLink
-                to={"/Orders"}
-                className="link"
-                reloadDocument
-              >
+              <NavLink to={"/Orders"} className="link" reloadDocument>
                 Orders
               </NavLink>
             </li>
             <li>
               <div className="login__form">
-              <div className="login__form_container">
-               
-              <NavLink
-                to={(checkingForRegistration()) ? "Profile": "Login"}
-                className="link"
-                reloadDocument
-              > 
-              {(checkingForRegistration())? "Profile": "Login"}
-              </NavLink>
-              <BiLogIn />
-              </div>
-                
+                <div className="login__form_container">
+                  <NavLink
+                    to={checkingForRegistration() ? "Profile" : "Login"}
+                    className="link"
+                    reloadDocument
+                  >
+                    {checkingForRegistration() ? "Profile" : "Login"}
+                  </NavLink>
+                  <BiLogIn />
+                </div>
               </div>
             </li>
           </ul>

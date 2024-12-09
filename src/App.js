@@ -23,11 +23,10 @@ class App extends React.Component {
         <div id="page-preloader" className="preloader">
           <div className="loader"></div>
         </div>
-        <MenuBurgerContainer pageWrapId={"main"} outerContainerId={"wrapper"} />
         <HeaderContainer />
         <main className="wrapper-content" id="main">
           <Routes>
-            <Route path="/RivoAgancy" element={<HomeContainer />}></Route>
+            <Route path="/RivoAgency" element={<HomeContainer />}></Route>
             <Route path="/Expertise" element={<Expertise />}></Route>
             <Route path="/Careers" element={<CareersContainer />}></Route>
             <Route path="/Projects" element={<Projects />}></Route>

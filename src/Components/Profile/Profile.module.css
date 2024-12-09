@@ -13,16 +13,16 @@
 }
 
 .profile_avatar {
-  padding: 4rem;
-  margin: 3rem;
+  padding: 1rem;
+  margin: 2rem;
   margin-left: 0;
-  margin-top: 0;
   display: flex;
   flex-direction: column;
   width: 80%;
   align-items: center;
   background-color: rgba(82, 82, 82, 0.5);
   max-width: 23rem;
+  height: 17rem;
 }
 .profile_registation__date {
   display: flex;
@@ -47,11 +47,6 @@
   padding: 3rem;
 }
 .profile_body {
-  div {
-    border: 1px solid rgb(164, 164, 164);
-    max-width: 30rem;
-    padding: 1em;
-  }
   input {
     border: none;
     background: transparent;
@@ -59,6 +54,11 @@
     color: white;
     font-size: 1.2em;
   }
+}
+.profile_body div:not(.PhoneInputCountry){
+    border: 1px solid rgb(164, 164, 164);
+    max-width: 30rem;
+    padding: 1em;
 }
 .profile_body * {
   margin: 10px 0;
@@ -100,6 +100,7 @@
     color: black;
   }
 }
+
 .profile_file_input {
   display: flex;
   align-items: center;
@@ -180,12 +181,41 @@
     #94820e 76.05%
   );
 }
+.phone_input 
+{
+  border: none !important;
+  padding: 0 !important;
+  display: flex;
+  *{
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  select{
+    max-width: 1rem;
+    max-height: 2rem;
+  }
+  div
+  {
+    max-width: 8rem;
+  }
+  input{
+    border-bottom: 1px solid white !important;
+  }
+  svg
+  {
+    width: 2rem;
+    height: 1.5rem;
+  }
+  img
+  {
+    width: 2rem;
+    height: 1.5rem;
+  }
+}
 @media screen and (max-width: 1150px) {
   .profile_wrapper {
     justify-items: center;
-  }
-  .profile_avatar {
-    margin: 0;
   }
   .profile_avatar {
     width: 70%;

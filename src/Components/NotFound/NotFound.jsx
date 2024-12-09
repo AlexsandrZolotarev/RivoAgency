@@ -34,7 +34,7 @@ let NotFound = () => {
           <p>Unfortunately, the page you're looking for doesn't exist or there was an error in the link you followed or typed.</p>
         </header>
         <div className={s.button} onClick={Scroll}>
-        <NavLink to={"/RivoAgancy"}><button>GO to home page</button></NavLink>
+        <NavLink to={"/RivoAgency"}><button>GO to home page</button></NavLink>
         <MdArrowOutward className={s.button__arrow} />
         </div>
       
