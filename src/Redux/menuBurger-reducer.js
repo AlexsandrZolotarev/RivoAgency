@@ -2,15 +2,12 @@ const TOGGLE_BURGER = "TOGGLE-BURGER";
 
 
 let initialState = {
-  bool:false,
 };
 
 const MenuBurgerReducer = (state = initialState, action) => {
   switch (action.type) {
     case TOGGLE_BURGER: {
-      // if(state.bool) document.body.style.overflow = 'auto';
-      // else document.body.style.overflow = 'hidden';
-      // state.bool = !state.bool;
+      document.documentElement.classList.toggle("unscroll");
       return {...state};
     }
     default:

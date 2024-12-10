@@ -3,7 +3,6 @@ import { connect } from "react-redux";
 import {addProfile, changeProfile, updatePhone, updateText} from "../../Redux/profile-reducer";
 import Profile from "./Profile";
 import { withLoginRedirect } from "../../hoc/withLoginRedirect";
- 
 
 class ProlifeContainer extends React.Component {
   componentDidMount()
@@ -16,6 +15,7 @@ class ProlifeContainer extends React.Component {
 }
 let RedirectComponent = withLoginRedirect(ProlifeContainer);
 const mapStateToProps = (state) => {
+
   return {
     profile: state.ProfilePage.profile,
     status: state.ProfilePage.profile.status,

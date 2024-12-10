@@ -4,7 +4,7 @@ import { ErrorMessage, Field, Form, Formik } from "formik";
 import { checkingForRegistration } from "../../localStorage/localStorage";
 import { useNavigate } from "react-router-dom";
 import * as Yup from 'yup';
-import { Preloader } from "../..";
+import { OnPreloaderPage } from "../../loader";
 
 const SignupSchema = Yup.object().shape({
   name: Yup.string()
@@ -17,7 +17,6 @@ const SignupSchema = Yup.object().shape({
     .required('Required'),
   email: Yup.string().email('Invalid email').required('Required'),
 });
-
 let LoginForm = (props) => {
   const navigate = useNavigate();
   return (
@@ -32,8 +31,8 @@ let LoginForm = (props) => {
         var registrationDate = new Date();
         values.registrationDate = `${registrationDate.getDate()}.${registrationDate.getMonth()}.${registrationDate.getFullYear()}`; 
         props.setAuthUser(values);
-        Preloader();
-        setTimeout(() => navigate('/Profile'),2000)
+        OnPreloaderPage();
+        setTimeout(() => navigate('/Profile'),1200)
       }}>
       {({ isSubmitting }) => (
         <Form>

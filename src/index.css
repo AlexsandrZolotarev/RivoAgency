@@ -68,14 +68,13 @@ input,
 button,
 textarea {
   font-family: inherit;
+  cursor: url("./assets/Icons/Cursor.svg") 2 2, default;
 }
 
 input::-ms-clear {
   display: none;
 }
-button {
-  cursor: pointer;
-}
+
 button::-moz-focus-inner {
   padding: 0;
   border: 0;
@@ -84,6 +83,9 @@ a,
 a:visited {
   text-decoration: none;
 }
+input:hover,
+button:hover,
+textarea:hover,
 a:hover {
   text-decoration: none;
   cursor: url("./assets/Icons/Cursor.svg") 2 2, default;
@@ -217,14 +219,20 @@ select:-webkit-autofill:focus {
     animation: 1s spin infinite linear;
   }
 }
+
 .preloader.done {
   opacity: 0;
   visibility: hidden;
 }
+
 .profile__information
 {
   display: flex;
   justify-content: space-between;
+  margin: 10px 0;
+  padding: 1em;
+  border: 1px solid rgb(164, 164, 164);
+  width: 100%; 
   input
   {
     cursor: pointer;
@@ -262,26 +270,23 @@ select:-webkit-autofill:focus {
     opacity: 0;
   }
 }
+.PhoneInputCountrySelectArrow
+{
+  display: none;
+}
 .PhoneInputCountry
 {
   display: flex;
-  gap: 0.5em;
+  gap: 10px;
   align-items: center;
-  margin-bottom: 1em !important;
+  border-bottom: 1px solid;
 }
-.PhoneInputCountrySelect
-{
-  margin-left: 1em ;
-}
+
 .PhoneInputCountry *
 {
   margin: 0;
   padding: 0;
   border: 0;
-}
-.PhoneInputCountrySelect
-{
-  margin: 1rem !important;
 }
 .WeWhoWeAreContainerMain__title h2
 {
@@ -326,4 +331,7 @@ select:-webkit-autofill:focus {
   .wrapper {
     background-color: white;
   }
+}
+.unscroll{
+  overflow:auto;
 }

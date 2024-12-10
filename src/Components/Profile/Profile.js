@@ -3,6 +3,7 @@ import s from "./Profile.module.css";
 import { MdOutlinePhotoCamera } from "react-icons/md";
 import PhoneInputWithCountrySelect from "react-phone-number-input";
 import ProfileStatus from "./ProfileStatus";
+import { OnPreloaderPage} from "../../loader";
 
 let Profile = (props) => {
   const dialog = React.createRef();
@@ -23,22 +24,21 @@ let Profile = (props) => {
   const onProfilechange = () => {
     dialog.current.close();
     props.changeProfile();
+    OnPreloaderPage();
   };
   return (
     <section className={s.profile}>
+      <div className={s.profile_container}>
       <article className={s.profile_wrapper}>
         <div className={s.profile_avatar}>
           <div className={s.profile_image}>
-            <img
-              src={user.img}
-              alt="MyProfileImage"
-            ></img>
-            <div className="profile__information">
+            <img src={user.img} alt="MyProfileImage"></img>
+            <div className={s.profile__id}>
               <p>ID</p>
               <p>{props.profile.id}</p>
             </div>
             <div className={s.profile__status}>
-              <ProfileStatus status={props.status}/>
+              <ProfileStatus status={props.profile.status} updateText= {props.updateText} />
             </div>
             <div className={s.profile_file_input}>
               <input
@@ -90,7 +90,7 @@ let Profile = (props) => {
               placeholder="Enter Birth Date"
               value={props.profile.birthDate}
             ></input>
-            <p>Email</p>
+            <p>Birth Date</p>
           </div>
           <h2>Contact Information</h2>
           <div className="profile__information">
@@ -107,14 +107,14 @@ let Profile = (props) => {
             <p>Email</p>
           </div>
           <div className="profile__information">
-              <PhoneInputWithCountrySelect
-                name="phoneInputWithCountrySelect"
-                className={s.phone_input}
-                rules={{ required: true }}
-                value={props.profile.phone}
-                onChange={onPhoneChange.bind(this)}
-              />
-           <p>Phone Number</p>
+            <PhoneInputWithCountrySelect
+              name="phoneInputWithCountrySelect"
+              className={s.phone_input}
+              rules={{ required: true }}
+              value={props.profile.phone}
+              onChange={onPhoneChange.bind(this)}
+            />
+            <p>Phone Number</p>
           </div>
 
           <div className={s.profile_button}>
@@ -122,6 +122,7 @@ let Profile = (props) => {
           </div>
         </div>
       </article>
+      </div>
     </section>
   );
 };

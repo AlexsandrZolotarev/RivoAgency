@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/RivoAgency/static/css/main.0165a62a.css",
-    "main.js": "/RivoAgency/static/js/main.75372990.js",
+    "main.css": "/RivoAgency/static/css/main.2b79a788.css",
+    "main.js": "/RivoAgency/static/js/main.106a5a99.js",
     "static/media/whoWeAreVideo.webm": "/RivoAgency/static/media/whoWeAreVideo.8017a8e116c45b72991d.webm",
     "static/media/Background.webp": "/RivoAgency/static/media/Background.53fc2f5fb1c25da4c901.webp",
     "static/media/BackgroundOrderBlack.png": "/RivoAgency/static/media/BackgroundOrderBlack.a28c82ae2256f5e6ab11.png",
@@ -46,7 +46,6 @@
     "static/media/Redux_icon.svg": "/RivoAgency/static/media/Redux_icon.c7d1ed558486e2aa36d441cd85f3785c.svg",
     "static/media/ElementCubeFooterMini.webp": "/RivoAgency/static/media/ElementCubeFooterMini.87ab2f67e06091733d3d.webp",
     "static/media/WP_icon.svg": "/RivoAgency/static/media/WP_icon.8dbf4e7b62e42db5dea8e79a4766a2ee.svg",
-    "static/media/ElementCube.webp": "/RivoAgency/static/media/ElementCube.a42d0ea8ba8114f89cd5.webp",
     "static/media/ElementFooterMini.webp": "/RivoAgency/static/media/ElementFooterMini.5470e6d60597c3c577b3.webp",
     "static/media/Laravel_icon.svg": "/RivoAgency/static/media/Laravel_icon.d7f6462f1b59404aaa33eec5f1a2371a.svg",
     "static/media/Google_cloud_icon.svg": "/RivoAgency/static/media/Google_cloud_icon.f9cf64e8c2bbaa557f018802e2223aa9.svg",
@@ -65,11 +64,11 @@
     "static/media/Vue_js_icon.svg": "/RivoAgency/static/media/Vue_js_icon.f6ec8318af9da2f644c1accff37055d9.svg",
     "static/media/Mobile_development_icon.webp": "/RivoAgency/static/media/Mobile_development_icon.15795fb02addf6e519ae.webp",
     "static/media/whoWeArePlay_icon.webp": "/RivoAgency/static/media/whoWeArePlay_icon.4a4ebd5ae179859188cc.webp",
-    "main.0165a62a.css.map": "/RivoAgency/static/css/main.0165a62a.css.map",
-    "main.75372990.js.map": "/RivoAgency/static/js/main.75372990.js.map"
+    "main.2b79a788.css.map": "/RivoAgency/static/css/main.2b79a788.css.map",
+    "main.106a5a99.js.map": "/RivoAgency/static/js/main.106a5a99.js.map"
   },
   "entrypoints": [
-    "static/css/main.0165a62a.css",
-    "static/js/main.75372990.js"
+    "static/css/main.2b79a788.css",
+    "static/js/main.106a5a99.js"
   ]
 }

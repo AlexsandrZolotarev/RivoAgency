@@ -11,18 +11,36 @@
   align-items: center;
   font-family: "Poppins";
 }
+.status
+{
 
+}
+.status__span 
+{
+  width: 100%;
+  span
+  {
+    display: block;
+  }
+}
+.status__input
+{
+
+}
 .profile_avatar {
   padding: 1rem;
   margin: 2rem;
-  margin-left: 0;
   display: flex;
   flex-direction: column;
   width: 80%;
   align-items: center;
   background-color: rgba(82, 82, 82, 0.5);
-  max-width: 23rem;
-  height: 17rem;
+  height: 15rem;
+}
+.profile__id
+{
+  display: flex;
+  justify-content: space-between
 }
 .profile_registation__date {
   display: flex;
@@ -53,15 +71,12 @@
     border-bottom: 1px solid white;
     color: white;
     font-size: 1.2em;
+    width: 70%;
   }
 }
-.profile_body div:not(.PhoneInputCountry){
-    border: 1px solid rgb(164, 164, 164);
-    max-width: 30rem;
-    padding: 1em;
-}
-.profile_body * {
-  margin: 10px 0;
+.profile_container
+{
+  width: 100%;
 }
 .profile_button {
   transition: all ease 1000ms;
@@ -135,6 +150,7 @@
   width: 60%;
   color: white;
   font-family: "Poppins";
+  max-width: 20rem;
 }
 .dialog {
   position: absolute;
@@ -181,15 +197,15 @@
     #94820e 76.05%
   );
 }
+
 .phone_input 
 {
-  border: none !important;
-  padding: 0 !important;
+  border: none ;
+  padding: 0 ;
   display: flex;
+  width: 100%;
   *{
-    border: none !important;
-    padding: 0 !important;
-    margin: 0 !important;
+    border: none;
   }
   select{
     max-width: 1rem;
@@ -231,7 +247,7 @@
 }
 @media screen and (max-width: 600px) {
   .profile_wrapper {
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     padding: 0;
   }
   .profile {

@@ -2,7 +2,8 @@ import Home from "./Home";
 import { onChangeButtonPlay, updateVolume } from "../../Redux/home-reducer";
 import { connect } from "react-redux";
 import { Component } from "react";
-import { AnimationHomePage } from "../..";
+import { AnimationHomePage } from "../../animation";
+
 class HomeContainer extends Component {
   componentDidMount()
   { 
