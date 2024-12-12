@@ -193,7 +193,7 @@
     margin: 0;
   }
 }
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
   .wrapper_Footer {
     color: black;
     background-color: white;
@@ -208,4 +208,4 @@
   .wrapper_Footer__menuitems a {
     color: black;
   }
-}
+} */

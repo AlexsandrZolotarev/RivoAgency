@@ -219,7 +219,7 @@
     }
   }
 }
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
   .Career {
     background-color: white;
     color: black !important;
@@ -248,4 +248,4 @@
       color: black;
     }
   }
-}
+} */

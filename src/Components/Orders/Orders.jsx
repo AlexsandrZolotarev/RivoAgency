@@ -1,16 +1,15 @@
 import React from "react";
 import s from "./Orders.module.css";
-import { GoArrowLeft } from "react-icons/go";
 import { NavLink } from "react-router-dom";
-import { PiArrowDownLight } from "react-icons/pi";
 import { PiEngineFill } from "react-icons/pi";
-import { FaGasPump } from "react-icons/fa6";
-import { FaChargingStation } from "react-icons/fa";
+import { FaCalculator, FaGasPump } from "react-icons/fa6";
+import { FaChargingStation, FaSearch } from "react-icons/fa";
 import { TbAutomaticGearbox } from "react-icons/tb";
 import { IoMdCheckmark } from "react-icons/io";
+import { GoChevronDown } from "react-icons/go";
 let Car = ({ car }) => {
   return (
-    <article className={s.car} tabIndex={car.id}>
+    <article className={s.car} tabIndex={car.id + 1}>
       <NavLink to={"Order/" + car.id} className={s.car__image}>
         <img
           src={`https://alexsandrzolotarev.github.io/RivoAgency/src/assets/Orders/Cars/${car.img}`}
@@ -100,41 +99,71 @@ let Car = ({ car }) => {
 let Orders = (props) => {
   return (
     <section className={s.Orders}>
-      <div className={s.OrdersImgs}></div>
-      <div className={s.OrdersContainer}>
-        <div className={s.OrdersTitle}>
-          <NavLink to={"/RivoAgency"}>
-            <div className={s.OrdersTitleButton}>
-              <GoArrowLeft />
-              <p>Back to Home</p>
+      <div className={s.Orders__container}>
+        <div className={s.Orders__title}>
+          <div className={s.Orders__title__container}>
+            <div className={s.title}>
+              <h1>Looking for a new vehicle in stock.</h1>
             </div>
-          </NavLink>
-          <div className={s.OrdersTitleBody}>
-            <header className={s.OrdersTitleBodyMenu}>
-              <p>Menu</p>
-              <p>Looking for a new vehicle in stock</p>
-            </header>
-            {/* <div className={s.OrdersTitleBodyButton}>
-              <a href="#Orders">
-                <PiArrowDownLight className={s.OrdersTitleBodyButtonArrow} />
-              </a>
-              <p>View</p>
-            </div> */}
+            <div className={s.title__list}>
+              <ul>
+                <li>Check out our range</li>
+                <li>Filter to search</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div className={s.Orders__body}>
+          <div className={s.Orders__aside}>
+            <aside>
+              <h2>Filter</h2>
+              <div className={s.filter}>
+                <div className={s.filter__head}>
+                  <FaCalculator />
+                  <span>Price</span>
+                </div>
+                <GoChevronDown />
+                <div className={s.filter__body}>
+                  <input type="text"/>
+                  <input type="text"/>
+                </div>
+              </div>
+              
+              <div className={s.filter}>
+                <div className={s.filter__head}>
+                  <PiEngineFill />
+                  <span>Engine</span>
+                </div>
+                <GoChevronDown />
+              </div>
+            </aside>
+          </div>
+          <div className={s.Orders__cards}>
+            <div className={s.Orders__cards__searching}>
+              <div className={s.Orders__searching}>
+                <div className={s.searching}>
+                  <input />
+                  <FaSearch />
+                </div>
+              </div>
+              <div className={s.Orders__sort}>
+                <div className={s.searching}>
+                  <select name="Orders" id="Orders-select" tabIndex={0}>
+                    <option value="">Sort</option>
+                    <option value="dog">Expensive </option>
+                    <option value="cat">Cheaper</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div className={s.orders__body__grid} id="ordersBody">
+              {props.orders.map((item) => (
+                <Car key={item.id} car={item} />
+              ))}
+            </div>
           </div>
         </div>
       </div>
-      <section className={s.OrdersBody}>
-        <div className={s.OrdersBodyTitle}>
-          <header>
-            <h2>Information</h2>
-          </header>
-        </div>
-        <div className={s.orders__body__grid} id="ordersBody">
-          {props.orders.map((item) => (
-            <Car key={item.id} car={item} />
-          ))}
-        </div>
-      </section>
     </section>
   );
 };

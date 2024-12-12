@@ -3,7 +3,7 @@ import Order from "./Order";
 import { getCarsOrder, setOrder } from "../../Redux/order-reducer";
 import { connect } from "react-redux";
 import { useParams } from "react-router-dom";
-import { getCars } from "../../api/api";
+import { getOrder} from "../../Redux/order-selectors";
 
 let OrderContainer = (props) => {
   const orderId = useParams();
@@ -15,7 +15,7 @@ let OrderContainer = (props) => {
 
 let mapStateToProps = (state) => {
   return {
-    order: state.OrdersPage.order,
+    order: getOrder(state),
   };
 };
 export default connect(mapStateToProps, {

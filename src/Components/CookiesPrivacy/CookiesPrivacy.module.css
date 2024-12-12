@@ -88,7 +88,7 @@
     width: 100%;
   }
 }
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
   .CookiesPrivacy
   {
     background-color: white;
@@ -98,4 +98,4 @@
   {
     color: black;
   }
-}
+} */

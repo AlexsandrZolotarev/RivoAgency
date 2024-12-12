@@ -203,7 +203,7 @@
   border: none ;
   padding: 0 ;
   display: flex;
-  width: 100%;
+  width: 100%; 
   *{
     border: none;
   }
@@ -243,6 +243,13 @@
     div {
       max-width: none;
     }
+  }
+}
+@media screen and (max-width: 1137px)
+{
+  .profile_body
+  {
+    margin-top: 5rem;
   }
 }
 @media screen and (max-width: 600px) {

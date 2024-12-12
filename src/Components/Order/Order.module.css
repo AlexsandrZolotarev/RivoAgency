@@ -248,7 +248,7 @@
   }
 }
 
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
   .order__header {
     background-color: white;
     border: none;
@@ -274,4 +274,4 @@
       color: black;
     }
   }
-}
+} */

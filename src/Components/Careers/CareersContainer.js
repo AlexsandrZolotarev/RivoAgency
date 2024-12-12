@@ -7,12 +7,20 @@ import {
 } from "../../Redux/careerVacancies-reducer";
 import { connect } from "react-redux";
 
+// let mapStateToProps = (state) => {
+//   return {
+//     careerVacancies: state.careerPage.vacancies,
+//     newCareerVacanci: state.careerPage.newCareerVacanci,
+//   };
+// };
+
 let mapStateToProps = (state) => {
   return {
     careerVacancies: state.careerPage.vacancies,
     newCareerVacanci: state.careerPage.newCareerVacanci,
   };
 };
+
 
 const CareersContainer = connect(mapStateToProps, 
   {liftText,

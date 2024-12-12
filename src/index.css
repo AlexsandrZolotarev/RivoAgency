@@ -45,15 +45,16 @@ body {
   transition: background-color 0.3s ease;
 }
 
-body.light-theme {
+ /* body.light-theme {
   background: #ffffff;
   color: #000000;
-}
+} 
 
 body.dark-theme {
   background: black;
   color: #ffffff;
-}
+} */
+
 *::-webkit-scrollbar {
   width: 7px;
 }
@@ -233,6 +234,7 @@ select:-webkit-autofill:focus {
   padding: 1em;
   border: 1px solid rgb(164, 164, 164);
   width: 100%; 
+  
   input
   {
     cursor: pointer;
@@ -250,23 +252,23 @@ select:-webkit-autofill:focus {
 }
 #HomeTitle h2:nth-child(odd)
 {
-  transform: translateX(-150%);
+  transform: translateX(-100%);
 }
 #HomeTitle h2:nth-child(even)
 {
-  transform: translateX(150%);
+  transform: translateX(100%);
 }
 @keyframes animatinRight {
-  0% {transform: translateX(150%);}
+  0% {transform: translateX(100%);}
   100% {transform: translateY(0);}
 }
 @keyframes animatinLeft {
-  0% {transform: translateX(-150%);}
+  0% {transform: translateX(-100%);}
   100% {transform: translateY(0);}
 }
 @keyframes weWhoWaAre {
   from{
-    translate: 25vw;
+    translate: 1vw;
     opacity: 0;
   }
 }
@@ -320,7 +322,7 @@ select:-webkit-autofill:focus {
    flex-wrap: wrap;
   }
 }
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
   body {
     background: white;
     color: black;
@@ -331,7 +333,7 @@ select:-webkit-autofill:focus {
   .wrapper {
     background-color: white;
   }
-}
+} */
 .unscroll{
   overflow:auto;
 }

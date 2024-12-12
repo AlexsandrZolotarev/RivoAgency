@@ -1,7 +1,7 @@
 import React from "react";
 import s from "./Order.module.css";
 import NotFound from "../NotFound/NotFound";
-import background from "../../assets/Orders/Order/vehicle_background.webp";
+// import background from "../../assets/Orders/Order/vehicle_background.webp";
 import backgroundBlack from "../../assets/Orders/Order/BackgroundOrderBlack.png";
 import { PiEngineFill } from "react-icons/pi";
 import { FaChargingStation, FaGasPump } from "react-icons/fa";
@@ -23,8 +23,8 @@ let Order = (props) => {
       </header>
       <div className={s.background}>
         <picture>
-          <source srcset={(window.matchMedia('(prefers-color-scheme: dark)').matches) ? backgroundBlack  : background} media="(min-width: 1024px)" />
-          <img src={(window.matchMedia('(prefers-color-scheme: dark)').matches) ? backgroundBlack  : background} alt="Background" width="2962" height="1297" />
+          <source srcSet={backgroundBlack} media="(min-width: 1024px)" />
+          <img src={backgroundBlack} alt="Background" width="2962" height="1297" />
         </picture>
       </div>
       <div className={s.order__container}>

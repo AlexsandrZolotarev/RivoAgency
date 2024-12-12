@@ -284,7 +284,7 @@
     }
   }
 }
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
   .wrapper_Projects {
     color: black !important;
   }
@@ -304,4 +304,4 @@
       color: black;
     }
   }
-}
+} */

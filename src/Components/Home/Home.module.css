@@ -328,7 +328,7 @@
     }
   }
 }
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
   .Home {
     color: #000;
     background-color: #eeeef0;
@@ -349,7 +349,7 @@
   .HomeButton a svg {
     color: #000;
   }
-}
+} */
 
 @keyframes weWhoWaAreTitle {
   from{

@@ -168,7 +168,7 @@ div[class~="ServiveButton"] {
     margin-top: 10%;
   }
 }
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
   .Service
   {
     color: black;
@@ -181,4 +181,4 @@ div[class~="ServiveButton"] {
   {
     color: black;
   }
-}
+} */

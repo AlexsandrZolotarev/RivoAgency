@@ -5,7 +5,7 @@ import ElementLeft2 from "./../../assets/HomePage/WeWhoWeAre/ElementLeftBig.svg"
 import ElementRight from "./../../assets/HomePage/WeWhoWeAre/ElementRight.svg";
 import Vector from "./../../assets/HomePage/WeWhoWeAre/Vector.svg";
 import Cloch from "./../../assets/HomePage/WeWhoWeAre/Cloch.svg";
-import ClochLights from "./../../assets/HomePage/WeWhoWeAre/ClochLight.svg";
+// import ClochLights from "./../../assets/HomePage/WeWhoWeAre/ClochLight.svg";
 import Cube from "./../../assets/HomePage/WeWhoWeAre/Cube.svg";
 import Poster from "./../../assets/HomePage/VideoPoster.webp";
 import videoWebm from ".//../../video/whoWeAreVideo.webm";
@@ -102,7 +102,7 @@ let Home = (props) => {
                 </p>
               </div>
               <div className={s.WeWhoWeAreContainerMain__Clutch}>
-                <img alt="#" src={(window.matchMedia('(prefers-color-scheme: dark)').matches) ? Cloch: ClochLights } aria-hidden="true"></img>
+                <img alt="#" src={Cloch} aria-hidden="true"></img>
               </div>
               <img
                 alt="#"

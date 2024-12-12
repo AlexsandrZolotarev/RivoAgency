@@ -3,7 +3,6 @@
   border-radius: 1%;
 }
 .Orders {
-  margin-top: 5%;
   white-space: nowrap;
   z-index: 49;
   color: white;
@@ -11,73 +10,121 @@
   width: 100%;
   height: 100%;
   font-family: "Poppins";
+  margin-top: 5%;
 }
-
-
-.OrdersImgs {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 1)),
-    url(/src/assets/Orders/Background.webp) no-repeat,
-    linear-gradient(to top, black -15%, transparent 90%);
-  background-clip: border-box;
-  background-origin: border-box;
-  background-size: 100% auto;
-  opacity: 0.4;
-  width: 100%;
-  height: calc(70%);
-  position: absolute;
-  top: 0%;
-}
-.OrdersTitle {
-  height: 100%;
-}
-.OrdersTitle a {
-  text-decoration: none;
-  color: white;
-}
-
-.OrdersBody {
-  position: relative;
-  z-index: 1;
-  margin: 10% 5%;
-  width: 90%;
-}
-.OrdersBodyTitle {
-  height: 100%;
-  width: 100%;
-}
-.OrdersBodyTitle h2 {
-  font-size: calc(32px + 14 * (100vw / 1980));
-  font-family: "Poppins";
-  text-transform: uppercase;
-  font-weight: 700;
-  margin-bottom: 2%;
-  padding: 0 20px;
-}
-.OrdersBodyTitle__Title {
-  width: auto;
-  position: absolute;
-  right: 0;
-  font-size: calc(50px + 50 * (100vw / 1980));
-  font-weight: 200;
-  font-family: "Alexandria";
-  z-index: 9998;
-  top: 15%;
-}
-
-.OrdersContainer {
-  position: relative;
-  margin: 0 auto;
+.Orders__body {
   display: flex;
-  flex-direction: column;
-  z-index: 10000;
-  height: 100%;
-  width: 50%;
+  width: 100%;
+  margin-top: 5%;
+}
+.Orders__aside {
+  width: 20%;
+  h2 {
+    margin-bottom: 2em;
+  }
+}
+.filter {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 20px;
+  border-bottom: 1px solid grey;
+  padding-bottom: 20px;
+  margin: 1em 0;
+  .filter__head {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+  }
+}
+.filter:hover svg:last-child
+{
+  color:rgb(44, 44, 43);
+  border-radius: 50%;
+  background-color: #fddd0a;
+}
+.Orders__cards__searching {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, max-content));
+  gap: 1em;
+  justify-content: space-between;
+  input {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 17px;
+    width: 92%;
+  }
+  select {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 17px;
+    padding: 0.2em;
+    width: 100%;
+    option {
+      color: black;
+    }
+  }
+}
+.searching {
+  cursor: pointer;
+  width: 20rem;
+  border: 1px solid white;
+  padding: 0.2em;
+}
+.Search__body {
+  width: 30%;
+  border: 1px solid white;
+}
+.Orders__cards {
+  width: 80%;
+  padding-left: 5em;
+}
+.Orders__container {
+  margin: 0 5%;
+}
+.Orders__title {
+  h1 {
+    font-size: calc(50px + 10 * (100vw / 1980));
+    font-weight: 400;
+    text-wrap: balance;
+  }
+}
+.title__list ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3em;
+}
+.title__list ul li {
+  position: relative;
+  margin-left: 30px;
+}
+.title__list ul li::after {
+  position: absolute;
+  content: "✔";
+  top: 0;
+  left: -25px;
+  width: 1.5em;
+  height: 1.5em;
+  color: black;
+}
+.title__list ul li::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: -31px;
+  width: 1.5em;
+  height: 1.5em;
+  background-color: #fddd0a;
+  border-radius: 50%;
 }
 .button {
   transition: all ease 1000ms;
   display: flex;
   justify-content: center;
-  border: 1px solid black;;
+  border: 1px solid black;
   padding: 2.5%;
   font-size: 1rem;
   font-family: "Poppins";
@@ -96,9 +143,20 @@
   }
   :last-child {
     position: relative;
-    font-size: 1.3em ;
+    font-size: 1.3em;
     top: 1px;
+  }
 }
+.button:focus-within {
+  background-position: left;
+  color: white;
+  button {
+    text-transform: uppercase;
+    color: black;
+  }
+}
+.select:focus-within {
+  background-color: red;
 }
 .button:hover {
   background-position: left;
@@ -108,64 +166,12 @@
     color: black;
   }
 }
-.OrdersTitleButton {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  height: 30%;
-  margin-bottom: 30%;
-  cursor: pointer;
-  text-decoration: none;
-  :first-child {
-    position: relative;
-    top: 4px;
-  }
-  :last-child {
-  }
-}
-.OrdersTitleBody {
-  height: 70%;
-}
-.OrdersTitleBodyMenu {
-  padding-bottom: 8%;
-  :first-child {
-    font-size: calc(50px + 50 * (100vw / 1980));
-  }
-}
-
-.OrdersTitleBodyButton {
-  transition: all 1s ease;
-  p {
-    margin-left: 1%;
-  }
-}
-.OrdersTitleBodyButton a {
-  color: white;
-  display: block;
-  position: relative;
-  width: 53px;
-  height: 53px;
-  background-color: transparent;
-  border-radius: 50%;
-  border: 1px solid white;
-  margin-right: 3%;
-}
-.OrdersTitleBodyButtonArrow {
-  animation: arrow 1.5s ease-in-out infinite;
-  display: inline-block;
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  inset: 25%;
-}
 .orders__body__grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(600px, max-content));
-  gap: 30px 30px;
-  align-items: center;
+  gap: 1em;
   position: relative;
-  justify-items: center;
-  justify-content: center;
+  margin-top: 3%;
 }
 .car {
   max-height: 80rem;
@@ -180,7 +186,7 @@
   display: flex;
   justify-content: center;
   img {
-    width: 90%;
+    width: 80%;
     max-width: auto;
     height: 18rem;
     padding-top: 2em;
@@ -223,8 +229,7 @@
   min-width: 10rem;
   max-width: 33rem;
 }
-.types__container
-{
+.types__container {
   height: auto;
   display: flex;
   align-items: center;
@@ -302,6 +307,11 @@
 
   50% {
     transform: translate(0px, -7px);
+  }
+}
+@media screen and (max-width: 920px) {
+  .Orders__aside {
+    display: none;
   }
 }
 @media screen and (max-width: 680px) {
@@ -387,43 +397,10 @@
     font-size: 30px;
     margin-bottom: 10px;
   }
-
-  .OrdersContainer {
-    width: 100%;
-    padding: 0 3%;
-  }
-  .OrdersTitleBodyMenu {
-    :last-child {
-      text-wrap: wrap;
-      width: 90%;
-    }
-  }
   .description {
     text-wrap: wrap;
   }
   .description__item:first-child {
     font-size: 1em;
-  }
-}
-@media (prefers-color-scheme: light) {
-  .OrdersBody {
-    color: black;
-    background-color: #eeeef0;
-  }
-  .Orders * {
-    color: #000;
-  }
-  .OrdersContainer * {
-    color: white;
-  }
-  .OrdersImgs {
-    background: url(/src/assets/Orders/Background.webp) no-repeat;
-    background-size: 100% auto;
-    width: 100%;
-    opacity: 1;
-    filter: brightness(40%);
-    height: calc(100%);
-    position: absolute;
-    top: 0%;
   }
 }
