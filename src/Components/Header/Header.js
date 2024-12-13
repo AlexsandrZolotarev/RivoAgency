@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { MdArrowOutward } from "react-icons/md";
 import { NavLink } from "react-router-dom";
 import logoDark from "./../../assets/Header/LogotypeDark.svg";
@@ -7,7 +7,13 @@ import s from "./Header.module.css";
 import { BiLogIn } from "react-icons/bi";
 import { checkingForRegistration } from "../../localStorage/localStorage";
 import MenuBurgerContainer from "../MenuBurger/MenuBurgerContainer";
-let Header = () => {
+let Header = (props) => {
+  let [imageUser, setImageUser] = useState(props.imageUser);
+  
+  useEffect(() =>{
+    setImageUser(props.imageUser)
+  },[props.imageUser]);
+
   return (
     <header className={s.header} id="header">
       <div className={s.container}>
@@ -15,13 +21,12 @@ let Header = () => {
           <NavLink to={"/RivoAgency"} aria-label="Home Page">
             <img alt="logotype" src={logoDark} />
           </NavLink>
-
           <div className={s.header__buttons_items}>
             <div className={s.login}>
               {checkingForRegistration() ? (
                 <img
                   className={s.profile__image}
-                  src={JSON.parse(localStorage.user).img}
+                  src={imageUser}
                   alt="MyProfileImage"
                 ></img>
               ) : (

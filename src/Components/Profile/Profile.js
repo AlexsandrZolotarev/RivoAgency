@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import s from "./Profile.module.css";
 import { MdOutlinePhotoCamera } from "react-icons/md";
 import PhoneInputWithCountrySelect from "react-phone-number-input";
@@ -8,6 +8,7 @@ import { OnPreloaderPage} from "../../loader";
 let Profile = (props) => {
   const dialog = React.createRef();
   var user = JSON.parse(localStorage.user);
+  let [link, setLink] = useState(props.img);
 
   const handleClickOpen = () => {
     dialog.current.showModal();
@@ -38,14 +39,14 @@ let Profile = (props) => {
               <p>{props.profile.id}</p>
             </div>
             <div className={s.profile__status}>
-              <ProfileStatus status={props.profile.status} updateText= {props.updateText} />
+              <ProfileStatus status={props.profile.status} updateText = {props.updateText} />
             </div>
             <div className={s.profile_file_input}>
               <input
                 onChange={onTextchange.bind(this)}
                 type="text"
                 name="img"
-                value={props.profile.img}
+                value={link}
               ></input>
               <MdOutlinePhotoCamera />
             </div>

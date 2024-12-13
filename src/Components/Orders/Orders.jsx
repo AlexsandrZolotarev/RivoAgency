@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import s from "./Orders.module.css";
 import { NavLink } from "react-router-dom";
 import { PiEngineFill } from "react-icons/pi";
@@ -9,7 +9,7 @@ import { IoMdCheckmark } from "react-icons/io";
 import { GoChevronDown } from "react-icons/go";
 let Car = ({ car }) => {
   return (
-    <article className={s.car} tabIndex={car.id + 1}>
+    <article className={s.car} tabIndex={1}>
       <NavLink to={"Order/" + car.id} className={s.car__image}>
         <img
           src={`https://alexsandrzolotarev.github.io/RivoAgency/src/assets/Orders/Cars/${car.img}`}
@@ -61,9 +61,9 @@ let Car = ({ car }) => {
               ? `Power consumption in combined cycle`
               : `Fuel consumption (combined cycle)`}{" "}
           </p>
-          <p>
+          <span>
             {!car.fuelConsumption ? car.PowerConsumption : car.fuelConsumption}
-          </p>
+          </span>
         </div>
         <div>
           <p>
@@ -71,14 +71,14 @@ let Car = ({ car }) => {
               ? `Power consumption in combined cycle`
               : `Fuel consumption (combined cycle)`}{" "}
           </p>
-          <p>
+          <span>
             {!car.fuelConsumption ? car.PowerConsumption : car.fuelConsumption}
-          </p>
+          </span>
         </div>
       </div>
       <div className={s.consumption__CO2}>
         <p>Emissions of CO₂ (combined cycle)</p>
-        <p>{car.emissionsOfCO}</p>
+        <span>{car.emissionsOfCO}</span>
       </div>
       <div className={s.category}>
         <img
@@ -97,6 +97,25 @@ let Car = ({ car }) => {
   );
 };
 let Orders = (props) => {
+  let pagesCount = Math.ceil(props.totalUserCount / props.pageSize);
+
+  useEffect(() => {
+    props.getCarsThunk();
+  },[props.currentPage]);
+
+  let pages = [];
+  for (let i = 1; i <= pagesCount; i++) {
+    pages.push(i);
+  }
+
+  function editCurrentPage(page){
+    props.setCurrentPage(+page.target.innerText);
+  }
+
+  function getCarsOutInputSearch(input) {
+    props.setCardsForSearchingThunk()
+    props.getCardsInSearching(input.target.value);
+  }
   return (
     <section className={s.Orders}>
       <div className={s.Orders__container}>
@@ -124,11 +143,11 @@ let Orders = (props) => {
                 </div>
                 <GoChevronDown />
                 <div className={s.filter__body}>
-                  <input type="text"/>
-                  <input type="text"/>
+                  <input type="text" />
+                  <input type="text" />
                 </div>
               </div>
-              
+
               <div className={s.filter}>
                 <div className={s.filter__head}>
                   <PiEngineFill />
@@ -142,7 +161,7 @@ let Orders = (props) => {
             <div className={s.Orders__cards__searching}>
               <div className={s.Orders__searching}>
                 <div className={s.searching}>
-                  <input />
+                  <input  onChange={getCarsOutInputSearch.bind(this)}/>
                   <FaSearch />
                 </div>
               </div>
@@ -160,6 +179,21 @@ let Orders = (props) => {
               {props.orders.map((item) => (
                 <Car key={item.id} car={item} />
               ))}
+            </div>
+
+            <div className={s.counterPages__body}>
+              {pages.map((page) => {
+                return (
+                  <span
+                    tabIndex={1}
+                    onKeyDown= {editCurrentPage.bind(page)}
+                    className={props.currentPage === page && s.selectedPage}
+                    onClick={editCurrentPage.bind(page)}
+                  >
+                    {page}
+                  </span>
+                );
+              })}
             </div>
           </div>
         </div>

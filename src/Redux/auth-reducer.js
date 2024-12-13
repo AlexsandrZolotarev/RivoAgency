@@ -1,7 +1,8 @@
 const SET_USER = "SET_USER";
-
+const linkImageUser = "https://alexsandrzolotarev.github.io/RivoAgency/src/assets/NotFound/notFound.webp";
 let initialState = {
-  user:null
+  user:null,
+  imgUser: JSON.parse(localStorage.user).img || linkImageUser,
 };
 const authReducer = (state = initialState, action) => {
   switch (action.type) {

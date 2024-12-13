@@ -9,7 +9,9 @@ class HeaderContainer extends React.Component {
   }
 }
 const mapStateToProps = (state) => {
-  return {};
+  return {
+    imageUser: state.auth.imgUser,
+  };
 };
 export default connect(mapStateToProps, {
   setAuthUser,
