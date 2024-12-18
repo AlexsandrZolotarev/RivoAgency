@@ -1,10 +1,10 @@
 import React from "react";
 import s from "./Login.module.css";
 import { ErrorMessage, Field, Form, Formik } from "formik";
-import { checkingForRegistration } from "../../localStorage/localStorage";
 import { useNavigate } from "react-router-dom";
 import * as Yup from 'yup';
 import { OnPreloaderPage } from "../../loader";
+import { checkingForRegistration } from "../../cookie/cookie";
 
 const SignupSchema = Yup.object().shape({
   name: Yup.string()
@@ -25,14 +25,9 @@ let LoginForm = (props) => {
       initialValues={{name: "" , email: "", password: ""}}
       validationSchema={SignupSchema}
       onSubmit={(values) => {
-        values.id = Math.random().toString(16).slice(2);
-        values.img = "https://alexsandrzolotarev.github.io/RivoAgency/src/assets/NotFound/notFound.webp"; 
-        values.status = "";
-        var registrationDate = new Date();
-        values.registrationDate = `${registrationDate.getDate()}.${registrationDate.getMonth()}.${registrationDate.getFullYear()}`; 
-        props.setAuthUser(values);
+        props.setUserThunk({username: values.name,email:values.email, password:values.password});
         OnPreloaderPage();
-        setTimeout(() => navigate('/Profile'),1200)
+        setTimeout(() => navigate('/Profile'),1000)
       }}>
       {({ isSubmitting }) => (
         <Form>

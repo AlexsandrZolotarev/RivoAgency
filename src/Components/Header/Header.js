@@ -2,18 +2,20 @@ import React, { useEffect, useState } from "react";
 import { MdArrowOutward } from "react-icons/md";
 import { NavLink } from "react-router-dom";
 import logoDark from "./../../assets/Header/LogotypeDark.svg";
-// import logoLight from "./../../assets/Header/LogotypeLight.svg";
 import s from "./Header.module.css";
 import { BiLogIn } from "react-icons/bi";
-import { checkingForRegistration } from "../../localStorage/localStorage";
 import MenuBurgerContainer from "../MenuBurger/MenuBurgerContainer";
-let Header = (props) => {
-  let [imageUser, setImageUser] = useState(props.imageUser);
-  
-  useEffect(() =>{
-    setImageUser(props.imageUser)
-  },[props.imageUser]);
+import { checkingForRegistration, getCookie } from "../../cookie/cookie";
 
+let Header = (props) => {
+  let [imageUser, setImageUser] = useState(props.userImage);
+  useEffect(() => {
+    setImageUser(imageUser);
+  }, [imageUser]);
+
+  useEffect(() => {
+    props.getUserThunk(getCookie("userId"));
+  }, [props.user]);
   return (
     <header className={s.header} id="header">
       <div className={s.container}>
@@ -23,19 +25,25 @@ let Header = (props) => {
           </NavLink>
           <div className={s.header__buttons_items}>
             <div className={s.login}>
-              {checkingForRegistration() ? (
+              {checkingForRegistration() === "undefined" ? (
+                <BiLogIn />
+              ) : (
                 <img
                   className={s.profile__image}
                   src={imageUser}
                   alt="MyProfileImage"
                 ></img>
-              ) : (
-                <BiLogIn />
               )}
-              <NavLink to={checkingForRegistration() ? "Profile" : "Login"}>
-                {checkingForRegistration()
-                  ? JSON.parse(localStorage.user).name
-                  : "Registration"}
+              <NavLink to={checkingForRegistration() === "undefined"
+                  ? "Login"
+                  : checkingForRegistration() === null
+                  ? "Login"
+                  : "Profile"}>
+                {checkingForRegistration() === "undefined"
+                  ? "Login"
+                  : checkingForRegistration() === null
+                  ? "Registation"
+                  : props.user.username}
               </NavLink>
             </div>
             <NavLink className={s.makeOrder_Button} to={"/Orders"}>

@@ -1,13 +1,12 @@
 import React from "react";
 import logoDark from "./../../assets/Header/LogotypeDark.svg";
-// import logoLight from "./../../assets/Header/LogotypeLight.svg";
 import { scaleRotate as Menu } from "react-burger-menu";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 import { SlSocialVkontakte } from "react-icons/sl";
 import "./MenuBurger.css";
 import { NavLink } from "react-router-dom";
 import { BiLogIn } from "react-icons/bi";
-import { checkingForRegistration } from "../../localStorage/localStorage";
+import { checkingForRegistration } from "../../cookie/cookie";
 
 let MenuBurger = (props) => {
   return (

@@ -1,29 +1,20 @@
 import React from "react";
 import { connect } from "react-redux";
-import {addProfile, changeProfile, updatePhone, updateText} from "../../Redux/profile-reducer";
+import {} from "../../Redux/auth-reducer";
 import Profile from "./Profile";
 import { withLoginRedirect } from "../../hoc/withLoginRedirect";
 
 class ProlifeContainer extends React.Component {
-  componentDidMount()
-  {
-    this.props.addProfile();
-  }
   render() {
     return <Profile {...this.props} />;
   }
 }
 let RedirectComponent = withLoginRedirect(ProlifeContainer);
 const mapStateToProps = (state) => {
-
   return {
-    profile: state.ProfilePage.profile,
-    status: state.ProfilePage.profile.status,
+    user: state.auth.user,
+    userImage:state.auth.userImage
   };
 };
 export default connect(mapStateToProps, {
-  updateText,
-  changeProfile,
-  addProfile,
-  updatePhone,
 })(RedirectComponent);

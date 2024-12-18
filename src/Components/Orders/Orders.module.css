@@ -295,6 +295,7 @@
   span {
     font-size: calc(12px + 10 * (100vw / 1980));
     margin: 0 1em 0 0;
+    cursor: pointer;
   }
 }
 .car {
