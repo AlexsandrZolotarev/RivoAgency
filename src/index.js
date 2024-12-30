@@ -6,7 +6,6 @@ import { HashRouter } from "react-router-dom";
 import store from "./Redux/redux-store";
 import { Provider } from "react-redux";
 import { OnPreloaderPage } from "./loader";
-
 ReactDOM.createRoot(document.getElementById("root")).render(
   <HashRouter>
     <React.StrictMode>

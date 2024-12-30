@@ -34,7 +34,7 @@ export const getUserThunk = (userId) => {
 
 export const setUserThunk = (userData) => {
   return (dispatch) => {
-    usersApi.setUser(userData).then((data) => {
+    usersApi.registrationUser(userData).then((data) => {
       dispatch(setUser(data));
     });
   };

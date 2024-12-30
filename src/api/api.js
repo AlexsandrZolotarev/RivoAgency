@@ -2,7 +2,7 @@ import axios from "axios";
 
 const instanceUser = axios.create({
   withCredentials: true,
-  baseURL: "https://ilyxxxa-server.ru/api/v1",
+  baseURL: "https://ilyxxxa-server.ru/api/v1/users/",
 });
 
 export const carsApi = {
@@ -17,9 +17,9 @@ export const carsApi = {
   },
 };
 export const usersApi = {
-  async setUser(userData) {
+  async registrationUser(userData) {
     return instanceUser
-      .post("/users",userData)
+      .post("/registration",userData)
       .then((response) => {
         return response.data;
       })
@@ -30,7 +30,7 @@ export const usersApi = {
   },
   async getUser(userId) {
     return instanceUser
-      .get(`/users/${userId}`)
+      .get(`${userId}`)
       .then((response) => {
         return response.data;
       })
