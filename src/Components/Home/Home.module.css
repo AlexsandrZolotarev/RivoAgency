@@ -353,13 +353,13 @@
 
 @keyframes weWhoWaAreTitle {
   from{
-    translate: 15vw;
+    translate: 5vw;
     opacity: 0;
   }
 }
 @keyframes weWhoWaAretextWithVideo {
   from{
-    translate: -15vw;
+    translate: 10vw;
     opacity: 0;
   }
 }
