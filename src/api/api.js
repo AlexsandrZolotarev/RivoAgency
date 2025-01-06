@@ -1,5 +1,6 @@
 import axios from "axios";
 
+
 const instanceUser = axios.create({
   withCredentials: true,
   baseURL: "https://ilyxxxa-server.ru/api/v1/users/",
@@ -37,5 +38,12 @@ export const usersApi = {
       .catch(() => {
         return "No name";
       })
+  },
+};
+export const telegramApi = {
+  async telegram(url) {
+    return axios
+      .get(`${url}`)
+      .then((response) => response)
   },
 };

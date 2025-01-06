@@ -104,18 +104,9 @@
       line-height: 52px;
     }
     :last-child {
-      font-size: calc(29px + 15*(100vw / 1980));
+      font-size: calc(40px + 15*(100vw / 1980));
+      -webkit-text-stroke: 1px rgb(80, 80, 80);
+      text-wrap: pretty;
     }
   }
 }
-
-/* @media (prefers-color-scheme: light) {
- .industry
- {
-  color: black;
- } 
- .industry__item
- {
-  color: black;
- }
-} */

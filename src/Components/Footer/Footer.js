@@ -20,19 +20,22 @@ let Footer = () => {
                   <NavLink to={"/RivoAgency"} title="Home">Home</NavLink>
                 </li>
                 <li onClick={Scroll}>
-                  <NavLink to={"/Services"} title="Who we are">Who we are</NavLink>
+                  <a href="#Who-we-are" title="Who we are">Who we are</a>
                 </li>
                 <li onClick={Scroll}>
                   <NavLink to={"/Services"} title="Services">Services</NavLink>
                 </li>
                 <li>
-                  <a href="IE" title="Industry Expertise">Industry Expertise</a>
+                  <a href="#IE" title="Industry Expertise">Industry Expertise</a>
                 </li>
                 <li onClick={Scroll}>
-                  <NavLink to={"/Careers"} title="Industry Expertise">Careers</NavLink>
+                  <NavLink to={"/Stack"} title="Industry Expertise">OUR StacK</NavLink>
                 </li>
                 <li onClick={Scroll}>
-                  <NavLink to={"/Careers"} title="Industry Expertise">Careers</NavLink>
+                  <NavLink to={"/Projects"} title="Projects">Projects</NavLink>
+                </li>
+                <li onClick={Scroll}>
+                  <NavLink to={"/Contacts"} title="Contacts">Contacts</NavLink>
                 </li>
                 <li onClick={Scroll}>
                   <NavLink to={"/Career"} title="Career">Career</NavLink>

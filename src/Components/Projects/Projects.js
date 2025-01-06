@@ -27,7 +27,7 @@ class Projects extends React.Component {
                 </div>
                 <picture>
                   <img
-                    srcset={image1}
+                    srcSet={image1}
                     alt="Project"
                     loading="lazy"
                     decoding="async"
@@ -48,7 +48,7 @@ class Projects extends React.Component {
 
                 <picture>
                   <img
-                    srcset={image2}
+                    srcSet={image2}
                     alt="Project"
                     loading="lazy"
                     decoding="async"
@@ -69,7 +69,7 @@ class Projects extends React.Component {
 
                 <picture>
                   <img
-                    srcset={image3}
+                    srcSet={image3}
                     alt="Project"
                     loading="lazy"
                     decoding="async"
@@ -90,7 +90,7 @@ class Projects extends React.Component {
 
                 <picture>
                   <img
-                    srcset={image1}
+                    srcSet={image1}
                     alt="Project"
                     loading="lazy"
                     decoding="async"
@@ -111,7 +111,7 @@ class Projects extends React.Component {
                 <picture>
                  
                   <img
-                    srcset={image3}
+                    srcSet={image3}
                     alt="Project"
                     loading="lazy"
                     decoding="async"

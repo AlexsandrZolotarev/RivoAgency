@@ -1,6 +1,7 @@
 .addNewVacanciBody {
   position: relative;
   transition: all ease 1000ms;
+  
 }
 .addNewVacanciButton {
   margin-top: 5%;
@@ -27,9 +28,10 @@
   display: flex;
   color: white;
   align-items: center;
-  font-family: 'Gilroy', sans-serif;
+  font-family: 'Gilroy';
   margin-top: 5%;
   justify-content: center;
+  font-weight: 400;
 }
 .Wrapper_Career__Title {
   display: flex;
@@ -38,16 +40,14 @@
 }
 .Wrapper_Career__Title_name {
   width: 50%;
-  font-family: "Alexandria", sans-serif;
   text-transform: uppercase;
-  font-weight: 600;
   :first-child {
     font-size: calc(52px + 32 * (100vw / 1980));
   }
   :last-child {
     font-weight: 700;
     border-radius: 1px;
-    font-family: 'Gilroy', sans-serif;
+    font-family: 'Gilroy';
     color: rgba(0, 0, 0, 0.1);
     -webkit-text-stroke: 0.5px rgb(80, 80, 80);
     font-size: calc(60px + 48 * (100vw / 1980));
@@ -87,19 +87,19 @@
       justify-content: space-between;
       border: 1px solid rgb(123, 123, 123, 0.2);
       :nth-child(2) {
-        font-family: 'Gilroy', sans-serif;
+        font-family: 'Gilroy';
         text-transform: uppercase;
         font-weight: 400;
         font-size: calc(24px + 1 * (100vw / 1980));
       }
       :first-child {
+
         text-transform: uppercase;
         background-color: white;
         color: black;
         padding: 1px 2px;
         max-width: max-content;
         font-size: calc(12px + 1 * (100vw / 1980));
-        font-weight: 600;
         margin-left: 10%;
       }
     }
@@ -111,9 +111,9 @@
   width: 100%;
   background-color: transparent;
   border: 1px solid #fddd0a;
-  font-weight: 600;
   color: #fddd0a;
   transition: ease 500ms;
+
 }
 .VacanciesForm {
   z-index: 1;
@@ -136,7 +136,7 @@
     font-size: calc(18px + 1 * (100vw / 1980));
   }
   input {
-    margin-top: 4%;
+    margin-top: 5%;
     cursor: pointer;
     font-size: calc(15px + 10 * (100vw / 1980));
     background-color: transparent;
@@ -211,7 +211,6 @@
   }
   .Wrapper_Career__Title_title {
     :first-child {
-      font-weight: 700;
       font-size: calc(17px + 4 * (100vw / 1980));
     }
     :last-child {
@@ -219,33 +218,3 @@
     }
   }
 }
-/* @media (prefers-color-scheme: light) {
-  .Career {
-    background-color: white;
-    color: black !important;
-  }
-  .Wrapper_Career__Vacancies_vacancies button {
-    border: 1px solid black;
-    color: black;
-    text-transform: uppercase;
-  }
-  .Wrapper_Career__Vacancies_vacancies button:hover {
-    background-color: #fddd0a;
-  }
-  .Wrapper_Career__Vacancies_vacancies {
-    .vacancies {
-      li ul {
-        :first-child {
-          background-color: #fddd0a;
-       
-        }
-      }
-    }
-  }
-  .VacanciesForm {
-    input {
-      border-bottom: 1px solid #D8D7DB;
-      color: black;
-    }
-  }
-} */

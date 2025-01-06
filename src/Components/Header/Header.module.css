@@ -426,33 +426,9 @@
     align-items: center;
     padding-left: 20px;
   }
-  .header {
-    top: 10px;
-  }
   .header__buttons_items {
     padding: 0 3% 0 5%;
   }
 }
 
-@media (prefers-color-scheme: light) {
-  .header {
-    color: #000000;
-  }
-  /* .header__items_items a
-  {
-    color: #000000;
-  }
-  .header__items_items a::after {
-    background: #000000;
-  }
-  .header__items_items a:hover {
-    color: black;
-    box-shadow: none;
-  } */
-  #submenu a::after {
-    background: #ffffff;
-  }
-  #submenu a {
-    color: white;
-  }
-}
+

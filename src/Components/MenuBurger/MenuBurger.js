@@ -19,12 +19,7 @@ let MenuBurger = (props) => {
     >
       <div>
         <NavLink to={""} className="link" reloadDocument>
-          <img
-            alt="logotype"
-            src={
-              logoDark
-            }
-          />
+          <img alt="logotype" src={logoDark} />
         </NavLink>
       </div>
       <div className="burger__body">
@@ -82,7 +77,7 @@ let MenuBurger = (props) => {
               <p>Let’s make something that matters.</p>
             </div>
             <div className="contactsBodyTextContact__street">
-              <p>Rivne, A. Melnyk str.1, 33016</p>
+              <p>Poste Antanimena str.1, 33016</p>
             </div>
             <div className="contactsBodyTextContact__phone">
               <a href="tel:+79998887766">+7 999 888 77 66</a>
@@ -93,7 +88,7 @@ let MenuBurger = (props) => {
                 <a
                   href="https://vk.com"
                   target="_blank"
-                  rel="nofollow"
+                  rel="noreferrer"
                   aria-label="Наша компания в facebook"
                 >
                   <FaFacebookF />
@@ -103,9 +98,8 @@ let MenuBurger = (props) => {
                 <a
                   href="https://vk.com"
                   target="_blank"
-                  rel="nofollow"
-                  aria-label="Наша компания в instagram"
-                >
+                  rel="noreferrer"
+                  aria-label="Наша компания в instagram">
                   <FaInstagram />
                 </a>
               </li>
@@ -113,10 +107,8 @@ let MenuBurger = (props) => {
                 <a
                   href="https://vk.com"
                   target="_blank"
-                  rel="nofollow"
-                  aria-label="Наша компания в X"
-                >
-                  {" "}
+                  rel="noreferrer"
+                  aria-label="Наша компания в X">
                   <FaTwitter />
                 </a>
               </li>
@@ -124,10 +116,8 @@ let MenuBurger = (props) => {
                 <a
                   href="https://vk.com"
                   target="_blank"
-                  rel="nofollow"
-                  aria-label="Наша компания в VK"
-                >
-                  {" "}
+                  rel="noreferrer"
+                  aria-label="Наша компания в VK">
                   <SlSocialVkontakte />
                 </a>
               </li>

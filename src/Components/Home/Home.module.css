@@ -11,8 +11,8 @@
   display: flex;
   justify-content: space-evenly;
   position: relative;
-  margin-top: 2%;
-  margin-bottom: 18rem;
+  margin-block: 2% 20rem;
+  margin-inline: 3%;
 }
 .HomeImgs {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 1)),
@@ -240,7 +240,8 @@
 
 .inputVolume {
   opacity: 0;
-  width: 100%;
+  margin-top: 4%;
+  width: 80%;
   color: #000;
   accent-color: #fddd0a;
   transition: all 1200ms ease;
@@ -276,12 +277,21 @@
     font-weight: 600;
   }
 }
-@media screen and (max-width: 670px) {
-
+@media screen and (max-width: 640px) {
+  .HomeTitleCube
+  {
+    display: none;
+  }
+}
+@media screen and (max-width: 400px) {
   .WeWhoWeAreContainerMain_VideoContainar {
     width: 250px;
     height: 250px;
     margin-bottom: 10%;
+  }
+  .HomeTitleWithCube
+  {
+    margin-inline:0;
   }
   .WeWhoWeAreContainerMain__title {
     font-size: calc(29px + 7 * (100vw / 1980));
@@ -329,12 +339,7 @@
     opacity: 0;
   }
 }
-@keyframes weWhoWaAretextWithVideo {
-  from{
-    translate: 10vw;
-    opacity: 0;
-  }
-}
+
 .WeWhoWeAreContainerMain__textWithClutch
 {
   display: block;
@@ -344,28 +349,5 @@
   animation-timing-function: linear;
   view-timeline-name: --we-Who-Wa-Are-textWithClutch;
   animation-timeline: --we-Who-Wa-Are-textWithClutch;
-  animation-range: 20% 50%;
-}
-.WeWhoWeAreContainerMain__title h2
-{
-  display: block;
-  margin-inline: auto;
-  animation-name: weWhoWaAreTitle;
-  animation-fill-mode: both;
-  animation-timing-function: linear;
-  view-timeline-name: --we-Who-Wa-Are-Title;
-  animation-timeline: --we-Who-Wa-Are-Title;
-  animation-range: 20% 50%;
-}
-
-.WeWhoWeAreContainerMain__textWithVideo
-{
-  display: block;
-  margin-inline: auto;
-  animation-name: weWhoWaAretextWithVideo;
-  animation-fill-mode: both;
-  animation-timing-function: linear;
-  view-timeline-name: --we-Who-Wa-Are-textWithVideo;
-  animation-timeline: --we-Who-Wa-Are-textWithVideo;
   animation-range: 20% 50%;
 }

@@ -166,7 +166,7 @@
 
 .card {
   outline: var(--outline-width) solid lime;
-  min-height: 55rem;
+  min-height: 45rem;
   font-family: 'Gilroy', sans-serif;
   h2
   {
@@ -184,7 +184,6 @@
   color: rgb(10, 5, 7);
   border-radius: 1em;
   overflow: hidden;
-  min-height: 45rem;
   display: grid;
   grid-template-areas: "text img";
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -221,7 +220,8 @@
   border: 1px solid #000000;
   padding: 2.5%;
   font-size: 1rem;
-  font-family: 'Gilroy', sans-serif;
+  font-family: 'Gilroy';
+  font-weight: 400;
   color: #fddd0a;
   background: linear-gradient(to left, transparent 50%, #fddd0a 50%) right;
   background-size: 200%;
