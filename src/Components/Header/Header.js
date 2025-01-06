@@ -6,7 +6,14 @@ import s from "./Header.module.css";
 import { BiLogIn } from "react-icons/bi";
 import MenuBurgerContainer from "../MenuBurger/MenuBurgerContainer";
 import { checkingForRegistration, getCookie } from "../../cookie/cookie";
-
+function checkedValentinasDay(){
+  const date = new Date();
+  return  date.getMonth() === 1 && date.getDate() === 14;
+}
+function checkedNewYear(){
+  const date = new Date();
+  return date.getMonth() === 11 || date.getMonth() === 0;
+}
 let Header = (props) => {
   let [imageUser, setImageUser] = useState(props.userImage);
   useEffect(() => {
@@ -20,7 +27,11 @@ let Header = (props) => {
     <header className={s.header} id="header">
       <div className={s.container}>
         <div className={s.header__body}>
-          <NavLink to={"/RivoAgency"} aria-label="Home Page">
+          <NavLink to={"/RivoAgency"} aria-label="Home Page" className={(
+              (checkedNewYear) ? "NewYear" :
+              (checkedValentinasDay) ? "ValentinesDay" :
+            ""
+            )}>
             <img alt="logotype" src={logoDark} />
           </NavLink>
           <div className={s.header__buttons_items}>

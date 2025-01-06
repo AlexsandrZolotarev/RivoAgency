@@ -1,18 +1,11 @@
 import React from "react";
-import Careers from "./Careers";
+import Career from "./Career";
 import {
   addVacanci,
   updateNewVacanciText,
   liftText,
 } from "../../Redux/careerVacancies-reducer";
 import { connect } from "react-redux";
-
-// let mapStateToProps = (state) => {
-//   return {
-//     careerVacancies: state.careerPage.vacancies,
-//     newCareerVacanci: state.careerPage.newCareerVacanci,
-//   };
-// };
 
 let mapStateToProps = (state) => {
   return {
@@ -21,11 +14,10 @@ let mapStateToProps = (state) => {
   };
 };
 
-
-const CareersContainer = connect(mapStateToProps, 
-  {liftText,
+const CareersContainer = connect(mapStateToProps, {
+  liftText,
   updateNewVacanciText,
-  addVacanci,}
-)(Careers);
+  addVacanci,
+})(Career);
 
 export default CareersContainer;

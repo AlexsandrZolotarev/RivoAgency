@@ -3,12 +3,11 @@
   width: 60%;
   margin: 0 auto;
   color: white;
-  font-family: "Poppins";
+  font-family: 'Gilroy';
   margin-top: 6%;
 }
 .contactsTitle {
   width: 100%;
-  font-family: "Alexandria", sans-serif;
   text-transform: uppercase;
   font-weight: 700;
   :first-child {
@@ -19,7 +18,6 @@
     border-radius: 1px;
     color: rgba(0, 0, 0, 0.1);
     -webkit-text-stroke: 0.5px rgb(80, 80, 80);
-    font-family: "Poppins";
     color: transparent;
     font-size: calc(60px + 12 * (100vw / 1980));
   }
@@ -49,7 +47,7 @@
   width: 40%;
 }
 .contactsBodyTextContact__title {
-  & p {
+  & h2 {
     font-size: 30px;
     text-wrap: balance;
     padding-bottom: 4%;
@@ -65,13 +63,11 @@
 .contactsBodyTextContact__phone {
   display: flex;
   flex-direction: column;
-
   & a {
     text-decoration: none;
     font-size: 17px;
     padding-bottom: 3%;
     color: rgb(255, 255, 255);
-    font-family: "Poppins";
     font-weight: 400;
   }
 }
@@ -199,8 +195,7 @@
 .inputFile input[type="file"]:disabled + .inputFileButton {
   background-color: #eee;
 }
-@media screen and (max-width: 1240px) {
-}
+
 @media screen and (max-width: 670px) {
   .contactsTitle > p {
     font-size: calc(50px + 1 * (100vw / 1980)) !important;
@@ -244,41 +239,3 @@
     margin-top: 10%;
   }
 }
-/* @media (prefers-color-scheme: light) {
-  .contacts {
-    color: black;
-  }
-  .contactsBodyFieds__name input {
-    color: black !important;
-  }
-  .contactsBodyTextContact__phone a {
-    color: black;
-  }
-  .contactsBodyFieds {
-    & input {
-      color: black;
-      font-weight: 500;
-    }
-  }
-  .contactsButton {
-    border: 1px solid black;
-    color: black;
-  }
-  .contactsBodyTextContact__icons {
-    color: white;
-  }
-  .contactsBodyTextContact__icons li svg {
-    color: white;
-  }
-  .contactsBodyTextContact__icons li svg:hover {
-    color: black;
-  }
-  .contactsBodyFieds input {
-    color: black;
-  }
-  .contactsBodyFieds {
-    & input {
-      border-bottom: 1px solid black;
-    }
-  }
-} */

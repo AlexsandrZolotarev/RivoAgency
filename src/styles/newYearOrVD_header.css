@@ -1,0 +1,30 @@
+.NewYear
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.NewYear::before
+{   
+    position: absolute;
+    content: '';
+    background-image: url('../assets/Header/Rivo_logo_new_year.svg');
+    background-repeat: no-repeat;
+    top: -15px;
+    right: 11px;
+    width: 100%;
+    height: 100%;
+}
+.ValentinesDay
+{
+    position: absolute;
+    content: '';
+    background-image: url('../assets/Header/Rivo_logo_Valentinas\ day.svg');
+    background-repeat: no-repeat;
+    top: -15px;
+    width: 100%;
+    height: 100%;
+    img{
+        display: none;
+    }
+}

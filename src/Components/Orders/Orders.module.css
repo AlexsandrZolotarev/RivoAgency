@@ -9,7 +9,7 @@
   margin-bottom: 20%;
   width: 100%;
   height: 100%;
-  font-family: "Poppins";
+  font-family: 'Gilroy', sans-serif;
   margin-top: 5%;
 }
 .Orders__body {
@@ -126,7 +126,7 @@
   border: 1px solid black;
   padding: 2.5%;
   font-size: 1rem;
-  font-family: "Poppins";
+  font-family: 'Gilroy', sans-serif;
   color: white;
   background: linear-gradient(to left, transparent 50%, #fddd0a 50%) right;
   background-size: 200%;
@@ -387,7 +387,7 @@
   .consumption p{
     text-wrap: wrap;
     font-weight: 600;
-    font-family:'Poppins';   
+    font-family: 'Gilroy', sans-serif;   
     font-size: 18px;
   }
   .consumption *:not(p) {
@@ -400,7 +400,7 @@
     :first-child{
       text-wrap: wrap;
       font-weight: 600;
-      font-family:'Poppins';   
+      font-family: 'Gilroy', sans-serif;   
       font-size: 18px;
     }
   }

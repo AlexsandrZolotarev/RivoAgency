@@ -4,8 +4,8 @@
   width: 60%;
   margin: 0 auto;
   color: white;
-  font-family: "Alexandria", sans-serif;
-  font-weight: 600;
+  font-family: "RoadRadio";
+  font-weight: 700;
   line-height: 1.2;
   margin-top: 7%;
   position: relative;
@@ -25,7 +25,6 @@
     border-radius: 1px;
     color: rgba(0, 0, 0, 0.1);
     -webkit-text-stroke: 0.5px rgb(80, 80, 80);
-    font-family:'Poppins';
     color: transparent;
   }
 }

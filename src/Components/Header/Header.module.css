@@ -5,6 +5,7 @@
   top: 30px;
   left: 0;
   z-index: 50;
+  font-family: 'RoadRadio';
 }
 .Rivo_Body {
   display: flex;
@@ -62,7 +63,7 @@
   font-size: 20px;
   a {
     color: white;
-    font-family: 'Poppins';
+    
     font-size: 18px;
     font-weight: 300;
     line-height: 21.19px;
@@ -230,7 +231,6 @@
 
 .Hot::before {
   content: "HOT";
-  font-family: "Poppins", system-ui;
   font-weight: 600;
   font-size: 11px;
   padding: 1px 2px;
@@ -259,7 +259,6 @@
   font-size: 18px;
   line-height: 21.19px;
   font-weight: 500;
-  font-family: "Poppins", system-ui;
 }
 .hamburger:focus {
   nav {
@@ -274,11 +273,7 @@
   padding: 10px 18px;
   margin: 0 50px 0 50px;
 }
-.makeOrder_Button p {
-  font-family: "Poppins", system-ui;
-  font-weight: 500;
-  font-size: small;
-}
+
 .makeOrder_Button__arrow {
   margin-left: 5px;
   width: 20px;
@@ -292,7 +287,6 @@
   a {
     text-decoration: none;
     color: white;
-    font-family: "Quicksand", sans-serif;
     font-weight: 500;
   }
 }
@@ -303,7 +297,6 @@
   color: white;
   text-transform: uppercase;
   width: 60%;
-  font-family: "Quicksand", sans-serif;
   font-weight: 500;
   a {
     position: relative;

@@ -4,7 +4,7 @@ import Contacts from "./Components/Contacts/Contacts";
 import Expertise from "./Components/Expertise/Expertise";
 import Projects from "./Components/Projects/Projects";
 import CookiesPrivacy from "./Components/CookiesPrivacy/CookiesPrivacy";
-import CareersContainer from "./Components/Careers/CareersContainer";
+import CareerContainer from "./Components/Career/CareerContainer";
 import HomeContainer from "./Components/Home/HomeContainer";
 import OrdersContainer from "./Components/Orders/OrdersContainer";
 import NotFound from "./Components/NotFound/NotFound";
@@ -27,7 +27,7 @@ class App extends React.Component {
           <Routes>
             <Route path="/RivoAgency" element={<HomeContainer />}></Route>
             <Route path="/Expertise" element={<Expertise />}></Route>
-            <Route path="/Careers" element={<CareersContainer />}></Route>
+            <Route path="/Career" element={<CareerContainer />}></Route>
             <Route path="/Projects" element={<Projects />}></Route>
             <Route path="/Contacts" element={<Contacts />}></Route>
             <Route path="/Profile" element={<ProfileContainer />}></Route>

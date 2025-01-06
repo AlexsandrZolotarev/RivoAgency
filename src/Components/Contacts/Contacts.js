@@ -23,8 +23,8 @@ class Contacts extends React.Component {
     return (
       <section className={s.contacts} name="Contacts" id="Contacts">
         <header className={s.contactsTitle}>
-          <p>Contacts</p>
-          <p>Contacts</p>
+          <h2>Contacts</h2>
+          <h2>Contacts</h2>
         </header>
         <article className={s.contactsBody}>
           <div className={s.contactsBodyFieds}>
@@ -85,7 +85,7 @@ class Contacts extends React.Component {
 
           <div className={s.contactsBodyTextContact}>
             <div className={s.contactsBodyTextContact__title}>
-              <p>Let’s make something that matters.</p>
+              <h2>Let’s make something that matters.</h2>
             </div>
             <div className={s.contactsBodyTextContact__street}>
               <p>Rivne, A. Melnyk str.1, 33016</p>

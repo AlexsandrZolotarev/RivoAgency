@@ -4,7 +4,7 @@
   color: white;
   min-height: 640px;
   max-height: 750px;
-  font-family: "Poppins";
+  font-family: 'Gilroy', sans-serif;
   font-weight: 600;
   font-size: calc(42px + 16 * (100vw / 1980));
   line-height: 93.6px;
@@ -57,7 +57,7 @@
   border: 1px solid #fddd0a;
   padding: 1.5%;
   font-size: 0.7rem;
-  font-family: "Poppins";
+  font-family: 'Gilroy', sans-serif;
   color: #fddd0a;
   background: linear-gradient(to left, transparent 50%, #fddd0a 50%) right;
   background-size: 200%;

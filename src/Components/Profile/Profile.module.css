@@ -9,7 +9,7 @@
   min-height: 50rem;
   display: flex;
   align-items: center;
-  font-family: "Poppins";
+  font-family: 'Gilroy', sans-serif;
 }
 .status__span 
 {
@@ -77,7 +77,7 @@
   justify-content: center;
   padding: 2.5%;
   font-size: 1rem;
-  font-family: "Poppins";
+  font-family: 'Gilroy', sans-serif;
   color: #fddd0a;
   background: linear-gradient(to left, transparent 50%, #fddd0a 50%) right;
   background-size: 200%;
@@ -141,7 +141,7 @@
   font-size: 20px;
   width: 60%;
   color: white;
-  font-family: "Poppins";
+  font-family: 'Gilroy', sans-serif;
   max-width: 20rem;
 }
 .dialog {

@@ -2,8 +2,8 @@
   width: 60%;
   margin: 0 auto;
   color: white;
-  font-family: "Poppins";
-  font-weight: 600;
+  font-family: 'RoadRadio';
+  font-weight: 700;
   line-height: 1.2;
   margin-top: 7%;
   position: relative;
@@ -52,7 +52,6 @@
     font-weight: 700;
     border-radius: 1px;
     -webkit-text-stroke: 0.5px rgb(80, 80, 80);
-    font-family:'Poppins';
     color: transparent;
     :after {
       content: "";
@@ -64,7 +63,6 @@
 
 div[class~="ServiveButton"] {
   font-size: smaller;
-  font-family: "Alexandria", sans-serif;
   font-size: 17px;
   font-weight: 400;
   line-height: 17px;
@@ -117,11 +115,11 @@ div[class~="ServiveButton"] {
 .ServiceItem_Text {
   font-weight: 250;
   position: relative;
-  font-family: "Alexandria";
   color: #b6b6b6;
   line-height: 25.5px;
   text-wrap: wrap;
   p {
+    font-family: "Gilroy";
   }
 }
 .ServiceItem {

@@ -75,8 +75,7 @@ let Home = (props) => {
                   <source src={videoWebm} type="video/webm"></source>
                 </video>
                 <span ref={buttonPlay} className={s.videoEnter}></span>
-              </div>
-              <input
+                <input
                 type="range"
                 className={s.inputVolume}
                 min="0"
@@ -85,6 +84,8 @@ let Home = (props) => {
                 onChange={onVolumeChange.bind(this)}
                 id="myNumber"
               ></input>
+              </div>
+              
             </div>
             <div className={s.WeWhoWeAreContainerMain__textWithClutch}>
               <div className={s.WeWhoWeAreContainerMain__textWithClutch_body}>

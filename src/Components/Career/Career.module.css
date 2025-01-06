@@ -27,7 +27,7 @@
   display: flex;
   color: white;
   align-items: center;
-  font-family: "Poppins", system-ui;
+  font-family: 'Gilroy', sans-serif;
   margin-top: 5%;
   justify-content: center;
 }
@@ -47,7 +47,7 @@
   :last-child {
     font-weight: 700;
     border-radius: 1px;
-    font-family:'Poppins';
+    font-family: 'Gilroy', sans-serif;
     color: rgba(0, 0, 0, 0.1);
     -webkit-text-stroke: 0.5px rgb(80, 80, 80);
     font-size: calc(60px + 48 * (100vw / 1980));
@@ -87,7 +87,7 @@
       justify-content: space-between;
       border: 1px solid rgb(123, 123, 123, 0.2);
       :nth-child(2) {
-        font-family: "Poppins";
+        font-family: 'Gilroy', sans-serif;
         text-transform: uppercase;
         font-weight: 400;
         font-size: calc(24px + 1 * (100vw / 1980));

@@ -10,8 +10,8 @@
   width: 60%;
   margin: 0 auto;
   color: white;
-  font-family: "Poppins";
-  font-weight: 600;
+  font-family: 'RoadRadio';
+  font-weight: 700;
   line-height: 1.2;
   margin-top: 7%;
   position: relative;
@@ -24,7 +24,6 @@
 }
 
 .wrapper_Projects__title {
-  font-family: "Alexandria", sans-serif;
   text-transform: uppercase;
   font-weight: 600;
   :first-child {
@@ -36,7 +35,6 @@
     border-radius: 1px;
     color: rgba(0, 0, 0, 0.1);
     -webkit-text-stroke: 0.5px rgb(80, 80, 80);
-    font-family: "Poppins";
     color: transparent;
   }
 }
@@ -93,7 +91,7 @@
   border: 1px solid #fddd0a;
   padding: 2.5%;
   font-size: 1rem;
-  font-family: "Poppins";
+  font-family: 'Gilroy', sans-serif;
   color: #fddd0a;
   background: linear-gradient(to left, transparent 50%, #fddd0a 50%) right;
   background-size: 200%;
@@ -169,7 +167,7 @@
 .card {
   outline: var(--outline-width) solid lime;
   min-height: 55rem;
-  font-family: "Poppins";
+  font-family: 'Gilroy', sans-serif;
   h2
   {
     font-size: 50px;
@@ -223,7 +221,7 @@
   border: 1px solid #000000;
   padding: 2.5%;
   font-size: 1rem;
-  font-family: "Poppins";
+  font-family: 'Gilroy', sans-serif;
   color: #fddd0a;
   background: linear-gradient(to left, transparent 50%, #fddd0a 50%) right;
   background-size: 200%;
@@ -260,15 +258,10 @@
 }
 
 @media screen and (max-width: 670px) {
-  .card
-  {
-    min-height: 80rem;
-  }
   .card__content
   {
     display: flex;
     flex-direction: column;
-    min-height: 60rem;
   }
   .card__content > div
   {
@@ -284,24 +277,3 @@
     }
   }
 }
-/* @media (prefers-color-scheme: light) {
-  .wrapper_Projects {
-    color: black !important;
-  }
-  .wrapper_Projects__button {
-    color: black;
-    border: 1px solid black;
-
-    button {
-      color: black;
-    }
-  }
-  .wrapper_Projects__button:hover {
-    background-position: left;
-    color: black;
-    button {
-      text-transform: uppercase;
-      color: black;
-    }
-  }
-} */

@@ -1,5 +1,5 @@
 import React from "react";
-import s from "./Careers.module.css";
+import s from "./Career.module.css";
 
 function AddNewVacancies({ props }) {
   let positionJob = React.createRef();

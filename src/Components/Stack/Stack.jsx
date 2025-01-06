@@ -32,39 +32,39 @@ let Stack = () => {
             <h2>Web Development</h2>
             <div className={s.stack__body__items}>
               <a href="" className={s.stack__item}>
-                <img src={webLavarel} alt="Значок Laravel" />
+                <img src={webLavarel} alt="Значок Laravel" loading="lazy"/>
                 <h2>Laravel</h2>
               </a>
               <a href="" className={s.stack__item}>
-                <img src={webPHP} alt="Значок PHP" />
+                <img src={webPHP} alt="Значок PHP" loading="lazy"/>
                 <h2>PHP</h2>
               </a>
               <a href="" className={s.stack__item}>
-                <img src={webJquery} alt="Значок jQuery" />
+                <img src={webJquery} alt="Значок jQuery" loading="lazy"/>
                 <h2>jQuery</h2>
               </a>
               <a href="" className={s.stack__item}>
-                <img src={webJs} alt="Значок JavaScript" />
+                <img src={webJs} alt="Значок JavaScript" loading="lazy"/>
                 <h2>JavaScript</h2>
               </a>
               <a href="" className={s.stack__item}>
-                <img src={webJava} alt="Значок Java" />
+                <img src={webJava} alt="Значок Java" loading="lazy"/>
                 <h2>Java</h2>
               </a>
               <a href="" className={s.stack__item}>
-                <img src={webBootstrap} alt="Значок Bootstrap" />
+                <img src={webBootstrap} alt="Значок Bootstrap" loading="lazy"/>
                 <h2>Bootstrap</h2>
               </a>
               <a href="" className={s.stack__item}>
-                <img src={webWordPress} alt="Значок WordPress" />
+                <img src={webWordPress} alt="Значок WordPress" loading="lazy"/>
                 <h2>WordPress</h2>
               </a>
               <a href="" className={s.stack__item}>
-                <img src={webSql} alt="Значок MySQL" />
+                <img src={webSql} alt="Значок MySQL" loading="lazy"/>
                 <h2>MySQL</h2>
               </a>
               <a href="" className={s.stack__item}>
-                <img src={webVue} alt="Значок Vue.js" />
+                <img src={webVue} alt="Значок Vue.js" loading="lazy"/>
                 <h2>Vue.js</h2>
               </a>
             </div>
@@ -75,27 +75,27 @@ let Stack = () => {
             <h2>Mobile Development</h2>
             <div className={s.stack__body__items}>
               <a href="" className={s.stack__item}>
-                <img src={mobileSwift} alt="Значок Swift" />
+                <img src={mobileSwift} alt="Значок Swift" loading="lazy" />
                 <h2>Swift</h2>
               </a>
               <a href="" className={s.stack__item}>
-                <img src={mobileReact} alt="Значок React Native" />
+                <img src={mobileReact} alt="Значок React Native" loading="lazy"/>
                 <h2>React Native</h2>
               </a>
               <a href="" className={s.stack__item}>
-                <img src={mobileNodeJs} alt="Node js" />
+                <img src={mobileNodeJs} alt="Node js" loading="lazy"/>
                 <h2>Node js</h2>
               </a>
               <a href="" className={s.stack__item}>
-                <img src={mobileAws} alt="Значок AWS Amplify" />
+                <img src={mobileAws} alt="Значок AWS Amplify" loading="lazy"/>
                 <h2>AWS Amplify</h2>
               </a>
               <a href="" className={s.stack__item}>
-                <img src={mobileGraph} alt="Значок GraphQL" />
+                <img src={mobileGraph} alt="Значок GraphQL" loading="lazy"/>
                 <h2>GraphQL</h2>
               </a>
               <a href="" className={s.stack__item}>
-                <img src={mobileRedux} alt="Значок Redux" />
+                <img src={mobileRedux} alt="Значок Redux" loading="lazy"/>
                 <h2>Redux</h2>
               </a>
             </div>
@@ -106,11 +106,11 @@ let Stack = () => {
             <h2>Devops</h2>
             <div className={s.stack__body__items}>
               <a href="" className={s.stack__item}>
-                <img src={devAws} alt="Значок Amazone AWS" />
+                <img src={devAws} alt="Значок Amazone AWS" loading="lazy"/>
                 <h2>Amazone AWS</h2>
               </a>
               <a href="" className={s.stack__item}>
-                <img src={devGoogle} alt="Значок Google Cloud" />
+                <img src={devGoogle} alt="Значок Google Cloud" loading="lazy"/>
                 <h2>Google Cloud</h2>
               </a>
             </div>
