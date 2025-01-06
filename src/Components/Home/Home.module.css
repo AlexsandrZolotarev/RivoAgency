@@ -336,6 +336,15 @@
 @keyframes weWhoWaAreTitle {
   from{
     translate: 5vw;
+<<<<<<< HEAD
+=======
+    opacity: 0;
+  }
+}
+@keyframes weWhoWaAretextWithVideo {
+  from{
+    translate: 10vw;
+>>>>>>> 8c41edb88b8c09c588008adaccd39282f7c98904
     opacity: 0;
   }
 }
@@ -351,3 +360,29 @@
   animation-timeline: --we-Who-Wa-Are-textWithClutch;
   animation-range: 20% 50%;
 }
+<<<<<<< HEAD
+=======
+.WeWhoWeAreContainerMain__title h2
+{
+  display: block;
+  margin-inline: auto;
+  animation-name: weWhoWaAreTitle;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+  view-timeline-name: --we-Who-Wa-Are-Title;
+  animation-timeline: --we-Who-Wa-Are-Title;
+  animation-range: 20% 50%;
+}
+
+.WeWhoWeAreContainerMain__textWithVideo
+{
+  display: block;
+  margin-inline: auto;
+  animation-name: weWhoWaAretextWithVideo;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+  view-timeline-name: --we-Who-Wa-Are-textWithVideo;
+  animation-timeline: --we-Who-Wa-Are-textWithVideo;
+  animation-range: 20% 50%;
+}
+>>>>>>> 8c41edb88b8c09c588008adaccd39282f7c98904
