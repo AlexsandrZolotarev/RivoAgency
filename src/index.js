@@ -6,9 +6,7 @@ import { HashRouter } from "react-router-dom";
 import store from "./Redux/redux-store";
 import { Provider } from "react-redux";
 import { OnPreloaderPage } from "./loader";
-import { deleteCookie } from "./cookie/cookie";
 
-deleteCookie('UserId');
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <HashRouter>

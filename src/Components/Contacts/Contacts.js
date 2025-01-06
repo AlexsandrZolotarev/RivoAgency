@@ -79,7 +79,6 @@ let ContactsForm = () => {
 };
 
 function Contacts(props){
-
     return (
       <section className={s.contacts} name="Contacts" id="Contacts">
         <header className={s.contactsTitle}>
