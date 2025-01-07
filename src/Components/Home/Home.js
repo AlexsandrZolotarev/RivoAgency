@@ -5,7 +5,6 @@ import ElementLeft2 from "./../../assets/HomePage/WeWhoWeAre/ElementLeftBig.svg"
 import ElementRight from "./../../assets/HomePage/WeWhoWeAre/ElementRight.svg";
 import Vector from "./../../assets/HomePage/WeWhoWeAre/Vector.svg";
 import Cloch from "./../../assets/HomePage/WeWhoWeAre/Cloch.svg";
-// import ClochLights from "./../../assets/HomePage/WeWhoWeAre/ClochLight.svg";
 import Cube from "./../../assets/HomePage/WeWhoWeAre/Cube.svg";
 import Poster from "./../../assets/HomePage/VideoPoster.webp";
 import videoWebm from ".//../../video/whoWeAreVideo.webm";
@@ -14,6 +13,7 @@ import Projects from "../Projects/Projects";
 import Services from "../Services/Services";
 import IndustryExpertise from "../IndustryExpertise/IndustryExpertise";
 import Stack from "../Stack/Stack";
+
 
 let Home = (props) => {
   let video = React.createRef();
@@ -48,7 +48,7 @@ let Home = (props) => {
           <img src={ElementLeft2} aria-hidden="true" loading="lazy"></img>
         </article>
 
-        <section className={s.WeWhoWeAreContainerMain}>
+        <section className={s.WeWhoWeAreContainerMain} id="Who-we-are">
           <header className={s.WeWhoWeAreContainerMain__title}>
             <h2>Who we are?</h2>
             <h2>Who we are?</h2>
@@ -75,6 +75,7 @@ let Home = (props) => {
                   <source src={videoWebm} type="video/webm"></source>
                 </video>
                 <span ref={buttonPlay} className={s.videoEnter}></span>
+                
               </div>
               <input
                 type="range"

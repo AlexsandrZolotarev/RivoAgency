@@ -3,12 +3,11 @@
   width: 60%;
   margin: 0 auto;
   color: white;
-  font-family: "Poppins";
+  font-family: 'Gilroy';
   margin-top: 6%;
 }
 .contactsTitle {
   width: 100%;
-  font-family: "Alexandria", sans-serif;
   text-transform: uppercase;
   font-weight: 700;
   :first-child {
@@ -19,16 +18,41 @@
     border-radius: 1px;
     color: rgba(0, 0, 0, 0.1);
     -webkit-text-stroke: 0.5px rgb(80, 80, 80);
-    font-family: "Poppins";
     color: transparent;
-    font-size: calc(60px + 12 * (100vw / 1980));
+    font-size: calc(55px + 12 * (100vw / 1980));
   }
 }
 .contactsBody {
   display: flex;
   padding: 20px;
-}
 
+}
+.field__label
+{
+  color: #B6B6B6;
+}
+.error{
+  position: absolute;
+  left: 68%;
+  bottom: 40%;
+  color: #fd0a0a;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 13px;
+}
+.error::after {
+  content: "⊗";
+  position: absolute;
+  top: 0;
+  right: -1.2em;
+  font-size: 20px;
+}
+.field
+{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
 .contactsBodyFieds {
   width: 70%;
   & input {
@@ -42,6 +66,7 @@
     font-size: 20px;
     font-weight: 100;
     background-color: transparent;
+    padding-bottom: 0.3em;
   }
 }
 
@@ -49,7 +74,7 @@
   width: 40%;
 }
 .contactsBodyTextContact__title {
-  & p {
+  & h2 {
     font-size: 30px;
     text-wrap: balance;
     padding-bottom: 4%;
@@ -65,19 +90,18 @@
 .contactsBodyTextContact__phone {
   display: flex;
   flex-direction: column;
-
   & a {
     text-decoration: none;
     font-size: 17px;
     padding-bottom: 3%;
     color: rgb(255, 255, 255);
-    font-family: "Poppins";
     font-weight: 400;
   }
 }
 .contactsBodyTextContact__icons {
   display: flex;
   margin-top: 4%;
+  position: relative;
   :first-child {
     margin-left: 0;
   }
@@ -90,12 +114,19 @@
     transition: transform 500ms ease;
   }
 }
-
+.contactsBodyTextContact__icons li a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+  z-index: 2;
+}
 .contactsBodyTextContact__icons li svg {
   color: white;
-  position: relative;
-  top: 11px;
-  right: -12px;
+  position: absolute;
+  top: 12px;
+  margin: 0px 13px;
+  z-index: 1;
 }
 .contactsBodyTextContact__icons li:hover {
   transform: scale(1.3);
@@ -199,14 +230,22 @@
 .inputFile input[type="file"]:disabled + .inputFileButton {
   background-color: #eee;
 }
-@media screen and (max-width: 1240px) {
-}
+
+
 @media screen and (max-width: 670px) {
   .contactsTitle > p {
     font-size: calc(50px + 1 * (100vw / 1980)) !important;
   }
   .contacts {
     padding-left: 5%;
+  }
+  .field
+  {
+    margin-bottom: 15%;
+  }
+  .contactsButton
+  {
+    width: 90%;
   }
   .contactsBodyFieds {
     width: 100%;
@@ -231,12 +270,7 @@
     width: 100%;
   }
 }
-@media screen and (max-width: 900px) {
-  .contactsBody {
-    flex-direction: column;
-    padding: 0;
-  }
-}
+
 @media screen and (max-width: 1250px) {
   .contacts {
     width: 100%;
@@ -244,41 +278,20 @@
     margin-top: 10%;
   }
 }
-/* @media (prefers-color-scheme: light) {
-  .contacts {
-    color: black;
-  }
-  .contactsBodyFieds__name input {
-    color: black !important;
-  }
-  .contactsBodyTextContact__phone a {
-    color: black;
-  }
-  .contactsBodyFieds {
-    & input {
-      color: black;
-      font-weight: 500;
+@media screen and (max-width: 900px) {
+  .contacts{
+    input, button {
+      width: 100%;
     }
   }
-  .contactsButton {
-    border: 1px solid black;
-    color: black;
+  .contactsBody {
+    flex-direction: column;
+    padding: 0;
+    gap: 5em;
+    
   }
-  .contactsBodyTextContact__icons {
-    color: white;
+  .contactsBodyFieds
+  {
+    width: 100%;
   }
-  .contactsBodyTextContact__icons li svg {
-    color: white;
-  }
-  .contactsBodyTextContact__icons li svg:hover {
-    color: black;
-  }
-  .contactsBodyFieds input {
-    color: black;
-  }
-  .contactsBodyFieds {
-    & input {
-      border-bottom: 1px solid black;
-    }
-  }
-} */
+}

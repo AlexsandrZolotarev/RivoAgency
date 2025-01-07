@@ -1,0 +1,122 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+:root {
+  --card-height: 40vw;
+  --card-margin: 4vw;
+  --card-top-offset: 1em;
+  --outline-width: 0px;
+}
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:focus,
+:active {
+  outline: none;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background: black;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+/* body.light-theme {
+    background: #ffffff;
+    color: #000000;
+  } 
+  
+  body.dark-theme {
+    background: black;
+    color: #ffffff;
+  } */
+
+*::-webkit-scrollbar {
+  width: 7px;
+}
+body::-webkit-scrollbar-track {
+  background: white;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: yellow;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+  cursor: url("../assets/Icons/Cursor.svg") 2 2, default;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+input:hover,
+button:hover,
+textarea:hover,
+a:hover {
+  text-decoration: none;
+  cursor: url("../assets/Icons/Cursor.svg") 2 2, default;
+}
+ul li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-family: 'RoadRadio';
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus input:-webkit-autofill,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: none !important;
+  -webkit-text-fill-color: inherit !important;
+  -webkit-box-shadow: 0 0 0px 1000px #fddd0a inset;
+  transition: background-color 5000s ease-in-out 0s;
+}

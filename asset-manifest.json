@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/RivoAgency/static/css/main.dd4c5f5a.css",
-    "main.js": "/RivoAgency/static/js/main.957d6370.js",
+    "main.css": "/RivoAgency/static/css/main.2c5768ef.css",
+    "main.js": "/RivoAgency/static/js/main.8fb237c7.js",
     "static/media/whoWeAreVideo.webm": "/RivoAgency/static/media/whoWeAreVideo.8017a8e116c45b72991d.webm",
     "static/media/BackgroundOrderBlack.png": "/RivoAgency/static/media/BackgroundOrderBlack.a28c82ae2256f5e6ab11.png",
     "static/media/Expiriens.webp": "/RivoAgency/static/media/Expiriens.ca3abf02e037ef7b4e1c.webp",
@@ -13,19 +13,26 @@
     "static/media/Mercedes-MaybachS680Category.svg": "/RivoAgency/static/media/Mercedes-MaybachS680Category.7ce2d7438f965ca1b30a.svg",
     "static/media/VideoPoster.webp": "/RivoAgency/static/media/VideoPoster.61dfb4051db68b6396db.webp",
     "static/media/img-3.webp": "/RivoAgency/static/media/img-3.245bec3597670f7a4e70.webp",
+    "static/media/Rivo_logo_Valentinas day.svg": "/RivoAgency/static/media/Rivo_logo_Valentinas day.82439c91f70cde515b2b.svg",
+    "static/media/Gilroy-Medium.woff2": "/RivoAgency/static/media/Gilroy-Medium.acd4e613de34a826c191.woff2",
     "static/media/Mercedes-AMGSL63SEPERFORMANCECategory.svg": "/RivoAgency/static/media/Mercedes-AMGSL63SEPERFORMANCECategory.c4672b58d492fc1801b0.svg",
     "static/media/jQuery_icon.svg": "/RivoAgency/static/media/jQuery_icon.9adb7816ca44a1dc0c56d0be0bd0f572.svg",
     "static/media/Elements bigRight.svg": "/RivoAgency/static/media/Elements bigRight.7a49fa90d91a08d5f359.svg",
     "static/media/A-Class180ProgressiveLineCategory.svg": "/RivoAgency/static/media/A-Class180ProgressiveLineCategory.c59ca75885c1877051b9.svg",
     "static/media/T-Class160dSTYLECategory.svg": "/RivoAgency/static/media/T-Class160dSTYLECategory.aea967494ee26b1bffb6.svg",
     "static/media/Elements big.svg": "/RivoAgency/static/media/Elements big.ecc21f49573efcf05e1a.svg",
+    "static/media/RoadRadio-Black.woff2": "/RivoAgency/static/media/RoadRadio-Black.42b71f184ab3376a0aa5.woff2",
+    "static/media/RoadRadio.woff2": "/RivoAgency/static/media/RoadRadio.9e2688692f354834f870.woff2",
+    "static/media/RoadRadio-Light.woff2": "/RivoAgency/static/media/RoadRadio-Light.9482c68022ecdca359b5.woff2",
+    "static/media/RoadRadio-Bold.woff2": "/RivoAgency/static/media/RoadRadio-Bold.5bf2d339ccd9861aec29.woff2",
     "static/media/ElementbigStackRight.svg": "/RivoAgency/static/media/ElementbigStackRight.413906b691d1223bee9c.svg",
+    "static/media/RoadRadio-Thin.woff2": "/RivoAgency/static/media/RoadRadio-Thin.aac2bd740b1a1596f06e.woff2",
     "static/media/ElementBig.svg": "/RivoAgency/static/media/ElementBig.06ba74353cb8badcdbd1.svg",
     "static/media/Element big.svg": "/RivoAgency/static/media/Element big.d1f99fb78797b5489d4b.svg",
     "static/media/Cloch.svg": "/RivoAgency/static/media/Cloch.d5a338d4056287026db6c85a0b56d0bc.svg",
-    "index.html": "/RivoAgency/index.html",
     "static/media/Node_js_icon.svg": "/RivoAgency/static/media/Node_js_icon.3686bd68ae88222f5e4a5606c5617b00.svg",
     "static/media/MySQL_icon.svg": "/RivoAgency/static/media/MySQL_icon.e83f3e4d9f05a35652436883461c0930.svg",
+    "index.html": "/RivoAgency/index.html",
     "static/media/CLA180CoupeAMGLineCategory.svg": "/RivoAgency/static/media/CLA180CoupeAMGLineCategory.af2419e1644f2bc59d21.svg",
     "static/media/Aws_icon.svg": "/RivoAgency/static/media/Aws_icon.3e4329b7dc7fa14699002d6237798d61.svg",
     "static/media/LogotypeDark.svg": "/RivoAgency/static/media/LogotypeDark.e7e8db4e667545c5195f3115d40d0990.svg",
@@ -33,6 +40,7 @@
     "static/media/Cursor.svg": "/RivoAgency/static/media/Cursor.e7f00b614b9b369efc75.svg",
     "static/media/PHP_icon.svg": "/RivoAgency/static/media/PHP_icon.d862f32964a8b5b2d51bc27c92724688.svg",
     "static/media/ElementLeftBig.svg": "/RivoAgency/static/media/ElementLeftBig.8823bd095c2cf54d88267877791e6ef5.svg",
+    "static/media/Rivo_logo_new_year.svg": "/RivoAgency/static/media/Rivo_logo_new_year.f4b5860178cfcd97a446.svg",
     "static/media/ElementRight.svg": "/RivoAgency/static/media/ElementRight.deaf7c8aa6749df622d6.svg",
     "static/media/Java_icon.svg": "/RivoAgency/static/media/Java_icon.214100b7734cee539bfa61c6a1efd20b.svg",
     "static/media/Swift_icon.svg": "/RivoAgency/static/media/Swift_icon.97d28609568404323896001ed6111606.svg",
@@ -60,11 +68,11 @@
     "static/media/Vue_js_icon.svg": "/RivoAgency/static/media/Vue_js_icon.f8a5707a9245b9e284ce33d9205d1734.svg",
     "static/media/Mobile_development_icon.webp": "/RivoAgency/static/media/Mobile_development_icon.15795fb02addf6e519ae.webp",
     "static/media/whoWeArePlay_icon.webp": "/RivoAgency/static/media/whoWeArePlay_icon.4a4ebd5ae179859188cc.webp",
-    "main.dd4c5f5a.css.map": "/RivoAgency/static/css/main.dd4c5f5a.css.map",
-    "main.957d6370.js.map": "/RivoAgency/static/js/main.957d6370.js.map"
+    "main.2c5768ef.css.map": "/RivoAgency/static/css/main.2c5768ef.css.map",
+    "main.8fb237c7.js.map": "/RivoAgency/static/js/main.8fb237c7.js.map"
   },
   "entrypoints": [
-    "static/css/main.dd4c5f5a.css",
-    "static/js/main.957d6370.js"
+    "static/css/main.2c5768ef.css",
+    "static/js/main.8fb237c7.js"
   ]
 }

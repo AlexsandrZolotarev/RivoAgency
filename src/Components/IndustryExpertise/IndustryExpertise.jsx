@@ -3,7 +3,7 @@ import s from "./IndustryExpertise.module.css";
 import element from '../../assets/IndustryExpertise/Element.svg'
 let IndustryExpertise = () => {
   return (
-    <section className={s.industry}>
+    <section className={s.industry} id="IE">
       <header className={s.industry__title}>
         <h2>Industry Expertise</h2>
         <h2>Industry Expertise</h2>

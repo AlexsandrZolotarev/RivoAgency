@@ -1,7 +1,7 @@
 .login {
   color: white;
   font-size: 20px;
-  font-family: "Poppins";
+ font-family: 'Gilroy', sans-serif;
   form {
     display: flex;
     flex-direction: column;
@@ -74,7 +74,7 @@
     border-radius: 1px;
     color: rgba(0, 0, 0, 0.1);
     -webkit-text-stroke: 0.5px rgb(80, 80, 80);
-    font-family: "Poppins";
+   font-family: 'Gilroy', sans-serif;
     color: transparent;
     font-size: calc(60px + 12 * (100vw / 1980));
   }
