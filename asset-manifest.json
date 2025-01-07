@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/RivoAgency/static/css/main.65c423b9.css",
-    "main.js": "/RivoAgency/static/js/main.ac091bd5.js",
+    "main.css": "/RivoAgency/static/css/main.2c5768ef.css",
+    "main.js": "/RivoAgency/static/js/main.8fb237c7.js",
     "static/media/whoWeAreVideo.webm": "/RivoAgency/static/media/whoWeAreVideo.8017a8e116c45b72991d.webm",
     "static/media/BackgroundOrderBlack.png": "/RivoAgency/static/media/BackgroundOrderBlack.a28c82ae2256f5e6ab11.png",
     "static/media/Expiriens.webp": "/RivoAgency/static/media/Expiriens.ca3abf02e037ef7b4e1c.webp",
@@ -68,11 +68,11 @@
     "static/media/Vue_js_icon.svg": "/RivoAgency/static/media/Vue_js_icon.f8a5707a9245b9e284ce33d9205d1734.svg",
     "static/media/Mobile_development_icon.webp": "/RivoAgency/static/media/Mobile_development_icon.15795fb02addf6e519ae.webp",
     "static/media/whoWeArePlay_icon.webp": "/RivoAgency/static/media/whoWeArePlay_icon.4a4ebd5ae179859188cc.webp",
-    "main.65c423b9.css.map": "/RivoAgency/static/css/main.65c423b9.css.map",
-    "main.ac091bd5.js.map": "/RivoAgency/static/js/main.ac091bd5.js.map"
+    "main.2c5768ef.css.map": "/RivoAgency/static/css/main.2c5768ef.css.map",
+    "main.8fb237c7.js.map": "/RivoAgency/static/js/main.8fb237c7.js.map"
   },
   "entrypoints": [
-    "static/css/main.65c423b9.css",
-    "static/js/main.ac091bd5.js"
+    "static/css/main.2c5768ef.css",
+    "static/js/main.8fb237c7.js"
   ]
 }
