@@ -61,7 +61,7 @@ let MenuBurger = (props) => {
               </NavLink>
             </li>
             <li>
-              <div className="login__form">
+              {/* <div className="login__form">
                 <div className="login__form_container">
                   <NavLink
                     to={checkingForRegistration() ? "Profile" : "Login"}
@@ -72,7 +72,7 @@ let MenuBurger = (props) => {
                   </NavLink>
                   <BiLogIn />
                 </div>
-              </div>
+              </div> */}
             </li>
           </ul>
         </nav>

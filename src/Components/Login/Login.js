@@ -67,11 +67,12 @@ let LoginForm = (props) => {
 };
 
 let Login = (props) => {
+  let userReg = checkingForRegistration(); 
   return (
     <section className={s.login}>
       <div className={s.login_wrapper}>
-        <h1>{(checkingForRegistration()) ? "Login" : "Registration"}</h1>
-        <h2>{(checkingForRegistration())? "Login" : "Registration"}</h2>
+        <h1>{(userReg === "undefined") ? "Login" : "Registration"}</h1>
+        <h2>{(userReg === "undefined") ? "Login" : "Registration"}</h2>
         <LoginForm {...props} />
       </div>
     </section>

@@ -5,7 +5,8 @@ import { getCookie } from "../cookie/cookie";
 export const withLoginRedirect = (Component) => {
   class RedirectComponent extends React.Component {
     render() {
-      if (!getCookie("userId")) {
+      let userReg = getCookie("userId"); 
+      if (!+userReg) {
         return <Navigate to="/login" />;
       }
       return <Component {...this.props} />;
@@ -16,7 +17,8 @@ export const withLoginRedirect = (Component) => {
 export const withProfileRedirect = (Component) => {
   class RedirectComponent extends React.Component {
     render() {
-      if (!getCookie("userId")) {
+      let userReg = getCookie("userId");  
+      if (!userReg) {
         return <Navigate to="/Profile" />;
       }
       return <Component {...this.props} />;

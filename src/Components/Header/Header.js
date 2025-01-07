@@ -6,16 +6,19 @@ import s from "./Header.module.css";
 import { BiLogIn } from "react-icons/bi";
 import MenuBurgerContainer from "../MenuBurger/MenuBurgerContainer";
 import { checkingForRegistration, getCookie } from "../../cookie/cookie";
+import { boolean } from "yup";
 
 let Header = (props) => {
   let [imageUser, setImageUser] = useState(props.userImage);
+  let userReg;
   useEffect(() => {
     setImageUser(imageUser);
   }, [imageUser]);
 
   useEffect(() => {
-    props.getUserThunk(getCookie("userId"));
-  }, [props.user]);
+    userReg = checkingForRegistration();
+    props.getUserThunk(userReg);
+  });
   return (
     <header className={s.header} id="header">
       <div className={s.container}>
@@ -24,28 +27,22 @@ let Header = (props) => {
             <img alt="logotype" src={logoDark} />
           </NavLink>
           <div className={s.header__buttons_items}>
-            <div className={s.login}>
-              {checkingForRegistration() === "undefined" ? (
-                <BiLogIn />
-              ) : (
+            {/* <div className={s.login}>
+              {(!+userReg) ? <BiLogIn />
+              : 
                 <img
                   className={s.profile__image}
                   src={imageUser}
                   alt="MyProfileImage"
                 ></img>
-              )}
-              <NavLink to={checkingForRegistration() === "undefined"
-                  ? "Login"
-                  : checkingForRegistration() === null
+              }
+              <NavLink to={(!+userReg)
                   ? "Login"
                   : "Profile"}>
-                {checkingForRegistration() === "undefined"
-                  ? "Login"
-                  : checkingForRegistration() === null
-                  ? "Registation"
-                  : props.user.username}
+                {(userReg === "undefined") ? "Login" : !+userReg
+                  ? "Registation" : props.user.username}
               </NavLink>
-            </div>
+            </div> */}
             <NavLink className={s.makeOrder_Button} to={"/Orders"}>
               <p>MAKE ORDER</p>
               <MdArrowOutward className={s.makeOrder_Button__arrow} />

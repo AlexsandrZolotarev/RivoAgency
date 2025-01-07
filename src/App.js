@@ -30,11 +30,11 @@ class App extends React.Component {
             <Route path="/Careers" element={<CareersContainer />}></Route>
             <Route path="/Projects" element={<Projects />}></Route>
             <Route path="/Contacts" element={<Contacts />}></Route>
-            <Route path="/Profile" element={<ProfileContainer />}></Route>
             <Route path="/Orders" element={<OrdersContainer />}></Route>
             <Route path="/Services" element={<Services />}></Route>
             <Route path="/Orders/Order/:carId" element={<OrderContainer />}></Route>
-            <Route path="/Login" element={<LoginContainer />}></Route>
+            {/* <Route path="/Profile" element={<ProfileContainer />}></Route> */}
+            {/* <Route path="/Login" element={<LoginContainer />}></Route> */}
             <Route path="*" element={<NotFound />}></Route>
             <Route path="/" element={<HomeContainer />}></Route>
           </Routes>
