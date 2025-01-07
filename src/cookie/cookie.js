@@ -21,6 +21,7 @@ export const getCookie = (name)=> {
   let matches = document.cookie.match(new RegExp(
     "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
   ));
+  if(decodeURIComponent(matches[1]) === "undefined") matches = undefined;
   return matches ? decodeURIComponent(matches[1]) : null;
 }
 export const deleteCookie = (name) => {
