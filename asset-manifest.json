@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/RivoAgency/static/css/main.2c5768ef.css",
-    "main.js": "/RivoAgency/static/js/main.8fb237c7.js",
+    "main.css": "/RivoAgency/static/css/main.80b148a4.css",
+    "main.js": "/RivoAgency/static/js/main.8ed3f7af.js",
     "static/media/whoWeAreVideo.webm": "/RivoAgency/static/media/whoWeAreVideo.8017a8e116c45b72991d.webm",
     "static/media/BackgroundOrderBlack.png": "/RivoAgency/static/media/BackgroundOrderBlack.a28c82ae2256f5e6ab11.png",
     "static/media/Expiriens.webp": "/RivoAgency/static/media/Expiriens.ca3abf02e037ef7b4e1c.webp",
@@ -13,7 +13,7 @@
     "static/media/Mercedes-MaybachS680Category.svg": "/RivoAgency/static/media/Mercedes-MaybachS680Category.7ce2d7438f965ca1b30a.svg",
     "static/media/VideoPoster.webp": "/RivoAgency/static/media/VideoPoster.61dfb4051db68b6396db.webp",
     "static/media/img-3.webp": "/RivoAgency/static/media/img-3.245bec3597670f7a4e70.webp",
-    "static/media/Rivo_logo_Valentinas day.svg": "/RivoAgency/static/media/Rivo_logo_Valentinas day.82439c91f70cde515b2b.svg",
+    "static/media/Rivo_logo_Valentinas day.svg": "/RivoAgency/static/media/Rivo_logo_Valentinas day.01492b70e3e0089dced2.svg",
     "static/media/Gilroy-Medium.woff2": "/RivoAgency/static/media/Gilroy-Medium.acd4e613de34a826c191.woff2",
     "static/media/Mercedes-AMGSL63SEPERFORMANCECategory.svg": "/RivoAgency/static/media/Mercedes-AMGSL63SEPERFORMANCECategory.c4672b58d492fc1801b0.svg",
     "static/media/jQuery_icon.svg": "/RivoAgency/static/media/jQuery_icon.9adb7816ca44a1dc0c56d0be0bd0f572.svg",
@@ -40,7 +40,7 @@
     "static/media/Cursor.svg": "/RivoAgency/static/media/Cursor.e7f00b614b9b369efc75.svg",
     "static/media/PHP_icon.svg": "/RivoAgency/static/media/PHP_icon.d862f32964a8b5b2d51bc27c92724688.svg",
     "static/media/ElementLeftBig.svg": "/RivoAgency/static/media/ElementLeftBig.8823bd095c2cf54d88267877791e6ef5.svg",
-    "static/media/Rivo_logo_new_year.svg": "/RivoAgency/static/media/Rivo_logo_new_year.f4b5860178cfcd97a446.svg",
+    "static/media/Rivo_logo_new_year.svg": "/RivoAgency/static/media/Rivo_logo_new_year.b5d9bd1d5e2b3fd16dac.svg",
     "static/media/ElementRight.svg": "/RivoAgency/static/media/ElementRight.deaf7c8aa6749df622d6.svg",
     "static/media/Java_icon.svg": "/RivoAgency/static/media/Java_icon.214100b7734cee539bfa61c6a1efd20b.svg",
     "static/media/Swift_icon.svg": "/RivoAgency/static/media/Swift_icon.97d28609568404323896001ed6111606.svg",
@@ -68,11 +68,11 @@
     "static/media/Vue_js_icon.svg": "/RivoAgency/static/media/Vue_js_icon.f8a5707a9245b9e284ce33d9205d1734.svg",
     "static/media/Mobile_development_icon.webp": "/RivoAgency/static/media/Mobile_development_icon.15795fb02addf6e519ae.webp",
     "static/media/whoWeArePlay_icon.webp": "/RivoAgency/static/media/whoWeArePlay_icon.4a4ebd5ae179859188cc.webp",
-    "main.2c5768ef.css.map": "/RivoAgency/static/css/main.2c5768ef.css.map",
-    "main.8fb237c7.js.map": "/RivoAgency/static/js/main.8fb237c7.js.map"
+    "main.80b148a4.css.map": "/RivoAgency/static/css/main.80b148a4.css.map",
+    "main.8ed3f7af.js.map": "/RivoAgency/static/js/main.8ed3f7af.js.map"
   },
   "entrypoints": [
-    "static/css/main.2c5768ef.css",
-    "static/js/main.8fb237c7.js"
+    "static/css/main.80b148a4.css",
+    "static/js/main.8ed3f7af.js"
   ]
 }
