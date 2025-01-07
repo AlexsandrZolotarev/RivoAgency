@@ -54,32 +54,46 @@ let Car = ({ car }) => {
           </div>
         ))}
       </div>
-      <div className={s.consumption}>
-        <div>
-          <p>
-            {!car.fuelConsumption
-              ? `Power consumption in combined cycle`
-              : `Fuel consumption (combined cycle)`}{" "}
-          </p>
-          <span>
-            {!car.fuelConsumption ? car.PowerConsumption : car.fuelConsumption}
-          </span>
+      <div className={s.consumption__body}>
+        <div className={s.consumption}>
+          <div>
+            <p>
+              {!car.fuelConsumption
+                ? `Power consumption in combined cycle`
+                : `Fuel consumption (combined cycle)`}{" "}
+            </p>
+            <span>
+              <mark>
+                {!car.fuelConsumption
+                  ? car.PowerConsumption
+                  : car.fuelConsumption}
+              </mark>
+            </span>
+          </div>
+          <div>
+            <p>
+              {!car.fuelConsumption
+                ? `Power consumption in combined cycle`
+                : `Fuel consumption (combined cycle)`}{" "}
+            </p>
+            <span>
+              <mark>
+                {" "}
+                {!car.fuelConsumption
+                  ? car.PowerConsumption
+                  : car.fuelConsumption}
+              </mark>
+            </span>
+          </div>
         </div>
-        <div>
-          <p>
-            {!car.fuelConsumption
-              ? `Power consumption in combined cycle`
-              : `Fuel consumption (combined cycle)`}{" "}
-          </p>
+        <div className={s.consumption__CO2}>
+          <p>Emissions of CO₂ (combined cycle)</p>
           <span>
-            {!car.fuelConsumption ? car.PowerConsumption : car.fuelConsumption}
+            <mark> {car.emissionsOfCO}</mark>
           </span>
         </div>
       </div>
-      <div className={s.consumption__CO2}>
-        <p>Emissions of CO₂ (combined cycle)</p>
-        <span>{car.emissionsOfCO}</span>
-      </div>
+
       <div className={s.category}>
         <img
           src={require(`../../assets/Orders/Category/${car.category}`)}
@@ -101,19 +115,19 @@ let Orders = (props) => {
 
   useEffect(() => {
     props.getCarsThunk();
-  },[props.currentPage]);
+  }, [props.currentPage]);
 
   let pages = [];
   for (let i = 1; i <= pagesCount; i++) {
     pages.push(i);
   }
 
-  function editCurrentPage(page){
+  function editCurrentPage(page) {
     props.setCurrentPage(+page.target.innerText);
   }
 
   function getCarsOutInputSearch(input) {
-    props.setCardsForSearchingThunk()
+    props.setCardsForSearchingThunk(input.target.value);
     props.getCardsInSearching(input.target.value);
   }
   return (
@@ -159,13 +173,15 @@ let Orders = (props) => {
           </div>
           <div className={s.Orders__cards}>
             <div className={s.Orders__cards__searching}>
-              <div className={s.Orders__searching}>
-                <div className={s.searching}>
-                  <input  onChange={getCarsOutInputSearch.bind(this)}/>
-                  <FaSearch />
-                </div>
+              <div className={s.all_venicles}>
+                <p>{props.totalUserCount + " results"}</p>
               </div>
-              <div className={s.Orders__sort}>
+              <div className={s.searching}>
+                <input onChange={getCarsOutInputSearch.bind(this)} />
+                <FaSearch />
+              </div>
+
+              {/* <div className={s.Orders__sort}>
                 <div className={s.searching}>
                   <select name="Orders" id="Orders-select" tabIndex={0}>
                     <option value="">Sort</option>
@@ -173,7 +189,7 @@ let Orders = (props) => {
                     <option value="cat">Cheaper</option>
                   </select>
                 </div>
-              </div>
+              </div> */}
             </div>
             <div className={s.orders__body__grid} id="ordersBody">
               {props.orders.map((item) => (
@@ -186,7 +202,7 @@ let Orders = (props) => {
                 return (
                   <span
                     tabIndex={1}
-                    onKeyDown= {editCurrentPage.bind(page)}
+                    onKeyDown={editCurrentPage.bind(page)}
                     className={props.currentPage === page && s.selectedPage}
                     onClick={editCurrentPage.bind(page)}
                   >
