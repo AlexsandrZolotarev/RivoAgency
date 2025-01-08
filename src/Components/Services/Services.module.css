@@ -1,0 +1,182 @@
+.Service {
+  width: 60%;
+  margin: 0 auto;
+  color: white;
+  font-family: 'RoadRadio';
+  font-weight: 700;
+  line-height: 1.2;
+  margin-top: 7%;
+  position: relative;
+  z-index: 1;
+}
+.Service::before {
+  content: '';
+  position: absolute;
+  background: url(../../assets/Services/Element\ big.svg) no-repeat;
+  width: 40%;
+  height: 100%;
+  top: 0;
+  right: -33%;
+  z-index: 100;
+}
+.Service::after {
+  content: '';
+  position: absolute;
+  background: url(../../assets/Services/Elements\ bigRight.svg) no-repeat;
+  width: 40%;
+  height: 100%;
+  bottom:0;
+  left: -33%;
+  z-index: 100;
+}
+
+.ContainerServiceItems {
+  display: flex;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+.ServiceTitle {
+  width: 100%;
+  text-transform: uppercase;
+  :first-child {
+    font-size: 30px;
+    margin-bottom: 0;
+  }
+  :last-child {
+    width: 100%;
+    text-align: justify;
+    font-size: 5.3vw;
+    font-size: calc(84px + 16*(100vw / 1980));
+    font-weight: 700;
+    border-radius: 1px;
+    -webkit-text-stroke: 0.5px rgb(80, 80, 80);
+    color: transparent;
+    :after {
+      content: "";
+      display: inline-block;
+      width: 100%;
+    }
+  }
+}
+
+div[class~="ServiveButton"] {
+  font-size: smaller;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 17px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  display: inline-block;
+  text-transform: uppercase;
+  color: #fddd0a;
+  position: relative;
+}
+.ServiceItem {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5%;
+  .Item {
+    margin-left: 20px;
+    margin-top: 5%;
+  }
+  
+}
+.ServiceItem a::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: -10px;
+  display: block;
+  width: 0%;
+  height: 1px;
+  background: #000000;
+  transition: 0.3s;
+}
+.ServiceItem a:hover:after {
+  width: 100%;
+}
+
+.ServiceItem_Arrow {
+  position: absolute;
+  top: -4px;
+  width: 25px;
+  height: 25px;
+  left: 120px;
+}
+
+.ServiceItem_Title {
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 10% 0;
+}
+.ServiceItem_Text {
+  font-weight: 250;
+  position: relative;
+  color: #b6b6b6;
+  line-height: 25.5px;
+  text-wrap: wrap;
+  p {
+    font-family: "Gilroy";
+  }
+}
+.ServiceItem {
+  margin-right: 5%;
+
+  a {
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 768px)
+{
+  .ContainerServiceItems {
+    flex-wrap: wrap;
+  }
+  .ServiceItem_Title
+  {
+    margin: 7% 0;
+  }
+  .ServiceItem
+  {
+    margin-bottom: 10%;
+  }
+} 
+@media screen and (max-width: 1250px) {
+  .Service::before,::after
+  {
+    display: none;
+  }
+  
+  .ServiceTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 32px;
+    :last-child {
+      width: auto;
+      font-size: 48px;
+    }
+  }
+  .Service {
+    width: 100%;
+    padding: 0 5%;
+    margin-top: 10%;
+  }
+}
+/* @media (prefers-color-scheme: light) {
+  .Service
+  {
+    color: black;
+  }
+  a
+  {
+    color: black;
+  }
+  .ServiceItem_Arrow
+  {
+    color: black;
+  }
+} */
