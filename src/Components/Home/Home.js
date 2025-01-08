@@ -31,7 +31,7 @@ let Home = (props) => {
         <div className={s.HomeImgs}></div>
         <div className={s.HomeTitleWithCube}>
           <div className={s.HomeTitle} id="HomeTitle">
-            <h2>We are rivo agency</h2>
+            <h1>We are rivo agency</h1>
             <h2>We help</h2>
             <h2>Ideas</h2>
             <h2>To Change</h2>
@@ -70,12 +70,14 @@ let Home = (props) => {
                   poster={Poster}
                   preload="metadata"
                   id="VideoGofman"
+                  width="350px"
+                  height="350px"
                 >
                   <source src={video} type="video/mp4"></source>
                   <source src={videoWebm} type="video/webm"></source>
+                  <p>Unfortunately, your website does not support videos.</p>
                 </video>
                 <span ref={buttonPlay} className={s.videoEnter}></span>
-                
               </div>
               <input
                 type="range"

@@ -33,15 +33,10 @@
   position: relative;
  
 }
-.HomeTitle h2:first-child {
-  color: #fddd0a;
-  font-size: calc(15px + 10.25 * (100vw / 1980));
-  margin-left: 10%;
-}
 
 .HomeTitle {
   text-transform: uppercase;
-  font-family: 'RoadRadio-Black';
+  font-family: 'RoadRadio';
   font-size: calc(60px + 50 * (100vw / 1980));
   font-weight: 900;
   line-height: 1.3;
@@ -64,6 +59,12 @@
     -webkit-background-clip: text;
   }
 }
+.HomeTitle h1,h2:first-child {
+  color: #fddd0a;
+  font-size: calc(15px + 10.25 * (100vw / 1980));
+  margin-left: 10%;
+}
+
 .HomeTitleCube {
   margin-top: 13%;
 }
@@ -342,7 +343,6 @@
 @keyframes weWhoWaAretextWithVideo {
   from{
     translate: 10vw;
-
     opacity: 0;
   }
 }

@@ -8,6 +8,7 @@ import { ErrorMessage, Field, Form, Formik } from "formik";
 import * as Yup from "yup";
 import { sendMessage } from "../../api/telegram";
 import { toast, ToastContainer } from "react-toastify";
+import Scroll from "../../Scroll";
 
 const ContactSchema = Yup.object().shape({
   name: Yup.string()
@@ -45,21 +46,21 @@ let ContactsForm = () => {
             <label htmlFor="name" className={s.field__label}>
               Name
             </label>
-            <Field type="name" name="name" placeholder="Enter Name" />
+            <Field type="name" name="name" placeholder="Enter Name" id="name"/>
             <ErrorMessage name="name" component="div" className={s.error} />
           </p>
           <p className={s.field}>
             <label htmlFor="email" className={s.field__label}>
               Email
             </label>
-            <Field type="email" name="email" placeholder="Enter Email" />
+            <Field type="email" name="email" placeholder="Enter Email" id="email"/>
             <ErrorMessage name="email" component="div" className={s.error} />
           </p>
           <p className={s.field}>
             <label htmlFor="message" className={s.field__label}>
               Message
             </label>
-            <Field type="message" name="message" placeholder="Enter message" />
+            <Field type="text" name="message" placeholder="Enter message" id="message" autoComplete="off"/>
             <ErrorMessage name="message" component="div" className={s.error} />
           </p>
 
@@ -79,6 +80,7 @@ let ContactsForm = () => {
 };
 
 function Contacts(props){
+  Scroll();
     return (
       <section className={s.contacts} name="Contacts" id="Contacts">
         <header className={s.contactsTitle}>
@@ -91,6 +93,7 @@ function Contacts(props){
             <div className={s.contactsBodyTextContact__title}>
               <h2>Let’s make something that matters.</h2>
             </div>
+            <address>
             <div className={s.contactsBodyTextContact__street}>
               <p>Poste Antanimena str.1, 33016</p>
             </div>
@@ -98,6 +101,7 @@ function Contacts(props){
               <a href="tel:+79998887766">+7 999 888 77 66</a>
               <a href="tel:+79998887765">+7 999 888 77 65</a>
             </div>
+            </address>
             <ul className={s.contactsBodyTextContact__icons}>
               <li>
                 <a

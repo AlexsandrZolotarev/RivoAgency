@@ -3,7 +3,7 @@
   width: 60%;
   margin: 0 auto;
   color: white;
-  font-family: 'Gilroy';
+  font-family: "RoadRadio";
   margin-top: 6%;
 }
 .contactsTitle {
@@ -67,6 +67,7 @@
     font-weight: 100;
     background-color: transparent;
     padding-bottom: 0.3em;
+    font-family: "Gilroy";
   }
 }
 
@@ -81,7 +82,9 @@
   }
 }
 .contactsBodyTextContact__street {
+  font-family: "Gilroy";
   & p {
+    
     font-size: 17px;
     padding-bottom: 4%;
     color: #797979;
@@ -90,6 +93,8 @@
 .contactsBodyTextContact__phone {
   display: flex;
   flex-direction: column;
+  font-style:normal;
+
   & a {
     text-decoration: none;
     font-size: 17px;
