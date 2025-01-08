@@ -94,29 +94,17 @@
   flex-wrap: wrap;
   gap: 3em;
 }
-.title__list ul li {
-  position: relative;
-  margin-left: 30px;
+.title__list li{
+  display: flex;
+  gap: 1em;
 }
-.title__list ul li::after {
-  position: absolute;
-  content: "✔";
-  top: 0;
-  left: -25px;
-  width: 1.5em;
-  height: 1.5em;
-  color: black;
-}
-.title__list ul li::before {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: -31px;
-  width: 1.5em;
-  height: 1.5em;
+.title__list li svg{
   background-color: #fddd0a;
+  color: black;
+  font-size: 20px;
   border-radius: 50%;
 }
+
 .button {
   transition: all ease 1000ms;
   display: flex;
@@ -204,7 +192,7 @@
 {
   font-size: 20px;
   span{
-   text-decoration: dashed;
+   display: ruby;
   }
 }
 .consumption {
@@ -225,8 +213,10 @@
   display: flex;
   align-items: center;
   :first-child {
-    color: #fddd0a;
-    font-size: 30px;
+    color: black;
+    background-color: #fddd0a;
+    border-radius: 50%;
+    font-size: 20px;
     margin: 1px 5px;
   }
 }
@@ -456,7 +446,7 @@
     font-size: 1em;
   }
 }
-@media screen and (max-width: 1200px)
+@media screen and (max-width: 1000px)
 {
   .orders__body__grid {
     grid-template-columns: auto;

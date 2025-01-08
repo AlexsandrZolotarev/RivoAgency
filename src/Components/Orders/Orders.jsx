@@ -26,7 +26,6 @@ let Car = ({ car }) => {
             <PiEngineFill />
             {car.engine}
           </div>
-
           <div className={s.types__fuel}>
             {car.Fuel === "Gasoline" || car.Fuel === "Diesel" ? (
               <FaGasPump />
@@ -58,13 +57,13 @@ let Car = ({ car }) => {
         <div className={s.consumption}>
           <div>
             <p>
-              {!car.fuelConsumption
+              {(!car.fuelConsumption)
                 ? `Power consumption in combined cycle`
                 : `Fuel consumption (combined cycle)`}{" "}
             </p>
             <span>
               <mark>
-                {!car.fuelConsumption
+                {(!car.fuelConsumption)
                   ? car.PowerConsumption
                   : car.fuelConsumption}
               </mark>
@@ -89,7 +88,7 @@ let Car = ({ car }) => {
         <div className={s.consumption__CO2}>
           <p>Emissions of CO₂ (combined cycle)</p>
           <span>
-            <mark> {car.emissionsOfCO}</mark>
+            <mark>{car.emissionsOfCO}</mark>
           </span>
         </div>
       </div>
@@ -140,14 +139,20 @@ let Orders = (props) => {
             </div>
             <div className={s.title__list}>
               <ul>
-                <li>Check out our range</li>
-                <li>Filter to search</li>
+                <li>
+                  <IoMdCheckmark />
+                  <p>Check out our range</p>
+                </li>
+                <li>
+                  <IoMdCheckmark />
+                  <p>Filter to search</p>
+                </li>
               </ul>
             </div>
           </div>
         </div>
         <div className={s.Orders__body}>
-          <div className={s.Orders__aside}>
+          {/* <div className={s.Orders__aside}>
             <aside>
               <h2>Filter</h2>
               <div className={s.filter}>
@@ -170,7 +175,7 @@ let Orders = (props) => {
                 <GoChevronDown />
               </div>
             </aside>
-          </div>
+          </div> */}
           <div className={s.Orders__cards}>
             <div className={s.Orders__cards__searching}>
               <div className={s.all_venicles}>

@@ -2,6 +2,7 @@
   color: white;
   margin-top: 1rem;
   position: relative;
+  font-family: "RoadRadio";
 }
 .order__container {
   position: relative;
@@ -51,6 +52,7 @@
   padding: 0 1.5em;
   height: 100%;
   justify-content: space-around;
+  margin-block: 0.5em;
 }
 .background {
   display: block;
@@ -63,6 +65,7 @@
     height: 100%;
   }
 }
+
 .order__header {
   min-height: 3rem;
   height: 3rem;
@@ -77,7 +80,6 @@
   }
   h2 {
     font-size: 18px;
-  font-family: 'Gilroy', sans-serif;
     font-weight: 400;
     color: white;
     margin-left: 10rem;
@@ -112,11 +114,13 @@
   display: flex;
   flex-direction: column;
   margin-top: 20px;
-  margin: 2em 0;
+  margin: 1em 0;
 }
 .consumption *:not(p) {
   display: flex;
   justify-content: space-between;
+  margin-block: 0.5em;
+  align-items: center
 }
 .consumption__CO2 {
   display: flex;
@@ -131,7 +135,6 @@
   border: 1px solid #fddd0a;
   padding: 2.5%;
   font-size: 1rem;
-font-family: 'Gilroy', sans-serif;
   color: #fddd0a;
   background: linear-gradient(to left, transparent 50%, #fddd0a 50%) right;
   background-size: 200%;
@@ -186,10 +189,9 @@ font-family: 'Gilroy', sans-serif;
   margin-top: 1rem;
   font-weight: 600;
   font-size: 1.5rem;
-font-family: 'Gilroy', sans-serif;
 }
 .prices * {
-  padding-top: 40px;
+  padding-top: 30px;
   border-radius: 10px;
 }
 .prices__price {
@@ -226,9 +228,6 @@ font-family: 'Gilroy', sans-serif;
   .img__body {
     padding-bottom: 10%;
   }
-  .descriprion {
-    padding: 4%;
-  }
 }
 
 @media screen and (max-width: 860px) {
@@ -240,7 +239,7 @@ font-family: 'Gilroy', sans-serif;
     }
   }
   .order__container {
-    margin: 0 1em;
+    margin-inline:1em;
     margin-top: 5em;
   }
   .order__header h2{
@@ -248,30 +247,3 @@ font-family: 'Gilroy', sans-serif;
   }
 }
 
-/* @media (prefers-color-scheme: light) {
-  .order__header {
-    background-color: white;
-    border: none;
-    h2 {
-      color: #767676;
-    }
-  }
-  .descriprion {
-    background-color: white;
-    color: black;
-    grid-row: 1 / 2;
-    grid-column: 8 / 13;
-    border: 0;
-  }
-  .order__header
-  {
-    background-color: transparent;
-  }
-  .button
-  {
-    color: black;
-    button{
-      color: black;
-    }
-  }
-} */

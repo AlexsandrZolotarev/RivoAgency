@@ -91,9 +91,11 @@ let Order = (props) => {
                     : `Fuel consumption (combined cycle):`}{" "}
                 </p>
                 <p>
+                  <mark>
                   {!props.order.fuelConsumption
                     ? props.order.PowerConsumption
                     : props.order.fuelConsumption}
+                    </mark>
                 </p>
               </div>
               <div>
@@ -103,15 +105,17 @@ let Order = (props) => {
                     : `Fuel consumption (combined cycle):`}{" "}
                 </p>
                 <p>
+                  <mark>
                   {!props.order.fuelConsumption
                     ? props.order.PowerConsumption
                     : props.order.fuelConsumption}
+                    </mark>
                 </p>
               </div>
             </div>
             <div className={s.consumption__CO2}>
               <p>Emissions of CO₂ (combined cycle):</p>
-              <p>{props.order.emissionsOfCO}</p>
+              <p><mark>{props.order.emissionsOfCO}</mark></p>
             </div>
             <a
               href=" "
