@@ -58,13 +58,11 @@
     -webkit-text-stroke: 0.5px rgb(255, 255, 255);
     -webkit-background-clip: text;
   }
-}
-.HomeTitle h1,h2:first-child {
+  h1,h2:first-child {
   color: #fddd0a;
   font-size: calc(15px + 10.25 * (100vw / 1980));
   margin-left: 10%;
 }
-
 .HomeTitleCube {
   margin-top: 13%;
 }
