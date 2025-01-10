@@ -1,5 +1,4 @@
 import { usersApi } from "../api/api";
-import { setCookie } from "../cookie/cookie";
 const SET_USER = "SET_USER";
 const SET_NAME = "SET_NAME";
 
@@ -13,9 +12,6 @@ let initialState = {
 
 const authReducer = (state = initialState, action) => {
   switch (action.type) {
-    case SET_USER:
-      setCookie("userId",action.data.id, {secure: true, 'max-age': 3600})
-      return { ...state, user: action.data };
     case SET_NAME:
       return { ...state, user: {
         name:action.username

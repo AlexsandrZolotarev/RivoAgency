@@ -13,8 +13,6 @@ import ContactUs from "./Components/ContactsUs/ContactUs";
 import FooterContainer from "./Components/Footer/FooterContainer";
 import OrderContainer from "./Components/Order/OrderContainer";
 import HeaderContainer from "./Components/Header/HeaderContainer";
-import LoginContainer from "./Components/Login/LoginContainer";
-import ProfileContainer from "./Components/Profile/ProfileContainer";
 class App extends React.Component {
   render() {
     return (

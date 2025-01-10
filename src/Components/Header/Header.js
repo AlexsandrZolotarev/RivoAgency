@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import logoDark from "./../../assets/Header/LogotypeDark.svg";
 import s from "./Header.module.css";
 import MenuBurgerContainer from "../MenuBurger/MenuBurgerContainer";
-import { checkingForRegistration} from "../../cookie/cookie";
+
 function checkedValentinasDay(){
   const date = new Date();
   return  date.getMonth() === 1 && date.getDate() === 14;
@@ -22,7 +22,6 @@ let Header = (props) => {
   }, [imageUser]);
 
   useEffect(() => {
-    userReg = checkingForRegistration();
     props.getUserThunk(userReg);
   });
   return (
