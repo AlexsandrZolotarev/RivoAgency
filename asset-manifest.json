@@ -1,12 +1,8 @@
 {
   "files": {
-<<<<<<< HEAD
     "main.css": "/RivoAgency/static/css/main.d0ad002b.css",
     "main.js": "/RivoAgency/static/js/main.8c6b0564.js",
-=======
     "main.css": "/RivoAgency/static/css/main.80b148a4.css",
-    "main.js": "/RivoAgency/static/js/main.8ed3f7af.js",
->>>>>>> 7a4e9905b390c5b83bca7a2f2afb2ef31e4f88c6
     "static/media/whoWeAreVideo.webm": "/RivoAgency/static/media/whoWeAreVideo.8017a8e116c45b72991d.webm",
     "static/media/BackgroundOrderBlack.png": "/RivoAgency/static/media/BackgroundOrderBlack.a28c82ae2256f5e6ab11.png",
     "static/media/Expiriens.webp": "/RivoAgency/static/media/Expiriens.ca3abf02e037ef7b4e1c.webp",
