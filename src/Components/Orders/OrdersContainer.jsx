@@ -1,13 +1,12 @@
-import React from "react";
+import React, { memo } from "react";
 import { getCardsInSearching, getCarsThunk, setCardsForSearchingThunk, setCurrentPage} from "../../Redux/order-reducer";
 import { connect } from "react-redux";
 import Orders from "./Orders";
-class OrdersContainer extends React.Component {
-  render() {
-    return <Orders {...this.props} />;
-  }
-}
 
+const OrdersContainer = memo(function Greeting(props)
+{
+  return <Orders {...props} />;
+});
 let mapStateToProps = (state) => {
   return {
     orders: state.OrdersPage.orders,

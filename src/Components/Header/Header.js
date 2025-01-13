@@ -16,14 +16,10 @@ function checkedNewYear(){
 
 let Header = (props) => {
   let [imageUser, setImageUser] = useState(props.userImage);
-  let userReg;
   useEffect(() => {
     setImageUser(imageUser);
   }, [imageUser]);
 
-  useEffect(() => {
-    props.getUserThunk(userReg);
-  });
   return (
     <header className={s.header} id="header">
       <div className={s.container}>

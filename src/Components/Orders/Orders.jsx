@@ -1,13 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { memo, useEffect} from "react";
 import s from "./Orders.module.css";
 import { NavLink } from "react-router-dom";
 import { PiEngineFill } from "react-icons/pi";
-import { FaCalculator, FaGasPump } from "react-icons/fa6";
+import { FaGasPump } from "react-icons/fa6";
 import { FaChargingStation, FaSearch } from "react-icons/fa";
 import { TbAutomaticGearbox } from "react-icons/tb";
 import { IoMdCheckmark } from "react-icons/io";
-import { GoChevronDown } from "react-icons/go";
-let Car = ({ car }) => {
+const Car = React.memo(function Greeting({ car }){
   return (
     <article className={s.car} tabIndex={1}>
       <NavLink to={"Order/" + car.id} className={s.car__image}>
@@ -55,10 +54,10 @@ let Car = ({ car }) => {
       </div>
       <div className={s.consumption__body}>
         <div className={s.consumption}>
-          <div>
+          <div className={s.consumption__description}>
             <p>
               {(!car.fuelConsumption)
-                ? `Power consumption in combined cycle`
+                ? `Power consumption in combined`
                 : `Fuel consumption (combined cycle)`}{" "}
             </p>
             <span>
@@ -69,10 +68,10 @@ let Car = ({ car }) => {
               </mark>
             </span>
           </div>
-          <div>
+          <div className={s.consumption__description}>
             <p>
               {!car.fuelConsumption
-                ? `Power consumption in combined cycle`
+                ? `Power consumption in combined`
                 : `Fuel consumption (combined cycle)`}{" "}
             </p>
             <span>
@@ -85,11 +84,13 @@ let Car = ({ car }) => {
             </span>
           </div>
         </div>
-        <div className={s.consumption__CO2}>
+        <div className={s.consumption}>
+        <div className={s.consumption__description}>
           <p>Emissions of CO₂ (combined cycle)</p>
           <span>
             <mark>{car.emissionsOfCO}</mark>
           </span>
+          </div>
         </div>
       </div>
 
@@ -108,10 +109,9 @@ let Car = ({ car }) => {
       </NavLink>
     </article>
   );
-};
-let Orders = (props) => {
+});
+let Orders = memo(props => {
   let pagesCount = Math.ceil(props.totalUserCount / props.pageSize);
-
   useEffect(() => {
     props.getCarsThunk();
   }, [props.currentPage]);
@@ -152,30 +152,6 @@ let Orders = (props) => {
           </div>
         </div>
         <div className={s.Orders__body}>
-          {/* <div className={s.Orders__aside}>
-            <aside>
-              <h2>Filter</h2>
-              <div className={s.filter}>
-                <div className={s.filter__head}>
-                  <FaCalculator />
-                  <span>Price</span>
-                </div>
-                <GoChevronDown />
-                <div className={s.filter__body}>
-                  <input type="text" />
-                  <input type="text" />
-                </div>
-              </div>
-
-              <div className={s.filter}>
-                <div className={s.filter__head}>
-                  <PiEngineFill />
-                  <span>Engine</span>
-                </div>
-                <GoChevronDown />
-              </div>
-            </aside>
-          </div> */}
           <div className={s.Orders__cards}>
             <div className={s.Orders__cards__searching}>
               <div className={s.all_venicles}>
@@ -185,30 +161,14 @@ let Orders = (props) => {
                 <input onChange={getCarsOutInputSearch.bind(this)} />
                 <FaSearch />
               </div>
-
-              {/* <div className={s.Orders__sort}>
-                <div className={s.searching}>
-                  <select name="Orders" id="Orders-select" tabIndex={0}>
-                    <option value="">Sort</option>
-                    <option value="dog">Expensive </option>
-                    <option value="cat">Cheaper</option>
-                  </select>
-                </div>
-              </div> */}
             </div>
-            <div className={s.orders__body__grid} id="ordersBody">
-              {props.orders.map((item) => (
-                <Car key={item.id} car={item} />
-              ))}
-            </div>
-
             <div className={s.counterPages__body}>
               {pages.map((page) => {
                 return (
                   <span
                     tabIndex={1}
                     onKeyDown={editCurrentPage.bind(page)}
-                    className={props.currentPage === page && s.selectedPage}
+                    className={props.currentPage === page ? s.selectedPage : ""}
                     onClick={editCurrentPage.bind(page)}
                   >
                     {page}
@@ -216,11 +176,18 @@ let Orders = (props) => {
                 );
               })}
             </div>
+            <div className={s.orders__body__grid} id="ordersBody">
+              {props.orders.map((item) => (
+                <Car key={item.id} car={item} />
+              ))}
+            </div>
+
+           
           </div>
         </div>
       </div>
     </section>
   );
-};
+});
 
 export default Orders;

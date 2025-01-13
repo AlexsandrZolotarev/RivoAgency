@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import s from "./Contacts.module.css";
 import { FaFacebookF } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa6";
@@ -22,7 +22,6 @@ const ContactSchema = Yup.object().shape({
   email: Yup.string().email("Invalid email").required("Required"),
 });
 let ContactsForm = () => {
-
   const handleSubmit = async({ name, email,message }) => {
     try {
       const mes = `Имя: ${name}, Email: ${email}, Сообщение: ${message}`;

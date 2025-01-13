@@ -76,9 +76,6 @@
   width: 30%;
   border: 1px solid white;
 }
-.Orders__cards {
-  padding-left: 5em;
-}
 .Orders__container {
   margin: 0 5%;
 }
@@ -109,7 +106,7 @@
   transition: all ease 1000ms;
   display: flex;
   justify-content: center;
-  border: 1px solid black;
+  border: 1px solid #fddd0a;
   padding: 2.5%;
   font-size: 1rem;
   font-family: 'Gilroy';
@@ -121,14 +118,14 @@
   margin: 10px 5px;
   button {
     text-transform: uppercase;
-    color: black;
-    font-size: 1rem;
+    color: #fddd0a;
+    font-size: 0.4rem;
     border: 0;
     background-color: transparent;
   }
   :last-child {
     position: relative;
-    font-size: 1.3em;
+    font-size: 1em;
     top: 1px;
   }
 }
@@ -165,9 +162,12 @@
   width: 40rem;
   display: flex;
   flex-direction: column;
-  
   justify-content: space-between;
   transition: all .5s ease-in-out;
+  mark
+  {
+    padding: 2.5px;
+  }
 }
 .car__image {
   display: flex;
@@ -198,12 +198,16 @@
 .consumption {
   display: flex;
   flex-direction: column;
-  margin-top: 20px;
+  padding: 0 5px;
+  p{
+    margin-block: 1em;
+  }
 }
-.consumption *:not(p) {
+.consumption__description
+{
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  margin-bottom: 0.4em;
 }
 .consumption__CO2 {
   display: flex;
@@ -302,6 +306,7 @@
     font-size: calc(18px + 10 * (100vw / 1980));
     padding-top: 1.5em;
   }
+
 }
 @keyframes arrow {
   0%,
@@ -322,6 +327,11 @@
   }
 }
 @media screen and (max-width: 680px) {
+  .consumption__description
+  {
+    flex-direction: column;
+    align-items: flex-start
+  }
   .consumption p{
    padding-right: 0.5em;
   }
@@ -377,10 +387,6 @@
     grid-template-columns: auto;
     margin-block: 2em;
   }
-  .Orders__cards
-  {
-    width: 95%;
-  }
   .car__image {
     width: 18rem;
     padding: 15px;
@@ -397,20 +403,6 @@
     text-wrap: wrap;
     font-size: 18px;
     margin-block: 1em;
-  }
-  .consumption *:not(p) {
-    flex-direction: column;
-    
-  }
-  .consumption__CO2 {
-    flex-direction: column;
-    font-size: 15px;
-    padding: 0 5px;
-    :first-child{
-      text-wrap: wrap;
-      font-family: 'Gilroy';   
-      font-size: 18px;
-    }
   }
   .prices {
     margin-top: 1rem;

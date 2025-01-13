@@ -5,7 +5,8 @@ import { connect } from "react-redux";
 import { useParams } from "react-router-dom";
 import { getOrder} from "../../Redux/order-selectors";
 
-let OrderContainer = (props) => {
+const OrderContainer = (props) => {
+  
   const orderId = useParams();
   useEffect(() => {
     props.getCarsOrder(orderId);
