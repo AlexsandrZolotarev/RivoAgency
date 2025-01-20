@@ -10,7 +10,7 @@
   opacity: 1;
   visibility: visible;
 }
-.preloader.loader {
+.loader {
   width: 75px;
   height: 75px;
   border: 6px solid white;

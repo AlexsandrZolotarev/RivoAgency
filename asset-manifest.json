@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/RivoAgency/static/css/main.dba50ff3.css",
+    "main.css": "/RivoAgency/static/css/main.4443c828.css",
     "main.js": "/RivoAgency/static/js/main.fbbdf047.js",
     "static/media/whoWeAreVideo.webm": "/RivoAgency/static/media/whoWeAreVideo.8017a8e116c45b72991d.webm",
     "static/media/BackgroundOrderBlack.png": "/RivoAgency/static/media/BackgroundOrderBlack.a28c82ae2256f5e6ab11.png",
@@ -67,11 +67,11 @@
     "static/media/Vue_js_icon.svg": "/RivoAgency/static/media/Vue_js_icon.f8a5707a9245b9e284ce33d9205d1734.svg",
     "static/media/Mobile_development_icon.webp": "/RivoAgency/static/media/Mobile_development_icon.15795fb02addf6e519ae.webp",
     "static/media/whoWeArePlay_icon.webp": "/RivoAgency/static/media/whoWeArePlay_icon.4a4ebd5ae179859188cc.webp",
-    "main.dba50ff3.css.map": "/RivoAgency/static/css/main.dba50ff3.css.map",
+    "main.4443c828.css.map": "/RivoAgency/static/css/main.4443c828.css.map",
     "main.fbbdf047.js.map": "/RivoAgency/static/js/main.fbbdf047.js.map"
   },
   "entrypoints": [
-    "static/css/main.dba50ff3.css",
+    "static/css/main.4443c828.css",
     "static/js/main.fbbdf047.js"
   ]
 }

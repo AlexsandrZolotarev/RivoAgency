@@ -7,4 +7,4 @@ export function AnimationHomePage() {
         else e.style.animation = "animatinLeft 2.2s forwards";
       });
     }, 100);
-  }
+}
