@@ -28,7 +28,7 @@
   display: flex;
   color: white;
   align-items: center;
-  font-family: 'Gilroy';
+  font-family: 'RoadRadio';
   margin-top: 5%;
   justify-content: center;
   font-weight: 400;
@@ -47,7 +47,6 @@
   :last-child {
     font-weight: 700;
     border-radius: 1px;
-    font-family: 'Gilroy';
     color: rgba(0, 0, 0, 0.1);
     -webkit-text-stroke: 0.5px rgb(80, 80, 80);
     font-size: calc(60px + 48 * (100vw / 1980));
@@ -129,6 +128,7 @@
     label {
       margin-bottom: -9%;
       transition: 500ms ease all;
+      padding-bottom: 1%;
     }
   }
   label {

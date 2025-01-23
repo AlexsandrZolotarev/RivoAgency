@@ -15,7 +15,6 @@ const Order = memo(function Order(props){
     if (!props.order) {
       return <NotFound />;
     }
-    console.log('Order');
     return (
       <section className={s.order}>
         <header className={s.order__header}>

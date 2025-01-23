@@ -45,8 +45,8 @@ const Car = React.memo(function Greeting({ car }){
       </div>
 
       <div className={s.description}>
-        {car.Equipment.map((item) => (
-          <div className={s.description__item}>
+        {car.Equipment.map((item,index) => (
+          <div className={s.description__item} key={index}>
             <IoMdCheckmark />
             {item}
           </div>
@@ -163,10 +163,11 @@ let Orders = memo(props => {
               </div>
             </div>
             <div className={s.counterPages__body}>
-              {pages.map((page) => {
+              {pages.map((page,index) => {
                 return (
                   <span
                     tabIndex={1}
+                    key={index}
                     onKeyDown={editCurrentPage.bind(page)}
                     className={props.currentPage === page ? s.selectedPage : ""}
                     onClick={editCurrentPage.bind(page)}

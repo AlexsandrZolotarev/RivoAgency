@@ -49,21 +49,16 @@ const careerVacanciesReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_VACANCI: {
       stateCopy.vacancies = [...state.vacancies];
-      let counter = 0;
-      Object.entries(state.newCareerVacanci).forEach((item) => {
-        if (!!item[1]) counter++;
+      stateCopy.vacancies.push({
+        id: state.vacancies.at(-1)?.id + 1 ?? 0, // Проверка на undefined если нет то 0, если есть то + 1 к последнему
+        name: `${state.newCareerVacanci.name}`,
+        salary: `${state.newCareerVacanci.salary}`,
+        region: `${state.newCareerVacanci.region}`,
+        positionJob: `${state.newCareerVacanci.positionJob}`,
       });
-      if (counter === 4 && !!state.vacancies.length) {
-        stateCopy.vacancies.push({
-          id: state.vacancies.at(-1)?.id + 1 ?? 0, // Проверка на undefined если нет то 0, если есть то + 1 к последнему
-          name: `${state.newCareerVacanci.name}`,
-          salary: `${state.newCareerVacanci.salary}`,
-          region: `${state.newCareerVacanci.region}`,
-          positionJob: `${state.newCareerVacanci.positionJob}`,
-        });
-        for (let key in state.newCareerVacanci)
-          stateCopy.newCareerVacanci[key] = "";
-      }
+      for (let key in state.newCareerVacanci)
+        stateCopy.newCareerVacanci[key] = "";
+
       return stateCopy;
     }
     case UPDATE_VACANCI: {
@@ -75,7 +70,7 @@ const careerVacanciesReducer = (state = initialState, action) => {
     case LIFT_TEXT: {
       !action.newInput.target.value
         ? (action.newInput.target.previousElementSibling.style.marginBottom =
-            "-9%")
+            "-5%")
         : (action.newInput.target.previousElementSibling.style.marginBottom =
             "1%");
       return state;

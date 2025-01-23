@@ -8,42 +8,38 @@ const instanceUser = axios.create({
 
 export const carsApi = {
   async getCars() {
-    return axios.get("https://alexsandrzolotarev.github.io/api/encrypted.json")
-    .then((response) => {
+    try {
+      let response = await axios.get("https://alexsandrzolotarev.github.io/api/encrypted.json");
       return response.data.models;
-    })
-    .catch(error => {
-      return {};
-    })
+    }
+    catch {
+      return {}
+    }
   },
 };
 export const usersApi = {
   async registrationUser(userData) {
-    return instanceUser
-      .post("/registration",userData)
-      .then((response) => {
-        return response.data;
-      })
-      .catch(error => {
-        console.error(error);
-        return {};
-      })
+    try {
+      let response = await instanceUser.post("/registration",userData);
+      return response.data;
+    }
+    catch {
+      return {}
+    }
   },
   async getUser(userId) {
-    return instanceUser
-      .get(`${userId}`)
-      .then((response) => {
-        return response.data;
-      })
-      .catch(() => {
-        return "No name";
-      })
+    try {
+      let response = await instanceUser.get(`${userId}`);
+      return response.data;
+    }
+    catch {
+      return "No name";
+    }
   },
 };
 export const telegramApi = {
   async telegram(url) {
-    return axios
-      .get(`${url}`)
-      .then((response) => response)
+    let response = await axios.get(`${url}`);
+    return response;
   },
 };
