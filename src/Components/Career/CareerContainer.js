@@ -13,7 +13,7 @@ let mapStateToProps = (state) => {
     newCareerVacanci: state.careerPage.newCareerVacanci,
   };
 };
-
+ 
 const CareersContainer = connect(mapStateToProps, {
   liftText,
   updateNewVacanciText,

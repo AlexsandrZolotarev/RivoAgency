@@ -5,9 +5,6 @@ import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 import { SlSocialVkontakte } from "react-icons/sl";
 import "./MenuBurger.css";
 import { NavLink } from "react-router-dom";
-import { BiLogIn } from "react-icons/bi";
-import { checkingForRegistration } from "../../cookie/cookie";
-
 let MenuBurger = (props) => {
   return (
     <Menu
@@ -46,8 +43,8 @@ let MenuBurger = (props) => {
               </NavLink>
             </li>
             <li>
-              <NavLink to={"/Careers"} className="link" reloadDocument>
-                Careers
+              <NavLink to={"/Career"} className="link" reloadDocument>
+                Career
               </NavLink>
             </li>
             <li>

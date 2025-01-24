@@ -87,26 +87,24 @@ export const setCurrentPage = (page) => ({
 });
 export const setOrder = (order) => ({ type: SET_ORDER, order });
 
-export const getCarsThunk = () => {
-  return (dispatch) => {
-    carsApi.getCars().then((data) => {
-      dispatch(setCards(data));
-    });
-  };
+
+function getData () {
+  return carsApi.getCars();
+}
+export const getCarsThunk = () => async (dispatch) => {
+  let data = await getData();
+  dispatch(setCards(data));
 };
-export const setCardsForSearchingThunk = (input_value) => {
-  return (dispatch) => {
-    carsApi.getCars().then((data) => {
-      dispatch(setCardsForSearching(data, input_value));
-    });
-  };
+export const setCardsForSearchingThunk = (input_value) => async (dispatch) => {
+  let data = await getData();
+  dispatch(setCardsForSearching(data, input_value));
 };
-export const getCarsOrder = (orderId) => {
-  return (dispatch) => {
-    carsApi
-      .getCars()
-      .then((data) => dispatch(setOrder(data[orderId.carId - 1])))
-      .catch((data) => dispatch(setOrder(null)));
-  };
+export const getCarsOrder = (orderId) => async (dispatch) => {
+  try {
+    let data = await getData();
+    dispatch(setOrder(data[orderId.carId - 1]));
+  } catch {
+    dispatch(setOrder(null));
+  }
 };
 export default ordersReducer;

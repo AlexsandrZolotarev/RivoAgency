@@ -6,7 +6,6 @@ let initialState = {
 const headerReducer = (state = initialState, action) => {
   switch (action.type) {
     case SCROLL: {
-      console.log(1);
       return {...state}
     }
     default:

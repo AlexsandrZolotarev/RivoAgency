@@ -6,34 +6,30 @@ const linkImageUser =
   "https://alexsandrzolotarev.github.io/RivoAgency/src/assets/NotFound/notFound.webp";
 let initialState = {
   user: null,
-  userImage : linkImageUser,
+  userImage: linkImageUser,
 };
-
 
 const authReducer = (state = initialState, action) => {
   switch (action.type) {
     case SET_NAME:
-      return { ...state, user: {
-        name:action.username
-      }};
+      return {
+        ...state,
+        user: {
+          name: action.username,
+        },
+      };
     default:
       return state;
   }
 };
-export const getUserThunk = (userId) => {
-  return (dispatch) => {
-    usersApi.getUser(userId).then((data) => {
-      dispatch(setUser(data));
-    });
-  };
+export const getUserThunk = (userId) => async (dispatch) => {
+  let data = await usersApi.getUser(userId);
+  dispatch(setUser(data));
 };
 
-export const setUserThunk = (userData) => {
-  return (dispatch) => {
-    usersApi.registrationUser(userData).then((data) => {
-      dispatch(setUser(data));
-    });
-  };
+export const setUserThunk = (userData) => async (dispatch) => {
+  let data = await usersApi.registrationUser(userData);
+  dispatch(setUser(data));
 };
 
 export const setAuthUser = (data) => ({ type: SET_USER, data });
