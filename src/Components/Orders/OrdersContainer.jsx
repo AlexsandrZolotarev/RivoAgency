@@ -13,6 +13,7 @@ let mapStateToProps = (state) => {
     pageSize: state.OrdersPage.pageSize,
     totalUserCount: state.OrdersPage.totalUserCount,
     currentPage: state.OrdersPage.currentPage,
+    amountPage:state.OrdersPage.amountPage,
   };
 };
 

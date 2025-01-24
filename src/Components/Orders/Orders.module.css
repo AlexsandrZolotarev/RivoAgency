@@ -285,16 +285,35 @@
     max-width: 9rem;
   }
 }
-.selectedPage {
-  font-weight: bold;
+.paginator-selectedPage {
+  border: 1px solid white;
+  border-radius: 8px;
 }
-.counterPages__body {
+.paginator {
+  display: flex;
+  align-items: center;
   margin-top: 1em;
+  font-size: calc(12px + 10 * (100vw / 1980));
   span {
-    font-size: calc(12px + 10 * (100vw / 1980));
     margin: 0 1em 0 0;
     cursor: pointer;
+    padding: 10px;
   }
+}
+.paginator-arrow-button {
+  background-color: transparent;
+  border: none;
+  svg {
+    color: white;
+    margin: 10px;
+  }
+}
+
+.paginator span:hover,
+button:hover
+{
+ border: 1px solid white;
+  border-radius: 8px;
 }
 .car {
   background-color: rgb(97, 97, 97);
