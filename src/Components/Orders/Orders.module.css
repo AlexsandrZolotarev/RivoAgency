@@ -79,6 +79,15 @@
 .Orders__container {
   margin: 0 5%;
 }
+.title
+{
+
+}
+.Orders__title__container
+{
+  display: flex;
+  flex-direction: column;
+}
 .Orders__title {
   h1 {
     font-size: calc(50px + 10 * (100vw / 1980));
@@ -443,6 +452,10 @@ button:hover
     margin-bottom: 90%;
     min-height: 800px;
   }
+  .paginator {
+    font-size: 30px;
+    margin-bottom: 2rem;
+  }
   .OrdersBody::after {
     display: none;
   }
@@ -457,10 +470,12 @@ button:hover
     font-size: 1em;
   }
 }
-@media screen and (max-width: 1000px)
+@media screen and (max-width: 1340px)
 {
   .orders__body__grid {
     grid-template-columns: auto;
   }
-  
+  .Orders__body{
+    justify-content: center
+  }
 }
