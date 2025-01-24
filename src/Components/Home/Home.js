@@ -14,7 +14,6 @@ import Services from "../Services/Services";
 import IndustryExpertise from "../IndustryExpertise/IndustryExpertise";
 import Stack from "../Stack/Stack";
 
-
 let Home = (props) => {
   let video = React.createRef();
   let buttonPlay = React.createRef();

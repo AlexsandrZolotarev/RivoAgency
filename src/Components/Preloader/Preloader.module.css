@@ -30,27 +30,3 @@
     transform: translate(-50%, -50%) rotate(360deg);
   }
 }
-.preloader.done {
-  opacity: 0;
-  visibility: hidden;
-}
-
-.profile__information {
-  display: flex;
-  justify-content: space-between;
-  margin: 10px 0;
-  padding: 1em;
-  border: 1px solid rgb(164, 164, 164);
-  width: 100%;
-
-  input {
-    cursor: pointer;
-  }
-  :first-child {
-    font-weight: 600;
-  }
-  :last-child {
-    color: rgb(169, 169, 169);
-    text-wrap: nowrap;
-  }
-}

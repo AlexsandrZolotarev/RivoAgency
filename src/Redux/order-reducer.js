@@ -18,7 +18,7 @@ let initialState = {
 const ordersReducer = (state = initialState, action) => {
   switch (action.type) {
     case SET_CARDS: {
-      debugger;
+ 
       return {
         ...state,
         totalUserCount: action.cards.length,
@@ -57,7 +57,6 @@ const ordersReducer = (state = initialState, action) => {
       };
     }
     case SET_CURRENT_PAGE: {
-      debugger;
       return {
         ...state,
         currentPage: action.page,
