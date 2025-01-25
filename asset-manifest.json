@@ -1,16 +1,7 @@
 {
   "files": {
-    "main.css": "/RivoAgency/static/css/main.9dabf7a5.css",
-    "main.js": "/RivoAgency/static/js/main.03295c52.js",
-    "static/css/996.74bdcc4f.chunk.css": "/RivoAgency/static/css/996.74bdcc4f.chunk.css",
-    "static/js/996.25ef9e7d.chunk.js": "/RivoAgency/static/js/996.25ef9e7d.chunk.js",
-    "static/css/863.a1b70975.chunk.css": "/RivoAgency/static/css/863.a1b70975.chunk.css",
-    "static/js/863.cc5f745d.chunk.js": "/RivoAgency/static/js/863.cc5f745d.chunk.js",
-    "static/css/328.7c04545a.chunk.css": "/RivoAgency/static/css/328.7c04545a.chunk.css",
-    "static/js/328.d76eb644.chunk.js": "/RivoAgency/static/js/328.d76eb644.chunk.js",
-    "static/js/812.cd457dba.chunk.js": "/RivoAgency/static/js/812.cd457dba.chunk.js",
-    "static/js/842.5a54d989.chunk.js": "/RivoAgency/static/js/842.5a54d989.chunk.js",
-    "static/js/423.5dac1652.chunk.js": "/RivoAgency/static/js/423.5dac1652.chunk.js",
+    "main.css": "/RivoAgency/static/css/main.2d55de5f.css",
+    "main.js": "/RivoAgency/static/js/main.2fc14352.js",
     "static/media/whoWeAreVideo.webm": "/RivoAgency/static/media/whoWeAreVideo.8017a8e116c45b72991d.webm",
     "static/media/BackgroundOrderBlack.png": "/RivoAgency/static/media/BackgroundOrderBlack.a28c82ae2256f5e6ab11.png",
     "static/media/Expiriens.webp": "/RivoAgency/static/media/Expiriens.ca3abf02e037ef7b4e1c.webp",
@@ -76,20 +67,11 @@
     "static/media/Vue_js_icon.svg": "/RivoAgency/static/media/Vue_js_icon.f8a5707a9245b9e284ce33d9205d1734.svg",
     "static/media/Mobile_development_icon.webp": "/RivoAgency/static/media/Mobile_development_icon.15795fb02addf6e519ae.webp",
     "static/media/whoWeArePlay_icon.webp": "/RivoAgency/static/media/whoWeArePlay_icon.4a4ebd5ae179859188cc.webp",
-    "main.9dabf7a5.css.map": "/RivoAgency/static/css/main.9dabf7a5.css.map",
-    "main.03295c52.js.map": "/RivoAgency/static/js/main.03295c52.js.map",
-    "996.74bdcc4f.chunk.css.map": "/RivoAgency/static/css/996.74bdcc4f.chunk.css.map",
-    "996.25ef9e7d.chunk.js.map": "/RivoAgency/static/js/996.25ef9e7d.chunk.js.map",
-    "863.a1b70975.chunk.css.map": "/RivoAgency/static/css/863.a1b70975.chunk.css.map",
-    "863.cc5f745d.chunk.js.map": "/RivoAgency/static/js/863.cc5f745d.chunk.js.map",
-    "328.7c04545a.chunk.css.map": "/RivoAgency/static/css/328.7c04545a.chunk.css.map",
-    "328.d76eb644.chunk.js.map": "/RivoAgency/static/js/328.d76eb644.chunk.js.map",
-    "812.cd457dba.chunk.js.map": "/RivoAgency/static/js/812.cd457dba.chunk.js.map",
-    "842.5a54d989.chunk.js.map": "/RivoAgency/static/js/842.5a54d989.chunk.js.map",
-    "423.5dac1652.chunk.js.map": "/RivoAgency/static/js/423.5dac1652.chunk.js.map"
+    "main.2d55de5f.css.map": "/RivoAgency/static/css/main.2d55de5f.css.map",
+    "main.2fc14352.js.map": "/RivoAgency/static/js/main.2fc14352.js.map"
   },
   "entrypoints": [
-    "static/css/main.9dabf7a5.css",
-    "static/js/main.03295c52.js"
+    "static/css/main.2d55de5f.css",
+    "static/js/main.2fc14352.js"
   ]
 }

@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React from "react";
 import { Route, Routes } from "react-router-dom";
 
 import HeaderContainer from "./Components/Header/HeaderContainer";
@@ -11,20 +11,9 @@ import Services from "./Components/Services/Services";
 import ContactUs from "./Components/ContactsUs/ContactUs";
 import FooterContainer from "./Components/Footer/FooterContainer";
 import CareerContainer from "./Components/Career/CareerContainer";
-import Preloader from "./Components/Preloader/Preloader";
-// import OrderContainer from "./Components/Order/OrderContainer";
-// import OrdersContainer from "./Components/Orders/OrdersContainer";
-
-const OrderContainer = React.lazy(() =>
-  import("./Components/Order/OrderContainer")
-);
-const OrdersContainer = React.lazy(() =>
-  import("./Components/Orders/OrdersContainer")
-);
-
-// import NotFound from "./Components/NotFound/NotFound";
-const NotFound = React.lazy(() => import("./Components/NotFound/NotFound"));
-
+import OrderContainer from "./Components/Order/OrderContainer";
+import OrdersContainer from "./Components/Orders/OrdersContainer";
+import NotFound from "./Components/NotFound/NotFound";
 class App extends React.Component {
   render() {
     return (
@@ -34,13 +23,6 @@ class App extends React.Component {
         </div>
         <HeaderContainer />
         <main className="wrapper-content" id="main">
-          <Suspense
-            fallback={
-              <div>
-                <Preloader />
-              </div>
-            }
-          >
             <Routes>
               <Route path="/RivoAgency" element={<HomeContainer />}></Route>
               <Route path="/Expertise" element={<Expertise />}></Route>
@@ -56,7 +38,6 @@ class App extends React.Component {
               <Route path="*" element={<NotFound />}></Route>
               <Route path="/" element={<HomeContainer />}></Route>
             </Routes>
-          </Suspense>
         </main>
         <FooterContainer />
         <CookiesPrivacy />

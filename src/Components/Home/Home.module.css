@@ -246,7 +246,10 @@
   accent-color: #fddd0a;
   transition: all 1200ms ease;
 }
-
+.soundSwitch {
+  opacity: 0;
+  visibility: hidden;
+}
 @media screen and (max-width: 1000px) {
   .WeWhoWeAreContainerMain__body {
     flex-direction: column;

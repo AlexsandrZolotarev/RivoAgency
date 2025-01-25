@@ -42,10 +42,10 @@ let Home = (props) => {
         </div>
       </section>
       <article className={s.WeWhoWeAreContainer} id="WeWhoWeAre">
-        <article className={s.WeWhoWeAreContainerLeft}>
+        <div className={s.WeWhoWeAreContainerLeft}>
           <img src={ElementLeft} aria-hidden="true" loading="lazy"></img>
           <img src={ElementLeft2} aria-hidden="true" loading="lazy"></img>
-        </article>
+        </div>
 
         <section className={s.WeWhoWeAreContainerMain} id="Who-we-are">
           <header className={s.WeWhoWeAreContainerMain__title}>
@@ -78,6 +78,7 @@ let Home = (props) => {
                 </video>
                 <span ref={buttonPlay} className={s.videoEnter}></span>
               </div>
+              <label htmlFor="sound-switch" className={s.soundSwitch}>Soundswitch</label>
               <input
                 type="range"
                 className={s.inputVolume}
@@ -85,7 +86,7 @@ let Home = (props) => {
                 max="10"
                 value={props.volume}
                 onChange={onVolumeChange.bind(this)}
-                id="myNumber"
+                id="sound-switch"
               ></input>
             </div>
             <div className={s.WeWhoWeAreContainerMain__textWithClutch}>
