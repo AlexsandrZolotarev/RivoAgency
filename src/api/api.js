@@ -9,7 +9,7 @@ const instanceUser = axios.create({
 export const carsApi = {
   async getCars() {
     try {
-      let response = await axios.get("https://alexsandrzolotarev.github.io/api/encrypted.json");
+      let response = await axios.get("https://alexsandrzolotarev.github.io/RivoAgencyJSON.github.io/api/encrypted.json");
       return response.data.models;
     }
     catch {
