@@ -94,6 +94,7 @@ function Contacts(props){
             <div className={s.contactsBodyTextContact__street}>
               <p>Poste Antanimena str.1, 33016</p>
             </div>
+            <address>
             <div className={s.contactsBodyTextContact__phone}>
               <a href="tel:+79998887766">+7 999 888 77 66</a>
               <a href="tel:+79998887765">+7 999 888 77 65</a>
@@ -134,6 +135,7 @@ function Contacts(props){
                 <SlSocialVkontakte />
               </li>
             </ul>
+            </address>
           </div>
         </div>
       </section>
