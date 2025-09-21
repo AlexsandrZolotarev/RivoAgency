@@ -12,9 +12,7 @@ import Services from "./Components/Services/Services";
 import ContactUs from "./Components/ContactsUs/ContactUs";
 import FooterContainer from "./Components/Footer/FooterContainer";
 import OrderContainer from "./Components/Order/OrderContainer";
-import HeaderContainer from "./Components/Header/HeaderContainer";
-import LoginContainer from "./Components/Login/LoginContainer";
-import ProfileContainer from "./Components/Profile/ProfileContainer";
+import Header from "./Components/Header/Header";
 class App extends React.Component {
   render() {
     return (
@@ -22,7 +20,7 @@ class App extends React.Component {
         <div id="page-preloader" className="preloader">
           <div className="loader"></div>
         </div>
-        <HeaderContainer />
+        <Header />
         <main className="wrapper-content" id="main">
           <Routes>
             <Route path="/RivoAgency" element={<HomeContainer />}></Route>
@@ -33,8 +31,6 @@ class App extends React.Component {
             <Route path="/Orders" element={<OrdersContainer />}></Route>
             <Route path="/Services" element={<Services />}></Route>
             <Route path="/Orders/Order/:carId" element={<OrderContainer />}></Route>
-            {/* <Route path="/Profile" element={<ProfileContainer />}></Route> */}
-            {/* <Route path="/Login" element={<LoginContainer />}></Route> */}
             <Route path="*" element={<NotFound />}></Route>
             <Route path="/" element={<HomeContainer />}></Route>
           </Routes>

@@ -12,7 +12,7 @@ let Car = ({ car }) => {
     <article className={s.car} tabIndex={1}>
       <NavLink to={"Order/" + car.id} className={s.car__image}>
         <img
-          src={`https://alexsandrzolotarev.github.io/RivoAgency/src/assets/Orders/Cars/${car.img}`}
+          src={`https://github.com/AlexsandrZolotarev/RivoAgency/blob/main/src/assets/Orders/Cars/${car.img}`}
           alt={`Модель ${car.model}`}
           loading="lazy"
         />
@@ -47,7 +47,7 @@ let Car = ({ car }) => {
 
       <div className={s.description}>
         {car.Equipment.map((item) => (
-          <div className={s.description__item}>
+          <div key={item} className={s.description__item}>
             <IoMdCheckmark />
             {item}
           </div>
@@ -152,30 +152,6 @@ let Orders = (props) => {
           </div>
         </div>
         <div className={s.Orders__body}>
-          {/* <div className={s.Orders__aside}>
-            <aside>
-              <h2>Filter</h2>
-              <div className={s.filter}>
-                <div className={s.filter__head}>
-                  <FaCalculator />
-                  <span>Price</span>
-                </div>
-                <GoChevronDown />
-                <div className={s.filter__body}>
-                  <input type="text" />
-                  <input type="text" />
-                </div>
-              </div>
-
-              <div className={s.filter}>
-                <div className={s.filter__head}>
-                  <PiEngineFill />
-                  <span>Engine</span>
-                </div>
-                <GoChevronDown />
-              </div>
-            </aside>
-          </div> */}
           <div className={s.Orders__cards}>
             <div className={s.Orders__cards__searching}>
               <div className={s.all_venicles}>
@@ -185,16 +161,6 @@ let Orders = (props) => {
                 <input onChange={getCarsOutInputSearch.bind(this)} />
                 <FaSearch />
               </div>
-
-              {/* <div className={s.Orders__sort}>
-                <div className={s.searching}>
-                  <select name="Orders" id="Orders-select" tabIndex={0}>
-                    <option value="">Sort</option>
-                    <option value="dog">Expensive </option>
-                    <option value="cat">Cheaper</option>
-                  </select>
-                </div>
-              </div> */}
             </div>
             <div className={s.orders__body__grid} id="ordersBody">
               {props.orders.map((item) => (

@@ -3,7 +3,6 @@ import homeReducer from "./home-reducer";
 import { createStore, combineReducers, applyMiddleware } from "redux";
 import ordersReducer from "./order-reducer";
 import headerReducer from "./menuBurger-reducer";
-import authReducer from "./auth-reducer";
 import profileReducer from "./profile-reducer";
 import {thunk} from "redux-thunk";
 
@@ -12,7 +11,6 @@ let reducers = combineReducers({
   homePage: homeReducer,
   OrdersPage: ordersReducer,
   headerPage: headerReducer,
-  auth:authReducer,
   ProfilePage: profileReducer,
 });
 
